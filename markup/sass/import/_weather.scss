@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_날씨
+/* ---------------------------------------------------------------------- */
+.weather_card_wrap {
+    text-align: center;
+
+    &__date {
+        font-size:$F-size-xsmall;
+        color: $C-font-basic;
+        margin-top: 20px;
+    }
+
+    &__weather {
+        .weather_s_img {
+            border: 0;
+        }
+        margin-top: 10px;
+    }
+
+    &__temp {
+        font-size:$F-size-small;
+        color: $C-font-dark;
+        margin-top: 15px;
+    }
+
+    &__nodata {
+        display: none;
+    }
+    
+}
+.card_wrap__item {
+    &.active {
+        .weather_card_wrap__date {
+            color: $C-font-point;
+        }
+
+        .weather_card_wrap__temp {
+            color: $C-font-point;
+        }
+    }
+    &.none {
+        .weather_card_wrap__weather,.weather_card_wrap__temp {
+            display: none;
+        }
+        .weather_card_wrap__nodata {
+            margin-top: 60px;
+            display: block;
+            color: $C-font-light;
+        }
+    }
+}
+.weather_daily_wrap {
+    width:100%;
+
+    .weather_daily_represent {
+        float: left;
+        width: 738px;
+        &__img {
+            float: left;
+            width: 250px;
+        }
+        &__info {
+            float: left;
+            width: 450px;
+            margin: 30px 0 0 35px;
+        }
+        &__title {
+            font-size: $F-size-xbig;
+            color: $C-font-point;
+            font-weight: $F-weight-bold;
+        }
+
+        &__detail {
+            margin-top: 18px;
+            @include clear();
+        }
+        &__degree {
+            float: left;
+            font-size: 4.0rem;
+            color: $C-black;
+        }
+        &__detail_more {
+            float: left;
+            margin: 5px 0 0 25px;
+        }
+        &__better {
+            font-size: $F-size-big;
+            color: $C-font-dark-gray;
+        }
+        &__degree_more {
+            margin-top: 0;
+            .degree_high,
+            .degree_low {
+                display: inline-block;
+                vertical-align: top;
+                font-size: $F-size-under;
+                color: $C-font-dark;
+            }
+        }
+        &__info_more {
+            margin-top: 10px;
+        }
+        &__precipitation,
+        &__dust {
+            display: inline-block;
+            vertical-align:top;
+            font-size: $F-size-small;
+            color: $C-font-light;
+        }
+        &__dust {
+            margin-left: 15px;
+        }
+        @include clear();
+    }
+    .weather_daily_timeline {
+        float:left;
+        margin: 30px 0 0 70px;
+        &__list {
+
+            @include clear();
+        }
+        &__item {
+            float:left;
+            width: 100px;
+            text-align: center;
+        }
+        .weather_daily_timeline__item + .weather_daily_timeline__item {
+            margin-left:45px;
+        }
+        &__time {
+            font-size: $F-size-under;
+            color:$C-font-basic;
+
+            
+        }
+        
+        &__degree {
+            font-size: $F-size-big;
+            color: $C-black;
+            font-weight: $F-weight-bold;
+        }
+    }
+    @include clear();
+}
+.weather_weekend_wrap {
+    display: flex;
+    justify-content: center;
+
+    .weather_weekend {
+        width: 535px;
+        &__info {
+            float: left;
+            width: 132px;
+            text-align: center;
+        }
+        &__date {
+            text-align:center;
+            font-size: $F-size-xsmall;
+        }
+        &__weather_img {
+            margin-top: 5px;
+        }
+        &__info_more {
+            float: left;
+            margin-left: 50px;
+        }
+        &__weather_title {
+            font-size: $F-size-xbig;
+            color: $C-font-point;
+            font-weight: $F-weight-bold;
+        }
+        &__temp {
+            margin-top: 12px;
+            .degree_high,
+            .degree_low {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .degree_low {
+                margin-left: 20px;
+            }
+        }
+        &__precipitation {
+            margin-top:15px;
+            font-size: $F-size-small;
+            color: $C-font-light;
+        }
+        @include clear();
+
+        &.none {
+            .weather_weekend__weather_title, 
+            .weather_weekend__temp, 
+            .weather_weekend__precipitation {
+                color: $C-font-disable;
+            }
+            
+        }
+    }
+
+    .weather_weekend + .weather_weekend {
+        margin-left: 57px;
+    }
+}
+.weather_finedust_wrap {
+    display: flex;
+    justify-content: center;
+
+    .weather_atmosphere {
+        float: left;
+        width: 419px;
+        &__img {
+            float: left;
+        }
+        &__info{
+            float: left;
+            margin-left: 0;
+            width: 208px;
+            text-align: center;
+
+            
+        }
+        &__title {
+            font-size: $F-size-under;
+            color: $C-font-dark;
+        }
+        &__status {
+            margin-top: 18px;
+            font-size: 3.1rem;
+            color: $C-font-point;
+            font-weight: $F-weight-bold;
+        }
+        &__data {
+            margin-top: 20px;
+        }
+        &__data_value {
+            display: inline-block;
+            vertical-align: top;
+            width: 178px;
+            height: 38px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            line-height: 42px;
+            color: $C-font-dark;
+        }
+        @include clear();
+    }
+    .weather_finedust {
+        float: left;
+        &__list {
+            
+            @include clear();
+        }
+        &__item {
+            float: left;
+            width: 230px;
+            text-align: center;
+        }
+        &__title {
+            font-size: $F-size-under;
+            color: $C-font-dark;
+        }
+        &__info {
+            margin-top: 20px;
+        }
+        &__info_img,
+        &__info_data {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &__info_data {
+            font-size: 2.5rem;
+            font-weight: $F-weight-bold;
+        }
+        &__data_value {
+
+            margin-top: 13px;
+            font-size: $F-size-small;
+        }
+        .weather_finedust__list + .weather_finedust__list {
+            margin-left: 15px;
+        }
+    }
+
+    @include clear();
+}

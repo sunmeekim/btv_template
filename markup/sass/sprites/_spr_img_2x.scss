@@ -1,0 +1,46 @@
+@mixin spr_img_2x($important:null){
+    @if $important {
+        $important : unquote('!important');
+    }
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url('/biz/static/assets/images/spr_img_2x.png') $important;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+$spr_img_2x: (
+    spritesheet_name: spr_img_2x,
+    total_width: 696px,
+    total_height: 500px,
+    total_width_retina: 348px,
+    total_height_retina: 250px,
+    gnb_logo_black: (
+        offset_x: -504px,
+        offset_y: 0,
+        width: 192px,
+        height: 48px,
+        offset_x_retina: -252px,
+        offset_y_retina: 0,
+        width_retina: 96px,
+        height_retina: 24px),
+    gnb_menu: (
+        offset_x: -504px,
+        offset_y: -52px,
+        width: 40px,
+        height: 40px,
+        offset_x_retina: -252px,
+        offset_y_retina: -26px,
+        width_retina: 20px,
+        height_retina: 20px),
+    thanks_img: (
+        offset_x: 0,
+        offset_y: 0,
+        width: 500px,
+        height: 500px,
+        offset_x_retina: 0,
+        offset_y_retina: 0,
+        width_retina: 250px,
+        height_retina: 250px),
+);

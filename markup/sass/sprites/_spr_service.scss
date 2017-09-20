@@ -1,0 +1,55 @@
+@mixin spr_service($important:null){
+    @if $important {
+        $important : unquote('!important');
+    }
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url('/biz/static/assets/images/spr_service.png') $important;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+$spr_service: (
+    spritesheet_name: spr_service,
+    total_width: 288px,
+    total_height: 288px,
+    total_width_retina: 144px,
+    total_height_retina: 144px,
+    my_ic_01: (
+        offset_x: 0,
+        offset_y: 0,
+        width: 142px,
+        height: 142px,
+        offset_x_retina: 0,
+        offset_y_retina: 0,
+        width_retina: 71px,
+        height_retina: 71px),
+    my_ic_02: (
+        offset_x: -146px,
+        offset_y: 0,
+        width: 142px,
+        height: 142px,
+        offset_x_retina: -73px,
+        offset_y_retina: 0,
+        width_retina: 71px,
+        height_retina: 71px),
+    my_ic_03: (
+        offset_x: 0,
+        offset_y: -146px,
+        width: 142px,
+        height: 142px,
+        offset_x_retina: 0,
+        offset_y_retina: -73px,
+        width_retina: 71px,
+        height_retina: 71px),
+    my_ic_04: (
+        offset_x: -146px,
+        offset_y: -146px,
+        width: 142px,
+        height: 142px,
+        offset_x_retina: -73px,
+        offset_y_retina: -73px,
+        width_retina: 71px,
+        height_retina: 71px),
+);
