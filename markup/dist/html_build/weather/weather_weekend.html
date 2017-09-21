@@ -7,73 +7,67 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<!-- end: META -->
-
-	<!-- start: Tracking -->
-	<!--<script src="../../dist/assets/js/tracker-all-min.js"></script>-->
-	<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
-        <!--new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
-        <!--j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
-        <!--'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
-    <!--})(window,document,'script','dataLayer','GTM-5JG89ZH');-->
-	<!--</script>-->
-	<!-- end: Tracking -->
-
-	<link rel="stylesheet" href="../../assets/css/btv_weather.css"/>
+	<link rel="stylesheet" href="http://dev-img-ai.aicloud.kr/aladdin/resources/btv/css/btv_weather.css"/>
 </head>
 <!-- end: HEAD -->
 
 <body>
-<div id="wrap">
-	<div class="container">
-		<div class="top_title_area">8월 첫째주 주말 날씨 정보입니다.</div>
-		<div class="content_area">
-			
-			<!-- start: LNB -->
-			
+<!-- start: Btv template -->	
 <div class="webview_area">
 	<div class="weather_weekend_wrap">
+		<!-- Start:주말 날씨 토요일 -->
 		<div class="weather_weekend">
 			<div class="weather_weekend__info">
+				<!-- [D] 날짜와 요일 -->
 				<p class="weather_weekend__date">28일 토요일</p>
-				<p class="weather_weekend__weather_img"><img src="../../assets/images/weather/sky_s02_m.png" class="weather_w_img"/></p>
-			</div>
-			<div class="weather_weekend__info_more">
-				<p class="weather_weekend__weather_title">구름조금</p>
-				<p class="weather_weekend__temp">
-					<span class="degree_high">최고 32&deg;</span>
-					<span class="degree_low">최저 22&deg;</span>
+				<!-- [D] 날씨 이미지 -->
+				<p class="weather_weekend__weather_img">
+					<img src="../../assets/images/weather/sky_s02_m.png" class="weather_w_img" alt="대표날씨 이미지"/>
+					<img src="../../assets/images/weather/sky_nodate_m.png" class="weather_w_noimg" alt="데이터없음 이미지"/>
 				</p>
-				<p class="weather_weekend__precipitation">강수확율 : 30%</p>
+			</div>
+			<!-- [D] 날씨 상태 텍스트, 최고/최저기온 강수확률 -->
+			<div class="weather_weekend__info_more">
+				<p class="weather_weekend__weather_title"><span class="data">구름조금</span><span class="no_data">정보없음</span></p>
+				<p class="weather_weekend__temp">
+					<span class="degree_high">최고 <span class="data">32</span><span class="no_data">&#65293;</span>&deg;</span>
+					<span class="degree_low">최저 <span class="data">22</span><span class="no_data">&#65293;</span>&deg;</span>
+				</p>
+				<p class="weather_weekend__precipitation">강수확률 : <span class="data">30</span><span class="no_data">&#65293;</span>%</p>
 			</div>
 		</div>
+		<!-- End:주말 날씨 토요일 -->
+
+		<!-- Start:주말 날씨 일요일:: 데이터가 없을 경우 none을 추가해줍니다. -->
 		<div class="weather_weekend none">
 			<div class="weather_weekend__info">
-				<p class="weather_weekend__date">29일 일요일</p>
-				<p class="weather_weekend__weather_img"><img src="../../assets/images/weather/sky_nodate_m.png" class="weather_w_img"/></p>
-			</div>
-			<div class="weather_weekend__info_more">
-				<p class="weather_weekend__weather_title">정보없음</p>
-				<p class="weather_weekend__temp">
-					<span class="degree_high">최고 -&deg;</span>
-					<span class="degree_low">최저 -&deg;</span>
+				<!-- [D] 날짜와 요일 -->
+				<p class="weather_weekend__date">28일 일요일</p>
+				<!-- [D] 날씨 이미지 -->
+				<p class="weather_weekend__weather_img">
+					<img src="../../assets/images/weather/sky_s02_m.png" class="weather_w_img" alt="대표날씨 이미지"/>
+					<img src="../../assets/images/weather/sky_nodate_m.png" class="weather_w_noimg" alt="데이터없음 이미지"/>
 				</p>
-				<p class="weather_weekend__precipitation">강수확율 : -%</p>
+			</div>
+			<!-- [D] 날씨 상태 텍스트, 최고/최저기온 강수확률 -->
+			<div class="weather_weekend__info_more">
+				<p class="weather_weekend__weather_title"><span class="data">구름조금</span><span class="no_data">정보없음</span></p>
+				<p class="weather_weekend__temp">
+					<span class="degree_high">최고 <span class="data">32</span><span class="no_data">&#65293;</span>&deg;</span>
+					<span class="degree_low">최저 <span class="data">22</span><span class="no_data">&#65293;</span>&deg;</span>
+				</p>
+				<p class="weather_weekend__precipitation">강수확률 : <span class="data">30</span><span class="no_data">&#65293;</span>%</p>
 			</div>
 		</div>
-		
+		<!-- End:주말 날씨 일요일 -->
+
 	</div>
 </div>
-			<!-- end: LNB -->
-		
-		</div>	
-		<div class="help_area">도움말 보여줘</div>
-	</div>
-</div>
+<!-- end: Btv template -->
 </body>
 </html>

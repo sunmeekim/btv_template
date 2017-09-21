@@ -24,7 +24,6 @@ body, html {
 		left: 0;
 	}
 }
-
 .container {
 	height: 430px;
 	position: absolute;
@@ -42,17 +41,21 @@ body, html {
 	text-align: center;
 	line-height: 80px;
 	color: $C-black;
-	font-size:$F-size-small;
+	font-size: $F-size-small;
 	overflow: hidden;
+	border-bottom: 1px solid #ccc;
 }
 .help_area {
-	height: 90px;
+	height: 80px;
 	text-align: center;
 	color: $C-font-dark;
 	font-size:$F-size-xsmall;
 	clear: both;
+	border-top: 1px solid #ccc;
+	padding-top:10px;
 }
 .content_area {
 	height: 260px;
 	@include clear();
 }
+

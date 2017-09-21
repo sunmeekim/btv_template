@@ -27,6 +27,10 @@ body {
 	word-wrap: break-word;
 	word-break: keep-all;
 }
+html, 
+body {
+	background: transparent;
+}
 img, fieldset {
 	border: 0;
 }
@@ -185,6 +189,7 @@ sup {
 
 img {
 	border-style: none;
+	vertical-align: top;
 }
 
 svg:not(:root) {

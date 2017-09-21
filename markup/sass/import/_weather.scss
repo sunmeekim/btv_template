@@ -19,9 +19,10 @@
     }
 
     &__temp {
+        margin-top: 5px;
         font-size:$F-size-small;
         color: $C-font-dark;
-        margin-top: 15px;
+        font-weight: $F-weight-bold;
     }
 
     &__nodata {
@@ -46,9 +47,14 @@
         .weather_card_wrap__nodata {
             margin-top: 60px;
             display: block;
-            color: $C-font-light;
+            color: #bcbcbc;
+            font-weight: $F-weight-bold;
+
         }
     }
+}
+.weather_weekly {
+	margin-top: 10px;
 }
 .weather_daily_wrap {
     width:100%;
@@ -63,7 +69,7 @@
         &__info {
             float: left;
             width: 450px;
-            margin: 30px 0 0 35px;
+            margin: 20px 0 0 35px;
         }
         &__title {
             font-size: $F-size-xbig;
@@ -72,12 +78,12 @@
         }
 
         &__detail {
-            margin-top: 18px;
+            margin-top: 0;
             @include clear();
         }
         &__degree {
             float: left;
-            font-size: 4.0rem;
+            font-size: 4.4rem;
             color: $C-black;
         }
         &__detail_more {
@@ -90,8 +96,12 @@
         }
         &__degree_more {
             margin-top: 0;
-            .degree_high,
+
             .degree_low {
+                margin-left: 10px;
+            }
+
+            .data {
                 display: inline-block;
                 vertical-align: top;
                 font-size: $F-size-under;
@@ -115,7 +125,7 @@
     }
     .weather_daily_timeline {
         float:left;
-        margin: 30px 0 0 70px;
+        margin: 33px 0 0 70px;
         &__list {
 
             @include clear();
@@ -146,9 +156,16 @@
 .weather_weekend_wrap {
     display: flex;
     justify-content: center;
+    margin-top: 34px;
 
     .weather_weekend {
         width: 535px;
+
+        .no_data,
+        .weather_w_noimg {
+            display: none;
+        }
+
         &__info {
             float: left;
             width: 132px;
@@ -194,6 +211,14 @@
             .weather_weekend__precipitation {
                 color: $C-font-disable;
             }
+            .no_data,
+            .weather_w_noimg {
+                display: inline;
+            }
+            .data,
+            .weather_w_img {
+                display: none;
+            }
             
         }
     }
@@ -205,6 +230,7 @@
 .weather_finedust_wrap {
     display: flex;
     justify-content: center;
+    margin-top: 28px;
 
     .weather_atmosphere {
         float: left;
@@ -236,7 +262,7 @@
         &__data_value {
             display: inline-block;
             vertical-align: top;
-            width: 178px;
+            width: 148px;
             height: 38px;
             margin: 0 auto;
             border: 1px solid #ddd;
@@ -249,6 +275,8 @@
     }
     .weather_finedust {
         float: left;
+        margin-left: 100px;
+        
         &__list {
             
             @include clear();
@@ -268,15 +296,24 @@
         &__info_img,
         &__info_data {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
+            
         }
         &__info_data {
             font-size: 2.5rem;
             font-weight: $F-weight-bold;
         }
         &__data_value {
-
-            margin-top: 13px;
+            display: inline-block;
+            vertical-align: top;
+            width: 148px;
+            height: 38px;
+            margin: 18px auto 0;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            line-height: 42px;
+            color: $C-font-dark;
             font-size: $F-size-small;
         }
         .weather_finedust__list + .weather_finedust__list {

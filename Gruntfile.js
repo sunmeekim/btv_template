@@ -67,7 +67,7 @@ module.exports = function (grunt) {
             options: {
                 show_date : true,
                 filename: 'index.html',
-                title:'hidden biz network 마크업 산출물',
+                title:'Btv 템플릿 산출물',
                 include_folder : ['includes', 'inc', 'testInc'],
                 file_sort : 'asc',
                 file_sort_key : 'title',
