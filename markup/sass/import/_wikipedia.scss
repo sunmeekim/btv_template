@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_위키피디아
+/* ---------------------------------------------------------------------- */
+.wikipedia_wrap {
+
+   height: 250px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   overflow: hidden;
+   padding: 6px 0 0;
+
+   .wikipedia_block {
+      width: 1250px;
+      color: $C-font-basic;
+      @include multiline-ellipsis(6,$F-size-xsmall,$base-line-height,block);
+   }
+
+   .data {
+         font-size: $F-size-xsmall;
+         text-align: center;
+
+   }
+}

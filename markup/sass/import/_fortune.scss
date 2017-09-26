@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_운세
+/* ---------------------------------------------------------------------- */
+.fortune_wrap {
+      display: flex;
+      justify-content: center;
+      &__img {
+            float: left;
+            width: 230px;
+            overflow: hidden;
+            margin-top: 28px;
+      }
+      &__info {
+            float: left;
+            margin: 32px 0 0 22px;
+      }
+      &__title {
+            width: 995px;
+            font-size: $F-size-big;
+            color: $C-font-basic;
+      }
+      &__title-year {
+            color: $C-black;
+      }
+      &__zodiac {
+            color: $C-black;
+      }
+      &__astromanic {
+            color: $C-font-basic;
+      }
+      &__desc {
+            margin-top: 18px;
+            width: 995px;
+            font-size: $F-size-xsmall;
+            color: $C-font-basic;
+            @include multiline-ellipsis(3,$F-size-xsmall,1.5,block);
+      }
+      .fortune_wrap__title-year + .fortune_wrap__zodiac {
+            color: $C-font-basic;
+      }
+}

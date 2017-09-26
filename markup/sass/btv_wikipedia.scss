@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* common */
+@import "common/variables";
+@import "common/mixins";
+@import "common/normalize";
+@import "btv.scss";
+
+/* layout */
+@import "layout/container";
+
+/* component */
+//@import "component/card";
+
+/* import */
+@import "import/wikipedia";
