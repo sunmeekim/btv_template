@@ -19,6 +19,7 @@ module.exports = function (grunt) {
         CSS_NAME : 'btv_weather',
         CSS_NAME2 : 'btv_wikipedia',
         CSS_NAME3 : 'btv_fortune',
+        CSS_NAME4 : 'btv_traffic',
         CSS_STATIC_NAME : 'btv',
         // STATIC_DIR
         PUBLIC_DIR: './markup/dist/assets',
@@ -152,6 +153,7 @@ module.exports = function (grunt) {
                     '<%= PUBLIC_DIR %>/css/<%= CSS_NAME %>.css': './markup/sass/<%= CSS_NAME %>.scss',
                     '<%= PUBLIC_DIR %>/css/<%= CSS_NAME2 %>.css': './markup/sass/<%= CSS_NAME2 %>.scss',
                     '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css': './markup/sass/<%= CSS_NAME3 %>.scss',
+                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css': './markup/sass/<%= CSS_NAME4 %>.scss',
                     '<%= PUBLIC_DIR %>/css/<%= CSS_STATIC_NAME %>.css': './markup/sass/<%= CSS_STATIC_NAME %>.scss'
                     //'<%= PUBLIC_DIR %>/css/pc/editor_template.css': './develop/markup/sass/editor_template_pc.scss',
                     //'<%= PUBLIC_DIR %>/css/mobile/editor_template.css': './develop/markup/sass/editor_template_mobile.scss',
@@ -205,6 +207,10 @@ module.exports = function (grunt) {
                     '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css': [
                         './markup/sass/common/_dummy_charset.scss',
                         '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css'
+                    ],
+                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css': [
+                        './markup/sass/common/_dummy_charset.scss',
+                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css'
                     ]
                 }
             }
