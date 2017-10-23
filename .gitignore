@@ -27,7 +27,6 @@ coverage
 local.js
 web/mobile/html
 web/pc/html
-upload_storage
 html_build
-dist/admin.app.js
 .map
+dist
