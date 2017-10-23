@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_주문
+/* ---------------------------------------------------------------------- */
+.order_wrap {
+    display: flex;
+    justify-content: center;
+
+    .order_box {
+        width:760px;
+        height: 188px;
+        border: 1px solid #d9d9d9;
+        border-radius: 1px;
+        background: #fcfcfc;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__img {
+            width: 130px;
+            height: 130px;
+            position: relative;
+            background: #000;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 29px;
+            &:before {
+                position: absolute;
+                width: 128px;
+                height: 128px;
+                border: 1px solid #d9d9d9;
+                content:'';
+            }
+        }
+        &__ordertext {
+           max-width: 505px;
+           margin-left: 45px;
+           text-align: center;
+           font-size: 2.5rem;
+        }
+    }
+
+    .order_box2 {
+        width: 1234px;
+        height: 188px;
+        border: 1px solid #d9d9d9;
+        border-radius: 1px;
+        background: #fcfcfc;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        &.end {
+            margin-top: 30px;
+        }
+    }
+    .order_info {
+        float: left;
+        width: 576px;
+
+        &__img {
+            width: 130px;
+            height: 130px;
+            position: relative;
+            background: #000;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 29px;
+            &:before {
+                position: absolute;
+                width: 128px;
+                height: 128px;
+                border: 1px solid #d9d9d9;
+                content:'';
+            }
+        }
+        &__box {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 370px;
+            height: 130px;
+            margin-left: 7px;
+        }
+        &__menu {
+            @include ellipsis;
+            vertical-align: top;
+            font-size: $F-size-under;
+            font-weight: $F-weight-bold;
+        }
+        &__menu-detaile {
+            @include ellipsis;
+            vertical-align: top;
+            font-size: $F-size-xsmall;
+            color: $C-font-light;
+            margin-top: -5px;
+        }
+        &__value {
+            color: #ff4909;
+            font-weight: $F-weight-bold;
+            margin-top: -20px;
+            letter-spacing: -2px;
+        }
+
+        &__price-data {
+            font-size: $F-size-xxbig;
+        }
+        &__discount {
+            font-size: $F-size-small;
+        }
+    }
+    .delivery_info {
+        max-width: 585px;
+        vertical-align: top;
+
+        &:before {
+            content: '';
+            width: 2px;
+            background: #ccc;
+            height: 140px;
+            position: absolute;
+            left: 575px;
+            top: 24px;
+
+        }
+        &__list {
+            margin-left: 30px;
+            height: 140px;
+        }
+        &__item {
+            @include clear();
+            @include ellipsis(block);
+            vertical-align: top;
+            min-height: 50px;
+        }
+        &__item-title {
+            float: left;
+            font-size: $F-size-small;
+            font-weight: $F-weight-bold;
+            
+        }
+        &__item-data {
+            @include ellipsis;
+            float: left;
+            margin-left: 10px;
+            max-width: 435px;
+            font-size: $F-size-small;
+            color:$C-font-light;
+           
+            &.active {
+                color: #ff4909;
+            }
+        }
+    }
+    .order_btnbox {
+        margin-left: 10px;
+        &__button {
+            width: 188px;
+            height: 90px;
+            outline: 1px solid #d9d9d9;
+            display: block;
+            background: #fff;
+            border: 5px solid #fff;
+            border-radius: 1px;
+            font-size: $F-size-under;
+            font-weight: bold;
+            cursor: pointer;
+
+            & + .order_btnbox__button {
+                margin-top: 9px;
+            }
+            &.active {
+                border: 5px solid #ff4909;
+                outline: 1px solid #ff4909;
+                color:#ff4909;
+            }
+        }
+        &__button-large {
+            width: 188px;
+            height: 188px;
+            outline: 1px solid #d9d9d9;
+            display: block;
+            background: #fff;
+            border: 5px solid #fff;
+            border-radius: 1px;
+            font-size: $F-size-under;
+            font-weight: bold;
+            cursor: pointer;
+
+            &.active {
+                border: 5px solid #ff4909;
+                outline: 1px solid #ff4909;
+                color:#ff4909;
+            }
+        }
+    }
+
+    .order_mybox {
+        width:712px;
+        height: 234px;
+        border: 1px solid #d9d9d9;
+        border-radius: 1px;
+        background: #fcfcfc;
+        margin-top: 10px;
+        &__title {
+            display: block;
+            border-bottom: 2px solid #ccc;
+            margin: 0 30px;
+            text-align: center;
+            font-size: $F-size-small;
+            padding: 13px 0 2px;
+        }
+        + .order_mybox {
+            margin-left: 10px;
+        }
+    }
+    .order_myinfo {
+        width: 648px;
+        margin: 18px 0;
+
+        &__img {
+            width: 130px;
+            height: 130px;
+            position: relative;
+            background: #000;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 29px;
+            &:before {
+                position: absolute;
+                width: 128px;
+                height: 128px;
+                border: 1px solid #d9d9d9;
+                content:'';
+            }
+        }
+        &__box {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 370px;
+            height: 130px;
+            margin-left: 7px;
+        }
+        &__menu {
+            @include ellipsis;
+            vertical-align: top;
+            font-size: $F-size-under;
+            font-weight: $F-weight-bold;
+        }
+        &__menu-detaile {
+            @include ellipsis;
+            vertical-align: top;
+            font-size: $F-size-xsmall;
+            color: $C-font-light;
+            margin-top: -5px;
+        }
+        &__value {
+            color: #ff4909;
+            font-weight: $F-weight-bold;
+            margin-top: -20px;
+            letter-spacing: -2px;
+        }
+
+        &__price-data {
+            font-size: $F-size-xxbig;
+        }
+        &__discount {
+            font-size: $F-size-small;
+        }
+        &__nondata {
+            display: none;
+        }
+        &.none {
+            margin-left: 32px;
+
+            .order_myinfo__nondata {
+                display: block;
+                text-align: center;
+                margin-top: 62px;
+            }
+            .order_myinfo__nondata-logo {
+                display: inline-block;
+                vertical-align: middle;
+                width: 101px;
+                height: 22px;
+                margin: 3px 5px 0 0;
+                background: url('../../assets/images/order/ico_logo.png') no-repeat 0 0;
+            }
+            .order_myinfo__nondata-text {
+                font-size: $F-size-xsmall;
+                color: $C-font-light;
+                font-weight: $F-weight-bold;
+            }
+            .order_myinfo__img,
+            .order_myinfo__box {
+                display: none;
+            }
+        }
+    }
+}
+.order_text {
+    text-align: center;
+    font-size: $F-size-small;
+    font-weight: bold;
+    padding-bottom: 15px;
+    &.price {
+        &:before {
+            content:'';
+            display: inline-block;
+            vertical-align: top;
+            width: 29px;
+            height: 28px;
+            margin: 3px 5px 0 0;
+            background: url('../../assets/images/order/ico_txt.png') no-repeat 0 0;
+        }
+    }
+    .order_ico_text {
+        display: inline-block;
+        vertical-align: top;
+        border: 3px solid #000;
+        height: 30px;
+        border-radius: 17px;
+        padding:0 15px;
+        line-height: 34px;
+        font-size: $F-size-xsmall;
+        &:before {
+            content:'';
+            width: 19px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 2px 5px 0 0;
+            background: url('../../assets/images/order/ico_mic.png') no-repeat 0 0;
+        }
+    }
+}

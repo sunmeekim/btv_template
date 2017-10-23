@@ -1,0 +1,26 @@
+@@include('head.html', {"css": "btv_help", "title": "[Btv] 도움말 : Btv_help","filePath": "../"})
+<body>
+
+<div class="content_area">
+
+<!-- start: Btv template -->
+@@include('melon_help.html')
+<!-- end: Btv template -->
+
+<!-- start: 테스트용 이전 다음 버튼 -->
+    <div class="pagenate">
+        <div class="pagenate__prev disabled">
+            <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+            <p class="pagenate__paging"><span class="current">1</span>/2</p>
+        </div>
+        <div class="pagenate__next">
+            <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+            <p class="pagenate__paging"><span class="current">1</span>/2</p>
+        </div>
+    </div>
+<!-- end: 테스트용 이전 다음 버튼 -->
+</div>
+
+</body>
+
+</html>

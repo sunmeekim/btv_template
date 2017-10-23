@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 2-01.쇼핑_주문가능_1 : Btv_shopping</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_shopping.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+<!-- start: Btv template -->
+
+<div class="webview_area">
+	<!-- [D] 주문관련 문구 없을경우 <div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div> 이부분을 통째로 빼주세요 -->
+	<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>
+
+	<div class="shopping_wrap">
+		<div class="shopping_box2">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="shopping_box2__img"><img src="../../assets/images/shopping/test_img.png" class="shopping_menu_img" alt="쇼핑제품 이미지"/></span>
+			<div class="shopping_box2__info">
+				<div class="shopping_box2__title">
+					<!-- [D] 해당 제품 타이틀 -->
+					<h3 class="shopping_box2__title-main">
+						<span class="shopping_box2__text-ellipsis"><span class="data">농심 안성탕면 골드 40봉 2BOX 농심안성탕면골드40봉2BOX</span></span>
+					</h3>
+					
+					<!-- [D] 해당 제품 서브타이틀(도서의 경우 저자 정보) 없을경우 빼주세요. -->
+					<!-- <span class="shopping_box2__title-sub">
+						<span class="shopping_box2__text-ellipsis"><span class="data">이나영 저/ 누구 그림</span></span>
+					</span> -->
+				</div>
+
+				<div class="shopping_box2__data">
+					<div class="shopping_box2__data-detail">
+						<!-- [D] 해당 제품 특이정보 -->
+						<p class="shopping_box2__data-name"><span class="data">고객최저가</span></p>
+						<!-- [D] 해당 제품 배송정보 -->
+						<p class="shopping_box2__data-delivery"><span class="data">무료배송</span></p>
+					</div>
+					<div class="shopping_box2__data-price">
+						<!-- [D] 해당 제품 할인 전 가격(취소선있음) -->
+						<span class="shopping_box2__before-price"><span class="data">1,034,500원</span></span>
+						<!-- [D] 해당 제품 최종결제가 -->
+						<strong class="shopping_box2__after-price"><span class="data">824,600원</span></strong>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [D] 해당 제품 결제하기 버튼 -->
+		<div class="shopping_btnbox">
+			<button type="submit" class="shopping_btnbox__button-large active">결제하기</button>
+		</div>
+	</div>
+</div>
+<!-- end: Btv template -->
+</body>
+</html>

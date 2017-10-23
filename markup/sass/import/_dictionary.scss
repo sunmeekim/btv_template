@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_어학사전
+/* ---------------------------------------------------------------------- */
+.dictionary_wrap {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+      align-items: center;
+      
+   .dictionary_box {  
+      min-width: 710px;
+      max-width: 1528px;
+      height: 233px;
+      background: #fcfcfc;
+      border: 1px solid #9d9d9d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      &__info {
+           padding:0 115px;
+           word-break: keep-all;
+           font-size: $F-size-xbig;
+           font-weight: $F-weight-bold;
+      }
+      .data {
+            white-space: nowrap;
+            &+.data {
+                  margin-left: 50px;
+            }
+      }
+   }
+
+   
+}

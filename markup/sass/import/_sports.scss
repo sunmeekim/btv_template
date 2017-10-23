@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_스포츠
+/* ---------------------------------------------------------------------- */
+.sports_wrap {
+
+    .teamrank_wrap {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 10px;
+        &__list {
+            width: 712px;
+            +.teamrank_wrap__list {
+                margin-left: 2px;
+            }
+        }
+        &__list-item {
+            height: 78px;
+            background:#fff;
+            font-size: $F-size-xsmall;
+            line-height: 78px;
+            &.even {
+                background: #f8f8f8;
+            }
+            &.winner {
+                .teamrank_wrap__item-logo {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 2px;
+                        top: 14px;
+                        width: 46px;
+                        height: 46px;
+                        background: url('../../assets/images/sports/nugu_sports_rank_icon_badge.png') no-repeat 0 0;
+                    }
+                }
+                
+            }
+            &.active {
+                color:#f53f0e;
+            }
+            @include clear;
+        }
+        &__item-ranking {
+            float:left;
+            width: 57px;
+            text-align:center;
+            font-size: $F-size;
+            font-weight: $F-weight-bold;
+        }
+        &__item-logo {
+            float:left;
+            width: 63px;
+
+            .sports_img {
+                vertical-align: middle;
+                margin-top: -4px;
+            }
+        }
+        &__item-name {
+            float:left;
+            width: 63px;
+            font-weight: $F-weight-bold;
+        }
+        &__item-game {
+            float:left;
+            font-size: $F-size-xxsmall;
+        }
+        &__item-diff {
+            float:left;
+            
+            font-size: $F-size-xxsmall;
+            &:before {
+                content:'';
+                width: 2px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                background: #b2b2b2;
+                margin: 0 10px;
+            }
+        }
+        &__item-scoring {
+            float:left;
+            font-size: $F-size-xxsmall;
+            &:before {
+                content:'';
+                width: 2px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                background: #b2b2b2;
+                margin: 0 10px;
+            }
+        }
+        &__item-winrate {
+            float:left;
+            font-size: $F-size-xxsmall;
+            &:before {
+                content:'';
+                width: 2px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                background: #b2b2b2;
+                margin: 0 10px;
+            }
+        }
+    }
+
+}

@@ -55,6 +55,7 @@ body, html {
 	padding-top:10px;
 }
 .content_area {
+	position: relative;
 	height: 260px;
 	@include clear();
 }
