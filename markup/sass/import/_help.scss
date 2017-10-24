@@ -34,72 +34,100 @@
         }
         
     }
+    .card_wrap__item {
+        width: 472px;
+        height: 232px;
+        background: #fcfcfc;
+        border-radius: 1px;
     
-}
-.card_wrap__item {
-    width: 472px;
-    height: 232px;
-    background: #fcfcfc;
-    border-radius: 1px;
-
-    &.none {
-        .help_card {
-            display: none;
+        &.none {
+            .help_card {
+                display: none;
+            }
+            
         }
-        
     }
 }
 
-.pagenate {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.help_wrap {
+    justify-content: space-around;
+    padding-top: 7px;
 
-    &__prev {
-        position: absolute;
-        left:50px;
-        top: 50%;
-        margin-top: -80px;
-        
-        &.disabled {
-            @include opacity(.3);
+    .card_wrap__item {
+        position: relative;
+        background: #fcfcfc;
+        &.active {
+            &:before {
+                content:'';
+                width: 196px;
+                height: 234px;
+                position: absolute;
+                border: 8px solid #ff4909;
+                border-radius: 3px;
+                left: -8px;
+                top: -8px;
+            }
+            .help_default_card__order-info {
+                border-color: #ff4909;
+                background: #ff4909;
+                color: #fff;
+                &:before {
+                    content:'';
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 10px;
+                    height: 15px;;
+                    background: url('../../assets/images/help/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
+                    background-size: 10px 15px;
+                    margin: 6px 5px 0 0;
+                }
+            }
+            .help_default_card__domain {
+                color:#ff4909;
+            }
         }
     }
-    &__btn-prev {
-        width: 50px;
-        height: 80px;
-        background: url('../../assets/images/help/btn__prev.png') no-repeat 0 0;
-        overflow: hidden;
-    }
-    &__next {
-        position: absolute;
-        right:50px;
-        top: 50%;
-        margin-top: -80px;
-        
-        &.disabled {
-            @include opacity(.3);
+    .help_default_card {
+        .help_s_img {
+            width: 126px;
+            height: 126px;
         }
-    }
-    &__btn-next {
-        width: 50px;
-        height: 80px;
-        background: url('../../assets/images/help/btn__next.png') no-repeat 0 0;
-        overflow: hidden;
-    }
+        &__order {
+            text-align:right;
+            margin: 9px 9px 0;
+        }
+        &__order-info {
+            display: inline-block;
+            vertical-align: top;
+            height: 28px;
+            padding:0 10px;
+            border: 1px solid #333;
+            border-radius: 14px;
+            font-size: 1.3rem;
+            line-height: 29px;
+            &:before {
+                content:'';
+                display: inline-block;
+                vertical-align: top;
+                width: 10px;
+                height: 15px;;
+                background: url('../../assets/images/help/nugu_advice_icon_mic2.png') no-repeat 0 0;
+                background-size: 10px 15px;
+                margin: 6px 5px 0 0;
+            }
 
-    &__paging {
-        font-size: $F-size-xsmall;
-        color: $C-font-light;
-        width: 50px;
-        text-align: center;
-
-        .current {
-            color: $C-font-dark;
+        }
+        &__picto {
+            margin-top: 0;
+            text-align: center;
+        }
+        &__domain {
+            text-align: center;
+            font-size: $F-size-xsmall;
             font-weight: $F-weight-bold;
+        }
+        &__nodata {
+            display: none;
         }
     }
 }

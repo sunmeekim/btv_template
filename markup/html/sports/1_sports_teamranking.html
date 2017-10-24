@@ -1,9 +1,15 @@
 @@include('head.html', {"css": "btv_sports", "title": "[Btv] 3-01.스포츠_올해프로야구팀순위 : Btv_sports","filePath": "../"})
 <body>
 
+<div class="content_area">
 <!-- start: Btv template -->
 @@include('sports_teamranking.html')
 <!-- end: Btv template -->
-		
+
+
+<!-- start: 이전 다음 버튼 -->
+@@include('pagenate.html')
+<!-- end: 이전 다음 버튼 -->
+</div>		
 </body>
 </html>

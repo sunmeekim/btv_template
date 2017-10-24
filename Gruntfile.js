@@ -25,12 +25,13 @@ module.exports = function (grunt) {
         CSS_NAME7 : 'btv_shopping',
         CSS_NAME8 : 'btv_sports',
         CSS_NAME9 : 'btv_dictionary',
-        CSS_STATIC_NAME : 'btv',
+        CSS_STATIC_NAME : 'btv_common',
         // STATIC_DIR
         PUBLIC_DIR: './markup/dist/assets',
         BASE_DIR  : "",
         HTML_DIR  : "./markup/html",
         BUILD_DIR : "./markup/dist/html",
+        IMG_DIR : "./markup/dist/assets/images/spr_img",
         // Metadata.
         pkg: grunt.file.readJSON("package.json"),
         banner: '/*!  <%= pkg.title || pkg.name %> - v<%= pkg.version %> ' + grunt.util.linefeed + '<%= pkg.author.name %>' + grunt.util.linefeed + ' */' + grunt.util.linefeed,
@@ -81,6 +82,25 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        sprite: {
+			spr_img: {
+				src: ['./markup/img/spr_img/*.png'],
+				dest: '<%= IMG_DIR %>/spr_img.png',
+				imgPath: '../images/spr_img/spr_img.png',
+				destCss: './markup/sass/sprites/_spr_img.scss',
+				padding: 4,
+				cssSpritesheetName: 'spr_img'
+			},
+
+			spr_img_2x: {
+				src: ['./markup/img/spr_img/2x/*.png'],
+				dest: '<%= IMG_DIR %>/spr_img_2x.png',
+				imgPath: '../images/spr_img/spr_img_2x.png',
+				destCss: './markup/sass/sprites/_spr_img_2x.scss',
+				padding: 4,
+				cssSpritesheetName: 'spr_img_2x'
+			},
+		},
 
         sass: {
             options: {
@@ -183,6 +203,9 @@ module.exports = function (grunt) {
                     cwd: './markup/img',
                     src: [
                         '**/*',
+                        '!**/spr_*.png',
+                        '!**/spr_*/**',
+                        '!**/spr_*/**/*.png'
                     ],
                     dest: 'markup/dist/assets/images'
                 }]
@@ -195,7 +218,7 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: 'markup/dist',
                     src: ['**'],
-                    dest: 'dist'
+                    dest: 'markup/dist'
                 }]
             },
             image: {
@@ -203,7 +226,9 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: 'markup/img',
                         src: [
-                            '**/*.png'
+                            '**/*.png',
+                            '!**/spr_*.png',
+                            '!**/spr_*/**/*.png'
                         ],
                         dest: 'markup/dist/assets/images'
                     }]
@@ -239,7 +264,21 @@ module.exports = function (grunt) {
             common_sass: {
                 files: ['./markup/sass/**/*.scss'],
                 tasks: ['build_sass', 'copy:static_resource', 'sync']
-            }
+            },
+            sprite: {
+				files: ['./markup/img/spr_*/**/*.png'],
+				tasks: ['sprite', 'build_sass', 'copy:static_resource', 'sync']
+			},
+
+			image: {
+				files: [
+					'markup/img/**/*.png',
+					'!markup/img/spr_*.png',
+					'!markup/img/spr_*/**/*.png'
+				],
+				tasks: ['sync']
+			}
+
         },
 
         concurrent: {
@@ -254,11 +293,58 @@ module.exports = function (grunt) {
     // default
     grunt.registerTask('default', ['clean', 'concurrent:build', 'watch']);
     grunt.registerTask('deploy', ['clean', 'sassNoMap', 'concurrent:deploy']);
+
     grunt.registerTask('build_sass', ['sass', 'postcss', 'cssmin']);
-    grunt.registerTask('sass_init', ['build_sass', 'copy:static_resource']);
+
+    grunt.registerTask('sass_init', ['sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);
+
+    grunt.registerTask('sass_init2', ['serverUrl', 'sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);
     grunt.registerTask('html', ['includereplace', 'markupfileindex']);
+    grunt.registerTask('sprite_common_func', function () {
+        _.each(grunt.config.data.sprite, function(conf){
+            if(!!conf.cssTemplate === false){
+                conf.cssTemplate = function (params) {
+                    var template = grunt.file.read('./markup/sass/sprites/sprites.mustache');
+                    return Mustache.render(template, params);
+                }
+            }
+
+            if(!!conf.cssOpts === false){
+                conf.cssOpts = {
+                    removepx: function () {
+                        return function (text, render) {
+                            var value = render(text);
+                            return '0px' === value ? '0' : value;
+                        };
+                    },
+                    retina: function () {
+                        return function (text, render) {
+                            var pixelRatio = 2;
+                            return parseInt(render(text), 10) / pixelRatio + 'px';
+                        };
+                    }
+                }
+            }
+        });
+    });
     // sass map 생성 여부
     grunt.registerTask('sassNoMap', function () {
         grunt.option('no-map', true);
+    });
+    grunt.registerTask('serverUrl', function () {
+        // var templateTaskName = ['spr_template', 'spr_template_2x'],
+        var url = '';
+
+        // if(e === 'deploy'){
+            url = '../images';
+            // grunt.config.data.IMG_DIR = '이미지 절대경로';
+        //     url = '이미지 상대경로';
+        // }
+
+        _.each(grunt.config.data.sprite, function(conf, key){
+            // if(templateTaskName.indexOf(key) !== -1) {
+            conf.imgPath = url + '/' + key + '.png';
+            //}
+        });
     });
 };

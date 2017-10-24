@@ -5,42 +5,60 @@
     overflow: hidden;
     display: inline-block;
     text-indent: -999px;
-    background-image: url('/biz/static/assets/images/spr_img_2x.png') $important;
+    background-image: url('../images/spr_img/spr_img_2x.png') $important;
     background-repeat: no-repeat;
     content: '';
 }
 
 $spr_img_2x: (
     spritesheet_name: spr_img_2x,
-    total_width: 696px,
-    total_height: 500px,
-    total_width_retina: 348px,
-    total_height_retina: 250px,
-    gnb_logo_black: (
-        offset_x: -504px,
-        offset_y: 0,
-        width: 192px,
-        height: 48px,
-        offset_x_retina: -252px,
-        offset_y_retina: 0,
-        width_retina: 96px,
-        height_retina: 24px),
-    gnb_menu: (
-        offset_x: -504px,
-        offset_y: -52px,
-        width: 40px,
-        height: 40px,
-        offset_x_retina: -252px,
-        offset_y_retina: -26px,
-        width_retina: 20px,
-        height_retina: 20px),
-    thanks_img: (
+    total_width: 158px,
+    total_height: 102px,
+    total_width_retina: 79px,
+    total_height_retina: 51px,
+    btn__next: (
         offset_x: 0,
         offset_y: 0,
-        width: 500px,
-        height: 500px,
+        width: 36px,
+        height: 66px,
         offset_x_retina: 0,
         offset_y_retina: 0,
-        width_retina: 250px,
-        height_retina: 250px),
+        width_retina: 18px,
+        height_retina: 33px),
+    btn__next2: (
+        offset_x: -80px,
+        offset_y: 0,
+        width: 52px,
+        height: 32px,
+        offset_x_retina: -40px,
+        offset_y_retina: 0,
+        width_retina: 26px,
+        height_retina: 16px),
+    btn__prev: (
+        offset_x: -40px,
+        offset_y: 0,
+        width: 36px,
+        height: 66px,
+        offset_x_retina: -20px,
+        offset_y_retina: 0,
+        width_retina: 18px,
+        height_retina: 33px),
+    btn__prev2: (
+        offset_x: 0,
+        offset_y: -70px,
+        width: 52px,
+        height: 32px,
+        offset_x_retina: 0,
+        offset_y_retina: -35px,
+        width_retina: 26px,
+        height_retina: 16px),
+    nugu_advice_icon_mic: (
+        offset_x: -136px,
+        offset_y: 0,
+        width: 22px,
+        height: 34px,
+        offset_x_retina: -68px,
+        offset_y_retina: 0,
+        width_retina: 11px,
+        height_retina: 17px),
 );

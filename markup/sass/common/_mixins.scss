@@ -2,75 +2,71 @@
 /* mixins.scss */
 
 // sprite
-// @mixin include-sprite($spritesheetName:null, $important:null){
-// 	@if $spritesheetName == 'spr_img' {
-// 		@include spr_img($important);
-// 	} @else if $spritesheetName == 'spr_img_2x' {
-// 		@include spr_img_2x($important);
-// 	} @else if $spritesheetName == 'spr_service' {
-// 		@include spr_service($important);
-// 	} @else if $spritesheetName == 'spr_service_2x' {
-// 		@include spr_service_2x($important);
-// 	}
-// }
-// @mixin use-sprite-normal($filename, $map:$spr_img, $retinaMap:null, $retina:false, $important:null, $mediaquery:false, $x2:false) {
-// 	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
-// }
-// @mixin use-sprite-retina($filename, $map:$retinaMap, $retinaMap:null, $retina:true, $important:null, $mediaquery:true, $x2:false) {
-// 	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
-// }
-// @mixin use-sprite-important($filename, $map:$spr_img, $retinaMap:$spr_img_2x, $retina:false, $important:true, $mediaquery:false, $x2:true) {
-// 	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
-// }
-// @mixin use-sprite($filename, $map:$spr_img, $retinaMap:$spr_img_2x, $retina:false, $important:null, $mediaquery:false, $x2:true) {
-// 	$dimension-map: map-get($map, $filename);
-// 	$spritesheet-name: map-get($map, spritesheet_name);
-// 	$importantTxt: null !default;
+@mixin include-sprite($spritesheetName:null, $important:null){
+	@if $spritesheetName == 'spr_img' {
+		@include spr_img($important);
+	} @else if $spritesheetName == 'spr_img_2x' {
+		@include spr_img_2x($important);
+	} 
+}
+@mixin use-sprite-normal($filename, $map:$spr_img, $retinaMap:null, $retina:false, $important:null, $mediaquery:false, $x2:false) {
+	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
+}
+@mixin use-sprite-retina($filename, $map:$spr_img_2x, $retinaMap:null, $retina:true, $important:null, $mediaquery:true, $x2:false) {
+	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
+}
+@mixin use-sprite-important($filename, $map:$spr_img, $retinaMap:$spr_img_2x, $retina:false, $important:true, $mediaquery:false, $x2:true) {
+	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2);
+}
+@mixin use-sprite($filename, $map:$spr_img, $retinaMap:$spr_img_2x, $retina:false, $important:null, $mediaquery:false, $x2:true) {
+	$dimension-map: map-get($map, $filename);
+	$spritesheet-name: map-get($map, spritesheet_name);
+	$importantTxt: null !default;
 
-// 	@if $important {
-// 		$importantTxt : unquote('!important');
-// 	}
+	@if $important {
+		$importantTxt : unquote('!important');
+	}
 
-// 	@if $retina {
-// 		$width: ceil(map-get($dimension-map, width_retina)) !global;
-// 		$height: ceil(map-get($dimension-map, height_retina)) !global;
-// 		$bgOffsetX: floor(map-get($dimension-map, offset_x_retina)) !global;
-// 		$bgOffsetY: ceil(map-get($dimension-map, offset_y_retina)) !global;
-// 		$bgSize: ceil(map-get($map, total_width_retina)) auto !global;
-// 	} @else {
-// 		$width: map-get($dimension-map, width) !global;
-// 		$height: map-get($dimension-map, height) !global;
-// 		$bgOffsetX: map-get($dimension-map, offset_x) !global;
-// 		$bgOffsetY: map-get($dimension-map, offset_y) !global;
-// 		$bgSize: map-get($map, total_width) auto !global;
-// 	}
+	@if $retina {
+		$width: ceil(map-get($dimension-map, width_retina)) !global;
+		$height: ceil(map-get($dimension-map, height_retina)) !global;
+		$bgOffsetX: floor(map-get($dimension-map, offset_x_retina)) !global;
+		$bgOffsetY: ceil(map-get($dimension-map, offset_y_retina)) !global;
+		$bgSize: ceil(map-get($map, total_width_retina)) auto !global;
+	} @else {
+		$width: map-get($dimension-map, width) !global;
+		$height: map-get($dimension-map, height) !global;
+		$bgOffsetX: map-get($dimension-map, offset_x) !global;
+		$bgOffsetY: map-get($dimension-map, offset_y) !global;
+		$bgSize: map-get($map, total_width) auto !global;
+	}
 
-// 	@if $mediaquery {
-// 		@include hdpi {
-// 			& {
-// 				width: $width $importantTxt;
-// 				height: $height $importantTxt;
-// 				background-position: $bgOffsetX $bgOffsetY $importantTxt;
-// 				background-size: $bgSize $importantTxt;
-// 				@include include-sprite($spritesheet-name, $important);
-// 			}
-// 		}
-// 	} @else {
-// 		width: $width $importantTxt;
-// 		height: $height $importantTxt;
-// 		background-position: $bgOffsetX $bgOffsetY $importantTxt;
+	@if $mediaquery {
+		@include hdpi {
+			& {
+				width: $width $importantTxt;
+				height: $height $importantTxt;
+				background-position: $bgOffsetX $bgOffsetY $importantTxt;
+				background-size: $bgSize $importantTxt;
+				@include include-sprite($spritesheet-name, $important);
+			}
+		}
+	} @else {
+		width: $width $importantTxt;
+		height: $height $importantTxt;
+		background-position: $bgOffsetX $bgOffsetY $importantTxt;
 
-// 		@if $retina {
-// 			background-size: $bgSize $importantTxt;
-// 		}
+		@if $retina {
+			background-size: $bgSize $importantTxt;
+		}
 
-// 		@include include-sprite($spritesheet-name, $important);
-// 	}
+		@include include-sprite($spritesheet-name, $important);
+	}
 
-// 	@if $x2 {
-// 		@include use-sprite-retina($filename: $filename, $map: $retinaMap, $retinaMap: null, $retina: true, $important: $important, $mediaquery: true, $x2: false);
-// 	}
-// }
+	@if $x2 {
+		@include use-sprite-retina($filename: $filename, $map: $retinaMap, $retinaMap: null, $retina: true, $important: $important, $mediaquery: true, $x2: false);
+	}
+}
 @mixin hdpi($ratio: 1.3){
 	@media only screen and (-webkit-min-device-pixel-ratio: $ratio),
 	only screen and (min--moz-device-pixel-ratio: $ratio),

@@ -5,7 +5,10 @@
 .order_wrap {
     display: flex;
     justify-content: center;
-
+    .order_menu_img {
+        width: 130px;
+        height: 130px;
+    }
     .order_box {
         width:760px;
         height: 188px;
@@ -15,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
+        
         &__img {
             width: 130px;
             height: 130px;

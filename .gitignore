@@ -31,3 +31,4 @@ upload_storage
 html_build
 dist/admin.app.js
 .map
+markup/dist/

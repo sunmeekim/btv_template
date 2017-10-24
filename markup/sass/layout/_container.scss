@@ -2,8 +2,15 @@
 /* ---------------------------------------------------------------------- */
 /*  Containers
 /* ---------------------------------------------------------------------- */
+.content_area {
+	position: relative;
+	height: 260px;
+	@include clear();
+}
 .webview_area {
 	width: 1530px;
 	margin:0 auto;
+	position: relative;
+	z-index: 10;
 	@include clear();
 }

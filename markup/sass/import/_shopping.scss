@@ -5,7 +5,10 @@
 .shopping_wrap {
     display: flex;
     justify-content: center;
-
+    .shopping_menu_img {
+        width: 130px;
+        height: 130px;
+    }
     .shopping_box {
         width:760px;
         height: 188px;

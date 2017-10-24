@@ -5,6 +5,12 @@
 .fortune_wrap {
       display: flex;
       justify-content: center;
+      
+      .fortune_d_img {
+            width: 230px;
+            height: 186px;
+      }
+
       &__img {
             float: left;
             width: 230px;

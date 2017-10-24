@@ -5,6 +5,11 @@
 .weather_card_wrap {
     text-align: center;
 
+    .weather_s_img {
+        width: 100px;
+        height: 100px;
+    }
+
     &__date {
         font-size:$F-size-xsmall;
         color: $C-font-basic;
@@ -62,6 +67,12 @@
     .weather_daily_represent {
         float: left;
         width: 738px;
+
+        .weather_d_img {
+            width:250px;
+            height: 250px;
+        }
+
         &__img {
             float: left;
             width: 250px;
@@ -126,6 +137,12 @@
     .weather_daily_timeline {
         float:left;
         margin: 33px 0 0 70px;
+
+        .weather_d_simg {
+            width: 100px;
+            height: 100px;
+        }
+
         &__list {
 
             @include clear();
@@ -160,7 +177,10 @@
 
     .weather_weekend {
         width: 535px;
-
+        .weather_w_img {
+            width: 132px;
+            height: 132px;
+        }
         .no_data,
         .weather_w_noimg {
             display: none;
@@ -219,7 +239,18 @@
             .weather_w_img {
                 display: none;
             }
-            
+            .weather_weekend__weather_img {
+
+                &:before {
+                    content:'';
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 132px;
+                    height: 132px;
+                    background: url('../../assets/images/weather/sky_nodate_m.png') no-repeat 0 0;
+                }
+                
+            }
         }
     }
 
@@ -235,6 +266,12 @@
     .weather_atmosphere {
         float: left;
         width: 419px;
+
+        .weather_d_img {
+            width: 180px;
+            height: 180px;
+        }
+
         &__img {
             float: left;
         }
@@ -276,7 +313,12 @@
     .weather_finedust {
         float: left;
         margin-left: 100px;
-        
+
+        .weather_d_img {
+            width: 54px;
+            height: 54px;
+        }
+
         &__list {
             
             @include clear();
