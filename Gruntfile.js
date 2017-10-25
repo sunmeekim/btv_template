@@ -3,6 +3,29 @@
 var Mustache = require("mustache");
 var _ = require('lodash');
 
+/**
+ * file config 설정
+ * ./markup/sass/*.sass =>>> ./markup/dist/css/asset/css/*.css
+ */
+var path = require('path');
+var fs = require('fs');
+
+var fileArr = fs.readdirSync(path.resolve(__dirname, './markup/sass'));
+var sassFileConfig = {};
+var minFileConfig = {};
+
+fileArr.forEach(function(filename){
+    if(filename.match(/\.scss$/)){
+        var name = filename.replace(/\.scss$/, '');
+        var cssDist = '<%= PUBLIC_DIR %>/css/'+ name + '.css';
+        sassFileConfig[cssDist] = './markup/sass/' + name + '.scss';
+        minFileConfig[cssDist] = [
+            './markup/sass/common/_dummy_charset.scss',
+            '<%= PUBLIC_DIR %>/css/' + name + '.css'
+        ];
+    }
+});
+
 module.exports = function (grunt) {
     // load grunt plugins
     require('jit-grunt')(grunt, {
@@ -15,17 +38,6 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        // CSS name
-        CSS_NAME : 'btv_weather',
-        CSS_NAME2 : 'btv_wikipedia',
-        CSS_NAME3 : 'btv_fortune',
-        CSS_NAME4 : 'btv_traffic',
-        CSS_NAME5 : 'btv_help',
-        CSS_NAME6 : 'btv_order',
-        CSS_NAME7 : 'btv_shopping',
-        CSS_NAME8 : 'btv_sports',
-        CSS_NAME9 : 'btv_dictionary',
-        CSS_STATIC_NAME : 'btv_common',
         // STATIC_DIR
         PUBLIC_DIR: './markup/dist/assets',
         BASE_DIR  : "",
@@ -109,18 +121,7 @@ module.exports = function (grunt) {
             },
 
             pc: {
-                files: {
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME %>.css': './markup/sass/<%= CSS_NAME %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME2 %>.css': './markup/sass/<%= CSS_NAME2 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css': './markup/sass/<%= CSS_NAME3 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css': './markup/sass/<%= CSS_NAME4 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME5 %>.css': './markup/sass/<%= CSS_NAME5 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME6 %>.css': './markup/sass/<%= CSS_NAME6 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME7 %>.css': './markup/sass/<%= CSS_NAME7 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME8 %>.css': './markup/sass/<%= CSS_NAME8 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME9 %>.css': './markup/sass/<%= CSS_NAME9 %>.scss',
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_STATIC_NAME %>.css': './markup/sass/<%= CSS_STATIC_NAME %>.scss'
-                }
+                files: sassFileConfig
             }
         },
 
@@ -155,44 +156,7 @@ module.exports = function (grunt) {
             },
 
             pc: {
-                files: {
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME2 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME2 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME3 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME4 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME5 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME5 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME6 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME6 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME7 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME7 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME8 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME8 %>.css'
-                    ],
-                    '<%= PUBLIC_DIR %>/css/<%= CSS_NAME9 %>.css': [
-                        './markup/sass/common/_dummy_charset.scss',
-                        '<%= PUBLIC_DIR %>/css/<%= CSS_NAME9 %>.css'
-                    ]
-                }
+                files: minFileConfig
             }
         },
 
