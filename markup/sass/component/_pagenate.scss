@@ -19,7 +19,7 @@
         width: 140px;
         text-align: center;
         &.disabled {
-            @include opacity(.3);
+            @include opacity(0);
         }
     }
     &__btn-prev {

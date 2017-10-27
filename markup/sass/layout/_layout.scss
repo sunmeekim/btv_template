@@ -32,13 +32,13 @@ body, html {
 	bottom: 0;
 	width: 100%;
 	min-width: 1920px;
-	background: rgba(0,0,0,.7);
+	background: rgba(255,255,255,.95);
 	z-index:10;
-	border-top: 1px solid #000;
+	// border-top: 1px solid #000;
 	&:before{
 		content:'';
 		width: 100%;
-		border-top: 1px solid #666;
+		// border-top: 1px solid #666;
 		position: absolute;
 		left:0;
 		top:0;
@@ -49,7 +49,7 @@ body, html {
 	height: 80px;
 	text-align: center;
 	line-height: 80px;
-	color: $C-white;
+	color: $C-black;
 	font-size: $F-size-small;
 	overflow: hidden;
 	// border-bottom: 1px solid #ccc;
@@ -57,7 +57,7 @@ body, html {
 .help_area {
 	height: 80px;
 	text-align: center;
-	color: $C-white;
+	color: $C-black;
 	font-size:$F-size-xsmall;
 	clear: both;
 	// border-top: 1px solid #ccc;
