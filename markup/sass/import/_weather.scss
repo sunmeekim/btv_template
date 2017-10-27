@@ -132,6 +132,35 @@
         &__dust {
             margin-left: 15px;
         }
+        &__special {
+            float: left;
+            width: 250px;
+            text-align: center;
+        }
+        &__special-name {
+            display: inline-block;
+            vertical-align: top;
+            width: 148px;
+            height: 38px;
+            margin: 18px auto 0;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            line-height: 42px;
+            color: #333;
+            font-size: $F-size-xxsmall;
+            font-weight: $F-weight-bold;
+            text-align: center;
+        }
+        &__special-img {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        &__special-time {
+            font-size: $F-size-small;
+            font-weight: $F-weight-bold;
+            color: #666;
+        }
         @include clear();
     }
     .weather_daily_timeline {

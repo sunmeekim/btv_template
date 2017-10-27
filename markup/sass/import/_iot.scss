@@ -1,55 +1,8 @@
 @charset "UTF-8";
 /* ---------------------------------------------------------------------- */
-/*  Btv_도움말
+/*  Btv_IOT
 /* ---------------------------------------------------------------------- */
-.help_card_wrap {
-    margin-top: 0;
-    .help_card {
-        margin:0 30px;
-        &__title {
-            padding:10px 0 2px;
-            border-bottom:2px solid #ccc;
-            font-size: $F-size-small;
-            text-align:center;
-        }
-        &__list {
-            margin-top: 20px;
-        }
-        &__list-item {
-            font-size: $F-size-xsmall;
-            color: $C-font-light;
-            .data {
-                @include ellipsis(inline-block,378px);
-            }
-            
-            &:before {
-                content: '';
-                display: inline-block;
-                vertical-align: top;
-                width: 26px;
-                height: 26px;
-                margin:2px 4px 0 0;
-                background: url('../../assets/images/help/nugu_advice_icon_mic.png') no-repeat 0 0;
-            }
-        }
-        
-    }
-    .card_wrap__item {
-        width: 472px;
-        height: 232px;
-        background: #fcfcfc;
-        border-radius: 1px;
-    
-        &.none {
-            .help_card {
-                display: none;
-            }
-            
-        }
-    }
-}
-
-.help_wrap {
+.iot_wrap {
     justify-content: space-around;
     padding-top: 7px;
 
@@ -67,7 +20,7 @@
                 left: -8px;
                 top: -8px;
             }
-            .help_default_card__order-info {
+            .iot_default_card__order-info {
                 border-color: #ff4909;
                 background: #ff4909;
                 color: #fff;
@@ -77,25 +30,21 @@
                     vertical-align: top;
                     width: 10px;
                     height: 15px;;
-                    background: url('../../assets/images/help/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
+                    background: url('../../assets/images/iot/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
                     background-size: 10px 15px;
                     margin: 6px 5px 0 0;
                 }
             }
-            .help_default_card__domain {
+            .iot_default_card__item {
                 color:#ff4909;
             }
         }
     }
-    .help_default_card {
-        .help_s_img {
-            width: 126px;
-            height: 126px;
-        }
+    .iot_default_card {
+        
         &__order {
             text-align:right;
             margin: 9px 9px 0;
-            height: 40px;
         }
         &__order-info {
             display: inline-block;
@@ -112,20 +61,27 @@
                 vertical-align: top;
                 width: 10px;
                 height: 15px;;
-                background: url('../../assets/images/help/nugu_advice_icon_mic2.png') no-repeat 0 0;
+                background: url('../../assets/images/iot/nugu_advice_icon_mic2.png') no-repeat 0 0;
                 background-size: 10px 15px;
                 margin: 6px 5px 0 0;
             }
 
         }
-        &__picto {
-            margin-top: 0;
+        &__action {
+            margin: 20px 0 15px;
             text-align: center;
+            font-size: 4.5rem;
+            font-weight: $F-weight-bold;
+            &.on{
+                color:#ff4909;
+            }
+            &.off{
+                color:#b3b3b3;
+            }
         }
-        &__domain {
-            margin-top: 15px;
+        &__item {
             text-align: center;
-            font-size: $F-size-xxsmall;
+            font-size: $F-size-xsmall;
             font-weight: $F-weight-bold;
         }
         &__nodata {

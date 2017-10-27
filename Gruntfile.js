@@ -116,7 +116,7 @@ module.exports = function (grunt) {
 
         sass: {
             options: {
-                outputStyle: 'compressed',
+                outputStyle: 'expanded',
                 sourceMap: !grunt.option('no-map')
             },
 
@@ -258,8 +258,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['clean', 'concurrent:build', 'watch']);
     grunt.registerTask('deploy', ['clean', 'sassNoMap', 'concurrent:deploy']);
 
-    grunt.registerTask('build_sass', ['sass', 'postcss', 'cssmin']);
-
+    grunt.registerTask('build_sass', ['sass', 'postcss']); //cssmin테스크를 뺴고 돌리면 sass옵션이 제대로 실행됨
+    // grunt.registerTask('build_sass', ['sass', 'postcss', 'cssmin']); 
     grunt.registerTask('sass_init', ['sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);
 
     grunt.registerTask('sass_init2', ['serverUrl', 'sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);

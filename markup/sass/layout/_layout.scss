@@ -12,17 +12,17 @@ body, html {
 	background: url($S-local-img+'/test_img.jpg') no-repeat 0 0;
 	background-size: cover;
 	
-	&:after {
-		content:'';
-		display: block;
-		background: #000;
-		opacity: .8;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
+	// &:after {
+	// 	content:'';
+	// 	display: block;
+	// 	background: #000;
+	// 	opacity: .8;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// }
 }
 .container {
 	height: 430px;
@@ -32,26 +32,35 @@ body, html {
 	bottom: 0;
 	width: 100%;
 	min-width: 1920px;
-	background: $C-bgColor;
+	background: rgba(0,0,0,.7);
 	z-index:10;
-	
+	border-top: 1px solid #000;
+	&:before{
+		content:'';
+		width: 100%;
+		border-top: 1px solid #666;
+		position: absolute;
+		left:0;
+		top:0;
+		z-index: 2;
+	}
 }
 .top_title_area {
 	height: 80px;
 	text-align: center;
 	line-height: 80px;
-	color: $C-black;
+	color: $C-white;
 	font-size: $F-size-small;
 	overflow: hidden;
-	border-bottom: 1px solid #ccc;
+	// border-bottom: 1px solid #ccc;
 }
 .help_area {
 	height: 80px;
 	text-align: center;
-	color: $C-font-dark;
+	color: $C-white;
 	font-size:$F-size-xsmall;
 	clear: both;
-	border-top: 1px solid #ccc;
+	// border-top: 1px solid #ccc;
 	padding-top:10px;
 }
 
