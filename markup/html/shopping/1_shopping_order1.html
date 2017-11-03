@@ -1,35 +1,23 @@
 @@include('head.html', {"css": "btv_shopping", "title": "[Btv] 2-01.쇼핑_주문가능_1 : Btv_shopping","filePath": "../"})
 <body>
-<div class="content_area">
+                <div id="wrap">
+                                <div class="video_bg">
+                                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+                                </div>
+                                <div class="container">
+                                <div class="top_title_area">11번가 추천상품 입니다.</div>
+        <div class="content_area">
 <!-- start: Btv template -->
 @@include('shopping_order1.html')
 <!-- end: Btv template -->
 
-<!-- start: 이전 다음 버튼 -->
-<div class="pagenate">
-    <div class="pagenate__prev disabled">
-        <p class="pagenate__voice_wrap">
-            <span class="pagenate__voice_ordertxt">이전페이지</span>
-        </p>
-        <p class="pagenate__remote_wrap">
-            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
-        </p>
-        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
-        <p class="pagenate__paging"><span class="current">1</span>/2</p>
-    </div>
 
-    <div class="pagenate__next">
-        <p class="pagenate__voice_wrap">
-            <span class="pagenate__voice_ordertxt">다음페이지</span>
-        </p>
-        <p class="pagenate__remote_wrap">
-            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
-        </p>
-        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
-        <p class="pagenate__paging"><span class="current">1</span>/2</p>
-    </div>
-</div>
+<!-- start: 이전 다음 버튼 -->
+@@include('pagenate.html')
 <!-- end: 이전 다음 버튼 -->
+        </div>
+        <div class="help_area">도움말</div>
+</div>
 </div>
 </body>
 </html>

@@ -5,6 +5,7 @@
 .shopping_wrap {
     display: flex;
     justify-content: center;
+    margin-top: 35px;
     .shopping_menu_img {
         width: 130px;
         height: 130px;
@@ -288,7 +289,7 @@
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
-        margin-top: 10px;
+        margin-top: -23px;
         &__title {
             display: block;
             border-bottom: 2px solid #ccc;
@@ -366,11 +367,13 @@
 
         &__data {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             margin-top: 10px;
         }
-
+        &__data-detail {
+            white-space: nowrap;
+        }
         &__data-name {
             font-size: $F-size-xsmall;
             color: #ff4808;
@@ -380,6 +383,10 @@
             margin-top: -3px;
             
         }
+        &__data-price {
+            display: block;
+            text-align: right;
+        }
         &__before-price {
             text-decoration: line-through;
             color: $C-font-light;
@@ -388,6 +395,8 @@
         &__after-price {
             font-size: $F-size-xxxbig;
             letter-spacing: -3px;
+            display: inline-block;
+            vertical-align: top;
         }
 
         
@@ -397,7 +406,8 @@
     text-align: center;
     font-size: $F-size-small;
     font-weight: bold;
-    padding-bottom: 15px;
+    padding: 10px 0 0;
+    min-height: 39px;
     &.price {
         &:before {
             content:'';
@@ -428,4 +438,7 @@
             background: url('../../assets/images/order/ico_mic.png') no-repeat 0 0;
         }
     }
+}
+.order_text + .shopping_wrap {
+    margin-top: 10px;
 }

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_Schedule
+/* ---------------------------------------------------------------------- */
+.schedule_wrap {
+    justify-content: space-around;
+    margin-top: 5px;
+    padding-top: 7px;
+    .card_wrap__item {
+        position: relative;
+        background: #fcfcfc;
+        &.date {
+            background: #f3f3f3;
+        }
+    }
+    .schedule_default_card {
+        
+        &__time {
+            text-align: center;
+            margin: 34px 28px 0;
+            height: 28px;
+            font-size: $F-size-xsmall;
+            line-height: 29px;
+            font-weight: $F-weight-bold;
+            color: $C-font-light;
+        }
+       
+        &__action {
+            margin: 20px 28px 15px;
+            text-align: left;
+            font-size: $F-size-small;
+            color: $C-black;
+            @include multiline-ellipsis(3,$F-size-small,$base-line-height,block);
+            
+        }
+
+        &__month {
+            margin-top: 40px;
+            text-align: center;
+            font-size: $F-size-xsmall;
+
+            font-weight: $F-weight-bold;
+            color: #808080;
+        }
+        &__day {
+            margin: -15px 0 -18px;
+            text-align: center;
+            font-size: 5.3rem;
+            color: $C-font-dark;
+            font-weight: $F-weight-bold;
+        }
+        &__week {
+            text-align: center;
+            font-size: $F-size-small;
+            font-weight: $F-weight-bold;
+            color: #4c4c4c;
+        }
+    }
+}

@@ -1,9 +1,18 @@
 @@include('head.html', {"css": "btv_fortune", "title": "[Btv] 운세 : Btv_fortune","filePath": "../"})
 <body>
-<div class="content_area">
-<!-- start: Btv template -->
-@@include('fortune_astromantic.html')
-<!-- end: Btv template -->
+<div id="wrap">
+        <div class="video_bg">
+                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+        <div class="container">
+                <div class="top_title_area">오늘의 별자리 운세입니다.</div>        
+                <div class="content_area">
+                <!-- start: Btv template -->
+                @@include('fortune_astromantic.html')
+                <!-- end: Btv template -->
+                </div>	
+                <div class="help_area">도움말</div>
+        </div>
 </div>
 </body>
 </html>

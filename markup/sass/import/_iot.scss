@@ -4,8 +4,8 @@
 /* ---------------------------------------------------------------------- */
 .iot_wrap {
     justify-content: space-around;
+    margin-top: 5px;
     padding-top: 7px;
-
     .card_wrap__item {
         position: relative;
         background: #fcfcfc;
@@ -45,6 +45,7 @@
         &__order {
             text-align:right;
             margin: 9px 9px 0;
+            height: 28px;
         }
         &__order-info {
             display: inline-block;

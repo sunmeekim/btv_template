@@ -4,14 +4,24 @@
 /* ---------------------------------------------------------------------- */
 .card_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     &__item {
         width: 196px;
         height: 234px;
         border: 1px solid #ddd;
-        border-radius: 5px;
+        border-radius: 2px;
         background:#fff;
         box-shadow: 0 0 1px 0 rgba(0,0,0,.1);
     }
 }
 
+.card_wrap2 {
+    display: flex;
+    justify-content: center;
+    &__item {
+        width: 269px;
+        height: 250px;
+        text-align: center;
+        margin: 0 15px;
+    }
+}

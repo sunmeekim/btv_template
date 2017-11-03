@@ -63,6 +63,8 @@
 }
 .weather_daily_wrap {
     width:100%;
+    display: flex;
+    justify-content: space-around;
 
     .weather_daily_represent {
         float: left;
@@ -142,7 +144,7 @@
             vertical-align: top;
             width: 148px;
             height: 38px;
-            margin: 18px auto 0;
+            margin: 26px auto 0;
             border: 1px solid #ddd;
             border-radius: 20px;
             background: #fff;
@@ -154,7 +156,7 @@
         }
         &__special-img {
             text-align: center;
-            padding: 20px 0 10px;
+            padding: 17px 0 10px;
         }
         &__special-time {
             font-size: $F-size-small;
@@ -162,6 +164,9 @@
             color: #666;
         }
         @include clear();
+    }
+    .weather_daily_represent__special + .weather_daily_represent__info {
+        margin-left: 0;
     }
     .weather_daily_timeline {
         float:left;
@@ -201,7 +206,7 @@
 }
 .weather_weekend_wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 34px;
 
     .weather_weekend {
@@ -289,7 +294,7 @@
 }
 .weather_finedust_wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 28px;
 
     .weather_atmosphere {
@@ -321,6 +326,21 @@
             font-size: 3.1rem;
             color: $C-font-point;
             font-weight: $F-weight-bold;
+            &.good {
+                color: #1dc2f1;
+            }
+            &.normal {
+                color: #00c177;
+            }
+            &.bad {
+                color: #f47b29;
+            }
+            &.worst {
+                color: #d24645;
+            }
+            &.none {
+                color: $C-font-dark;
+            }
         }
         &__data {
             margin-top: 20px;
@@ -362,7 +382,7 @@
             color: $C-font-dark;
         }
         &__info {
-            margin-top: 20px;
+            margin: 16px 0;
         }
         &__info_img,
         &__info_data {
@@ -373,6 +393,21 @@
         &__info_data {
             font-size: 2.5rem;
             font-weight: $F-weight-bold;
+            &.good {
+                color: #1dc2f1;
+            }
+            &.normal {
+                color: #00c177;
+            }
+            &.bad {
+                color: #f47b29;
+            }
+            &.worst {
+                color: #d24645;
+            }
+            &.none {
+                color: $C-font-dark;
+            }
         }
         &__data_value {
             display: inline-block;

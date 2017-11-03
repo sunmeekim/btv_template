@@ -5,15 +5,11 @@
 .content_area {
 	position: relative;
 	height: 260px;
-	border-width: 1px 0;
-	border-style: solid;
-	border-color:#d1d8e4;
+	width: 100%;
+	min-width: 1920px;
 	@include clear();
-	&:before {
-		content:'';
-		border: 1px solid #f1f3f6;
-		width: 100%;
-	}
+	
+	
 }
 .webview_area {
 	width: 1530px;

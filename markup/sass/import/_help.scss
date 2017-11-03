@@ -3,7 +3,8 @@
 /*  Btv_도움말
 /* ---------------------------------------------------------------------- */
 .help_card_wrap {
-    margin-top: 0;
+    margin-top: 12px;
+    
     .help_card {
         margin:0 30px;
         &__title {
@@ -51,6 +52,7 @@
 
 .help_wrap {
     justify-content: space-around;
+    margin-top: 5px;
     padding-top: 7px;
 
     .card_wrap__item {

@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  player UI
+/* ---------------------------------------------------------------------- */
+.player {
+    // max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    &.melon {
+        .btn__prev-speed,
+        .btn__next-speed,
+        .player__controller-speed {
+            display: none;
+        }
+    }
+    &.podcast {
+        .player__detail-desc {
+            @include ellipsis (block,100%);
+            
+        }
+        .player__detail-desc2,
+        .player__detail-desc2:before,
+        .btn__replay,
+        .btn__random {
+            display: none;
+        }
+    }
+    &.audiobook {
+        .btn__prev-speed,
+        .btn__next-speed,
+        .player__controller-speed,
+        .btn__replay,
+        .btn__random {
+            display: none;
+        }
+        .player__img-box {
+            background: url('../../assets/images/audiobook/nugu_audiobook_image.png') no-repeat 0 0;
+        }
+    }
+    &.radio {
+        .btn__prev-speed,
+        .btn__next-speed,
+        .player__controller-speed,
+        .btn__replay,
+        .btn__random,
+        .player__detail-desc2,
+        .player__detail-desc2:before {
+            display: none;
+        }
+        .player__detail-desc {
+            @include ellipsis (block,100%);
+           
+        }
+    }
+    &__img {
+        width: 230px;
+        height: 230px;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+
+        .ico_favorite {
+            @include use-sprite(nugu_melon_favorite_nor);
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            &.on {
+                @include use-sprite(nugu_melon_favorite_sel); 
+            }
+        }
+    }
+
+    &__img &__img-box {
+        display: inline-block;
+        vertical-align: top;
+        width: 230px;
+        height: 230px;
+        border-radius:50%;
+        overflow: hidden;
+
+        .player_p_img {
+            width: 230px;
+            height: 230px;
+        }
+        
+    }
+
+    &__info {
+        margin-left: 40px;
+        max-width: 820px;
+    }
+
+    &__info &__title {
+        @include ellipsis (block,820px);
+        font-size: $F-size-big;
+        color: $C-font-dark;
+    }
+    &__info &__detail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 5px;
+    }
+    &__info &__detail-desc {
+        @include ellipsis (block,50%);
+        color: $C-font-light;
+        font-size: $F-size-small;
+    }
+    &__info &__detail-desc2 {
+        @include ellipsis (block,50%);
+        color: $C-font-light;
+        font-size: $F-size-small;
+        &:before {
+            content:'|';
+            color: $C-font-light;
+            padding: 0 10px;
+        }
+    }
+    &__progress {
+        width: 820px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    &__progress &__progress-bg {
+        width: 620px;
+        height: 3px;
+        display: block;
+        background: #cbcbcb;
+        text-align:left;
+        vertical-align: top;
+        margin-top: 19px;
+    }
+    &__progress &__progress-bar {
+        display: inline-block;
+        vertical-align: top;
+        height: 3px;
+        background: #ff4909;
+    }
+    &__progress &__start,
+    &__progress &__end {
+        font-size: $F-size-small;
+        color: $C-font-dark;
+    }
+    &__controller {
+        position: relative;
+        margin-top: 10px;
+        @include clear;
+    }
+    &__controller &__controller-left {
+        position: absolute;
+        left:-23px;
+        top:0;
+    }
+    &__controller &__controller-right {
+        position: absolute;
+        right:-28px;
+        top:0;
+    }
+    &__controller &__controller-speed {
+        display: inline-block;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #e2e2e2;
+        border-radius: 15px;
+        background: #fff;
+        text-align: center;
+        font-size: $F-size-xsmall;
+        color: #ff4909;
+        font-weight: $F-weight-bold;
+    }
+
+}
+%active {
+    &:focus {
+        position:relative;
+        background-color:#fff;
+        border-radius: 50%;
+        overflow: hidden;
+        outline: none;
+        &:before {
+            position: absolute;
+            left:0;
+            top:0;
+            width:74px;
+            height: 74px;
+            border: 3px solid #ff611b;
+            border-radius: 50%;
+            overflow: hidden;
+            content:'';
+        }
+    }
+}
+
+.btn {
+    &__prev {
+        @include use-sprite(nugu_melon_control_back_nor);
+        @extend %active;
+    }
+    &__prev-speed {
+        @include use-sprite(nugu_melon_control_back_severalfold_nor);
+        @extend %active;
+    }
+    &__play {
+        @include use-sprite(nugu_melon_control_play_nor);
+        @extend %active;
+    }
+    &__next {
+        @include use-sprite(nugu_melon_control_next_nor);
+        @extend %active;
+    }
+    &__next-speed {
+        @include use-sprite(nugu_melon_control_next_severalfold_nor);
+        @extend %active;
+    }
+    &__pause {
+        @include use-sprite(nugu_melon_control_pause_nor);
+        @extend %active;
+    }
+
+    &__replay {
+        @include use-sprite(nugu_melon_control_repeat_off_nor);
+        @extend %active;
+        &.select {
+            @include use-sprite(nugu_melon_control_repeat_nor); 
+            @extend %active;
+        }
+        &.one {
+            @include use-sprite(nugu_melon_control_1_repeat_nor); 
+            @extend %active;
+        }
+        
+    }
+    &__random {
+        @include use-sprite(nugu_melon_control_shuffle_off_nor);
+        @extend %active;
+
+        &.select {
+            @include use-sprite(nugu_melon_control_shuffle_nor); 
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* common */
+@import "common/variables";
+@import "common/mixins";
+// @import "sprites/spr_img";
+// @import "sprites/spr_img_2x";
+// @import "common/normalize";
+//  @import "btv";
+
+/* layout */
+// @import "layout/layout";
+// @import "layout/container";
+
+
+/* component */
+@import "component/card";
+
+/* import */
+@import "import/alarm";

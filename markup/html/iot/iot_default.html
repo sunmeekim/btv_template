@@ -1,15 +1,22 @@
 @@include('head.html', {"css": "btv_iot", "title": "[Btv] IOT : btv_iot","filePath": "../"})
 <body>
+<div id="wrap">
+        <div class="video_bg">
+                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+        <div class="container">
+                <div class="top_title_area">등록된 조명이 7개 있습니다.</div>
+                <div class="content_area">
+                <!-- start: Btv template -->
+                @@include('iot_default.html')
+                <!-- end: Btv template -->
 
-<div class="content_area">
-
-<!-- start: Btv template -->
-@@include('iot_default.html')
-<!-- end: Btv template -->
-
-<!-- start: 이전 다음 버튼 -->
-@@include('pagenate.html')
-<!-- end: 이전 다음 버튼 -->
+                <!-- start: 이전 다음 버튼 -->
+                @@include('pagenate.html')
+                <!-- end: 이전 다음 버튼 -->
+                </div>	
+                <div class="help_area">도움말</div>
+        </div>
 </div>
 
 </body>
