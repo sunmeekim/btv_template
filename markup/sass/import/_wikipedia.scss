@@ -4,23 +4,44 @@
 /* ---------------------------------------------------------------------- */
 .wikipedia_wrap {
 
-   height: 250px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   overflow: hidden;
-   padding: 6px 0 0;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      margin-top: -3px;
+   
 
-   .wikipedia_block {
-      width: 1250px;
-      color: $C-font-basic;
-      @include multiline-ellipsis(6,$F-size-xsmall,$base-line-height,block);
-   }
+      .wikipedia_block {
+            max-width: 1300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-   .data {
-         font-size: $F-size-xsmall;
-         text-align: center;
+            &:before {
+                  content:'';
+                  width: 230px;
+                  height: 230px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  background: url('../../assets/images/wikipedia/nugu_wiki_image.png') no-repeat 0 0;
+            }
 
-   }
+            .data {
+                  max-width: 1000px;
+                  margin-left: 40px;
+                  text-align: left;
+                  vertical-align: top;
+                  @include multiline-ellipsis(5,$F-size,155%,block);
+
+                  strong {
+                        color:$C-font-point;
+                  }   
+            }
+
+
+      }
+
+
 }

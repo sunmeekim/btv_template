@@ -30,33 +30,6 @@ body, html {
 		height: 100%;
 	}
 }
-.container {
-	height: 430px;
-	position: absolute;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	min-width: 1920px;
-	background: rgba(255,255,255,.95);
-	z-index:100;
-	
-}
-.top_title_area {
-	height: 80px;
-	text-align: center;
-	line-height: 80px;
-	color: $C-black;
-	font-size: $F-size-small;
-	overflow: hidden;
-	// border-bottom: 1px solid #ccc;
-}
-.help_area {
-	height: 80px;
-	text-align: center;
-	color: $C-black;
-	font-size:$F-size-xsmall;
-	padding-top:10px;
-}
+
 
 

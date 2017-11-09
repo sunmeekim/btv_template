@@ -1,21 +1,22 @@
 @@include('head.html', {"css": "btv_player", "title": "[Btv] 기본플레이어공통(멜론,팟캐스트,오디오북,라디오) : btv_melon","filePath": "../"})
 <body>
-<div id="wrap">
-        <div class="video_bg">
-                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">인기 음악을 재생합니다.</span>
+                <span class="service_logo melon"></span>
         </div>
-        <div class="container">
-                <div class="top_title_area">인기음악을 재생합니다.</div>
 
-                <div class="content_area">
+        <div class="content_area">
                 <!-- start: Btv template -->
                 @@include('player.html')
                 <!-- end: Btv template -->
-
-                </div>	
-                <div class="help_area">도움말</div>
+        </div>	
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
+@@include('bottom.html')
 </body>
 
 </html>

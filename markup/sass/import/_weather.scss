@@ -11,21 +11,21 @@
     }
 
     &__date {
-        font-size:$F-size-xsmall;
+        font-size:$F-size-small;
         color: $C-font-basic;
-        margin-top: 20px;
+        margin-top: 16px;
     }
 
     &__weather {
         .weather_s_img {
             border: 0;
         }
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
     &__temp {
-        margin-top: 5px;
-        font-size:$F-size-small;
+        margin-top: 14px;
+        font-size:$F-size;
         color: $C-font-dark;
         font-weight: $F-weight-bold;
     }
@@ -49,17 +49,20 @@
         .weather_card_wrap__weather,.weather_card_wrap__temp {
             display: none;
         }
+        .weather_card_wrap__date {
+            color: #b2b2b2;
+        }
         .weather_card_wrap__nodata {
-            margin-top: 60px;
+            margin-top: 65px;
             display: block;
-            color: #bcbcbc;
+            color: #b2b2b2;
             font-weight: $F-weight-bold;
-
+            font-size: $F-size-big;
         }
     }
 }
 .weather_weekly {
-	margin-top: 10px;
+	margin-top: 6px;
 }
 .weather_daily_wrap {
     width:100%;
@@ -82,10 +85,10 @@
         &__info {
             float: left;
             width: 450px;
-            margin: 20px 0 0 35px;
+            margin: 23px 0 0 35px;
         }
         &__title {
-            font-size: $F-size-xbig;
+            font-size: $F-size-xxxbig;
             color: $C-font-point;
             font-weight: $F-weight-bold;
         }
@@ -96,20 +99,30 @@
         }
         &__degree {
             float: left;
-            font-size: 4.4rem;
+            font-size: 8.6rem;
             color: $C-black;
+            margin-top: 5px;
+            .data {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: -2px;
+                font-weight: $F-weight-bold;
+                padding: 0 2px 0 0;
+            }
         }
         &__detail_more {
             float: left;
-            margin: 5px 0 0 25px;
+            margin: 15px 0 0 25px;
         }
         &__better {
-            font-size: $F-size-big;
+            font-size: $F-size-xxbig;
             color: $C-font-dark-gray;
+            font-weight: $F-weight-bold;
         }
         &__degree_more {
             margin-top: 0;
-
+            font-size: $F-size-big;
+            color: $C-font-dark;
             .degree_low {
                 margin-left: 10px;
             }
@@ -117,49 +130,44 @@
             .data {
                 display: inline-block;
                 vertical-align: top;
-                font-size: $F-size-under;
-                color: $C-font-dark;
+                
             }
-        }
-        &__info_more {
-            margin-top: 10px;
         }
         &__precipitation,
         &__dust {
             display: inline-block;
             vertical-align:top;
-            font-size: $F-size-small;
+            font-size: $F-size;
             color: $C-font-light;
         }
-        &__dust {
-            margin-left: 15px;
-        }
+        
         &__special {
             float: left;
             width: 250px;
             text-align: center;
+            margin: -4px 15px 0 0;
         }
         &__special-name {
             display: inline-block;
             vertical-align: top;
-            width: 148px;
-            height: 38px;
+            width: 190px;
+            height: 44px;
             margin: 26px auto 0;
             border: 1px solid #ddd;
-            border-radius: 20px;
+            border-radius: 22px;
             background: #fff;
-            line-height: 42px;
+            line-height: 44px;
             color: #333;
-            font-size: $F-size-xxsmall;
+            font-size: $F-size;
             font-weight: $F-weight-bold;
             text-align: center;
         }
         &__special-img {
             text-align: center;
-            padding: 17px 0 10px;
+            padding: 14px 0 8px;
         }
         &__special-time {
-            font-size: $F-size-small;
+            font-size: $F-size;
             font-weight: $F-weight-bold;
             color: #666;
         }
@@ -167,10 +175,14 @@
     }
     .weather_daily_represent__special + .weather_daily_represent__info {
         margin-left: 0;
+        margin-top: 19px;
+    }
+    .weather_daily_represent__dust + .weather_daily_represent__dust {
+        margin-left: 26px;
     }
     .weather_daily_timeline {
         float:left;
-        margin: 33px 0 0 70px;
+        margin: 25px 0 0 70px;
 
         .weather_d_simg {
             width: 100px;
@@ -190,23 +202,24 @@
             margin-left:45px;
         }
         &__time {
-            font-size: $F-size-under;
+            font-size: $F-size-big;
             color:$C-font-basic;
-
+            padding-bottom:10px;
             
         }
         
         &__degree {
-            font-size: $F-size-big;
+            font-size: $F-size-xxbig;
             color: $C-black;
             font-weight: $F-weight-bold;
+            padding-top:10px;
         }
     }
     @include clear();
 }
 .weather_weekend_wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 34px;
 
     .weather_weekend {
@@ -226,23 +239,25 @@
             text-align: center;
         }
         &__date {
+            
             text-align:center;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-small;
         }
         &__weather_img {
-            margin-top: 5px;
+            margin-top: 8px;
         }
         &__info_more {
             float: left;
-            margin-left: 50px;
+            margin:-5px 0 0 55px;
         }
         &__weather_title {
-            font-size: $F-size-xbig;
+            font-size: $F-size-xxxxbig;
             color: $C-font-point;
             font-weight: $F-weight-bold;
         }
         &__temp {
             margin-top: 12px;
+            font-size: $F-size-xxxbig;
             .degree_high,
             .degree_low {
                 display: inline-block;
@@ -254,8 +269,13 @@
         }
         &__precipitation {
             margin-top:15px;
-            font-size: $F-size-small;
+            font-size: $F-size;
             color: $C-font-light;
+            .data {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 3px;
+            }
         }
         @include clear();
 
@@ -299,7 +319,7 @@
 
     .weather_atmosphere {
         float: left;
-        width: 419px;
+        width: 430px;
 
         .weather_d_img {
             width: 180px;
@@ -311,19 +331,19 @@
         }
         &__info{
             float: left;
-            margin-left: 0;
+            margin: -7px 0 0 40px;
             width: 208px;
             text-align: center;
 
             
         }
         &__title {
-            font-size: $F-size-under;
+            font-size: $F-size-xxbig;
             color: $C-font-dark;
         }
         &__status {
             margin-top: 18px;
-            font-size: 3.1rem;
+            font-size: 6.0rem;
             color: $C-font-point;
             font-weight: $F-weight-bold;
             &.good {
@@ -343,25 +363,24 @@
             }
         }
         &__data {
-            margin-top: 20px;
+            margin-top: 8px;
         }
         &__data_value {
             display: inline-block;
             vertical-align: top;
-            width: 148px;
-            height: 38px;
             margin: 0 auto;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            background: #fff;
-            line-height: 42px;
+            font-size: 4.0rem;
             color: $C-font-dark;
+            
+            .data {
+                font-weight: $F-weight-bold;
+            }
         }
         @include clear();
     }
     .weather_finedust {
         float: left;
-        margin-left: 100px;
+        margin: -4px 0 0 0x;
 
         .weather_d_img {
             width: 54px;
@@ -378,11 +397,11 @@
             text-align: center;
         }
         &__title {
-            font-size: $F-size-under;
-            color: $C-font-dark;
+            font-size: $F-size-big;
+            color: $C-font-basic;
         }
         &__info {
-            margin: 16px 0;
+            margin: 27px 0 0;
         }
         &__info_img,
         &__info_data {
@@ -391,7 +410,7 @@
             
         }
         &__info_data {
-            font-size: 2.5rem;
+            font-size: 4.8rem;
             font-weight: $F-weight-bold;
             &.good {
                 color: #1dc2f1;
@@ -412,15 +431,19 @@
         &__data_value {
             display: inline-block;
             vertical-align: top;
-            width: 148px;
-            height: 38px;
-            margin: 18px auto 0;
-            border: 1px solid #ddd;
-            border-radius: 20px;
+            margin: 15px auto 0;
             background: #fff;
             line-height: 42px;
             color: $C-font-dark;
-            font-size: $F-size-small;
+            font-size: $F-size-xxbig;
+            
+            .data {
+                display: inline-block;
+                vertical-align: top;
+                margin-right:3px;
+                font-weight: $F-weight-bold;
+                
+            }
         }
         .weather_finedust__list + .weather_finedust__list {
             margin-left: 15px;

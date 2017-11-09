@@ -6,7 +6,7 @@
     // max-width: 1100px;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 8px;
     &.melon {
         .btn__prev-speed,
         .btn__next-speed,
@@ -34,7 +34,7 @@
         .btn__random {
             display: none;
         }
-        .player__img-box {
+        .player__img .player__img-box {
             background: url('../../assets/images/audiobook/nugu_audiobook_image.png') no-repeat 0 0;
         }
     }
@@ -51,6 +51,24 @@
         .player__detail-desc {
             @include ellipsis (block,100%);
            
+        }
+    }
+    &.dailybrifing {
+        .btn__prev-speed,
+        .btn__next-speed,
+        .player__controller-speed,
+        .btn__replay,
+        .btn__random,
+        .player__detail-desc2,
+        .player__detail-desc2:before {
+            display: none;
+        }
+        .player__detail-desc {
+            @include ellipsis (block,100%);
+           
+        }
+        .player__img .player__img-box {
+            background: url('../../assets/images/dailybriefing/nugu_news_image.png') no-repeat 0 0;
         }
     }
     &__img {
@@ -78,7 +96,7 @@
         height: 230px;
         border-radius:50%;
         overflow: hidden;
-
+        background: url('../../assets/images/dailybriefing/nugu_news_image.png') no-repeat 0 0;
         .player_p_img {
             width: 230px;
             height: 230px;
@@ -93,7 +111,7 @@
 
     &__info &__title {
         @include ellipsis (block,820px);
-        font-size: $F-size-big;
+        font-size: $F-size-xxbig;
         color: $C-font-dark;
     }
     &__info &__detail {
@@ -105,12 +123,12 @@
     &__info &__detail-desc {
         @include ellipsis (block,50%);
         color: $C-font-light;
-        font-size: $F-size-small;
+        font-size: $F-size;
     }
     &__info &__detail-desc2 {
         @include ellipsis (block,50%);
         color: $C-font-light;
-        font-size: $F-size-small;
+        font-size: $F-size;
         &:before {
             content:'|';
             color: $C-font-light;
@@ -122,7 +140,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 10px;
+        margin-top: 13px;
     }
     &__progress &__progress-bg {
         width: 620px;
@@ -141,12 +159,12 @@
     }
     &__progress &__start,
     &__progress &__end {
-        font-size: $F-size-small;
+        font-size: $F-size-under;
         color: $C-font-dark;
     }
     &__controller {
         position: relative;
-        margin-top: 10px;
+        margin-top: 13px;
         @include clear;
     }
     &__controller &__controller-left {
@@ -165,6 +183,7 @@
         height: 30px;
         border: 1px solid #e2e2e2;
         border-radius: 15px;
+        margin-top: 22px;
         background: #fff;
         text-align: center;
         font-size: $F-size-xsmall;
@@ -198,7 +217,12 @@
     &__prev {
         @include use-sprite(nugu_melon_control_back_nor);
         @extend %active;
+        &.disabled {
+            @include use-sprite(nugu_melon_control_back_dis);
+
+        }
     }
+
     &__prev-speed {
         @include use-sprite(nugu_melon_control_back_severalfold_nor);
         @extend %active;
@@ -210,6 +234,10 @@
     &__next {
         @include use-sprite(nugu_melon_control_next_nor);
         @extend %active;
+        &.disabled {
+            @include use-sprite(nugu_melon_control_next_dis);
+
+        }
     }
     &__next-speed {
         @include use-sprite(nugu_melon_control_next_severalfold_nor);

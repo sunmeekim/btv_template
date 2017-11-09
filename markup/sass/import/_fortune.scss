@@ -8,23 +8,25 @@
       
       .fortune_d_img {
             width: 230px;
-            height: 186px;
+            height: 230px;
       }
 
       &__img {
             float: left;
             width: 230px;
+            height: 230px;
+            border-radius: 50%;
             overflow: hidden;
-            margin-top: 28px;
+            margin-top: 6px;
       }
       &__info {
             float: left;
-            margin: 32px 0 0 22px;
+            margin: 17px 0 0 40px;
       }
       &__title {
             width: 995px;
-            font-size: $F-size-big;
-            color: $C-font-basic;
+            font-size: $F-size-xxxxbig;
+            color: $C-black;
       }
       &__title-year {
             color: $C-black;
@@ -33,16 +35,15 @@
             color: $C-black;
       }
       &__astromanic {
-            color: $C-font-basic;
+            color: $C-black;
       }
       &__desc {
-            margin-top: 18px;
+            margin-top: 13px;
             width: 995px;
-            font-size: $F-size-xsmall;
-            color: $C-font-basic;
-            @include multiline-ellipsis(3,$F-size-xsmall,1.5,block);
+            color: $C-font-dark;
+            @include multiline-ellipsis(3,$F-size,155%,block);
       }
       .fortune_wrap__title-year + .fortune_wrap__zodiac {
-            color: $C-font-basic;
+            color: $C-black;
       }
 }

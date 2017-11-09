@@ -1,18 +1,19 @@
 @@include('head.html', {"css": "btv_dictionary", "title": "[Btv] 4-01.어학사전_한영 : Btv_dictionary","filePath": "../"})
 <body>
-<div id="wrap">
-    <div class="video_bg">
-        <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+@@include('top.html')
+<div class="container">
+    <div class="top_title_area">
+        <span class="data">사과의 영어 표기입니다.</span>
     </div>
-    <div class="container">
-        <div class="top_title_area">사과를 영어로</div>
-        <div class="content_area">
+    <div class="content_area">
         <!-- start: Btv template -->
         @@include('dictionary_english.html')
         <!-- end: Btv template -->
-        </div>	
-        <div class="help_area">도움말</div>
+    </div>	
+    <div class="help_area">
+        <button class="bottom_text-area"><span class="data">도움말</span></button>
     </div>
 </div>
+@@include('bottom.html')
 </body>
 </html>

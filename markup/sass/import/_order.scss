@@ -5,11 +5,11 @@
 .order_wrap {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 30px;
 
     .order_menu_img {
-        width: 130px;
-        height: 130px;
+        width: 186px;
+        height: 186px;
     }
     .order_box {
         width:760px;
@@ -22,18 +22,17 @@
         justify-content: flex-start;
         
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 186px;
+            height: 186px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 184px;
+                height: 186px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
@@ -46,8 +45,8 @@
     }
 
     .order_box2 {
-        width: 1234px;
-        height: 188px;
+        width: 1300px;
+        height: 186px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
@@ -60,60 +59,61 @@
     }
     .order_info {
         float: left;
-        width: 576px;
+        width: 628px;
 
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 186px;
+            height: 186px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 186px;
+                height: 186px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
         &__box {
             display: inline-block;
             vertical-align: top;
-            max-width: 370px;
-            height: 130px;
-            margin-left: 7px;
+            max-width: 380px;
+            margin: 0 20px 0 26px;
         }
         &__menu {
             @include ellipsis;
             vertical-align: top;
-            font-size: $F-size-under;
+            font-size: $F-size-xbig;
             font-weight: $F-weight-bold;
+            margin-top: 26px;
         }
         &__menu-detaile {
             @include ellipsis;
             vertical-align: top;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
             color: $C-font-light;
-            margin-top: -5px;
         }
         &__value {
-            color: #ff4909;
-            font-weight: $F-weight-bold;
-            margin-top: -20px;
-            letter-spacing: -2px;
+            @include clear;
         }
 
         &__price-data {
-            font-size: $F-size-xxbig;
+            float: right;
+            font-size: 4.4rem;
+            font-weight: $F-weight-bold;
+            color: $C-black;
         }
         &__discount {
-            font-size: $F-size-small;
+            float:left;
+            margin-top: 12px;
+            color: #ff4909;
+            font-size: $F-size-under;
         }
     }
     .delivery_info {
-        max-width: 585px;
+        width: 630px;
         vertical-align: top;
 
         &:before {
@@ -122,12 +122,12 @@
             background: #ccc;
             height: 140px;
             position: absolute;
-            left: 575px;
+            left: 628px;
             top: 24px;
 
         }
         &__list {
-            margin-left: 30px;
+            margin-left: 32px;
             height: 140px;
         }
         &__item {
@@ -138,7 +138,7 @@
         }
         &__item-title {
             float: left;
-            font-size: $F-size-small;
+            font-size: $F-size-under;
             font-weight: $F-weight-bold;
             
         }
@@ -146,8 +146,8 @@
             @include ellipsis;
             float: left;
             margin-left: 10px;
-            max-width: 435px;
-            font-size: $F-size-small;
+            max-width: 480px;
+            font-size: $F-size-under;
             color:$C-font-light;
            
             &.active {
@@ -200,7 +200,7 @@
 
     .order_mybox {
         width:712px;
-        height: 234px;
+        height: 232px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
@@ -208,78 +208,82 @@
         &__title {
             display: block;
             border-bottom: 2px solid #ccc;
-            margin: 0 30px;
-            text-align: center;
-            font-size: $F-size-small;
-            padding: 13px 0 2px;
+            font-size: $F-size;
+            color:$C-font-dark;
+            height: 46px;
+            padding-top: 19px;
         }
         + .order_mybox {
             margin-left: 10px;
         }
     }
     .order_myinfo {
-        width: 648px;
-        margin: 18px 0;
-
+        // width: 712px;
+        .order_menu_img {
+            width: 232px;
+            height: 232px;
+        }
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 232px;
+            height: 232px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 231px;
+                height: 232px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
         &__box {
             display: inline-block;
             vertical-align: top;
-            max-width: 370px;
+            max-width: 420px;
             height: 130px;
-            margin-left: 7px;
+            margin: 0 25px;
         }
         &__menu {
             @include ellipsis;
             vertical-align: top;
-            font-size: $F-size-under;
+            margin-top: 12px;
+            font-size: $F-size-xbig;
             font-weight: $F-weight-bold;
         }
         &__menu-detaile {
+            
             @include ellipsis;
             vertical-align: top;
-            font-size: $F-size-xsmall;
+            margin-top: 2px;
+            font-size: $F-size-under;
             color: $C-font-light;
-            margin-top: -5px;
         }
         &__value {
-            color: #ff4909;
-            font-weight: $F-weight-bold;
-            margin-top: -20px;
-            letter-spacing: -2px;
+            @include clear;
         }
 
         &__price-data {
-            font-size: $F-size-xxbig;
+            float:right;
+            font-size: $F-size-xxxbig;
+            font-weight: $F-weight-bold;
         }
         &__discount {
-            font-size: $F-size-small;
+            float:left;
+            margin-top: 10px;
+            font-size: $F-size-under;
+            color: #ff4909;
         }
         &__nondata {
             display: none;
         }
         &.none {
-            margin-left: 32px;
 
             .order_myinfo__nondata {
                 display: block;
                 text-align: center;
-                margin-top: 62px;
+                margin-top: 94px;
             }
             .order_myinfo__nondata-logo {
                 display: inline-block;
@@ -290,7 +294,7 @@
                 background: url('../../assets/images/order/ico_logo.png') no-repeat 0 0;
             }
             .order_myinfo__nondata-text {
-                font-size: $F-size-xsmall;
+                font-size: $F-size-small;
                 color: $C-font-light;
                 font-weight: $F-weight-bold;
             }
@@ -303,9 +307,8 @@
 }
 .order_text {
     text-align: center;
-    font-size: $F-size-small;
+    font-size: $F-size-big;
     font-weight: bold;
-    padding: 10px 0 0;
     &.price {
         &:before {
             content:'';
@@ -313,30 +316,31 @@
             vertical-align: top;
             width: 29px;
             height: 28px;
-            margin: 3px 5px 0 0;
+            margin: 5px 7px 0 0;
             background: url('../../assets/images/order/ico_txt.png') no-repeat 0 0;
         }
     }
     .order_ico_text {
         display: inline-block;
         vertical-align: top;
-        border: 3px solid #000;
-        height: 30px;
-        border-radius: 17px;
+        border: 2px solid #000;
+        margin: 0 5px;
+        height: 36px;
+        border-radius: 18px;
         padding:0 15px;
-        line-height: 34px;
-        font-size: $F-size-xsmall;
+        line-height: 36px;
+        font-size: $F-size-under;
         &:before {
             content:'';
             width: 19px;
             height: 24px;
             display: inline-block;
             vertical-align: top;
-            margin: 2px 5px 0 0;
+            margin: 4px 5px 0 0;
             background: url('../../assets/images/order/ico_mic.png') no-repeat 0 0;
         }
     }
     + .order_wrap{
-        margin-top: 10px;
+        margin-top: 7px;
     }
 }

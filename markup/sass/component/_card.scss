@@ -7,11 +7,11 @@
     justify-content: space-around;
     &__item {
         width: 196px;
-        height: 234px;
+        height: 232px;
         border: 1px solid #ddd;
         border-radius: 2px;
         background:#fff;
-        box-shadow: 0 0 1px 0 rgba(0,0,0,.1);
+        box-shadow: 0 0 1px 0 #f2f2f2;
     }
 }
 

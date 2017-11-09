@@ -3,12 +3,13 @@
 /*  Btv_Schedule
 /* ---------------------------------------------------------------------- */
 .schedule_wrap {
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 5px;
     padding-top: 7px;
     .card_wrap__item {
         position: relative;
         background: #fcfcfc;
+        margin: 0 5px;
         &.date {
             background: #f3f3f3;
         }
@@ -16,42 +17,58 @@
     .schedule_default_card {
         
         &__time {
+            height: 66px;
+            margin: 0 20px;
+            border-bottom: 1px solid #e2e2e2;
             text-align: center;
-            margin: 34px 28px 0;
-            height: 28px;
-            font-size: $F-size-xsmall;
-            line-height: 29px;
-            font-weight: $F-weight-bold;
-            color: $C-font-light;
+            .ampm {
+                display: inline-block;
+                vertical-align: top;
+                height: 32px;
+                margin-top: 19px;
+                padding:0 15px;
+                border-radius: 16px;
+                line-height: 32px;
+                font-size: 2.3rem;
+                color:#626262;
+                background: #e6e6e6;
+            }
+            .time {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 18px;
+                color:#626262;
+                font-size: $F-size-small;
+            }
         }
        
         &__action {
-            margin: 20px 28px 15px;
+            margin: 10px 28px 15px;
             text-align: left;
-            font-size: $F-size-small;
+            font-size: $F-size;
             color: $C-black;
-            @include multiline-ellipsis(3,$F-size-small,$base-line-height,block);
+            @include multiline-ellipsis(4,$F-size,125%,block);
             
         }
 
         &__month {
-            margin-top: 40px;
+            margin-top: 27px;
             text-align: center;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
 
             font-weight: $F-weight-bold;
             color: #808080;
         }
         &__day {
-            margin: -15px 0 -18px;
+            margin: 10px 0 9px;
             text-align: center;
-            font-size: 5.3rem;
+            font-size: 6.8rem;
             color: $C-font-dark;
             font-weight: $F-weight-bold;
         }
         &__week {
             text-align: center;
-            font-size: $F-size-small;
+            font-size: $F-size;
             font-weight: $F-weight-bold;
             color: #4c4c4c;
         }

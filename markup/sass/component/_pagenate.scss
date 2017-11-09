@@ -18,7 +18,7 @@
         position: absolute;
         left:50px;
         top: 50%;
-        margin-top: -85px;
+        margin-top: -83px;
         width: 140px;
         text-align: center;
         &.disabled {
@@ -27,12 +27,13 @@
     }
     &__btn-prev {
         @include use-sprite(btn__prev);
+        margin-top: 13px;
     }
     &__next {
         position: absolute;
         right:50px;
         top: 50%;
-        margin-top: -85px;
+        margin-top: -83px;
         width: 140px;
         
         text-align: center;
@@ -42,13 +43,14 @@
     }
     &__btn-next {
         @include use-sprite(btn__next);
+        margin-top: 13px;
     }
 
     &__paging {
-        font-size: $F-size-xsmall;
+        font-size: 1.9rem;
         color: $C-font-light;
         text-align: center;
-
+        margin-top: 3px;
         .current {
             color: $C-font-dark;
             font-weight: $F-weight-bold;
@@ -56,6 +58,7 @@
     }
     &__remote_wrap{
         display:block;
+        margin-top: 3px;
     }
     &__remote_prev {
         border: 1px solid #d9d9d9;
@@ -98,16 +101,20 @@
         display: inline-block;
         vertical-align: top;
         border: 1px solid #d9d9d9;
-        border-radius: 14px;
-        height: 28px;
+        border-radius: 16px;
+        height: 32px;
         padding: 0 10px;
-        font-size: $F-size-xxsmall;
+        font-size: 1.9rem;
         color: $C-font-light;
+        font-weight: $F-weight-bold;
+        line-height: 32px;
         background: #fcfcfc;
+
         &:before {
             content:'';
             @include use-sprite(nugu_advice_icon_mic);
-            margin-right: 3px;
+            vertical-align: top;
+            margin: 7px 3px 0 0;
         }
 
     }

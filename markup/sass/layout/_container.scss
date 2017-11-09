@@ -2,6 +2,15 @@
 /* ---------------------------------------------------------------------- */
 /*  Containers
 /* ---------------------------------------------------------------------- */
+.container {
+	height: 430px;
+	width: 100%;
+	min-width: 1920px;
+	background: rgba(242,242,242,.97);
+	z-index:100;
+	
+}
+
 .content_area {
 	position: relative;
 	height: 260px;
@@ -17,4 +26,63 @@
 	position: relative;
 	z-index: 10;
 	@include clear();
+}
+.top_title_area {
+	height: 80px;
+	
+	text-align: center;
+	color: $C-font-light;
+	font-size: $F-size-big;
+	overflow: hidden;
+	text-align: center;
+	.data {
+		display: inline-block;
+		padding-top: 25px;
+	}
+	.top_help-tip {
+		position: absolute;
+		right: 65px;
+		top: 0;
+		vertical-align: top;
+		margin: 30px 0 0 116px;
+		font-size: $F-size-xsmall;
+		color: #999;
+		&:before {
+			content: '';
+			@include use-sprite(nugu_help_tip);
+			vertical-align: top;
+			margin: 3px 7px 0 0;
+		}
+	}
+	.service_logo {
+		position: absolute;
+		right: 65px;
+		top: 30px;
+		&.melon {
+			@include use-sprite(nugu_melon_control_logo);
+		}
+	}
+}
+.help_area {
+	height: 80px;
+	text-align: center;
+	color: $C-font-light;
+	
+	.bottom_text-area {
+		font-size:$F-size-small;
+		display: inline-block;
+		vertical-align: top;
+		border: 1px solid #999;
+		height: 38px;
+		border-radius: 19px;
+		padding: 0 20px;
+		line-height: 38px;
+		color: $C-font-light;
+		&:before {
+			content:'';
+			@include use-sprite(nugu_general_grammer_mic);
+			vertical-align: top;
+			margin-right: 5px;
+		}
+	}
 }

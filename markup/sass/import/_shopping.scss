@@ -5,14 +5,18 @@
 .shopping_wrap {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 28px;
     .shopping_menu_img {
-        width: 130px;
-        height: 130px;
+        width: 186px;
+        height: 186px;
+    }
+    .shopping_mybox .shopping_menu_img {
+        width: 234px;
+        height: 234px;
     }
     .shopping_box {
-        width:760px;
-        height: 188px;
+        width:900px;
+        height: 186px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
@@ -21,18 +25,17 @@
         justify-content: flex-start;
 
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 186px;
+            height: 186px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 184px;
+                height: 184px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
@@ -45,8 +48,8 @@
        
     }
     .shopping_box2 {
-        width:716px;
-        height: 188px;
+        width:900px;
+        height: 186px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
@@ -55,44 +58,42 @@
         justify-content: flex-start;
 
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 186px;
+            height: 186px;
             position: relative;
             background: #000;
             display: inline-block;
-            vertical-align: middle;
-            margin-left: 29px;
+            vertical-align: top;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 184px;
+                height: 184px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
         &__info {
-            margin-left: 20px;
+            margin: 0 30px;
         }
         &__title {
-            border-bottom: 2px solid #ccc;
             @include clear;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            width: 498px;
+            width: 650px;
             padding-bottom: 5px;
         }
         &__title-main {
             min-width: 30%;
             .shopping_box2__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size,$base-line-height);
+                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
             }
         }
         &__title-sub {
             max-width: 30%;
 
             .shopping_box2__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-small,$base-line-height);
+                @include multiline-ellipsis(1,$F-size,$base-line-height);
             }
         }
 
@@ -100,31 +101,36 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 17px;
         }
 
         &__data-name {
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
             color: #ff4808;
         }
         &__data-delivery {
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
             margin-top: -3px;
             
         }
         &__before-price {
+            display: inline-block;
+            vertical-align: top;
             text-decoration: line-through;
             color: $C-font-light;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
+            margin:18px 10px 0;
         }
         &__after-price {
-            font-size: $F-size-xxxbig;
-            letter-spacing: -3px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 5.4rem;
+            
         }
     }
     .shopping_box3 {
-        width: 1234px;
-        height: 188px;
+        width: 1300px;
+        height: 186px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
         background: #fcfcfc;
@@ -138,51 +144,50 @@
         }
     }
     .shopping_info {
-        width:690px;
-        height: 188px;
+        width:807px;
+        height: 186px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
 
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 186px;
+            height: 186px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
+                width: 184px;
+                height: 184px;
                 border: 1px solid #d9d9d9;
                 content:'';
             }
         }
         &__info {
-            margin-left: 20px;
+            margin: 0 30px;
         }
         &__title {
-            border-bottom: 2px solid #ccc;
+            
             @include clear;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            width: 478px;
+            width: 550px;
             padding-bottom: 5px;
         }
         &__title-main {
             min-width: 30%;
             .shopping_info__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size,$base-line-height);
+                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
             }
         }
         &__title-sub {
             max-width: 30%;
 
             .shopping_info__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-small,$base-line-height);
+                @include multiline-ellipsis(1,$F-size-under,$base-line-height);
             }
         }
 
@@ -190,26 +195,25 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 16px;
         }
 
         &__data-name {
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
             color: #ff4808;
         }
         &__data-delivery {
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
             margin-top: -3px;
             
         }
         &__before-price {
             text-decoration: line-through;
             color: $C-font-light;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-under;
         }
         &__after-price {
-            font-size: $F-size-xxxbig;
-            letter-spacing: -3px;
+            font-size: 5.4rem;
         }
     }
     .delivery_info {
@@ -222,22 +226,22 @@
             background: #ccc;
             height: 140px;
             position: absolute;
-            left: 690px;
+            left: 800px;
             top: 24px;
 
         }
         &__wrap {
-            margin-left: 20px;
+            margin: 0 30px 0 35px;
         }
         &__title {
-            font-size: $F-size-small;
+            font-size: $F-size-under;
             font-weight: $F-weight-bold;
             padding-bottom: 5px;
         }
 
         &__data {
             color: $C-font-light;
-            @include multiline-ellipsis(2,$F-size-small,$base-line-height);
+            @include multiline-ellipsis(2,$F-size-under,$base-line-height);
         }
     }
     .shopping_btnbox {
@@ -271,7 +275,7 @@
             background: #fff;
             border: 5px solid #fff;
             border-radius: 1px;
-            font-size: $F-size-under;
+            font-size: $F-size;
             font-weight: bold;
             cursor: pointer;
 
@@ -320,41 +324,63 @@
     }
     .shopping_myinfo {
         width:690px;
-        height: 188px;
+        height: 234px;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-        margin-top: 20px;
         &__img {
-            width: 130px;
-            height: 130px;
+            width: 234px;
+            height: 234px;
             position: relative;
             background: #000;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 29px;
             &:before {
                 position: absolute;
-                width: 128px;
-                height: 128px;
-                border: 1px solid #d9d9d9;
+                width: 234px;
+                height: 234px;
+                border-right: 1px solid #d9d9d9;
                 content:'';
             }
         }
         &__info {
-            margin-left: 20px;
+            margin: 0 30px;
+        }
+        &__order-info {
+            height: 56px;
+            border-bottom: 1px solid #d9d9d9;
+            margin-top: 22px;
+        }
+        &__order-state {
+            display:inline-block;
+            vertical-align: top;
+            padding: 0 15px;
+            background: #ff4909;
+            color:#fff;
+            font-size: $F-size-xsmall;
+            height:36px;
+            border-radius: 18px;
+            line-height: 36px;
+        }
+        &__state-date {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: -1px;
+            font-size: $F-size-small;
+            color:$C-font-dark;
         }
         &__title {
             @include clear;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            width: 498px;
+            width: 427px;
+            padding-top: 20px;
         }
         &__title-main {
             min-width: 30%;
             .shopping_myinfo__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size,$base-line-height);
+                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
             }
         }
         &__title-sub {
@@ -369,7 +395,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 14px;
         }
         &__data-detail {
             white-space: nowrap;
@@ -379,8 +405,10 @@
             color: #ff4808;
         }
         &__data-delivery {
-            font-size: $F-size-xsmall;
-            margin-top: -3px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 7px;
+            font-size: $F-size-under;
             
         }
         &__data-price {
@@ -394,7 +422,6 @@
         }
         &__after-price {
             font-size: $F-size-xxxbig;
-            letter-spacing: -3px;
             display: inline-block;
             vertical-align: top;
         }
@@ -404,9 +431,8 @@
 }
 .order_text {
     text-align: center;
-    font-size: $F-size-small;
+    font-size: $F-size-big;
     font-weight: bold;
-    padding: 10px 0 0;
     min-height: 39px;
     &.price {
         &:before {
@@ -422,23 +448,27 @@
     .order_ico_text {
         display: inline-block;
         vertical-align: top;
-        border: 3px solid #000;
-        height: 30px;
-        border-radius: 17px;
+        border: 2px solid #000;
+        height: 36px;
+        border-radius: 18px;
         padding:0 15px;
-        line-height: 34px;
-        font-size: $F-size-xsmall;
+        line-height: 36px;
+        font-size: $F-size-under;
+        margin: 0 5px;
         &:before {
             content:'';
             width: 19px;
             height: 24px;
             display: inline-block;
             vertical-align: top;
-            margin: 2px 5px 0 0;
+            margin: 5px 5px 0 0;
             background: url('../../assets/images/order/ico_mic.png') no-repeat 0 0;
         }
     }
 }
 .order_text + .shopping_wrap {
-    margin-top: 10px;
+    margin-top: 7px;
+}
+.shopping_box2__title-main + .shopping_box2__title-sub {
+    margin-left: 45px;
 }

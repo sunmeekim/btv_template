@@ -1,18 +1,19 @@
 @@include('head.html', {"css": "btv_order", "title": "[Btv] 1-03.예약주문_매장사정으로일시적주문불가 : Btv_order","filePath": "../"})
 <body>
-                <div id="wrap">
-                                <div class="video_bg">
-                                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
-                                </div>
-                                <div class="container">
-                                <div class="top_title_area">주문이 접수되었습니다.</div>
-        <div class="content_area">
-<!-- start: Btv template -->
-@@include('order_error1.html')
-<!-- end: Btv template -->
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">도미노피자를 주문합니다.</span>
         </div>
-        <div class="help_area">도움말</div>
+        <div class="content_area">
+                <!-- start: Btv template -->
+                @@include('order_error1.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
 </div>
-</div>
+@@include('bottom.html')
 </body>
 </html>

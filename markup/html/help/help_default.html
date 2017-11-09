@@ -1,13 +1,11 @@
 @@include('head.html', {"css": "btv_help", "title": "[Btv] 도움말 : Btv_help","filePath": "../"})
 <body>
-<div id="wrap">
-        <div class="video_bg">
-                <iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">도움말 입니다.</span>
         </div>
-        <div class="container">
-                <div class="top_title_area">도움말 입니다.</div>
-                <div class="content_area">
-
+        <div class="content_area">
                 <!-- start: Btv template -->
                 @@include('help_default.html')
                 <!-- end: Btv template -->
@@ -15,11 +13,12 @@
                 <!-- start: 이전 다음 버튼 -->
                 @@include('pagenate.html')
                 <!-- end: 이전 다음 버튼 -->
-                </div>	
-                <!-- <div class="help_area">도움말</div> -->
+        </div>	
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
-
+@@include('bottom.html')
 </body>
 
 </html>

@@ -3,17 +3,17 @@
 /*  Btv_IOT
 /* ---------------------------------------------------------------------- */
 .iot_wrap {
-    justify-content: space-around;
-    margin-top: 5px;
-    padding-top: 7px;
+    justify-content: center;
+    padding-top: 6px;
     .card_wrap__item {
         position: relative;
         background: #fcfcfc;
+        margin: 0 5px;
         &.active {
             &:before {
                 content:'';
                 width: 196px;
-                height: 234px;
+                height: 232px;
                 position: absolute;
                 border: 8px solid #ff4909;
                 border-radius: 3px;
@@ -35,13 +35,12 @@
                     margin: 6px 5px 0 0;
                 }
             }
-            .iot_default_card__item {
-                color:#ff4909;
-            }
+            
         }
     }
     .iot_default_card {
-        
+        text-align: center;
+
         &__order {
             text-align:right;
             margin: 9px 9px 0;
@@ -54,7 +53,8 @@
             padding:0 10px;
             border: 1px solid #333;
             border-radius: 14px;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
+            font-weight: $F-weight-bold;
             line-height: 29px;
             &:before {
                 content:'';
@@ -69,21 +69,20 @@
 
         }
         &__action {
-            margin: 20px 0 15px;
-            text-align: center;
-            font-size: 4.5rem;
-            font-weight: $F-weight-bold;
+            margin: 24px 0 13px;
+            display: inline-block;
+            vertical-align: top;
             &.on{
-                color:#ff4909;
+                @include use-sprite(nugu_smarthome_on);
+                
             }
             &.off{
-                color:#b3b3b3;
+                @include use-sprite(nugu_smarthome_off);
             }
         }
         &__item {
             text-align: center;
-            font-size: $F-size-xsmall;
-            font-weight: $F-weight-bold;
+            font-size: $F-size;
         }
         &__nodata {
             display: none;

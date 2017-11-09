@@ -30,12 +30,13 @@ module.exports = function (grunt) {
     // load grunt plugins
     require('jit-grunt')(grunt, {
         sprite: 'grunt-spritesmith',
-        includereplace: 'grunt-include-replace'
+        includereplace: 'grunt-include-replace',
+        stringreplace:'grunt-string-replace'
     });
 
     // Display the elapsed execution time of grunt tasks
     require('time-grunt')(grunt);
-
+    
     // Project configuration.
     grunt.initConfig({
         // STATIC_DIR
@@ -177,6 +178,7 @@ module.exports = function (grunt) {
         },
 
         sync: {
+
             dist: {
                 verbose: true,
                 files: [{
@@ -233,7 +235,7 @@ module.exports = function (grunt) {
 				files: ['./markup/img/spr_*/**/*.png'],
 				tasks: ['sprite', 'build_sass', 'copy:static_resource', 'sync']
 			},
-
+            
 			image: {
 				files: [
 					'markup/img/**/*.png',
@@ -251,7 +253,8 @@ module.exports = function (grunt) {
             },
             build: ['sass_init','html'],
             deploy: ['sass_init','html']
-        }
+        },
+        
     });
 
     // default

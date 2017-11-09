@@ -3,115 +3,55 @@
 /*  Btv_교통정보
 /* ---------------------------------------------------------------------- */
 .traffic_wrap {
-      width: 1150px;
-      margin: 0 auto;
+      
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      overflow: hidden;
+      margin-top: -3px;
+      
+      .traffic_block {
+            max-width: 1300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-      &__info {
-            margin-top: 19px;
-      }
-      &__title {
-            font-size: 2.8rem;
-            color: $C-black;
-      }
-      &__stitle {
-            margin-top: -8px;
-            font-size: 1.9rem;
-            color: $C-font-light;
-      }
-      &__view {
-            margin-top: 17px;
-      }
-      &__start_img {
-            display: inline-block;
-            vertical-align: top;
-            width: 40px;
-            height: 40px;
-            background: url('../../assets/images/traffic/nugu_traffic_graph_icon_start.png') no-repeat 0 0;
-
-      }
-      &__end_img {
-            display: inline-block;
-            vertical-align: top;
-            width: 40px;
-            height: 40px;
-            background: url('../../assets/images/traffic/nugu_traffic_graph_icon_arrival.png') no-repeat 0 0;
-      }
-      &__graph {
-            position: relative;
-            display: inline-block;
-            vertical-align: top;
-            background: #e6e6e6;
-            width: 1028px;
-            height: 14px;
-            border: 1px dashed #b4b4b4;
-            border-radius: 7px;
-            margin: 12px 0 0;
-            overflow:hidden;
-      }
-      &__area_green,
-      &__area_yellow,
-      &__area_red {
-           float: left;
-           vertical-align: top;
-           height: 14px; 
-           position: relative;
-      }
-      &__area_green,
-      &__area_yellow,
-      &__area_red {
-            &:after {
-                  content: " ";
-                  left: 100%;
-                  top: 50%;
-                  border: solid transparent;
-                  height: 0;
-                  width: 0;
-                  position: absolute;
-                  pointer-events: none;
-                  border-color: rgba(136, 183, 213, 0);
-                  
-                  border-width: 14px;
-                  margin-top: -14px;
-            }
-           
-      }
-      &__area_green {
-            background: #3ecd81;
-            &:after {
-                  content: " ";
-                  border-left-color: #3ecd81;
+            &:before {
+                  content:'';
+                  width: 230px;
+                  height: 230px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  background: url('../../assets/images/traffic/nugu_traffic_image.png') no-repeat 0 0;
             }
       }
-      &__area_yellow {
-            background: #fcbe3a;
-            &:after {
-                  content: " ";
-                  border-left-color: #fcbe3a;
+      .traffic {
+            margin-left:40px;
+            text-align: left;
+            &__title {
+                  font-size: $F-size-xxxxbig;
+                  color: $C-black;
+            }
+            &__info {
+                  font-size: $F-size;
+                  margin-top: 16px;
+            }
+            &__arrive {
+                  margin-top: 18px;
+                  font-size: $F-size-under;
+                  color: $C-font-light; 
+            }
+            &__arrive-title {
+                  color: $C-font-dark;
+                  padding-right: 15px;
+                  &:before {
+                        content:'';
+                        @include use-sprite(nugu_traffic_graph_icon_arrival_copy);
+                        vertical-align: top;
+                        margin: 2px 5px 0 0;
+                  }
             }
       }
-      &__area_red {
-            background: #fb4d4d;
-            &:after {
-                  content: " ";
-                  border-left-color: #fb4d4d;
-            }
-      }
-
-      &__summary {
-            margin-top: 5px;
-      }
-      &__summary_text {
-            font-size: 1.5rem;
-            color: $C-font-dark;
-      }
-      &__summary_img {
-            display: inline-block;
-            vertical-align: top;
-            width: 70px;
-            height: 30px;
-            margin: 11px 3px 0;
-            background: url('../../assets/images/traffic/nugu_traffic_icon_dot.png') no-repeat 0 0;
-      }
-  
 }
