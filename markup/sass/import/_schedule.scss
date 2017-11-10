@@ -47,7 +47,7 @@
             text-align: left;
             font-size: $F-size;
             color: $C-black;
-            @include multiline-ellipsis(4,$F-size,125%,block);
+            @include multiline-ellipsis(4,$F-size,1.25,block);
             
         }
 
@@ -56,7 +56,6 @@
             text-align: center;
             font-size: $F-size-under;
 
-            font-weight: $F-weight-bold;
             color: #808080;
         }
         &__day {
@@ -64,12 +63,11 @@
             text-align: center;
             font-size: 6.8rem;
             color: $C-font-dark;
-            font-weight: $F-weight-bold;
         }
         &__week {
             text-align: center;
             font-size: $F-size;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             color: #4c4c4c;
         }
     }

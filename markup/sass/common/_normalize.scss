@@ -12,7 +12,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 	margin: 0;
 	padding: 0;
 	font-family: $base-font-family;
-	
+	font-weight: $F-weight-reset;
 }
 body, input, textarea, select, button, table {
 	font-family: $base-font-family;
@@ -152,7 +152,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: $F-weight-bold;
+	font-weight: $F-weight-reset;
 }
 
 dfn {

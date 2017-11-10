@@ -31,6 +31,7 @@
             margin-left:40px;
             text-align: left;
             &__title {
+                  font-family: $F-family-semi;
                   font-size: $F-size-xxxxbig;
                   color: $C-black;
             }
@@ -44,6 +45,7 @@
                   color: $C-font-light; 
             }
             &__arrive-title {
+                  font-family: $F-family-bold;
                   color: $C-font-dark;
                   padding-right: 15px;
                   &:before {

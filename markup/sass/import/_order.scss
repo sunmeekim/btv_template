@@ -86,7 +86,7 @@
             @include ellipsis;
             vertical-align: top;
             font-size: $F-size-xbig;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             margin-top: 26px;
         }
         &__menu-detaile {
@@ -102,7 +102,7 @@
         &__price-data {
             float: right;
             font-size: 4.4rem;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             color: $C-black;
         }
         &__discount {
@@ -139,8 +139,8 @@
         &__item-title {
             float: left;
             font-size: $F-size-under;
-            font-weight: $F-weight-bold;
-            
+            font-family: $F-family-semi;
+
         }
         &__item-data {
             @include ellipsis;
@@ -166,7 +166,7 @@
             border: 5px solid #fff;
             border-radius: 1px;
             font-size: $F-size-under;
-            font-weight: bold;
+            font-family: $F-family-semi;
             cursor: pointer;
 
             & + .order_btnbox__button {
@@ -187,7 +187,7 @@
             border: 5px solid #fff;
             border-radius: 1px;
             font-size: $F-size-under;
-            font-weight: bold;
+            font-family: $F-family-semi;
             cursor: pointer;
 
             &.active {
@@ -209,6 +209,7 @@
             display: block;
             border-bottom: 2px solid #ccc;
             font-size: $F-size;
+            font-family: $F-family-semi;
             color:$C-font-dark;
             height: 46px;
             padding-top: 19px;
@@ -250,7 +251,7 @@
             vertical-align: top;
             margin-top: 12px;
             font-size: $F-size-xbig;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
         }
         &__menu-detaile {
             
@@ -267,7 +268,7 @@
         &__price-data {
             float:right;
             font-size: $F-size-xxxbig;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
         }
         &__discount {
             float:left;
@@ -296,7 +297,6 @@
             .order_myinfo__nondata-text {
                 font-size: $F-size-small;
                 color: $C-font-light;
-                font-weight: $F-weight-bold;
             }
             .order_myinfo__img,
             .order_myinfo__box {
@@ -307,8 +307,8 @@
 }
 .order_text {
     text-align: center;
+    font-family: $F-family-semi;
     font-size: $F-size-big;
-    font-weight: bold;
     &.price {
         &:before {
             content:'';

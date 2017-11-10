@@ -87,6 +87,7 @@
             min-width: 30%;
             .shopping_box2__text-ellipsis {
                 @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                font-family: $F-family-semi;
             }
         }
         &__title-sub {
@@ -125,6 +126,7 @@
             display: inline-block;
             vertical-align: top;
             font-size: 5.4rem;
+            font-family: $F-family-semi;
             
         }
     }
@@ -181,6 +183,7 @@
             min-width: 30%;
             .shopping_info__text-ellipsis {
                 @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                font-family: $F-family-semi;
             }
         }
         &__title-sub {
@@ -214,6 +217,7 @@
         }
         &__after-price {
             font-size: 5.4rem;
+            font-family: $F-family-semi;
         }
     }
     .delivery_info {
@@ -235,7 +239,7 @@
         }
         &__title {
             font-size: $F-size-under;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             padding-bottom: 5px;
         }
 
@@ -255,7 +259,7 @@
             border: 5px solid #fff;
             border-radius: 1px;
             font-size: $F-size-under;
-            font-weight: bold;
+            font-family: $F-family-semi;
             cursor: pointer;
 
             & + .shopping_btnbox__button {
@@ -276,7 +280,7 @@
             border: 5px solid #fff;
             border-radius: 1px;
             font-size: $F-size;
-            font-weight: bold;
+            font-family: $F-family-semi;
             cursor: pointer;
 
             &.active {
@@ -310,7 +314,6 @@
         }
 
         &__title-date{
-            font-weight: $F-weight-regular;
             &:before {
                 content:'';
                 width: 2px;
@@ -358,6 +361,7 @@
             background: #ff4909;
             color:#fff;
             font-size: $F-size-xsmall;
+            font-family: $F-family-bold;
             height:36px;
             border-radius: 18px;
             line-height: 36px;
@@ -381,6 +385,7 @@
             min-width: 30%;
             .shopping_myinfo__text-ellipsis {
                 @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                font-family: $F-family-semi;
             }
         }
         &__title-sub {
@@ -422,6 +427,7 @@
         }
         &__after-price {
             font-size: $F-size-xxxbig;
+            font-family: $F-family-semi;
             display: inline-block;
             vertical-align: top;
         }
@@ -432,7 +438,7 @@
 .order_text {
     text-align: center;
     font-size: $F-size-big;
-    font-weight: bold;
+    font-family: $F-family-semi;
     min-height: 39px;
     &.price {
         &:before {

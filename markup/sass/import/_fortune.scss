@@ -26,6 +26,7 @@
       &__title {
             width: 995px;
             font-size: $F-size-xxxxbig;
+            font-family: $F-family-semi;
             color: $C-black;
       }
       &__title-year {
@@ -41,7 +42,7 @@
             margin-top: 13px;
             width: 995px;
             color: $C-font-dark;
-            @include multiline-ellipsis(3,$F-size,155%,block);
+            @include multiline-ellipsis(3,$F-size,1.55,block);
       }
       .fortune_wrap__title-year + .fortune_wrap__zodiac {
             color: $C-black;

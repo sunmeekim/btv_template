@@ -155,7 +155,7 @@
 	overflow:hidden;
 	display:$display;
 	display:-webkit-box;
-	max-height:$font-size-number * $line-height * $lines + 'px';
+	max-height:$font-size-number * $line-height * $lines + px;
 	font-size:$font-size;
 	text-overflow:ellipsis;
 	line-height:$line-height;

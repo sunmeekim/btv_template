@@ -47,13 +47,13 @@
     }
 
     &__paging {
+        font-family: $F-family-bold;
         font-size: 1.9rem;
         color: $C-font-light;
         text-align: center;
         margin-top: 3px;
         .current {
             color: $C-font-dark;
-            font-weight: $F-weight-bold;
         }
     }
     &__remote_wrap{
@@ -106,7 +106,7 @@
         padding: 0 10px;
         font-size: 1.9rem;
         color: $C-font-light;
-        font-weight: $F-weight-bold;
+        font-family: $F-family-bold;
         line-height: 32px;
         background: #fcfcfc;
 

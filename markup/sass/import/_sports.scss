@@ -55,7 +55,7 @@
             width: 57px;
             text-align:center;
             font-size: $F-size;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
         }
         &__item-logo {
             float:left;
@@ -69,7 +69,7 @@
         &__item-name {
             float:left;
             width: 63px;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
         }
         &__item-game {
             float:left;

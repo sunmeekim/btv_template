@@ -27,7 +27,7 @@
         margin-top: 14px;
         font-size:$F-size;
         color: $C-font-dark;
-        font-weight: $F-weight-bold;
+        font-family: $F-family-semi;
     }
 
     &__nodata {
@@ -56,7 +56,6 @@
             margin-top: 65px;
             display: block;
             color: #b2b2b2;
-            font-weight: $F-weight-bold;
             font-size: $F-size-big;
         }
     }
@@ -90,7 +89,7 @@
         &__title {
             font-size: $F-size-xxxbig;
             color: $C-font-point;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
         }
 
         &__detail {
@@ -100,13 +99,13 @@
         &__degree {
             float: left;
             font-size: 8.6rem;
+            font-family: $F-family-semi;
             color: $C-black;
             margin-top: 5px;
             .data {
                 display: inline-block;
                 vertical-align: top;
                 margin-top: -2px;
-                font-weight: $F-weight-bold;
                 padding: 0 2px 0 0;
             }
         }
@@ -117,7 +116,7 @@
         &__better {
             font-size: $F-size-xxbig;
             color: $C-font-dark-gray;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
         }
         &__degree_more {
             margin-top: 0;
@@ -159,7 +158,7 @@
             line-height: 44px;
             color: #333;
             font-size: $F-size;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             text-align: center;
         }
         &__special-img {
@@ -168,7 +167,7 @@
         }
         &__special-time {
             font-size: $F-size;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             color: #666;
         }
         @include clear();
@@ -211,7 +210,7 @@
         &__degree {
             font-size: $F-size-xxbig;
             color: $C-black;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
             padding-top:10px;
         }
     }
@@ -253,7 +252,7 @@
         &__weather_title {
             font-size: $F-size-xxxxbig;
             color: $C-font-point;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
         }
         &__temp {
             margin-top: 12px;
@@ -338,6 +337,7 @@
             
         }
         &__title {
+            font-family: $F-family-semi;
             font-size: $F-size-xxbig;
             color: $C-font-dark;
         }
@@ -345,7 +345,7 @@
             margin-top: 18px;
             font-size: 6.0rem;
             color: $C-font-point;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-bold;
             &.good {
                 color: #1dc2f1;
             }
@@ -371,10 +371,7 @@
             margin: 0 auto;
             font-size: 4.0rem;
             color: $C-font-dark;
-            
-            .data {
-                font-weight: $F-weight-bold;
-            }
+            font-family: $F-family-bold;
         }
         @include clear();
     }
@@ -411,7 +408,7 @@
         }
         &__info_data {
             font-size: 4.8rem;
-            font-weight: $F-weight-bold;
+            font-family: $F-family-semi;
             &.good {
                 color: #1dc2f1;
             }
@@ -436,13 +433,13 @@
             line-height: 42px;
             color: $C-font-dark;
             font-size: $F-size-xxbig;
+            font-family: $F-family-bold;
             
             .data {
                 display: inline-block;
                 vertical-align: top;
                 margin-right:3px;
-                font-weight: $F-weight-bold;
-                
+
             }
         }
         .weather_finedust__list + .weather_finedust__list {

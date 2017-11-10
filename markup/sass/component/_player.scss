@@ -111,6 +111,7 @@
 
     &__info &__title {
         @include ellipsis (block,820px);
+        font-family: $F-family-bold;
         font-size: $F-size-xxbig;
         color: $C-font-dark;
     }
@@ -188,7 +189,7 @@
         text-align: center;
         font-size: $F-size-xsmall;
         color: #ff4909;
-        font-weight: $F-weight-bold;
+        font-family: $F-family-bold;
     }
 
 }
