@@ -198,6 +198,16 @@ module.exports = function (grunt) {
                         ],
                         dest: 'markup/dist/assets/images'
                     }]
+            },
+            script: {
+                verbose: true,
+                files: [{
+                    cwd: 'markup/js',
+                    src: [
+                        '**/*.js'
+                    ],
+                    dest: 'markup/dist/assets/js'
+                }]
             }
         },
 
@@ -243,7 +253,11 @@ module.exports = function (grunt) {
 					'!markup/img/spr_*/**/*.png'
 				],
 				tasks: ['sync']
-			}
+			},
+            script: {
+                files: ['./markup/js/**/*.js'],
+                tasks: ['sync']
+            },
 
         },
 
