@@ -30,12 +30,14 @@
 
       &__info {
            word-break: keep-all;
-           font-size: 4.8rem;
+           font-size: 3.6rem;
            line-height: 1.5;
       }
       .data {
-            white-space: nowrap;
-            display: block;
+          &:only-child {
+            font-size: 4.8rem;
+          }
+          @include ellipsis(block,1030px);
             text-align: left;
       }
    }

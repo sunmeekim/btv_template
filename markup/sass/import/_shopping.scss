@@ -438,7 +438,6 @@
 .order_text {
     text-align: center;
     font-size: $F-size-big;
-    font-family: $F-family-semi;
     min-height: 39px;
     &.price {
         &:before {
@@ -459,6 +458,7 @@
         border-radius: 18px;
         padding:0 15px;
         line-height: 36px;
+        font-family: $F-family-bold;
         font-size: $F-size-under;
         margin: 0 5px;
         &:before {

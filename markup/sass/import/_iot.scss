@@ -69,15 +69,12 @@
 
         }
         &__action {
+            @include use-sprite(nugu_smarthome_off);
             margin: 24px 0 13px;
             display: inline-block;
             vertical-align: top;
             &.on{
                 @include use-sprite(nugu_smarthome_on);
-                
-            }
-            &.off{
-                @include use-sprite(nugu_smarthome_off);
             }
         }
         &__item {

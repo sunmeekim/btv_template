@@ -27,7 +27,7 @@
             background:#fff;
             font-size: $F-size-under;
             line-height: 78px;
-            &.even {
+            &:nth-child(2n) {
                 background: #f8f8f8;
             }
             &.winner {
