@@ -48,6 +48,17 @@
             &.active {
                 color:#f53f0e;
             }
+            &.none {
+                .teamrank_wrap__item-ranking,
+                .teamrank_wrap__item-logo,
+                .teamrank_wrap__item-name,
+                .teamrank_wrap__item-game,
+                .teamrank_wrap__item-diff,
+                .teamrank_wrap__item-scoring,
+                .teamrank_wrap__item-winrate {
+                    display: none;
+                }
+            }
             @include clear;
         }
         &__item-ranking {

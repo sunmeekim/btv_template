@@ -23,11 +23,7 @@
             }
         }
         &.none {
-            .alarm_default_card__ampm,
-            .alarm_default_card__action,
-            .alarm_default_card__item {
-               display: none;
-            }
+            display: none;
         }
     }
     .alarm_default_card {

@@ -21,7 +21,7 @@
             font-size: $F-size-xsmall;
             color: $C-font-light;
             .data {
-                @include ellipsis(inline-block,378px);
+                @include ellipsis(inline-block,375px);
             }
             
             &:before {
@@ -41,12 +41,10 @@
         height: 234px;
         background: #fcfcfc;
         border-radius: 1px;
-    
+        margin: 0 5px;
+        
         &.none {
-            .help_card {
-                display: none;
-            }
-            
+            display: none;
         }
     }
 }

@@ -145,17 +145,16 @@
     }
     &__progress &__progress-bg {
         width: 620px;
-        height: 3px;
+        height: 5px;
         display: block;
         background: #cbcbcb;
         text-align:left;
-        vertical-align: top;
-        margin-top: 19px;
+        margin-top: 17px;
     }
     &__progress &__progress-bar {
         display: inline-block;
         vertical-align: top;
-        height: 3px;
+        height: 5px;
         background: #ff4909;
     }
     &__progress &__start,
