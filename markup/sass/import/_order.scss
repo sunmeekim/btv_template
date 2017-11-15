@@ -242,12 +242,12 @@
         &__box {
             display: inline-block;
             vertical-align: top;
-            max-width: 420px;
+            width: 420px;
             height: 130px;
             margin: 0 25px;
         }
         &__menu {
-            @include ellipsis;
+            @include ellipsis(block,100%);
             vertical-align: top;
             margin-top: 12px;
             font-size: $F-size-xbig;
@@ -255,7 +255,7 @@
         }
         &__menu-detaile {
             
-            @include ellipsis;
+            @include ellipsis(block,100%);
             vertical-align: top;
             margin-top: 2px;
             font-size: $F-size-under;
