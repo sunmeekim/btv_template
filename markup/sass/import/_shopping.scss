@@ -86,15 +86,17 @@
         &__title-main {
             min-width: 30%;
             .shopping_box2__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                @include ellipsis;
                 font-family: $F-family-semi;
+                font-size: $F-size-xbig;
             }
         }
         &__title-sub {
-            max-width: 30%;
+            max-width: 70%;
 
             .shopping_box2__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size,$base-line-height);
+                @include ellipsis;
+                font-size: $F-size;
             }
         }
 
@@ -102,7 +104,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 17px;
+            margin-top: 2px;
         }
 
         &__data-name {
@@ -182,15 +184,17 @@
         &__title-main {
             min-width: 30%;
             .shopping_info__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                @include ellipsis;
                 font-family: $F-family-semi;
+                font-size: $F-size-xbig;
             }
         }
         &__title-sub {
-            max-width: 30%;
+            max-width: 70%;
 
             .shopping_info__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-under,$base-line-height);
+                @include ellipsis;
+                font-size: $F-size-under;
             }
         }
 
@@ -292,7 +296,7 @@
     }
 
     .shopping_mybox {
-        width:712px;
+        width:721px;
         height: 234px;
         border: 1px solid #d9d9d9;
         border-radius: 1px;
@@ -326,7 +330,7 @@
         }
     }
     .shopping_myinfo {
-        width:690px;
+        //width:690px;
         height: 234px;
         display: flex;
         align-items: flex-start;
@@ -369,9 +373,10 @@
         &__state-date {
             display: inline-block;
             vertical-align: top;
-            margin-top: -1px;
+            margin: 2px 0 0 10px;
             font-size: $F-size-small;
             color:$C-font-dark;
+
         }
         &__title {
             @include clear;
@@ -384,15 +389,17 @@
         &__title-main {
             min-width: 30%;
             .shopping_myinfo__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-xbig,$base-line-height);
+                @include ellipsis;
+                font-size: $F-size-xbig;
                 font-family: $F-family-semi;
             }
         }
         &__title-sub {
-            max-width: 30%;
+            max-width: 70%;
 
             .shopping_myinfo__text-ellipsis {
-                @include multiline-ellipsis(1,$F-size-small,$base-line-height);
+                @include ellipsis;
+                font-size: $F-size-small;
             }
         }
 
@@ -400,7 +407,6 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            margin-top: 14px;
         }
         &__data-detail {
             white-space: nowrap;
@@ -447,7 +453,7 @@
             width: 29px;
             height: 28px;
             margin: 3px 5px 0 0;
-            background: url('../../assets/images/order/ico_txt.png') no-repeat 0 0;
+            background: url('/images/order/ico_txt.png') no-repeat 0 0;
         }
     }
     .order_ico_text {
@@ -468,7 +474,7 @@
             display: inline-block;
             vertical-align: top;
             margin: 5px 5px 0 0;
-            background: url('../../assets/images/order/ico_mic.png') no-repeat 0 0;
+            background: url('/images/order/ico_mic.png') no-repeat 0 0;
         }
     }
 }

@@ -13,6 +13,12 @@
         &.date {
             background: #f3f3f3;
         }
+        &.past{
+            .schedule_default_card__time,
+            .schedule_default_card__action {
+                opacity: .4;
+            }
+        }
     }
     .schedule_default_card {
         
@@ -36,7 +42,7 @@
             .time {
                 display: inline-block;
                 vertical-align: top;
-                margin-top: 18px;
+                margin: 18px 0 0 5px;
                 color:#626262;
                 font-size: $F-size-small;
             }

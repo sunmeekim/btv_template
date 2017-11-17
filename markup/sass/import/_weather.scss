@@ -169,6 +169,11 @@
         &__special-img {
             text-align: center;
             padding: 14px 0 8px;
+
+            .weather_d_simg {
+                width: 150px;
+                height: 150px;
+            }
         }
         &__special-time {
             font-size: $F-size;
@@ -182,6 +187,9 @@
         margin-top: 19px;
     }
     .weather_daily_represent__dust + .weather_daily_represent__dust {
+        margin-left: 26px;
+    }
+    .weather_daily_represent__precipitation + .weather_daily_represent__dust {
         margin-left: 26px;
     }
     .weather_daily_timeline {
@@ -305,7 +313,7 @@
                     vertical-align: top;
                     width: 132px;
                     height: 132px;
-                    background: url('../../assets/images/weather/sky_nodate_m.png') no-repeat 0 0;
+                    background: url('/images/weather/sky_nodate_m.png') no-repeat 0 0;
                 }
                 
             }

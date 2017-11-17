@@ -4,6 +4,7 @@
 /* ---------------------------------------------------------------------- */
 .playerlst {
     margin-top: 7px;
+    width: 269px;
     &.active {
 
         .playerlst__img {
@@ -29,7 +30,7 @@
                 vertical-align: top;
                 width: 10px;
                 height: 15px;;
-                background: url('../../assets/images/melon/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
+                background: url('/images/melon/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
                 background-size: 10px 15px;
                 margin: 6px 5px 0 0;
             }
@@ -65,7 +66,7 @@
             vertical-align: top;
             width: 10px;
             height: 15px;;
-            background: url('../../assets/images/melon/nugu_advice_icon_mic2.png') no-repeat 0 0;
+            background: url('/images/melon/nugu_advice_icon_mic2.png') no-repeat 0 0;
             background-size: 10px 15px;
             margin: 6px 5px 0 0;
         }

@@ -99,7 +99,7 @@ module.exports = function (grunt) {
 			spr_img: {
 				src: ['./markup/img/spr_img/*.png'],
 				dest: '<%= IMG_DIR %>/spr_img.png',
-				imgPath: '../images/spr_img/spr_img.png',
+				imgPath: '/images/spr_img/spr_img.png',
 				destCss: './markup/sass/sprites/_spr_img.scss',
 				padding: 4,
 				cssSpritesheetName: 'spr_img'
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
 			spr_img_2x: {
 				src: ['./markup/img/spr_img/2x/*.png'],
 				dest: '<%= IMG_DIR %>/spr_img_2x.png',
-				imgPath: '../images/spr_img/spr_img_2x.png',
+				imgPath: '/images/spr_img/spr_img_2x.png',
 				destCss: './markup/sass/sprites/_spr_img_2x.scss',
 				padding: 4,
 				cssSpritesheetName: 'spr_img_2x'
@@ -275,8 +275,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['clean', 'concurrent:build', 'watch']);
     grunt.registerTask('deploy', ['clean', 'sassNoMap', 'concurrent:deploy']);
 
-    grunt.registerTask('build_sass', ['sass', 'postcss']); //cssmin테스크를 뺴고 돌리면 sass옵션이 제대로 실행됨
-    // grunt.registerTask('build_sass', ['sass', 'postcss', 'cssmin']); 
+    // grunt.registerTask('build_sass', ['sass', 'postcss']); //cssmin테스크를 뺴고 돌리면 sass옵션이 제대로 실행됨
+    grunt.registerTask('build_sass', ['sass', 'postcss', 'cssmin']); 
     grunt.registerTask('sass_init', ['sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);
 
     grunt.registerTask('sass_init2', ['serverUrl', 'sprite_common_func', 'sprite', 'build_sass', 'copy:static_resource']);
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
         var url = '';
 
         // if(e === 'deploy'){
-            url = '../images';
+            url = '/images';
             // grunt.config.data.IMG_DIR = '이미지 절대경로';
         //     url = '이미지 상대경로';
         // }
