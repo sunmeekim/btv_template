@@ -38,7 +38,7 @@
             display: none;
         }
         .player__img .player__img-box {
-            background: url('../../assets/images/audiobook/nugu_audiobook_image.png') no-repeat 0 0;
+            background: url('/images/audiobook/nugu_audiobook_image.png') no-repeat 0 0;
         }
     }
     &.radio {
@@ -71,7 +71,7 @@
            
         }
         .player__img .player__img-box {
-            background: url('../../assets/images/dailybriefing/nugu_news_image.png') no-repeat 0 0;
+            background: url('/images/dailybriefing/nugu_news_image.png') no-repeat 0 0;
         }
     }
     &.banner {
@@ -83,7 +83,6 @@
             position: absolute;
             left: 0;
             top: 0;
-    
         }
     }
     .banner_area {
@@ -181,6 +180,16 @@
         justify-content: space-between;
         align-items: flex-start;
         margin-top: 13px;
+
+        &.disabled {
+            .player__start,
+            .player__end {
+                opacity: .3;
+            }
+            .player__progress-bar {
+                display: none;
+            }
+        }
     }
     &__progress &__progress-bg {
         width: 620px;
@@ -201,6 +210,7 @@
         font-size: $F-size-under;
         color: $C-font-dark;
     }
+
     &__controller {
         position: relative;
         margin-top: 13px;
@@ -257,7 +267,7 @@
     &__prev {
         @include use-sprite(nugu_melon_control_back_nor);
         @extend %active;
-        &.disabled {
+        &:disabled {
             @include use-sprite(nugu_melon_control_back_dis);
 
         }
@@ -266,6 +276,9 @@
     &__prev-speed {
         @include use-sprite(nugu_melon_control_back_severalfold_nor);
         @extend %active;
+        &:disabled {
+            opacity: .3;
+        }
     }
     &__play {
         @include use-sprite(nugu_melon_control_play_nor);
@@ -274,7 +287,7 @@
     &__next {
         @include use-sprite(nugu_melon_control_next_nor);
         @extend %active;
-        &.disabled {
+        &:disabled {
             @include use-sprite(nugu_melon_control_next_dis);
 
         }
@@ -282,6 +295,9 @@
     &__next-speed {
         @include use-sprite(nugu_melon_control_next_severalfold_nor);
         @extend %active;
+        &:disabled {
+            opacity: .3;
+        }
     }
     &__pause {
         @include use-sprite(nugu_melon_control_pause_nor);
