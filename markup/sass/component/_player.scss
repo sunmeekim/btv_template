@@ -18,12 +18,7 @@
     }
     
     &.podcast {
-        .player__detail-desc {
-            @include ellipsis (block,100%);
-            
-        }
-        .player__detail-desc2,
-        .player__detail-desc2:before,
+        
         .btn__replay,
         .btn__random {
             display: none;
@@ -40,36 +35,27 @@
         .player__img .player__img-box {
             background: url('/images/audiobook/nugu_audiobook_image.png') no-repeat 0 0;
         }
+        
     }
     &.radio {
         .btn__prev-speed,
         .btn__next-speed,
         .player__controller-speed,
         .btn__replay,
-        .btn__random,
-        .player__detail-desc2,
-        .player__detail-desc2:before {
+        .btn__random {
             display: none;
         }
-        .player__detail-desc {
-            @include ellipsis (block,100%);
-           
-        }
+        
     }
     &.dailybrifing {
         .btn__prev-speed,
         .btn__next-speed,
         .player__controller-speed,
         .btn__replay,
-        .btn__random,
-        .player__detail-desc2,
-        .player__detail-desc2:before {
+        .btn__random {
             display: none;
         }
-        .player__detail-desc {
-            @include ellipsis (block,100%);
-           
-        }
+        
         .player__img .player__img-box {
             background: url('/images/dailybriefing/nugu_news_image.png') no-repeat 0 0;
         }
@@ -160,20 +146,11 @@
         margin-top: 5px;
     }
     &__info &__detail-desc {
-        @include ellipsis (block,50%);
+        @include ellipsis (block,100%);
         color: $C-font-light;
         font-size: $F-size;
     }
-    &__info &__detail-desc2 {
-        @include ellipsis (block,50%);
-        color: $C-font-light;
-        font-size: $F-size;
-        &:before {
-            content:'|';
-            color: $C-font-light;
-            padding: 0 10px;
-        }
-    }
+    
     &__progress {
         width: 820px;
         display: flex;
