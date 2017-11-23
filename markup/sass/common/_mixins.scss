@@ -7,6 +7,10 @@
 		@include spr_img($important);
 	} @else if $spritesheetName == 'spr_img_2x' {
 		@include spr_img_2x($important);
+	} @else if $spritesheetName == 'spr_member' {
+		@include spr_member($important);
+	}@else if $spritesheetName == 'spr_member_2x' {
+		@include spr_member_2x($important);
 	} 
 }
 @mixin use-sprite-normal($filename, $map:$spr_img, $retinaMap:null, $retina:false, $important:null, $mediaquery:false, $x2:false) {

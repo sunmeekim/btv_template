@@ -84,7 +84,7 @@
             padding-bottom: 5px;
         }
         &__title-main {
-            min-width: 30%;
+            min-width: 70%;
             .shopping_box2__text-ellipsis {
                 @include ellipsis;
                 font-family: $F-family-semi;
@@ -92,11 +92,12 @@
             }
         }
         &__title-sub {
-            max-width: 70%;
+            min-width: 30%;
 
             .shopping_box2__text-ellipsis {
                 @include ellipsis;
                 font-size: $F-size;
+                margin-left:10px;
             }
         }
 

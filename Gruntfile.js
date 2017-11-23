@@ -45,6 +45,7 @@ module.exports = function (grunt) {
         HTML_DIR  : "./markup/html",
         BUILD_DIR : "./markup/dist/html",
         IMG_DIR : "./markup/dist/assets/images/spr_img",
+        IMG_DIR2 : "/images/spr_img/",
         // Metadata.
         pkg: grunt.file.readJSON("package.json"),
         banner: '/*!  <%= pkg.title || pkg.name %> - v<%= pkg.version %> ' + grunt.util.linefeed + '<%= pkg.author.name %>' + grunt.util.linefeed + ' */' + grunt.util.linefeed,
@@ -99,7 +100,7 @@ module.exports = function (grunt) {
 			spr_img: {
 				src: ['./markup/img/spr_img/*.png'],
 				dest: '<%= IMG_DIR %>/spr_img.png',
-				imgPath: '/images/spr_img/spr_img.png',
+				imgPath: '<%= IMG_DIR2 %>/spr_img.png',
 				destCss: './markup/sass/sprites/_spr_img.scss',
 				padding: 4,
 				cssSpritesheetName: 'spr_img'
@@ -108,10 +109,26 @@ module.exports = function (grunt) {
 			spr_img_2x: {
 				src: ['./markup/img/spr_img/2x/*.png'],
 				dest: '<%= IMG_DIR %>/spr_img_2x.png',
-				imgPath: '/images/spr_img/spr_img_2x.png',
+				imgPath: '<%= IMG_DIR2 %>/spr_img_2x.png',
 				destCss: './markup/sass/sprites/_spr_img_2x.scss',
 				padding: 4,
 				cssSpritesheetName: 'spr_img_2x'
+            },
+            spr_member: {
+				src: ['./markup/img/member/*.png'],
+				dest: '<%= IMG_DIR %>/spr_member.png',
+				imgPath: '<%= IMG_DIR2 %>/spr_member.png',
+				destCss: './markup/sass/sprites/_spr_member.scss',
+				padding: 4,
+				cssSpritesheetName: 'spr_member'
+			},
+            spr_member_2x: {
+				src: ['./markup/img/member/2x/*.png'],
+				dest: '<%= IMG_DIR %>/spr_member_2x.png',
+				imgPath: '<%= IMG_DIR2 %>/spr_member_2x.png',
+				destCss: './markup/sass/sprites/_spr_member_2x.scss',
+				padding: 4,
+				cssSpritesheetName: 'spr_member_2x'
 			},
 		},
 
