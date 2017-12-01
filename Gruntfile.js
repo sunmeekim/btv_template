@@ -45,6 +45,7 @@ module.exports = function (grunt) {
         HTML_DIR  : "./markup/html",
         BUILD_DIR : "./markup/dist/html",
         IMG_DIR : "./markup/dist/assets/images/spr_img",
+        // ../은 local용 올릴땐 /로 변경해 전달해야함
         IMG_DIR2 : "/images/spr_img/",
         // Metadata.
         pkg: grunt.file.readJSON("package.json"),

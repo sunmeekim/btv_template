@@ -99,6 +99,7 @@
 
         &__detail {
             margin-top: 0;
+            min-height: 116px;
             @include clear();
         }
         &__degree {
@@ -116,7 +117,7 @@
         }
         &__detail_more {
             float: left;
-            margin: 15px 0 0 25px;
+            margin: 15px 0 0 0;
         }
         &__better {
             font-size: $F-size-xxbig;
@@ -191,6 +192,9 @@
     }
     .weather_daily_represent__precipitation + .weather_daily_represent__dust {
         margin-left: 26px;
+    }
+    .weather_daily_represent__degree + .weather_daily_represent__detail_more {
+        margin-left: 25px;
     }
     .weather_daily_timeline {
         float:left;

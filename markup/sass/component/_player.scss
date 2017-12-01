@@ -18,7 +18,9 @@
     }
     
     &.podcast {
-        
+        .btn__prev-speed,
+        .btn__next-speed,
+        .player__controller-speed,
         .btn__replay,
         .btn__random {
             display: none;
@@ -100,17 +102,20 @@
         border-radius:50%;
         overflow: hidden;
         position: relative;
-        &:before {
-            content:'';
-            position: absolute;
-            bottom:0;
-            left:0;
-            right:0;
-            width: 230px;
-            height: 230px;
-            background: -webkit-linear-gradient(top, rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%);
-            background: linear-gradient(to bottom, rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%);
+        &.mask {
+            &:before {
+                content:'';
+                position: absolute;
+                bottom:0;
+                left:0;
+                right:0;
+                width: 230px;
+                height: 230px;
+                background: -webkit-linear-gradient(top, rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%);
+                background: linear-gradient(to bottom, rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%);
+            }
         }
+        
         .player_p_img {
             width: 230px;
             height: 230px;
@@ -195,8 +200,12 @@
     }
     &__controller &__controller-left {
         position: absolute;
-        left:-23px;
+        left:-35px;
         top:0;
+        
+        button {
+            margin: 0 13px 0 12px;
+        }
     }
     &__controller &__controller-right {
         position: absolute;
