@@ -5,10 +5,13 @@
         <div class="top_title_area">
                 <span class="data">오늘 운세 입니다.</span>
         </div>
-        <div class="content_area">
+        <div class="content_area fortune">
                 <!-- start: Btv template -->
                 @@include('fortune_all.html')
                 <!-- end: Btv template -->
+                <!-- start: 이전 다음 버튼 -->
+                @@include('pagenate.html')
+                <!-- end: 이전 다음 버튼 -->
         </div>	
         <div class="help_area">
                 <button class="bottom_text-area"><span class="data">도움말</span></button>

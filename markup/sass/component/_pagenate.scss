@@ -119,4 +119,38 @@
         }
 
     }
+    
+}
+.fortune {
+    .pagenate__voice_wrap,
+    .pagenate__remote_wrap,
+    .pagenate__paging {
+        display: none !important;
+    }
+    .pagenate__btn-next,
+    .pagenate__btn-prev {
+        background-image: none;
+        width:15px;
+        height:15px;
+        border-radius: 50%;
+        background-color: #ff4909; 
+    }
+    .pagenate__prev {
+        left: auto;
+        right:50px;
+        top: 230px;
+        &.disabled {
+            .pagenate__btn-prev {
+                background-color: #d8d8d8;
+            }
+        }
+    }
+    .pagenate__next {
+        top: 260px;
+        &.disabled {
+            .pagenate__btn-next {
+                background-color: #d8d8d8;
+            }
+        }
+    }
 }

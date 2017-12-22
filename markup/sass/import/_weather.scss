@@ -75,7 +75,7 @@
 
     .weather_daily_represent {
         float: left;
-        width: 738px;
+        width: 750px;
 
         .weather_d_img {
             width:250px;
@@ -88,7 +88,7 @@
         }
         &__info {
             float: left;
-            width: 450px;
+            width: 465px;
             margin: 23px 0 0 35px;
         }
         &__title {
@@ -169,11 +169,11 @@
         }
         &__special-img {
             text-align: center;
-            padding: 14px 0 8px;
+            padding: 13px 0 0;
 
             .weather_d_simg {
-                width: 100px;
-                height: 100px;
+                width: 155px;
+                height: 155px;
             }
         }
         &__special-time {
