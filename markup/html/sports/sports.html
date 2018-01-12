@@ -14,6 +14,14 @@
                 @@include('pagenate.html')
                 <!-- end: 이전 다음 버튼 -->
         </div>
+        <div class="content_area" id="game_schedule">
+                <!-- start: Btv template -->
+                @@include('sports_gameschdule.html')
+                <!-- end: Btv template -->
+                <!-- start: 이전 다음 버튼 -->
+                @@include('pagenate.html')
+                <!-- end: 이전 다음 버튼 -->
+        </div>
         <div class="help_area">
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
@@ -24,7 +32,7 @@
 <div class="case_wrap">
         <ul class="case__list">
                 <li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">순위보기</a></li>
-                <li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'shopping_end')" >11번가 접수/결제완료</a></li>
+                <li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'game_schedule')" >경기일정</a></li>
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->

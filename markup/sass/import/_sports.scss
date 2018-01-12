@@ -127,5 +127,13 @@
             }
         }
     }
-
+    .game_schedule {
+        .game_card_wrap {
+            &__date {
+                text-align: center;
+                font-size: $F-size-small;
+                color:#626262;
+            }
+        }
+    }
 }
