@@ -1,11 +1,13 @@
-@@include('head.html', {"css": "btv_shopping", "title": "[Btv] 2-1-1. 주문 가능 : Btv_shopping","filePath": "../"})
+@@include('head.html', {"css": "btv_shopping", "title": "[Btv] 2. 쇼핑(11번가) : Btv_shopping","filePath": "../"})
 <body>
 @@include('top.html')
 <div class="container">
     <div class="top_title_area">
         <span class="data">11번가 추천상품 입니다.</span>
     </div>
-    <div class="content_area">
+
+    <!-- 11번가 추천상품 -->
+    <div class="content_area" id="default">
         <!-- start: Btv template -->
         @@include('shopping_order1.html')
         <!-- end: Btv template -->
@@ -13,10 +15,47 @@
         @@include('pagenate.html')
         <!-- end: 이전 다음 버튼 -->
     </div>
+
+    <!-- 11번가 접수/결제 완료 -->
+    <div class="content_area" id="shopping_end">
+        <!-- start: Btv template -->
+        @@include('shopping_order_bill_end.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- 11번가 배송현황 -->
+    <div class="content_area" id="shopping_delivery">
+        <!-- start: Btv template -->
+        @@include('shopping_delivery.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- 11번가 배송현황(2개이상 상품) -->
+    <div class="content_area" id="shopping_delivery2">
+        <!-- start: Btv template -->
+        @@include('shopping_delivery2.html')
+        <!-- end: Btv template -->
+        <!-- start: 이전 다음 버튼 -->
+        @@include('pagenate.html')
+        <!-- end: 이전 다음 버튼 -->
+    </div>
+
+
     <div class="help_area">
         <button class="bottom_text-area"><span class="data">도움말</span></button>
     </div>
 </div>
 @@include('bottom.html')
+
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+    <ul class="case__list">
+        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">11번가 추천상품</a></li>
+        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_end')" >11번가 접수/결제완료</a></li>
+        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery')" >11번가 배송현황/구매목록</a></li>
+        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery2')" >11번가 배송현황/구매목록(2개이상 상품)</a></li>
+    </ul>
+</div>
+<!-- //케이스 확인하기용 -->
 </body>
 </html>

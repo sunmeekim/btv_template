@@ -19,3 +19,20 @@ $(function(){
     });
 
 });
+function includePage(evt, displayType) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("content_area");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("case__link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(displayType).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+window.onload = function(){ document.getElementById('defaultOpen').click(); }
+// document.getElementById("defaultOpen").click();
