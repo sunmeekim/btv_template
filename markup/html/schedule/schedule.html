@@ -28,14 +28,17 @@
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
-@@include('bottom.html')
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
     <ul class="case__list">
-        <li class="case__item"><a href="#schedule" class="case__link" onclick="includePage(event, 'day')" id="defaultOpen">데일리 일정</a></li>
-        <li class="case__item"><a href="#schedule" class="case__link" onclick="includePage(event, 'week')" >주간 일정</a></li>
+        <!--<li class="case__item"><a href="#schedule" class="case__link" onclick="includePage(event, 'day')" id="defaultOpen">데일리 일정</a></li>-->
+        <!--<li class="case__item"><a href="#schedule" class="case__link" onclick="includePage(event, 'week')" >주간 일정</a></li>-->
+        <li class="case__item"><a href="#day" class="case__link" id="defaultOpen">데일리 일정</a></li>
+        <li class="case__item"><a href="#week" class="case__link">주간 일정</a></li>
     </ul>
 </div>
 </body>
 <!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
 </html>

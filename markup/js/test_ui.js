@@ -18,21 +18,33 @@ $(function(){
         $(this).addClass('active').siblings().removeClass('active').parent().siblings().find('.teamrank_wrap__list-item').removeClass('active');
     });
 
+    $("#defaultOpen").click();
+
 });
-function includePage(evt, displayType) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("content_area");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("case__link");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(displayType).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+// 인클루드페이지 스위칭 하기(jquery)
+$('.case__link').on('click', function() {
+    var displayType = $(this).attr('href');
+    //console.log(displayType);
+    $('.content_area').hide();
+    $(displayType).show();
+
+    $('.case__link').removeClass('active');
+    $(this).addClass('active');
+});
+//인클루드페이지 스위칭하기 (기본 스크립트)
+// function includePage(evt, displayType) {
+//     var i, tabcontent, tablinks;
+//     tabcontent = document.getElementsByClassName("content_area");
+//     for (i = 0; i < tabcontent.length; i++) {
+//         tabcontent[i].style.display = "none";
+//     }
+//     tablinks = document.getElementsByClassName("case__link");
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+//     document.getElementById(displayType).style.display = "block";
+//     evt.currentTarget.className += " active";
+// }
 
 // Get the element with id="defaultOpen" and click on it
-window.onload = function(){ document.getElementById('defaultOpen').click(); }
-// document.getElementById("defaultOpen").click();
+// window.onload = function(){ document.getElementById('defaultOpen').click(); }

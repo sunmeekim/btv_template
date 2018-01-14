@@ -45,17 +45,21 @@
         <button class="bottom_text-area"><span class="data">도움말</span></button>
     </div>
 </div>
-@@include('bottom.html')
-
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
     <ul class="case__list">
-        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">11번가 추천상품</a></li>
-        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_end')" >11번가 접수/결제완료</a></li>
-        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery')" >11번가 배송현황/구매목록</a></li>
-        <li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery2')" >11번가 배송현황/구매목록(2개이상 상품)</a></li>
+        <!--<li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">11번가 추천상품</a></li>-->
+        <!--<li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_end')" >11번가 접수/결제완료</a></li>-->
+        <!--<li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery')" >11번가 배송현황/구매목록</a></li>-->
+        <!--<li class="case__item"><a href="#shopping" class="case__link" onclick="includePage(event, 'shopping_delivery2')" >11번가 배송현황/구매목록(2개이상 상품)</a></li>-->
+        <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">11번가 추천상품</a></li>
+        <li class="case__item"><a href="#shopping_end" class="case__link" >11번가 접수/결제완료</a></li>
+        <li class="case__item"><a href="#shopping_delivery" class="case__link">11번가 배송현황/구매목록</a></li>
+        <li class="case__item"><a href="#shopping_delivery2" class="case__link">11번가 배송현황/구매목록(2개이상 상품)</a></li>
     </ul>
 </div>
 <!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
 </body>
 </html>

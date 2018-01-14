@@ -101,26 +101,41 @@
         <button class="bottom_text-area"><span class="data">도움말</span></button>
     </div>
 </div>
-@@include('bottom.html')
 
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
     <ul class="case__list">
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">주문접수(리모콘 제어화면)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default2')" >주문접수</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_end')" >주문접수완료</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_error')" >예약주문(일시적으로 주문이 불가능한 경우)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_confirm')" >주문확인(주문메뉴 및 가격문의)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_qna')" >문의대응(결제)(확정된 주문중-쿠폰 없음)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_my')" >마이메뉴 (등록)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_mynone')" >마이메뉴 (미등록)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_new')" >신메뉴</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_cancel')" >주문취소(예약된 주문 존재 시)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error')" >주문가능하지 않은 메뉴 주문(에러)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error2')" >진행중인 메뉴가 있는 경우(에러)</a></li>
-        <li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error3')" >매장사정으로 배달지연(에러)</a></li>
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">주문접수(리모콘 제어화면)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default2')" >주문접수</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_end')" >주문접수완료</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_error')" >예약주문(일시적으로 주문이 불가능한 경우)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_confirm')" >주문확인(주문메뉴 및 가격문의)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_qna')" >문의대응(결제)(확정된 주문중-쿠폰 없음)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_my')" >마이메뉴 (등록)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_mynone')" >마이메뉴 (미등록)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_new')" >신메뉴</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_cancel')" >주문취소(예약된 주문 존재 시)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error')" >주문가능하지 않은 메뉴 주문(에러)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error2')" >진행중인 메뉴가 있는 경우(에러)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error3')" >매장사정으로 배달지연(에러)</a></li>-->
+
+        <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">주문접수(리모콘 제어화면)</a></li>
+        <li class="case__item"><a href="#default2" class="case__link">주문접수</a></li>
+        <li class="case__item"><a href="#order_end" class="case__link">주문접수완료</a></li>
+        <li class="case__item"><a href="#order_error" class="case__link">예약주문(일시적으로 주문이 불가능한 경우)</a></li>
+        <li class="case__item"><a href="#order_confirm" class="case__link">주문확인(주문메뉴 및 가격문의)</a></li>
+        <li class="case__item"><a href="#order_qna" class="case__link">문의대응(결제)(확정된 주문중-쿠폰 없음)</a></li>
+        <li class="case__item"><a href="#order_my" class="case__link">마이메뉴 (등록)</a></li>
+        <li class="case__item"><a href="#order_mynone" class="case__link">마이메뉴 (미등록)</a></li>
+        <li class="case__item"><a href="#order_new" class="case__link">신메뉴</a></li>
+        <li class="case__item"><a href="#order_cancel" class="case__link">주문취소(예약된 주문 존재 시)</a></li>
+        <li class="case__item"><a href="#order_menu_error" class="case__link">주문가능하지 않은 메뉴 주문(에러)</a></li>
+        <li class="case__item"><a href="#order_menu_error2" class="case__link">진행중인 메뉴가 있는 경우(에러)</a></li>
+        <li class="case__item"><a href="#order_menu_error3" class="case__link">매장사정으로 배달지연(에러)</a></li>
     </ul>
 </div>
 <!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
 </body>
 </html>

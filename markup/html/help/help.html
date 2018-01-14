@@ -28,16 +28,19 @@
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
-@@include('bottom.html')
+
 
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
         <ul class="case__list">
-                <li class="case__item"><a href="#help" class="case__link" onclick="includePage(event, 'general')" id="defaultOpen">기본 도움말</a></li>
-                <li class="case__item"><a href="#help" class="case__link" onclick="includePage(event, 'melon')" >멜론 도움말</a></li>
+                <!--<li class="case__item"><a href="#help" class="case__link" onclick="includePage(event, 'general')" id="defaultOpen">기본 도움말</a></li>-->
+                <!--<li class="case__item"><a href="#help" class="case__link" onclick="includePage(event, 'melon')" >멜론 도움말</a></li>-->
+                <li class="case__item"><a href="#general" class="case__link" id="defaultOpen">기본 도움말</a></li>
+                <li class="case__item"><a href="#melon" class="case__link">멜론 도움말</a></li>
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->
+@@include('bottom.html')
 </body>
 
 </html>

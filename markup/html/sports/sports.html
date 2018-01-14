@@ -26,16 +26,19 @@
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
-@@include('bottom.html')
 
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
         <ul class="case__list">
-                <li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">순위보기</a></li>
-                <li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'game_schedule')" >경기일정</a></li>
+                <!--<li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">순위보기</a></li>-->
+                <!--<li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'game_schedule')" >경기일정</a></li>-->
+                <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">순위보기</a></li>
+                <li class="case__item"><a href="#game_schedule" class="case__link">경기일정</a></li>
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
 
 </body>
 </html>

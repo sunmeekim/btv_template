@@ -1,5 +1,5 @@
 @@include('head.html', {"css": "btv_weather", "title": "[Btv] 10.날씨","filePath": "../"})
-<body>
+<body id="test">
 @@include('top.html')
 <div class="container">
         <div class="top_title_area">
@@ -43,11 +43,17 @@
 <!-- 케이스 확인하기용 -->
 <div class="case_wrap">
         <ul class="case__list">
-                <li class="case__item"><a href="#weather" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">오늘 날씨</a></li>
-                <li class="case__item"><a href="#weather" class="case__link" onclick="includePage(event, 'weekend')" >주말 날씨</a></li>
-                <li class="case__item"><a href="#weather" class="case__link" onclick="includePage(event, 'weekly')" >주중 날씨</a></li>
-                <li class="case__item"><a href="#weather" class="case__link" onclick="includePage(event, 'special')" >특정일 날씨</a></li>
-                <li class="case__item"><a href="#weather" class="case__link" onclick="includePage(event, 'finedust')" >대기지수</a></li>
+                <!--<li class="case__item"><a href="#default" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">오늘 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#weekend" class="case__link" onclick="includePage(event, 'weekend')" >주말 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#weekly" class="case__link" onclick="includePage(event, 'weekly')" >주중 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#special" class="case__link" onclick="includePage(event, 'special')" >특정일 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#finedust" class="case__link" onclick="includePage(event, 'finedust')" >대기지수</a></li>-->
+
+                <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">오늘 날씨</a></li>
+                <li class="case__item"><a href="#weekend" class="case__link">주말 날씨</a></li>
+                <li class="case__item"><a href="#weekly" class="case__link">주중 날씨</a></li>
+                <li class="case__item"><a href="#special" class="case__link">특정일 날씨</a></li>
+                <li class="case__item"><a href="#finedust" class="case__link">대기지수</a></li>
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->
