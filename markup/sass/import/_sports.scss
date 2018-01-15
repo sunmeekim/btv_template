@@ -3,6 +3,7 @@
 /*  Btv_스포츠
 /* ---------------------------------------------------------------------- */
 .sports_wrap {
+    position: relative;
     margin-top: 12px;
     
     .teamrank_wrap {
@@ -128,11 +129,299 @@
         }
     }
     .game_schedule {
+        .card_wrap__item {
+            background: #fcfcfc;
+        }
         .game_card_wrap {
+
+            position: relative;
+
             &__date {
+                padding-top: 15px;
                 text-align: center;
                 font-size: $F-size-small;
                 color:#626262;
+            }
+            &__logo {
+                margin: 0 21px;
+                padding-top: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__team1,
+            &__team2 {
+                flex:left;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            &__vs {
+                padding: 0 10px;
+                flex:left;
+                color: $C-font-basic;
+                font-size: $F-size-small;
+            }
+            &__point {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__score {
+                flex:left;
+                overflow: hidden;
+                text-align: center;
+                font-family:$F-family-bold;
+                font-size: 5.4rem;
+                &.win {
+                    color: $C-black;
+                }
+                &.lose {
+                    color: $C-font-light;
+                }
+
+            }
+            &__vs2 {
+                flex:left;
+                padding: 0 5px;
+                font-size: $F-size-xxxbig;
+                color: #808080;
+
+            }
+            &__info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: $F-size-small;
+                color: $C-font-basic;
+            }
+            &__info-data {
+                color: $C-black;
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 2px;
+                    height: 24px;
+                    background: #ccc;
+                    margin: 5px 10px 0;
+                }
+                &.start_time {
+                    color: $C-font-basic;
+                }
+            }
+            &__place {
+                color: $C-font-basic;
+                &.next {
+                    color: $C-black;
+                }
+            }
+            &__nodata {
+                display: none;
+            }
+            &__pitcher {
+                margin: 0 10px 39px;
+                display: flex;
+
+            }
+            &__pitcher-name {
+                width: 50%;
+                text-align: center;
+                font-family: $F-family-bold;
+                font-size: $F-size-xsmall;
+                @include ellipsis(1);
+
+            }
+
+        }
+        .double_head {
+            width: 401px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &__date {
+                position: absolute;
+                left:0;
+                right: 0;
+                top: 15px;
+                width: 100%;
+                text-align: center;
+                font-size: $F-size-small;
+                color:#626262;
+            }
+            .game_card_wrap {
+                margin-top: 30px;
+                &.none {
+                    .game_card_wrap__nodata {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 10px;
+                        height: 160px;
+                        text-align: center;
+                        background: #fcfcfc;
+                        line-height: 160px;
+                        font-size: $F-size-xxbig;
+                        color: $C-black;
+                    }
+                }
+            }
+
+        }
+        .none {
+            .game_card_wrap__nodata {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 60px;
+                height: 160px;
+                text-align: center;
+                background: #fcfcfc;
+                line-height: 160px;
+                font-size: $F-size-xxbig;
+                color: $C-black;
+            }
+        }
+        .game_card_wrap + .game_card_wrap {
+            &:before {
+                content:'';
+                position: absolute;
+                left: 0;
+                top:18px;
+                width: 2px;
+                height: 146px;
+                background: #e0e0e0;
+            }
+        }
+    }
+    .team-box {
+        width: 810px;
+        display: flex;
+        justify-content: space-between;
+        margin: 3px auto 0;
+
+        &__team {
+            width: 180px;
+            height: 188px;
+        }
+        &__record {
+            width: 180px;
+            height: 44px;
+            border-radius: 22px;
+            text-align: center;
+            font-size: $F-size-small;
+            line-height: 44px;
+            color: $C-font-dark-gray;
+            background: $C-white;
+        }
+        &__logo {
+            margin-top: 44px;
+            width: 180px;
+            height: 144px;
+            overflow: hidden;
+
+            img {
+                width: 180px;
+                height: 144px;
+            }
+        }
+        .team-box__record + .team-box__logo {
+            margin-top: 0;
+        }
+    }
+    .score-box {
+        position: absolute;
+        left: 50%;
+        top: 33px;
+        margin-left: -200px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+
+        &__point {
+            font-family: $F-family-bold;
+            font-size: 12.0rem;
+            color: $C-font-light;
+            &.myteam {
+                color: $C-font-dark-gray;
+            }
+        }
+        &__vs {
+            font-family: $F-family-bold;
+            font-size: 12.0rem;
+            color: #808080;
+            padding: 8px 0;
+            width: 170px;
+            text-align: center;
+        }
+        &__other {
+            padding: 45px 0 0;
+            font-family: $F-family-bold;
+            font-size: 5.0rem;
+            color:#313131;
+        }
+
+    }
+    .title-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px;
+        text-align: center;
+
+        &__game-title {
+            font-size: $F-size-big;
+            font-family: $F-family-bold;
+            color: $C-black;
+        }
+        &__plus-info {
+            font-size: $F-size-under;
+            color: $C-font-basic;
+        }
+    }
+    .result-box {
+        width: 810px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        &__data {
+            min-width: 180px;
+            text-align: center;
+            font-size: $F-size;
+            font-family: $F-family-bold;
+        }
+        &__data-name {
+            font-family: $F-family-basic;
+            font-size: $F-size;
+            color: $C-font-light;
+        }
+        &__info {
+            .time {
+                font-size: $F-size;
+                color: $C-black;
+            }
+            .place {
+                font-size: $F-size;
+                color: $C-black;
+            }
+            .time + .place {
+                &:before {
+                    content:'';
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 2px;
+                    height: 24px;
+                    background: #7a7a7a;
+                    margin: 8px 12px 0 7px;
+
+                }
             }
         }
     }
