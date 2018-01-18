@@ -2,22 +2,22 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_교통정보
 /* ---------------------------------------------------------------------- */
-.traffic_wrap {
-      
-      height: 250px;
+.flex-center {
       display: flex;
       justify-content: center;
       align-items: center;
+}
+
+.traffic_wrap {
+      @extend .flex-center;
+      height: 250px;
       text-align: center;
       overflow: hidden;
       margin-top: -3px;
       
       .traffic_block {
+            @extend .flex-center;
             max-width: 1300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             &:before {
                   content:'';
                   width: 230px;
@@ -36,8 +36,8 @@
                   color: $C-black;
             }
             &__info {
-                  font-size: $F-size;
                   margin-top: 16px;
+                  font-size: $F-size;
             }
             &__arrive {
                   margin-top: 18px;
@@ -45,9 +45,10 @@
                   color: $C-font-light; 
             }
             &__arrive-title {
+                  padding-right: 15px;
                   font-family: $F-family-bold;
                   color: $C-font-dark;
-                  padding-right: 15px;
+
                   &:before {
                         content:'';
                         @include use-sprite(nugu_traffic_graph_icon_arrival_copy);

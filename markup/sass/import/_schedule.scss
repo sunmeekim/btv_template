@@ -6,20 +6,22 @@
     justify-content: center;
     margin-top: 5px;
     padding-top: 7px;
+
     .card_wrap__item {
         position: relative;
-        background: #fcfcfc;
+        background: $C-light-gray;
         margin: 0 5px;
         &.date {
-            background: #f3f3f3;
+            background: $C-light-grayBg2;
         }
         &.past{
             .schedule_default_card__time,
             .schedule_default_card__action {
-                opacity: .4;
+                @include opacity(.4);
             }
         }
     }
+
     .schedule_default_card {
         
         &__time {
@@ -36,18 +38,17 @@
                 border-radius: 16px;
                 line-height: 32px;
                 font-size: 2.3rem;
-                color:#626262;
-                background: #e6e6e6;
+                color: $C-font-light;
+                background: $C-light-grayBg;
             }
             .time {
                 display: inline-block;
                 vertical-align: top;
                 margin: 18px 0 0 5px;
-                color:#626262;
+                color: $C-font-light;
                 font-size: $F-size-small;
             }
         }
-       
         &__action {
             margin: 10px 28px 15px;
             text-align: left;
@@ -56,13 +57,11 @@
             @include multiline-ellipsis(4,$F-size,1.25,block);
             
         }
-
         &__month {
             margin-top: 27px;
             text-align: center;
             font-size: $F-size-under;
-
-            color: #808080;
+            color: $C-font-light2;
         }
         &__day {
             margin: 10px 0 9px;
@@ -74,7 +73,7 @@
             text-align: center;
             font-size: $F-size;
             font-family: $F-family-semi;
-            color: #4c4c4c;
+            color: $C-font-basic;
         }
     }
 }

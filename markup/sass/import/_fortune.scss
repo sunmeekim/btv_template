@@ -2,19 +2,20 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_운세
 /* ---------------------------------------------------------------------- */
-.fortune_wrap {
+.flex-center {
       display: flex;
       justify-content: center;
-      
+      align-items: center;
+}
+.fortune_wrap {
+      @extend .flex-center;
       .fortune_d_img {
             width: 230px;
             height: 230px;
       }
-
       &__img {
+            @extend .fortune_d_img;
             float: left;
-            width: 230px;
-            height: 230px;
             border-radius: 50%;
             overflow: hidden;
             margin-top: 6px;
@@ -29,12 +30,8 @@
             font-family: $F-family-semi;
             color: $C-black;
       }
-      &__title-year {
-            color: $C-black;
-      }
-      &__zodiac {
-            color: $C-black;
-      }
+      &__title-year,
+      &__zodiac,
       &__astromanic {
             color: $C-black;
       }

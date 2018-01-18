@@ -2,20 +2,21 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_어학사전
 /* ---------------------------------------------------------------------- */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .dictionary_wrap {
-      display: flex;
-      justify-content: center;
+      @extend .flex-center;
+      margin-top: 4px;
       overflow: hidden;
       text-align: center;
-      align-items: center;
-      margin-top: 4px;
-      
-   .dictionary_box {  
+
+   .dictionary_box {
+      @extend .flex-center;
       max-width: 1528px;
       height: 233px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
 
       &:before {
@@ -38,7 +39,7 @@
             font-size: 4.8rem;
           }
           @include ellipsis(block,1030px);
-            text-align: left;
+          text-align: left;
       }
    }
 

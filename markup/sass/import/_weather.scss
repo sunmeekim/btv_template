@@ -2,34 +2,38 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_날씨
 /* ---------------------------------------------------------------------- */
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .weather_card_wrap {
     text-align: center;
-
     .weather_s_img {
         width: 100px;
         height: 100px;
     }
-
     &__date {
+        margin-top: 16px;
         font-size:$F-size-small;
         color: $C-font-basic;
-        margin-top: 16px;
     }
-
     &__weather {
         .weather_s_img {
             border: 0;
         }
         margin-top: 15px;
     }
-
     &__temp {
         margin-top: 14px;
         font-size:$F-size;
         color: $C-font-dark;
         font-family: $F-family-semi;
     }
-
     &__nodata {
         display: none;
     }
@@ -37,25 +41,23 @@
 }
 .card_wrap__item {
     &.active {
-        .weather_card_wrap__date {
-            color: $C-font-point;
-        }
-
+        .weather_card_wrap__date,
         .weather_card_wrap__temp {
             color: $C-font-point;
         }
     }
     &.none {
-        .weather_card_wrap__weather,.weather_card_wrap__temp {
+        .weather_card_wrap__weather,
+        .weather_card_wrap__temp {
             display: none;
         }
         .weather_card_wrap__date {
-            color: #b2b2b2;
+            color: $C-border-gray4;
         }
         .weather_card_wrap__nodata {
             margin-top: 65px;
             display: block;
-            color: #b2b2b2;
+            color: $C-border-gray4;
             font-size: $F-size-big;
         }
     }
@@ -64,14 +66,14 @@
     margin-top: 6px;
     .card_wrap__item {
         &.none {
-            background: #f2f2f2;
+            background: $C-light-grayBg2;
         }
     }
 }
 .weather_daily_wrap {
+    @extend .flex-around;
+    @include clear();
     width:100%;
-    display: flex;
-    justify-content: space-around;
 
     .weather_daily_represent {
         float: left;
@@ -96,22 +98,22 @@
             color: $C-font-point;
             font-family: $F-family-bold;
         }
-
         &__detail {
             margin-top: 0;
             min-height: 116px;
             @include clear();
         }
         &__degree {
+            margin-top: 5px;
             float: left;
             font-size: 8.6rem;
             font-family: $F-family-semi;
             color: $C-black;
-            margin-top: 5px;
+
             .data {
+                margin-top: -2px;
                 display: inline-block;
                 vertical-align: top;
-                margin-top: -2px;
                 padding: 0 2px 0 0;
             }
         }
@@ -131,11 +133,9 @@
             .degree_low {
                 margin-left: 10px;
             }
-
             .data {
                 display: inline-block;
                 vertical-align: top;
-                
             }
         }
         &__precipitation,
@@ -147,30 +147,29 @@
         }
         
         &__special {
+            margin: -4px 15px 0 0;
             float: left;
             width: 250px;
             text-align: center;
-            margin: -4px 15px 0 0;
         }
         &__special-name {
+            margin: 26px auto 0;
             display: inline-block;
             vertical-align: top;
             width: 190px;
             height: 44px;
-            margin: 26px auto 0;
-            border: 1px solid #ddd;
+            border: 1px solid $C-border-gray;
             border-radius: 22px;
-            background: #fff;
+            text-align: center;
             line-height: 44px;
-            color: #333;
+            color: $C-font-dark;
             font-size: $F-size;
             font-family: $F-family-semi;
-            text-align: center;
+            background: $C-white;
         }
         &__special-img {
             text-align: center;
             padding: 13px 0 0;
-
             .weather_d_simg {
                 width: 155px;
                 height: 155px;
@@ -179,7 +178,7 @@
         &__special-time {
             font-size: $F-size;
             font-family: $F-family-semi;
-            color: #666;
+            color: $C-font-light;
         }
         @include clear();
     }
@@ -187,18 +186,14 @@
         margin-left: 0;
         margin-top: 19px;
     }
-    .weather_daily_represent__dust + .weather_daily_represent__dust {
-        margin-left: 26px;
-    }
-    .weather_daily_represent__precipitation + .weather_daily_represent__dust {
-        margin-left: 26px;
-    }
+    .weather_daily_represent__dust + .weather_daily_represent__dust,
+    .weather_daily_represent__precipitation + .weather_daily_represent__dust,
     .weather_daily_represent__degree + .weather_daily_represent__detail_more {
-        margin-left: 25px;
+        margin-left: 26px;
     }
     .weather_daily_timeline {
-        float:left;
         margin: 25px 0 0 70px;
+        float:left;
 
         .weather_d_simg {
             width: 100px;
@@ -206,7 +201,6 @@
         }
 
         &__list {
-
             @include clear();
         }
         &__item {
@@ -223,23 +217,21 @@
             padding-bottom:10px;
             
         }
-        
         &__degree {
+            padding-top:10px;
             font-size: $F-size-xxbig;
             color: $C-black;
             font-family: $F-family-bold;
-            padding-top:10px;
+
         }
     }
-    @include clear();
 }
 .weather_weekend_wrap {
-    display: flex;
-    justify-content: center;
+    @extend .flex-center;
     margin-top: 34px;
-
     .weather_weekend {
         width: 535px;
+
         .weather_w_img {
             width: 132px;
             height: 132px;
@@ -255,7 +247,6 @@
             text-align: center;
         }
         &__date {
-            
             text-align:center;
             font-size: $F-size-small;
         }
@@ -263,8 +254,8 @@
             margin-top: 8px;
         }
         &__info_more {
-            float: left;
             margin:-5px 0 0 55px;
+            float: left;
         }
         &__weather_title {
             font-size: $F-size-xxxxbig;
@@ -287,10 +278,11 @@
             margin-top:15px;
             font-size: $F-size;
             color: $C-font-light;
+
             .data {
+                margin-right: 3px;
                 display: inline-block;
                 vertical-align: top;
-                margin-right: 3px;
             }
         }
         @include clear();
@@ -310,7 +302,6 @@
                 display: none;
             }
             .weather_weekend__weather_img {
-
                 &:before {
                     content:'';
                     display: inline-block;
@@ -319,20 +310,16 @@
                     height: 132px;
                     background: url('/images/weather/sky_nodate_m.png') no-repeat 0 0;
                 }
-                
             }
         }
     }
-
     .weather_weekend + .weather_weekend {
         margin-left: 57px;
     }
 }
 .weather_finedust_wrap {
-    display: flex;
-    justify-content: space-around;
+    @extend .flex-around;
     margin-top: 28px;
-
     .weather_atmosphere {
         float: left;
         width: 430px;
@@ -400,9 +387,7 @@
             width: 54px;
             height: 54px;
         }
-
         &__list {
-            
             @include clear();
         }
         &__item {
@@ -421,7 +406,6 @@
         &__info_data {
             display: inline-block;
             vertical-align: top;
-            
         }
         &__info_data {
             font-size: 4.8rem;
@@ -442,6 +426,7 @@
                 color: $C-font-dark;
             }
         }
+
         &__data_value {
             display: inline-block;
             vertical-align: top;

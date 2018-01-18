@@ -40,6 +40,26 @@
                 @@include('sports_baseballgame_before.html')
                 <!-- end: Btv template -->
         </div>
+        <div class="content_area" id="game_cancel">
+                <!-- start: Btv template -->
+                @@include('sports_baseballgame_cancel.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="game_after">
+                <!-- start: Btv template -->
+                @@include('sports_baseballgame_after.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="game_double">
+                <!-- start: Btv template -->
+                @@include('sports_baseballgame_double.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="game_double_special">
+                <!-- start: Btv template -->
+                @@include('sports_baseballgame_double_special.html')
+                <!-- end: Btv template -->
+        </div>
 
         <div class="help_area">
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
@@ -51,11 +71,15 @@
         <ul class="case__list">
                 <!--<li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">순위보기</a></li>-->
                 <!--<li class="case__item"><a href="#sports" class="case__link" onclick="includePage(event, 'game_schedule')" >경기일정</a></li>-->
-                <li class="case__item"><a href="#default" class="case__link">순위보기</a></li>
+                <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">순위보기</a></li>
                 <li class="case__item"><a href="#game_schedule_last" class="case__link">경기일정(지난)</a></li>
                 <li class="case__item"><a href="#game_schedule" class="case__link">경기일정(다음)</a></li>
                 <li class="case__item"><a href="#game_info_normal" class="case__link">경기정보(일반)</a></li>
-                <li class="case__item"><a href="#game_before" class="case__link" id="defaultOpen">경기정보(시작전)</a></li>
+                <li class="case__item"><a href="#game_before" class="case__link">경기정보(시작전)</a></li>
+                <li class="case__item"><a href="#game_cancel" class="case__link">경기정보(취소)</a></li>
+                <li class="case__item"><a href="#game_after" class="case__link">경기정보(1시간후)</a></li>
+                <li class="case__item"><a href="#game_double" class="case__link">더블헤더(경기종료)</a></li>
+                <li class="case__item"><a href="#game_double_special" class="case__link">더블헤더(경기전,진행중)</a></li>
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->

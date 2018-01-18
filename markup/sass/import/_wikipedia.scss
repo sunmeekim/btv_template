@@ -2,22 +2,20 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_위키피디아
 /* ---------------------------------------------------------------------- */
-.wikipedia_wrap {
-
-      height: 250px;
+.flex-center {
       display: flex;
       justify-content: center;
       align-items: center;
+}
+.wikipedia_wrap {
+      @extend .flex-center;
+      height: 250px;
       text-align: center;
       overflow: hidden;
       margin-top: -3px;
-   
-
       .wikipedia_block {
+            @extend .flex-center;
             max-width: 1300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
             &:before {
                   content:'';
@@ -42,6 +40,4 @@
 
 
       }
-
-
 }

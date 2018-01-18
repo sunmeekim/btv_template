@@ -8,6 +8,7 @@
     &.active {
 
         .playerlst__img {
+
             &:before {
                 content:'';
                 position: absolute;
@@ -15,23 +16,20 @@
                 top: -3px;
                 width: 165px;
                 height: 165px;
-                border: 3px solid #ff4909;
+                border: 3px solid $C-font-point;
                 border-radius: 2px;
                 z-index: 2;
             }
         }
         .playerlst__count {
-            border-color: #ff4909;
-            background: #ff4909;
-            color: #fff;
+            border-color: $C-font-point;
+            background: $C-font-point;
+            color: $C-white;
+
             &:before {
                 content:'';
-                display: inline-block;
+                @include use-sprite(nugu_advice_icon_mic2_on);
                 vertical-align: top;
-                width: 10px;
-                height: 15px;;
-                background: url('/images/melon/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
-                background-size: 10px 15px;
                 margin: 6px 5px 0 0;
             }
         }
@@ -42,6 +40,7 @@
         height: 165px;
         position: relative;
         margin : 0 auto;
+
         .playerlst_d_img {
             width: 165px;
             height: 165px;
@@ -53,21 +52,18 @@
         right: 5px;
         top: 5px;
         height: 28px;
-        padding:0 10px;
-        border: 1px solid #333;
-        background: rgba(255,255,255,.7);
+        border: 1px solid $C-font-dark;
         border-radius: 14px;
+        padding:0 10px;
         font-size: 1.6rem;
         line-height: 29px;
         font-family: $F-family-bold;
+        background: rgba(255,255,255,.7);
+
         &:before {
             content:'';
-            display: inline-block;
+            @include use-sprite(nugu_advice_icon_mic2);
             vertical-align: top;
-            width: 10px;
-            height: 15px;;
-            background: url('/images/melon/nugu_advice_icon_mic2.png') no-repeat 0 0;
-            background-size: 10px 15px;
             margin: 6px 5px 0 0;
         }
     }

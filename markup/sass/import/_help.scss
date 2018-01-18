@@ -9,7 +9,7 @@
         margin:0 30px;
         &__title {
             padding:12px 0 9px;
-            border-bottom:2px solid #ccc;
+            border-bottom:2px solid $C-border-gray;
             font-size: $F-size-under;
             text-align:center;
         }
@@ -17,21 +17,17 @@
             margin-top: 27px;
         }
         &__list-item {
-            margin-top: 3px;
+            padding-top: 3px;
             font-size: $F-size-xsmall;
             color: $C-font-light;
-            .data {
-                @include ellipsis(inline-block,375px);
-            }
-            
             &:before {
                 content: '';
-                display: inline-block;
+                @include use-sprite(nugu_advice_icon_mic);
+                margin:4px 4px 0 0;
                 vertical-align: top;
-                width: 26px;
-                height: 26px;
-                margin:2px 4px 0 0;
-                background: url('/images/help/nugu_advice_icon_mic.png') no-repeat 0 0;
+            }
+            .data {
+                @include ellipsis(inline-block,375px);
             }
         }
         
@@ -39,7 +35,7 @@
     .card_wrap__item {
         width: 472px;
         height: 234px;
-        background: #fcfcfc;
+        background: $C-light-gray;
         border-radius: 1px;
         margin: 0 5px;
         
@@ -56,35 +52,32 @@
 
     .card_wrap__item {
         position: relative;
-        background: #fcfcfc;
+        background: $C-light-gray;
         margin: 0 5px;
+
         &.active {
             &:before {
                 content:'';
                 width: 196px;
                 height: 232px;
                 position: absolute;
-                border: 8px solid #ff4909;
-                border-radius: 3px;
                 left: -8px;
                 top: -8px;
+                border: 8px solid $C-font-point;
+                border-radius: 3px;
             }
             .help_default_card__order-info {
-                border-color: #ff4909;
-                background: #ff4909;
-                color: #fff;
+                border-color: $C-font-point;
+                background: $C-font-point;
+                color: $C-white;
+
                 &:before {
                     content:'';
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 10px;
-                    height: 15px;;
-                    background: url('/images/help/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
-                    background-size: 10px 15px;
+                    @include use-sprite(nugu_advice_icon_mic2_on);
                     margin: 6px 5px 0 0;
+                    vertical-align: top;
                 }
             }
-            
         }
     }
     .help_default_card {
@@ -101,22 +94,18 @@
             display: inline-block;
             vertical-align: top;
             height: 28px;
-            padding:0 10px;
             border: 1px solid #333;
             border-radius: 14px;
+            padding:0 10px;
             font-size: 1.6rem;
             line-height: 29px;
             font-weight: bold;
 
             &:before {
                 content:'';
-                display: inline-block;
-                vertical-align: top;
-                width: 10px;
-                height: 15px;;
-                background: url('/images/help/nugu_advice_icon_mic2.png') no-repeat 0 0;
-                background-size: 10px 15px;
+                @include use-sprite(nugu_advice_icon_mic2);
                 margin: 6px 5px 0 0;
+                vertical-align: top;
             }
 
         }

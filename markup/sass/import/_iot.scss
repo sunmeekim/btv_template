@@ -7,32 +7,29 @@
     padding-top: 6px;
     .card_wrap__item {
         position: relative;
-        background: #fcfcfc;
+        background: $C-light-gray;
         margin: 0 5px;
+
         &.active {
             &:before {
                 content:'';
                 width: 196px;
                 height: 232px;
                 position: absolute;
-                border: 8px solid #ff4909;
-                border-radius: 3px;
                 left: -8px;
                 top: -8px;
+                border: 8px solid $C-font-point;
+                border-radius: 3px;
             }
             .iot_default_card__order-info {
-                border-color: #ff4909;
-                background: #ff4909;
-                color: #fff;
+                border-color: $C-font-point;
+                background: $C-font-point;
+                color: $C-white;
                 &:before {
                     content:'';
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 10px;
-                    height: 15px;;
-                    background: url('/images/iot/nugu_advice_icon_mic2_on.png') no-repeat 0 0;
-                    background-size: 10px 15px;
+                    @include use-sprite(nugu_advice_icon_mic2_on);
                     margin: 6px 5px 0 0;
+                    vertical-align: top;
                 }
             }
             
@@ -51,20 +48,17 @@
             vertical-align: top;
             height: 28px;
             padding:0 10px;
-            border: 1px solid #333;
+            border: 1px solid $C-font-dark;
             border-radius: 14px;
             font-size: 1.6rem;
             font-family: $F-family-bold;
             line-height: 29px;
+
             &:before {
                 content:'';
-                display: inline-block;
-                vertical-align: top;
-                width: 10px;
-                height: 15px;;
-                background: url('/images/iot/nugu_advice_icon_mic2.png') no-repeat 0 0;
-                background-size: 10px 15px;
+                @include use-sprite(nugu_advice_icon_mic2);
                 margin: 6px 5px 0 0;
+                vertical-align: top;
             }
 
         }

@@ -5,44 +5,45 @@
 .alarm_wrap {
     justify-content: center;
     padding-top: 6px;
-
+    //기본 카드 UI 수정 부분
     .card_wrap__item {
         position: relative;
-        background: #fcfcfc;
+        background: $C-light-gray;
         margin: 0 5px;
 
         &.active {
             
             .alarm_default_card__action,
             .alarm_default_card__item {
-                color: #ff4909;
+                color: $C-font-point;
             }
             .alarm_default_card__ampm {
-                background: #ff4909;
-                color: #fff;
+                background: $C-font-point;
+                color: $C-white;
             }
         }
         &.none {
             display: none;
         }
     }
+
+    //알람카드 UI 추가 부분
     .alarm_default_card {
         text-align: center;
+
         &__ampm {
             display: inline-block;
-            vertical-align: top;
             height: 34px;
             margin-top: 29px;
-            padding:0 15px;
             border-radius: 17px;
-            background: #e6e6e6;
+            padding:0 15px;
+            vertical-align: top;
             text-align: center;
-            
             font-size: 2.5rem;
             line-height: 34px;
             color: $C-font-light;
+            background: $C-light-grayBg;
         }
-       
         &__action {
             margin: 20px 0 11px;
             text-align: center;

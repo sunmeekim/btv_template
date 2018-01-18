@@ -1,0 +1,2849 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_날씨
+/* ---------------------------------------------------------------------- */
+@charset "UTF-8";
+
+.weather_box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.sky_s01 {
+    @extend .weather_box;
+    animation: 3s linear infinite sky_s01;
+
+    .bA {
+        position: absolute;
+        top: 120px;
+        left: 10px;
+        width: 38px;
+        height: 10px;
+        padding-left: 192px;
+        div {
+            float: left;
+            width: 0;
+            height: 10px;
+            background: #FFC318;
+            border-radius: 10px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s01-Aa;
+        }
+    }
+    .bB {
+        position: absolute;
+        top: 40px;
+        right: 44px;
+        width: 20px;
+        height: 20px;
+        border: 5px solid #FFC318;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s01-Ba;
+    }
+    .bC {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 112px;
+        height: 112px;
+        margin: -56px 0 0 -56px;
+        border-radius: 112px;
+        background: #FFC318;
+    }
+    .mA {
+        transform: rotate(0deg);
+    }
+    .mB {
+        transform: rotate(45deg);
+    }
+    .mC {
+        transform: rotate(90deg);
+    }
+    .mD {
+        transform: rotate(135deg);
+    }
+    .mE {
+        transform: rotate(180deg);
+    }
+    .mF {
+        transform: rotate(225deg);
+    }
+    .mG {
+        transform: rotate(270deg);
+    }
+    .mA div {
+        animation-name: sky_s01-Aa;
+    }
+    .mB div {
+        animation-name: sky_s01-Ab;
+    }
+    .mC div {
+        animation-name: sky_s01-Ac;
+    }
+    .mD div {
+        animation-name: sky_s01-Ad;
+    }
+    .mE div {
+        animation-name: sky_s01-Ae;
+    }
+    .mF div {
+        animation-name: sky_s01-Af;
+    }
+    .mG div {
+        animation-name: sky_s01-Ag;
+    }
+}
+@keyframes sky_s01 {
+    from {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes sky_s01-Aa {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    13% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ab {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    17% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ac {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    21% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ad {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    25% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ae {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    29% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Af {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    33% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ag {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    37% {
+        width: 38px;
+        opacity: 1;
+    }
+    80% {
+        width: 38px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s01-Ba {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s01_night {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 36px;
+        left: 27px;
+        width: 192px;
+        height: 192px;
+        background: url(../images/weather_animation/nugu_wa_01.png) no-repeat;
+        background-size: 192px auto;
+        animation: 3s linear infinite sky_s01_night-A;
+    }
+    .bB {
+        position: absolute;
+        top: 57px;
+        right: 67px;
+        width: 20px;
+        height: 20px;
+        background: url(../images/weather_animation/nugu_wa_02.png) no-repeat;
+        background-size: 20px auto;
+        opacity: 0;
+        animation: 3s ease-in-out .3s infinite sky_s01_night-B;
+    }
+    .bC {
+        position: absolute;
+        top: 30px;
+        right: 22px;
+        width: 20px;
+        height: 20px;
+        background: url(../images/weather_animation/nugu_wa_02.png) no-repeat;
+        background-size: 20px auto;
+        opacity: 0;
+        transform: scale(0.8);
+        animation: 3s ease-in-out .6s infinite sky_s01_night-C;
+    }
+    .bD {
+        position: absolute;
+        top: 97px;
+        right: 24px;
+        width: 16px;
+        height: 16px;
+        border: 5px solid #FFC318;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s01_night-D;
+    }
+}
+
+@keyframes sky_s01_night-A {
+    from {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-4deg) scale(0.95);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes sky_s01_night-B {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s01_night-C {
+    from {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s01_night-D {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s02 {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 11px;
+        left: 13px;
+        width: 206px;
+        height: 206px;
+        animation: 3s linear infinite sky_s02;
+    }
+    .bAA {
+        position: absolute;
+        top: 103px;
+        left: 0;
+        width: 33px;
+        height: 10px;
+        padding-left: 173px;
+        div {
+            float: left;
+            width: 0;
+            height: 10px;
+            background: #FFC318;
+            border-radius: 10px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s02-Aa;
+        }
+    }
+    .bAB {
+        position: absolute;
+        top: 33px;
+        right: 32px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #FFC318;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s02-B;
+    }
+    .bC {
+        position: absolute;
+        top: 64px;
+        left: 65px;
+        width: 100px;
+        height: 100px;
+        border-radius: 112px;
+        background: #FFC318;
+    }
+    .bD {
+        position: absolute;
+        bottom: 16px;
+        right: 12px;
+        width: 205px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_03.png) no-repeat;
+        background-size: 205px auto;
+    }
+    .mA {
+        transform: rotate(180deg);
+    }
+    .mB {
+        transform: rotate(225deg);
+    }
+    .mC {
+        transform: rotate(270deg);
+    }
+    .mA div {
+        animation-name: sky_s02-Aa;
+    }
+    .mB div {
+        animation-name: sky_s02-Ab;
+    }
+    .mC div {
+        animation-name: sky_s02-Ac;
+    }
+}
+
+@keyframes sky_s02 {
+    from {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes sky_s02-Aa {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    13% {
+        width: 33px;
+        opacity: 1;
+    }
+    80% {
+        width: 33px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s02-Ab {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    17% {
+        width: 33px;
+        opacity: 1;
+    }
+    80% {
+        width: 33px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s02-Ac {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    21% {
+        width: 33px;
+        opacity: 1;
+    }
+    80% {
+        width: 33px;
+        opacity: 1;
+        float: right;
+    }
+    to {
+        width: 0;
+        opacity: 0;
+        float: right;
+    }
+}
+
+@keyframes sky_s02-B {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s02_night {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 35px;
+        left: 11px;
+        width: 126px;
+        height: 126px;
+        background: url(../images/weather_animation/nugu_wa_04.png) no-repeat;
+        background-size: 126px auto;
+        animation: 3s linear infinite sky_s02_night-A;
+    }
+    .bB {
+        position: absolute;
+        top: 44px;
+        right: 81px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #FFC318;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s02_night-B;
+    }
+    .bC {
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+        width: 205px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_03.png) no-repeat;
+        background-size: 205px auto;
+    }
+}
+
+@keyframes sky_s02_night-A {
+    from {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(4deg) scale(0.95);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes sky_s02_night-B {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s03 {
+    @extend .weather_box;
+    background: url(../images/weather_animation/sample/sky_s013.png) no-repeat;
+    .bA {
+        position: absolute;
+        top: 40px;
+        left: 15px;
+        width: 142px;
+        height: 98px;
+        background: url(../images/weather_animation/nugu_wa_05.png) no-repeat;
+        background-size: 142px auto;
+        opacity: 0;
+        animation: 4s ease-in-out infinite sky_s03-A;
+    }
+    .bB {
+        position: absolute;
+        top: 49px;
+        right: 31px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #C5D3D5;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 4s ease-in-out infinite sky_s03-B;
+    }
+    .bC {
+        position: absolute;
+        bottom: 31px;
+        right: 12px;
+        width: 205px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_03.png) no-repeat;
+        background-size: 205px auto;
+    }
+}
+
+@keyframes sky_s03-A {
+    from {
+        opacity: 0;
+        margin-left: -25px;
+    }
+
+    40% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+        margin-left: 40px;
+    }
+}
+
+@keyframes sky_s03-B {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s04 {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 21px;
+        left: 15px;
+        width: 142px;
+        height: 98px;
+        background: url(../images/weather_animation/nugu_wa_05.png) no-repeat;
+        background-size: 142px auto;
+    }
+    .bB {
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        width: 206px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_06.png) no-repeat;
+        background-size: 206px auto;
+    }
+    .bC {
+        position: absolute;
+        bottom: 0px;
+        left: 72px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s04-Ca;
+        }
+    }
+    .bCB {
+        position: absolute;
+        top: 77px;
+        right: 5px;
+        width: 48px;
+        height: 10px;
+        div {
+            float: right;
+            width: 48px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            animation: 3s ease-in-out infinite sky_s04-Cc;
+        }
+    }
+    .bCC {
+        position: absolute;
+        top: 72px;
+        right: 61px;
+        width: 10px;
+        height: 10px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s04-Cd;
+    }
+    .mB {
+        top: 37px;
+        left: 40px;
+    }
+    .mA div {
+        animation-name: sky_s04-Ca;
+    }
+    .mB div {
+        animation-name: sky_s04-Cb;
+    }
+    .mC div {
+        animation-name: sky_s04-Cc;
+    }
+}
+
+@keyframes sky_s04-Ca {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s04-Cb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s04-Cc {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    15% {
+        width: 48px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 48px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s04-Cd {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s05 {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 21px;
+        left: 15px;
+        width: 142px;
+        height: 98px;
+        background: url(../images/weather_animation/nugu_wa_05.png) no-repeat;
+        background-size: 142px auto;
+    }
+    .bB {
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        width: 206px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_06.png) no-repeat;
+        background-size: 206px auto;
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s05-Ca;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s05-CAi;
+        }
+    }
+    .bCB {
+        position: absolute;
+        top: 215px;
+        left: 165px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s05-Ce;
+    }
+    .mA {
+        top: 163px;
+        left: 103px;
+        animation-name: sky_s05-Ca;
+    }
+    .mB {
+        top: 176px;
+        left: 152px;
+        animation-name: sky_s05-Cb;
+    }
+    .mC {
+        top: 202px;
+        left: 123px;
+        animation-name: sky_s05-Cc;
+    }
+    .mD {
+        top: 217px;
+        left: 79px;
+        animation-name: sky_s05-Cd;
+    }
+    .mA div {
+        animation-delay: .2s;
+    }
+    .mB div {
+        animation-delay: 0;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: .3s;
+    }
+}
+
+@keyframes sky_s05-CAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s05-Ca {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s05-Cb {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s05-Cc {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s05-Cd {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s05-Ce {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s06 {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 21px;
+        left: 15px;
+        width: 142px;
+        height: 98px;
+        background: url(../images/weather_animation/nugu_wa_05.png) no-repeat;
+        background-size: 142px auto;
+    }
+    .bB {
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        width: 206px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_06.png) no-repeat;
+        background-size: 206px auto;
+    }
+    .bC {
+        position: absolute;
+        bottom: 0px;
+        left: 72px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s06-Ca;
+        }
+    }
+    .bDA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s06-Da;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s06-DAi;
+        }
+    }
+    .bDB {
+        position: absolute;
+        top: 215px;
+        left: 143px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s06-Dc;
+    }
+    .mB {
+        top: 32px;
+        left: 40px;
+    }
+    .mA div {
+        animation-name: sky_s06-Ca;
+    }
+    .mB div {
+        animation-name: sky_s06-Cb;
+    }
+    .mC {
+        top: 170px;
+        left: 162px;
+        animation-name: sky_s06-Da;
+    }
+    .mD {
+        top: 200px;
+        left: 182px;
+        animation-name: sky_s06-Db;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: 0;
+    }
+}
+
+@keyframes sky_s06-Ca {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s06-Cb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s06-DAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s06-Da {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s06-Db {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s06-Dc {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s07 {
+    @extend .weather_box;
+    background: url(../images/weather_animation/sample/sky_s013.png) no-repeat;
+    .bA {
+        position: absolute;
+        top: 40px;
+        left: 15px;
+        width: 142px;
+        height: 98px;
+        background: url(../images/weather_animation/nugu_wa_05.png) no-repeat;
+        background-size: 142px auto;
+        opacity: 0;
+        animation: 4s ease-in-out infinite sky_s07-A;
+    }
+    .bB {
+        position: absolute;
+        top: 49px;
+        right: 31px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #C5D3D5;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 4s ease-in-out infinite sky_s07-B;
+    }
+    .bC {
+        position: absolute;
+        bottom: 31px;
+        right: 12px;
+        width: 205px;
+        height: 142px;
+        background: url(../images/weather_animation/nugu_wa_03.png) no-repeat;
+        background-size: 205px auto;
+    }
+}
+
+@keyframes sky_s07-A {
+    from {
+        opacity: 0;
+        margin-left: -25px;
+    }
+
+    40% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+        margin-left: 40px;
+    }
+}
+
+@keyframes sky_s07-B {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s08 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bC {
+        position: absolute;
+        bottom: 7px;
+        left: 61px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s08-Ca;
+        }
+    }
+    .bCB {
+        position: absolute;
+        top: 77px;
+        right: 5px;
+        width: 48px;
+        height: 10px;
+        div {
+            float: right;
+            width: 48px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            animation: 3s ease-in-out infinite sky_s08-Cc;
+        }
+    }
+    .bCC {
+        position: absolute;
+        top: 72px;
+        right: 61px;
+        width: 10px;
+        height: 10px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s08-Cd;
+    }
+    .mB {
+        top: 37px;
+        left: 40px;
+    }
+    .mA div {
+        animation-name: sky_s08-Ca;
+    }
+    .mB div {
+        animation-name: sky_s08-Cb;
+    }
+    .mC div {
+        animation-name: sky_s08-Cc;
+    }
+}
+
+@keyframes sky_s08-Ca {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s08-Cb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s08-Cc {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    15% {
+        width: 48px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 48px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s08-Cd {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s09 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s09-Ca;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s09-CAi;
+        }
+    }
+    .bCB {
+        position: absolute;
+        top: 207px;
+        left: 157px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s09-Ce;
+    }
+    .mA {
+        top: 155px;
+        left: 95px;
+        animation-name: sky_s09-Ca;
+    }
+    .mB {
+        top: 168px;
+        left: 144px;
+        animation-name: sky_s09-Cb;
+    }
+    .mC {
+        top: 194px;
+        left: 115px;
+        animation-name: sky_s09-Cc;
+    }
+    .mD {
+        top: 209px;
+        left: 71px;
+        animation-name: sky_s09-Cd;
+    }
+    .mA div {
+        animation-delay: .2s;
+    }
+    .mB div {
+        animation-delay: 0;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: .3s;
+    }
+}
+
+@keyframes sky_s09-CAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s09-Ca {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s09-Cb {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s09-Cc {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s09-Cd {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s09-Ce {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s10 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bC {
+        position: absolute;
+        bottom: 7px;
+        left: 62px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s10-Ca;
+        }
+    }
+    .bDA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s10-Da;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s10-DAi;
+        }
+    }
+    .bDB {
+        position: absolute;
+        top: 207px;
+        left: 132px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s10-Dc;
+    }
+    .mB {
+        top: 32px;
+        left: 40px;
+    }
+    .mA div {
+        animation-name: sky_s10-Ca;
+    }
+    .mB div {
+        animation-name: sky_s10-Cb;
+    }
+    .mC {
+        top: 167px;
+        left: 154px;
+        animation-name: sky_s10-Da;
+    }
+    .mD {
+        top: 197px;
+        left: 174px;
+        animation-name: sky_s10-Db;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: 0;
+    }
+}
+
+@keyframes sky_s10-Ca {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s10-Cb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s10-DAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s10-Da {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s10-Db {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s10-Dc {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s11 {
+    @extend .weather_box;
+    .bA {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bBA {
+        position: absolute;
+        top: 133px;
+        left: 83px;
+        width: 45px;
+        height: 85px;
+        background: url(../images/weather_animation/nugu_wa_08.png) no-repeat;
+        background-size: 45px auto;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s11-Ba;
+    }
+    .bBB {
+        position: absolute;
+        top: 200px;
+        left: 159px;
+        width: 10px;
+        height: 10px;
+        border: 5px solid #FFC318;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s11-Bc;
+    }
+    .mA {
+        top: 133px;
+        left: 83px;
+        animation-name: sky_s11-Ba;
+    }
+    .mB {
+        top: 119px;
+        left: 134px;
+        animation-name: sky_s11-Bb;
+    }
+}
+
+@keyframes sky_s11-Ba {
+    from {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    10% {
+        opacity: .5;
+        margin: 0;
+    }
+
+    15% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    20% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    25% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    40% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    45% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    85% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s11-Bb {
+    from {
+        opacity: 0;
+    }
+
+    7% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    17% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    22% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    27% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    45% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    85% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s11-Bc {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    55% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s12 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bC {
+        position: absolute;
+        bottom: 7px;
+        left: 61px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bCA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s12-Ca;
+        }
+    }
+    .bCB {
+        position: absolute;
+        top: 77px;
+        right: 5px;
+        width: 48px;
+        height: 10px;
+        div {
+            float: right;
+            width: 48px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            animation: 3s ease-in-out infinite sky_s12-Cc;
+        }
+    }
+    .bCC {
+        position: absolute;
+        top: 72px;
+        right: 61px;
+        width: 10px;
+        height: 10px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s12-Cd;
+    }
+    .bDA {
+        position: absolute;
+        top: 133px;
+        left: 83px;
+        width: 45px;
+        height: 85px;
+        background: url(../images/weather_animation/nugu_wa_08.png) no-repeat;
+        background-size: 45px auto;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s12-Ba;
+    }
+    .mE {
+        top: 123px;
+        left: 105px;
+        animation-name: sky_s12-De;
+    }
+    .mB {
+        top: 37px;
+        left: 40px;
+    }
+    .mA div {
+        animation-name: sky_s12-Ca;
+    }
+    .mC div {
+        animation-name: sky_s12-Cc;
+    }
+}
+
+@keyframes sky_s12-Ca {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s12-Cc {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    15% {
+        width: 48px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 48px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
+
+@keyframes sky_s12-Cd {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s12-De {
+    from {
+        opacity: 0;
+    }
+
+    7% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    17% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    22% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    27% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    45% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    85% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s13 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bCA {
+        position: absolute;
+        top: 133px;
+        left: 83px;
+        width: 45px;
+        height: 85px;
+        background: url(../images/weather_animation/nugu_wa_08.png) no-repeat;
+        background-size: 45px auto;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s13-Ca;
+    }
+    .bDA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s13-Da;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s13-DAi;
+        }
+    }
+    .bDB {
+        position: absolute;
+        top: 207px;
+        left: 124px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s13-Dc;
+    }
+    .mA {
+        top: 130px;
+        left: 78px;
+        animation-name: sky_s13-Ca;
+    }
+    .mC {
+        top: 167px;
+        left: 146px;
+        animation-name: sky_s13-Da;
+    }
+    .mD {
+        top: 197px;
+        left: 166px;
+        animation-name: sky_s13-Db;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: 0;
+    }
+}
+
+@keyframes sky_s13-Ca {
+    from {
+        opacity: 0;
+    }
+
+    7% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    17% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    22% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    27% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    45% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    85% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s13-DAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s13-Da {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s13-Db {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s13-Dc {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sky_s14 {
+    @extend .weather_box;
+    .bB {
+        position: absolute;
+        top: 19px;
+        right: 12px;
+        width: 226px;
+        height: 162px;
+        background: url(../images/weather_animation/nugu_wa_07.png) no-repeat;
+        background-size: 226px auto;
+    }
+    .bCA {
+        position: absolute;
+        top: 133px;
+        left: 83px;
+        width: 45px;
+        height: 85px;
+        background: url(../images/weather_animation/nugu_wa_08.png) no-repeat;
+        background-size: 45px auto;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s14-Ca;
+    }
+    .bDA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s14-Da;
+        div {
+            width: 19px;
+            height: 19px;
+            background: #00BCD4;
+            border-radius: 50px;
+            animation: 2s ease-in-out infinite sky_s14-DAi;
+        }
+    }
+    .bDB {
+        position: absolute;
+        top: 207px;
+        left: 135px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid #00BCD4;
+        border-radius: 50px;
+        opacity: 0;
+        animation: 3s ease-in-out infinite sky_s14-Dc;
+    }
+    .bE {
+        position: absolute;
+        bottom: 7px;
+        left: 61px;
+        width: 119px;
+        height: 92px;
+        transform: rotate(-65deg);
+    }
+    .bEA {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78px;
+        height: 10px;
+        div {
+            float: right;
+            width: 78px;
+            height: 10px;
+            background: #00BCD4;
+            border-radius: 100px;
+            opacity: 0;
+            animation: 3s ease-in-out infinite sky_s14-Ef;
+        }
+    }
+    .mA {
+        top: 123px;
+        left: 105px;
+        animation-name: sky_s14-Ca;
+    }
+    .mC {
+        top: 169px;
+        left: 156px;
+        animation-name: sky_s14-Da;
+    }
+    .mD {
+        top: 199px;
+        left: 174px;
+        animation-name: sky_s14-Db;
+    }
+    .mC div {
+        animation-delay: .2s;
+    }
+    .mD div {
+        animation-delay: 0;
+    }
+    .mF div {
+        animation-name: sky_s14-Ef;
+    }
+}
+
+@keyframes sky_s14-Ca {
+    from {
+        opacity: 0;
+    }
+
+    7% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    17% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    22% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    27% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    45% {
+        opacity: 0;
+        margin: -3px 0 0 3px;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    70% {
+        opacity: 1;
+        margin: 0;
+    }
+
+    85% {
+        opacity: 0;
+        margin: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s14-DAi {
+    from {
+        margin-left: -5px;
+    }
+
+    50% {
+        margin-left: 5px;
+    }
+
+    to {
+        margin-left: -5px;
+    }
+}
+
+@keyframes sky_s14-Da {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s14-Db {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s14-Dc {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sky_s14-Ef {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        width: 78px;
+        opacity: 1;
+    }
+
+    80% {
+        width: 78px;
+        opacity: 1;
+        float: left;
+    }
+
+    to {
+        width: 0;
+        opacity: 0;
+        float: left;
+    }
+}
