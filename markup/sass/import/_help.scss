@@ -54,17 +54,17 @@
         position: relative;
         background: $C-light-gray;
         margin: 0 5px;
-
-        &.active {
+        outline: 0;
+        &.active,
+        &:focus {
             &:before {
                 content:'';
-                width: 196px;
-                height: 232px;
+                width: 186px;
+                height: 222px;
                 position: absolute;
-                left: -8px;
-                top: -8px;
-                border: 8px solid $C-font-point;
-                border-radius: 3px;
+                left: -1px;
+                top: -1px;
+                border: 6px solid $C-font-point;
             }
             .help_default_card__order-info {
                 border-color: $C-font-point;
@@ -81,6 +81,9 @@
         }
     }
     .help_default_card {
+        display: block;
+        text-align: center;
+
         .help_s_img {
             width: 126px;
             height: 126px;
@@ -100,7 +103,7 @@
             font-size: 1.6rem;
             line-height: 29px;
             font-weight: bold;
-
+            color: $C-font-dark;
             &:before {
                 content:'';
                 @include use-sprite(nugu_advice_icon_mic2);
@@ -118,6 +121,7 @@
             text-align: center;
             font-size: $F-size-small;
             font-weight: $F-weight-bold;
+            color: $C-font-dark;
         }
         &__nodata {
             display: none;

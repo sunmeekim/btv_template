@@ -9,17 +9,18 @@
         position: relative;
         background: $C-light-gray;
         margin: 0 5px;
+        outline: 0;
 
-        &.active {
+        &.active,
+        &:focus {
             &:before {
                 content:'';
-                width: 196px;
-                height: 232px;
+                width: 186px;
+                height: 222px;
                 position: absolute;
-                left: -8px;
-                top: -8px;
-                border: 8px solid $C-font-point;
-                border-radius: 3px;
+                left: -1px;
+                top: -1px;
+                border: 6px solid $C-font-point;
             }
             .iot_default_card__order-info {
                 border-color: $C-font-point;
@@ -37,6 +38,8 @@
     }
     .iot_default_card {
         text-align: center;
+        display: block;
+        outline: 0;
 
         &__order {
             text-align:right;
@@ -53,6 +56,7 @@
             font-size: 1.6rem;
             font-family: $F-family-bold;
             line-height: 29px;
+            color: $C-font-dark;
 
             &:before {
                 content:'';
@@ -74,6 +78,7 @@
         &__item {
             text-align: center;
             font-size: $F-size;
+            color: $C-font-dark;
         }
         &__nodata {
             display: none;

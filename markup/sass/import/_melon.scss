@@ -5,19 +5,21 @@
 .playerlst {
     margin-top: 7px;
     width: 269px;
-    &.active {
+    &.active,
+    &:focus {
+
+        outline: 0;
 
         .playerlst__img {
 
             &:before {
                 content:'';
                 position: absolute;
-                left: -3px;
-                top: -3px;
-                width: 165px;
-                height: 165px;
-                border: 3px solid $C-font-point;
-                border-radius: 2px;
+                left: 0;
+                top: 0;
+                width: 148px;
+                height: 148px;
+                border: 5px solid $C-font-point;
                 z-index: 2;
             }
         }
@@ -36,21 +38,21 @@
         
     }
     &__img {
-        width: 165px;
-        height: 165px;
+        width: 158px;
+        height: 158px;
         position: relative;
         margin : 0 auto;
 
         .playerlst_d_img {
-            width: 165px;
-            height: 165px;
+            width: 158px;
+            height: 158px;
         }
         
     }
     &__img &__count {
         position: absolute;
-        right: 5px;
-        top: 5px;
+        right: 10px;
+        top: 10px;
         height: 28px;
         border: 1px solid $C-font-dark;
         border-radius: 14px;
@@ -58,7 +60,8 @@
         font-size: 1.6rem;
         line-height: 29px;
         font-family: $F-family-bold;
-        background: rgba(255,255,255,.7);
+        color: $C-font-dark;
+        background: rgba(255,255,255,.3);
 
         &:before {
             content:'';
