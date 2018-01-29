@@ -8,10 +8,7 @@
 	min-width: 1920px;
 	background: rgba(242,242,242,.97);
 	z-index:100;
-	// position: absolute;
-	// left:0;
-	// right: 0;
-	// bottom: 0;
+
 }
 
 .content_area {
@@ -29,16 +26,19 @@
 	position: relative;
 	z-index: 10;
 	@include clear();
+
+	&.wide {
+		width: 1730px;
+	}
 }
 .top_title_area {
 	height: 80px;
-	
 	text-align: center;
 	font-family: $F-family-semi;
 	color: $C-font-light;
 	font-size: $F-size-big;
 	overflow: hidden;
-	text-align: center;
+
 	.data {
 		display: inline-block;
 		padding-top: 25px;
@@ -69,6 +69,9 @@
 		&.wikipedia {
 			@include use-sprite(nugu_wikipedia_control_logo);
 		}
+		&.cjo {
+			@include use-sprite(nugu_cjoshopping_logo);
+		}
 	}
 }
 .help_area {
@@ -90,7 +93,7 @@
 			content:'';
 			@include use-sprite(nugu_general_grammer_mic);
 			vertical-align: top;
-			margin-right: 5px;
+			margin:7px 5px 0 0;
 		}
 	}
 }

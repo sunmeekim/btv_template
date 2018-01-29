@@ -1,0 +1,640 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_쇼핑
+/* ---------------------------------------------------------------------- */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+.homeshopping_box710 {
+    width: 710px;
+    height: 186px;
+    border: 1px solid rgba(0,0,0,.2);
+    position: relative;
+    background: $C-white;
+}
+.homeshopping_box710_v2 {
+    width: 710px;
+    height: 232px;
+    border: 1px solid rgba(0,0,0,.2);
+    position: relative;
+    background: $C-white;
+}
+.homeshopping_box630 {
+    width: 630px;
+    height: 186px;
+    position: relative;
+}
+.homeshopping_box577 {
+    width: 577px;
+    height: 186px;
+    border: 1px solid rgba(0,0,0,.2);
+    position: relative;
+    background: $C-white;
+}
+.homeshopping_box1298 {
+    width: 1298px;
+    height: 186px;
+}
+.homeshopping_img {
+    width: 186px;
+    height: 186px;
+}
+.homeshopping_img_v2 {
+    width: 232px;
+    height: 232px;
+}
+.option_box194 {
+    width: 194px;
+    height: 186px;
+}
+.quantity_box262 {
+    width: 262px;
+    height: 186px;
+}
+.voice_order,
+.voice_order_focus {
+    display: inline-block;
+    vertical-align: top;
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    border-radius: 14px;
+    font-size: 1.6rem;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+
+    &:before {
+        content:'';
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+    }
+
+}
+.voice_order_focus {
+    color: $C-white;
+    background: $C-font-point;
+    border-color: $C-font-point;
+    &:before {
+        content:'';
+        @include use-sprite(nugu_advice_icon_mic2_on);
+
+    }
+}
+.bedge {
+    display: inline-block;
+    vertical-align: top;
+    height: 32px;
+    padding:0 15px;
+    border-radius: 16px;
+    font-size: 2.0rem;
+    font-family: $F-family-bold;
+    line-height: 32px;
+    color: $C-white;
+    background: $C-font-point;
+}
+.btnbox {
+
+
+}
+.btn_large {
+    @extend .flex-center;
+    @extend .homeshopping_img;
+    align-items: center;
+    position: relative;
+    border: 1px solid $C-border-gray5;
+    background: $C-white;
+    font-family: $F-family-bold;
+    text-align: center;
+    &:focus,
+    &.active {
+        outline: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            border: 6px solid $C-font-point;
+        }
+    }
+    .btn_large-link {
+        display: block;
+        box-sizing: border-box;
+        padding: 0 20px;
+        text-align: center;
+        color: $C-font-point;
+        span {
+            display: inline-block;
+        }
+        &:before {
+            @include use-sprite(nugu_shopping_voice);
+            vertical-align: top;
+            margin: 6px 5px 0 0;
+        }
+    }
+}
+.btn_double {
+    width: 188px;
+    &__link {
+        position: relative;
+        display: block;
+        width: 186px;
+        height: 88px;
+        border: 1px solid $C-border-gray5;
+        background: $C-white;
+        text-align: center;
+        line-height: 88px;
+        color: $C-black;
+        font-family: $F-family-bold;
+        &.active {
+            color: $C-font-point;
+            &:before {
+                position: absolute;
+                left: -1px;
+                right: -1px;
+                top: -1px;
+                bottom: -1px;
+                border: 6px solid $C-font-point;
+                content:'';
+            }
+        }
+    }
+}
+.btn_double__link + .btn_double__link {
+    margin-top: 8px;
+}
+.homeshopping_wrap {
+    @extend .flex-around;
+    margin-top: 28px;
+    .homeshopping_img {
+        @extend .homeshopping_img;
+    }
+    .homeshopping_lst {
+        @extend .flex-start;
+        @extend .homeshopping_box710;
+        &__img {
+            @extend .homeshopping_img;
+            display: block;
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+        &__info {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px 20px 20px 30px;
+        }
+        &__title {
+            height: 115px;
+        }
+        &__title-main {
+            font-family: $F-family-bold;
+            font-size: $F-size-under;
+            color: $C-black;
+            line-height: 1.3;
+            @include multiline-ellipsis(2,$F-size-under,$base-line-height);
+        }
+        &__value {
+            width: 100%;
+            @include clear();
+        }
+        &__value-label {
+            float:left;
+            font-size: $F-size-small;
+            color: $C-font-point;
+        }
+        &__value-price {
+            float: right;
+            font-size: $F-size;
+            color: $C-font-light;
+        }
+        &:focus {
+            &:before {
+                content:'';
+                position:absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border: 6px solid $C-font-point;
+            }
+            .voice_order {
+                @extend .voice_order_focus;
+            }
+        }
+        &.disabled {
+            .homeshopping_lst__title-main {
+                @include opacity(.4);
+            }
+            .homeshopping_lst__value-price {
+                display: none;
+            }
+            .homeshopping_lst__value-label {
+                color:$C-font-light;
+                @include opacity(.4);
+            }
+        }
+        &.counsel {
+            .homeshopping_lst__value-price {
+                display: none;
+            }
+            .homeshopping_lst__value-label {
+                color:$C-font-light;
+            }
+        }
+    }
+    .homeshopping_select {
+        @extend .flex-start;
+        @extend .homeshopping_box577;
+        &__img {
+            @extend .homeshopping_img;
+            display: block;
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+        &__info {
+            @extend .homeshopping_lst__info;
+        }
+        &__title-main {
+            @extend .homeshopping_lst__title-main;
+            font-size: 2.7rem;
+        }
+        &__value {
+            @extend .homeshopping_lst__value;
+            padding-top: 7px;
+        }
+        &__value-label {
+            @extend .homeshopping_lst__value-label;
+            font-size: $F-size-small;
+            color: #9b9b9b;
+        }
+        &__value-price {
+            @extend .homeshopping_lst__value-price;
+            font-size: $F-size-under;
+            color: $C-font-light;
+        }
+        &__opt {
+            @extend .flex-start;
+
+            margin: 5px 0 0 0;
+            padding-top: 5px;
+            border-top: 1px solid $C-border-gray5;
+
+        }
+        &__opt-item {
+            @include multiline-ellipsis(1,$F-size-small,$base-line-height);
+            max-width: 33.33%;
+            position: relative;
+            padding-right: 5px;
+            font-family: $F-family-bold;
+            font-size: $F-size-small;
+            color: #9b9b9b;
+            &:focus,
+            &.active {
+                color: $C-font-point;
+            }
+
+        }
+    }
+    .homeshopping_option {
+        width: 1110px;
+        position: relative;
+        margin-left: 40px;
+        &__lst {
+            width: 815px;
+            margin: 0 auto;
+        }
+        .card_wrap__item {
+            @extend .option_box194;
+            background: $C-light-gray;
+            &.disabled {
+                .homeshopping_option__value {
+                    @include opacity(.4);
+                }
+            }
+
+            &.quantity {
+                @extend .quantity_box262;
+
+                .homeshopping_option__link {
+                    @extend .quantity_box262;
+                }
+            }
+        }
+        &__link {
+            @extend .option_box194;
+            position: relative;
+            display: block;
+            text-align: right;
+
+            .voice_order {
+                @extend .voice_order;
+                margin: 10px 10px 0 0;
+            }
+            &:focus,
+            &.active {
+                outline: 0;
+                .voice_order {
+                    @extend .voice_order_focus;
+                    margin: 10px 10px 0 0;
+                }
+                &:before {
+                    position: absolute;
+                    left: -1px;
+                    top: -1px;
+                    right: -1px;
+                    bottom: -1px;
+                    content: '';
+                    border: 6px solid $C-font-point;
+
+                }
+            }
+        }
+        &__value {
+            @extend .flex-center;
+            padding: 0 10px;
+            height: 140px;
+            color: $C-black;
+            font-size: $F-size;
+            font-family: $F-family-bold;
+            text-align: center;
+            line-height: 1.1;
+            .data {
+                @include multiline-ellipsis(4,$F-size,1.1);
+                em {
+                    font-family: $F-family-basic;
+                }
+            }
+        }
+    }
+    .homeshopping_policy {
+        @extend .homeshopping_box1298;
+        @extend .flex-between;
+        background: $C-light-gray;
+        border: 1px solid $C-border-gray5;
+        .homeshopping_select {
+            @extend .flex-start;
+            @extend .homeshopping_box630;
+            border: 0;
+            background: $C-light-gray;
+            &__info {
+                @extend .flex-center;
+            }
+            &__value-label {
+                color: $C-font-light;
+            }
+        }
+
+    }
+    .homeshopping_agreement {
+        @extend .flex-center;
+        padding: 30px;
+        position: relative;
+        width: 650px;
+        box-sizing: border-box;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 2px;
+            height: 138px;
+            background: $C-border-gray;
+            content: '';
+        }
+        &__contents {
+            text-align: center;
+            font-size: $F-size-under;
+            color: $C-black;
+        }
+        &__attend {
+            padding-top: 20px;
+            text-align: center;
+            font-size: $F-size-xsmall;
+            color: #9b9b9b;
+        }
+    }
+    .homeshopping_track {
+        @extend .flex-between;
+        @extend .homeshopping_box710_v2;
+        margin-top: -20px;
+        &__img {
+            @extend .homeshopping_img_v2;
+            display: block;
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+        &__info {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px 20px 20px 30px;
+        }
+        &__date {
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 5px;
+            font-size: $F-size-xsmall;
+            color: $C-font-dark;
+        }
+        &__title-main {
+            @include multiline-ellipsis(2,2.7rem,$base-line-height);
+            margin-top: 12px;
+            font-family: $F-family-bold;
+            font-size: 2.7rem;
+            color: $C-black;
+            line-height: 1.1;
+        }
+        &__opt {
+            @extend .flex-start;
+            margin: 5px 0 0 0;
+            padding-top: 5px;
+        }
+        &__opt-item {
+            @include multiline-ellipsis(1,$F-size-xsmall,$base-line-height);
+            width: auto;
+            position: relative;
+            padding-right: 5px;
+            font-family: $F-family-bold;
+            font-size: $F-size-xsmall;
+            color: #9b9b9b;
+
+            &:last-child {
+                min-width: 65px;
+            }
+
+        }
+        &__value {
+            @extend .flex-between;
+            margin-top: 10px;
+        }
+        &__value-price {
+            font-size: $F-size-under;
+            font-family: $F-family-bold;
+            color: $C-font-light;
+        }
+        &__value-label {
+            padding-top: 7px;
+            font-family: $F-family-bold;
+            font-size: $F-size-xsmall;
+            color: $C-font-point;
+        }
+    }
+    .homeshopping_order {
+        @extend .homeshopping_box1298;
+        @extend .flex-between;
+        background: $C-light-gray;
+        border: 1px solid $C-border-gray5;
+        .homeshopping_select {
+            @extend .flex-start;
+            border: 0;
+            background: $C-light-gray;
+            &__info {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px 10px 20px 30px;
+            }
+            &__value-label {
+                color: $C-font-point;
+            }
+            &__value-price {
+                font-family: $F-family-bold;
+
+            }
+            &__opt {
+                @extend .flex-start;
+                margin: 5px 0 0 0;
+                padding-top: 5px;
+            }
+            &__opt-item {
+                @include multiline-ellipsis(1,$F-size-xsmall,$base-line-height);
+                width: auto;
+                max-width: none;
+                position: relative;
+                padding-right: 5px;
+                font-family: $F-family-bold;
+                font-size: $F-size-xsmall;
+                color: #9b9b9b;
+
+                &:last-child {
+                    min-width: 65px;
+                }
+
+            }
+        }
+    }
+    .homeshopping_payment {
+        padding: 30px;
+        position: relative;
+        width: 670px;
+        box-sizing: border-box;
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 2px;
+            height: 138px;
+            background: $C-border-gray;
+            content: '';
+        }
+        &__label {
+
+        }
+        &__11pay {
+            @include use-sprite(nugu_11pay);
+            vertical-align: top;
+            margin: 8px 0 0 0;
+        }
+        &__name {
+            font-size: $F-size-xsmall;
+            color: $C-black;
+        }
+        &__price {
+            font-size: 4.0rem;
+            font-family: $F-family-bold;
+        }
+        &__detail {
+            padding-top: 8px;
+            font-size: $F-size-xsmall;
+            color: #9b9b9b;
+        }
+    }
+
+    .homeshopping_select__opt-item + .homeshopping_select__opt-item {
+        padding: 0 10px;
+        &:before {
+            content:'';
+            position: absolute;
+            left: 0;
+            top:7px;
+            width: 1px;
+            height: 20px;
+            background: $C-border-gray5;
+        }
+    }
+    .homeshopping_track__opt-item + .homeshopping_track__opt-item {
+        padding: 0 10px;
+        &:before {
+            content:'';
+            position: absolute;
+            left: 0;
+            top:4px;
+            width: 1px;
+            height: 20px;
+            background: $C-border-gray5;
+        }
+    }
+
+
+
+}
+
+.order_text {
+    text-align: center;
+    font-size: $F-size-big;
+    min-height: 39px;
+
+    &.price {
+        &:before {
+            content:'';
+            @include use-sprite(ico_check);
+            vertical-align: top;
+            margin: 3px 5px 0 0;
+        }
+    }
+    .order_ico_text {
+        margin: 0 5px;
+        display: inline-block;
+        border: 2px solid $C-black;
+        height: 36px;
+        border-radius: 18px;
+        padding:0 15px;
+        vertical-align: top;
+        line-height: 36px;
+        font-family: $F-family-bold;
+        font-size: $F-size-under;
+
+        &:before {
+            content:'';
+            @include use-sprite(ico_order_mic);
+            vertical-align: top;
+            margin: 5px 5px 0 0;
+        }
+    }
+}
+.order_text + .homeshopping_wrap {
+    margin-top: 7px;
+}

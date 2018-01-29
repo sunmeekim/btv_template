@@ -48,11 +48,12 @@ $C-brand-point: #ffc501; //포인트 yellow
 $C-brand-point2: #46BFBD;//포인트 아쿠아그린
 $C-primary: #5674d7; //primary
 $C-red-point: #f1504a;//빨간색 포인트
-$C-light-gray : #fcfcfc; // 밝은회색
+
 $C-border-gray : #ccc; //테두리 그레이
 $C-border-gray2: #9d9d9d; // 조금 더 밝은 테두리 그레이
 $C-border-gray3 : #d1d2d3; //중앙 가름 밝은 테두리
 $C-border-gray4: #b2b2b2; //회색
+$C-border-gray5 : #d9d9d9; // 밝은회색
 
 // Font color
 $C-font-basic: #4c4c4c; //기본 폰트컬러
@@ -63,10 +64,11 @@ $C-font-dark-gray: #1a1a1a; //강한 폰트컬러
 $C-font-point : #ff4909;//강조의 오렌지 컬러
 $C-font-disable: #bcbcbc;
 
-//basic color
+//basic color & bgcolor
 $C-white: #fff; //흰색
 $C-black: #000; //검정색
 $C-bgColor: #f1f1f1; //밝은 회색
+$C-light-gray:#fcfcfc;
 $C-light-grayBg2: #f3f3f3; // 조금 밝은 회색
 $C-light-grayBg: #e6e6e6; // 조금 더 밝은 회색
 $C-light-grayBg3: #f8f8f8; // 조금 더더 밝은 회색

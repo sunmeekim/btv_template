@@ -1,0 +1,87 @@
+@@include('head.html', {"css": "btv_homeshopping", "title": "[Btv] 15. 홈쇼핑(CJO쇼핑) : Btv_homeshopping","filePath": "../"})
+<body>
+@@include('top.html')
+<div class="container">
+    <div class="top_title_area">
+        <span class="data">씨제이 오쇼핑입니다.</span>
+        <span class="service_logo cjo"></span>
+    </div>
+
+    <!-- CJ오쇼핑 상품목록 -->
+    <div class="content_area" id="default">
+        <!-- start: Btv template -->
+        @@include('homeshopping_list.html')
+        <!-- end: Btv template -->
+        <!-- start: 이전 다음 버튼 -->
+        @@include('pagenate.html')
+        <!-- end: 이전 다음 버튼 -->
+    </div>
+    <!-- CJ오쇼핑 상품옵션선택 -->
+    <div class="content_area" id="homeshopping_option">
+        <!-- start: Btv template -->
+        @@include('homeshopping_option.html')
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 상품갯수선택 -->
+    <div class="content_area" id="homeshopping_quantity">
+        <!-- start: Btv template -->
+        @@include('homeshopping_quantity.html')
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 약관동의 -->
+    <div class="content_area" id="homeshopping_policy">
+        <!-- start: Btv template -->
+        @@include('homeshopping_policy.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 상담신청완료 -->
+    <div class="content_area" id="homeshopping_track">
+        <!-- start: Btv template -->
+        @@include('homeshopping_track.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 결제하기 -->
+    <div class="content_area" id="homeshopping_order">
+        <!-- start: Btv template -->
+        @@include('homeshopping_order.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 결제하기(리모콘) -->
+    <div class="content_area" id="homeshopping_order_remote-control">
+        <!-- start: Btv template -->
+        @@include('homeshopping_remotecontrol.html')
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 주문결과 -->
+    <div class="content_area" id="homeshopping_order_result">
+        <!-- start: Btv template -->
+        @@include('homeshopping_order.html')
+        <!-- end: Btv template -->
+    </div>
+
+    <div class="help_area">
+        <button class="bottom_text-area"><span class="data">도움말</span></button>
+    </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+    <ul class="case__list">
+        <li class="case__item"><a href="#default" class="case__link">CJ오쇼핑 상품목록(기본,품절,상담)</a></li>
+        <li class="case__item"><a href="#homeshopping_option" class="case__link">CJ오쇼핑 상품옵션선택</a></li>
+        <li class="case__item"><a href="#homeshopping_quantity" class="case__link">CJ오쇼핑 상품갯수선택</a></li>
+        <li class="case__item"><a href="#homeshopping_policy" class="case__link">CJ오쇼핑 정보제공동의</a></li>
+        <li class="case__item"><a href="#homeshopping_track" class="case__link">CJ오쇼핑 상담신청완료</a></li>
+        <li class="case__item"><a href="#homeshopping_order" class="case__link">CJ오쇼핑 주문/결제하기</a></li>
+        <li class="case__item"><a href="#homeshopping_order_remote-control" class="case__link" id="defaultOpen">CJ오쇼핑 주문/결제하기(리모콘)</a></li>
+        <li class="case__item"><a href="#homeshopping_counsel" class="case__link">CJ오쇼핑 상담/문의</a></li>
+        <li class="case__item"><a href="#homeshopping_order_result" class="case__link">CJ오쇼핑 주문결과</a></li>
+    </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
+</body>
+</html>

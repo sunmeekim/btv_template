@@ -273,7 +273,7 @@
                 text-align: center;
                 font-family:$F-family-bold;
                 font-size: 5.4rem;
-                &.win {
+                &.myteam {
                     color: $C-black;
                 }
                 &.lose {
@@ -440,8 +440,11 @@
             font-family: $F-family-bold;
             font-size: 12.0rem;
             color: $C-font-light;
-            &.myteam {
+            &.win {
                 color: $C-font-dark-gray;
+            }
+            &.myteam {
+                color: $C-black;
             }
         }
         &__vs {
