@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
 .bar {
     margin: 5px 12px 0 7px;
     display: inline-block;
@@ -26,12 +30,20 @@
     background: $C-border-gray4;
 }
 .myteam {
-    color: $C-font-point !important;
+    color: $C-font-dark-gray !important;
+    &.win {
+        color: $C-font-point !important;
+    }
+}
+.card_box348 {
+    width: 348px;
+    height: 232px;
 }
 .sports_wrap {
     position: relative;
     margin-top: 12px;
 
+    //더블헤더경기보기
     &.double {
         @extend .flex-center;
         .game_bar {
@@ -133,444 +145,524 @@
         }
     }
 
-    .teamrank_wrap {
-        @extend .flex-center;
-        margin-top: 10px;
-        .sports_img {
-            width: 50px;
-            height: 50px;
-        }
-        &__list {
-            width: 712px;
-            +.teamrank_wrap__list {
-                margin-left: 2px;
-            }
-        }
-        &__list-item {
-            height: 78px;
-            font-size: $F-size-under;
-            line-height: 78px;
-            background: $C-white;
-
-            &:nth-child(2n) {
-                background: $C-light-grayBg3;
-            }
-            &.winner {
-                .teamrank_wrap__item-logo {
-                    position: relative;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        left: 2px;
-                        top: 14px;
-                        width: 46px;
-                        height: 46px;
-                        background: url('/images/sports/nugu_sports_rank_icon_badge.png') no-repeat 0 0;
-                    }
-                }
-                
-            }
-            &.active {
-                color: $C-font-point;
-            }
-            &.none {
-                .teamrank_wrap__item-ranking,
-                .teamrank_wrap__item-logo,
-                .teamrank_wrap__item-name,
-                .teamrank_wrap__item-game,
-                .teamrank_wrap__item-diff,
-                .teamrank_wrap__item-scoring,
-                .teamrank_wrap__item-winrate {
-                    display: none;
-                }
-            }
-            @include clear;
-        }
-        &__item-ranking {
-            float:left;
-            width: 57px;
-            text-align:center;
-            font-size: $F-size;
-            font-family: $F-family-bold;
-        }
-        &__item-logo {
-            float:left;
-            width: 63px;
-
-            .sports_img {
-                vertical-align: middle;
-                margin-top: -4px;
-            }
-        }
-        &__item-name {
-            float:left;
-            width: 63px;
-            font-family: $F-family-bold;
-        }
-        &__item-game {
-            float:left;
-            font-size: 2.2rem;
-        }
-        &__item-diff,
-        &__item-scoring,
-        &__item-winrate {
-            float:left;
-            font-size: 2.2rem;
-            &:before {
-                content:'';
-                margin: 0 10px;
-                width: 2px;
-                height: 20px;
-                display: inline-block;
-                vertical-align: middle;
-                background: $C-border-gray4;
-            }
+}
+//팀순위보기
+.teamrank_wrap {
+    @extend .flex-center;
+    margin-top: 10px;
+    .sports_img {
+        width: 50px;
+        height: 50px;
+    }
+    &__list {
+        width: 712px;
+        +.teamrank_wrap__list {
+            margin-left: 2px;
         }
     }
+    &__list-item {
+        height: 78px;
+        font-size: $F-size-under;
+        line-height: 78px;
+        background: $C-white;
 
-    .game_schedule {
-        .card_wrap__item {
-            background: $C-light-gray;
+        &:nth-child(2n) {
+            background: $C-light-grayBg3;
         }
-        .game_card_wrap {
-
-            position: relative;
-
-            &__date {
-                padding-top: 15px;
-                text-align: center;
-                font-size: $F-size-small;
-                color: $C-font-light;
-            }
-            &__logo {
-                @extend .flex-center;
-                margin: 0 21px;
-                padding-top: 13px;
-            }
-            &__team1,
-            &__team2 {
-                flex:left;
-                width: 50px;
-                height: 50px;
-                overflow: hidden;
-                img {
-                    width: 50px;
-                    height: 50px;
-                }
-            }
-            &__vs {
-                padding: 0 10px;
-                flex:left;
-                color: $C-font-basic;
-                font-size: $F-size-small;
-            }
-            &__point {
-                @extend .flex-center;
-            }
-            &__score {
-                flex:left;
-                overflow: hidden;
-                text-align: center;
-                font-family:$F-family-bold;
-                font-size: 5.4rem;
-                &.myteam {
-                    color: $C-black;
-                }
-                &.lose {
-                    color: $C-font-light;
-                }
-
-            }
-            &__vs2 {
-                flex:left;
-                padding: 0 5px;
-                font-size: $F-size-xxxbig;
-                color: $C-font-light2;
-
-            }
-            &__info {
-                @extend .flex-center;
-                font-size: $F-size-small;
-                color: $C-font-basic;
-            }
-            &__info-data {
-                color: $C-black;
-
-                &:after {
+        &.winner {
+            .teamrank_wrap__item-logo {
+                position: relative;
+                &:before {
                     content: '';
-                    margin: 5px 10px 0;
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 2px;
-                    height: 24px;
-                    background: $C-border-gray;
-                }
-                &.start_time {
-                    color: $C-font-basic;
+                    position: absolute;
+                    left: 2px;
+                    top: 14px;
+                    width: 46px;
+                    height: 46px;
+                    background: url('/images/sports/nugu_sports_rank_icon_badge.png') no-repeat 0 0;
                 }
             }
-            &__place {
-                color: $C-font-basic;
-                &.next {
-                    color: $C-black;
-                }
-            }
-            &__nodata {
+
+        }
+        &.active {
+            color: $C-font-point;
+        }
+        &.none {
+            .teamrank_wrap__item-ranking,
+            .teamrank_wrap__item-logo,
+            .teamrank_wrap__item-name,
+            .teamrank_wrap__item-game,
+            .teamrank_wrap__item-diff,
+            .teamrank_wrap__item-scoring,
+            .teamrank_wrap__item-winrate {
                 display: none;
             }
-            &__pitcher {
-                margin: 0 10px 39px;
-                display: flex;
-
-            }
-            &__pitcher-name {
-                @include ellipsis(1);
-                width: 50%;
-                text-align: center;
-                font-family: $F-family-bold;
-                font-size: $F-size-xsmall;
-            }
-
         }
-        .double_head {
-            @extend .flex-center;
-            width: 401px;
-            position: relative;
-            &__date {
-                position: absolute;
-                left:0;
-                right: 0;
-                top: 15px;
-                width: 100%;
-                text-align: center;
-                font-size: $F-size-small;
-                color: $C-font-light;
-            }
-            .game_card_wrap {
-                margin-top: 30px;
-                &.none {
-                    .game_card_wrap__nodata {
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 10px;
-                        height: 160px;
-                        text-align: center;
-                        background: $C-light-gray;
-                        line-height: 160px;
-                        font-size: $F-size-xxbig;
-                        color: $C-black;
-                    }
-                }
-            }
+        @include clear;
+    }
+    &__item-ranking {
+        float:left;
+        width: 57px;
+        text-align:center;
+        font-size: $F-size;
+        font-family: $F-family-bold;
+    }
+    &__item-logo {
+        float:left;
+        width: 63px;
 
-        }
-        .none {
-            .game_card_wrap__nodata {
-                display: block;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 60px;
-                height: 160px;
-                text-align: center;
-                background: $C-light-gray;
-                line-height: 160px;
-                font-size: $F-size-xxbig;
-                color: $C-black;
-            }
-        }
-        .game_card_wrap + .game_card_wrap {
-            &:before {
-                content:'';
-                position: absolute;
-                left: 0;
-                top:18px;
-                width: 2px;
-                height: 146px;
-                background: $C-light-grayBg;
-            }
+        .sports_img {
+            vertical-align: middle;
+            margin-top: -4px;
         }
     }
-    .team-box {
-        width: 810px;
-        display: flex;
-        justify-content: space-between;
-        margin: 3px auto 0;
-
-        &__team {
-            width: 180px;
-            height: 188px;
+    &__item-name {
+        float:left;
+        width: 63px;
+        font-family: $F-family-bold;
+    }
+    &__item-game {
+        float:left;
+        font-size: 2.2rem;
+    }
+    &__item-diff,
+    &__item-scoring,
+    &__item-winrate {
+        float:left;
+        font-size: 2.2rem;
+        &:before {
+            content:'';
+            margin: 0 10px;
+            width: 2px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            background: $C-border-gray4;
         }
-        &__record {
-            width: 180px;
-            height: 44px;
-            border-radius: 22px;
+    }
+}
+
+//게임스케쥴(지난,이번,다음)
+.game_schedule {
+    .card_wrap__item {
+        background: $C-light-gray;
+        border-radius: 0;
+        position: relative;
+    }
+    .game_card_wrap {
+        &__date,
+        &__turn {
+            padding-top: 20px;
+            box-sizing: border-box;
             text-align: center;
             font-size: $F-size-small;
-            line-height: 44px;
-            color: $C-font-dark-gray;
-            background: $C-white;
+            color: $C-font-light;
+            min-height: 48px;
+        }
+        &__turn {
+            color: $C-black;
         }
         &__logo {
-            margin-top: 44px;
-            width: 180px;
-            height: 144px;
-            overflow: hidden;
-
-            img {
-                width: 180px;
-                height: 144px;
-            }
+            @extend .flex-around;
+            padding: 15px 21px 0;
+            white-space: nowrap;
+            box-sizing: border-box;
         }
-        .team-box__record + .team-box__logo {
-            margin-top: 0;
-        }
-    }
-    .score-box {
-        @extend .flex-center;
-        margin-left: -200px;
-        position: absolute;
-        left: 50%;
-        top: 33px;
-        width: 400px;
+        &__team1,
+        &__team2 {
+            flex:1;
 
-        &__point {
+            font-size: $F-size-small;
             font-family: $F-family-bold;
-            font-size: 12.0rem;
-            color: $C-font-light;
-            &.win {
-                color: $C-font-dark-gray;
-            }
-            &.myteam {
-                color: $C-black;
+            color: $C-black;
+            text-align: center;
+            vertical-align: middle;
+
+            &.yet {
+                color: $C-font-light;
+                font-family: $F-family-basic;
             }
         }
         &__vs {
-            font-family: $F-family-bold;
-            font-size: 12.0rem;
-            color: $C-font-light2;
-            padding: 8px 0;
-            width: 170px;
+            padding: 0 10px;
+            color: #9b9b9b;
+            font-size: $F-size-xsmall;
             text-align: center;
         }
-        &__other {
-            padding: 45px 0 0;
-            font-family: $F-family-bold;
-            font-size: 5.0rem;
-            color: $C-font-dark;
-        }
-
-    }
-    .title-box {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -10px;
-        text-align: center;
-
-        &__game-title {
-            font-size: $F-size-big;
-            font-family: $F-family-bold;
-            color: $C-black;
-        }
-        &__plus-info {
-            font-size: $F-size-under;
-            color: $C-font-basic;
-        }
-    }
-    .result-box {
-        @extend .flex-between;
-        width: 810px;
-        margin: 0 auto;
-
-        &.data-full {
-            .result-box__data{
-                &:first-child {
-                    &.win {
-                        margin-left: -55px;
-                        text-align: left;
-                    }
-                }
-                &:last-child {
-                    &.win {
-                        margin-right: -80px;
-                        text-align: right;
-                    }
-                }
-            }
-        }
-        &.game_before {
-            .result-box__data {
-                &:first-child {
-                    margin-left: -20px;
-                }
-                &:last-child {
-                    margin-right: -40px;
-                }
-            }
-        }
-        &__data-last {
-            @extend .flex-start;
-            margin-right: 0;
-            vertical-align: top;
-            justify-content: left;
-        }
-        &__data {
+        &__point {
             @extend .flex-center;
-            min-width: 180px;
+            box-sizing: border-box;
+            padding-top: 5px;
+        }
+        &__score {
+            overflow: hidden;
+            text-align: center;
+            font-family:$F-family-bold;
+            font-size: 4.8rem;
             color: $C-font-light;
         }
-        &__data-label {
-            font-size: $F-size;
-            font-family: $F-family-bold;
-            color: $C-black;
-        }
-        &__data-name {
-            font-family: $F-family-basic;
-            font-size: $F-size;
-            color: $C-font-light;
-            vertical-align: top;
-            width: 135px;
-            text-align: left;
-            @include multiline-ellipsis(1, $F-size, $base-line-height, inline-block);
+        &__vs2 {
+            flex:left;
+            padding: 0 5px;
+            font-size: $F-size-xxxbig;
+            color: $C-font-light2;
 
-            &:before {
-                content:'';
+        }
+        &__info {
+            @extend .flex-center;
+            font-size: $F-size-xsmall;
+            color: $C-font-light;
+            position:absolute;
+            bottom: 13px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        &__info-data {
+            //color: $C-black;
+
+            &:after {
+                content: '';
+                margin: 5px 10px 0;
                 display: inline-block;
                 vertical-align: top;
-                margin: 5px 10px 0;
-                width: 3px;
-                height: 26px;
-                background: $C-border-gray4;
+                width: 2px;
+                height: 20px;
+                background: $C-border-gray;
+            }
+            &.start_time {
+                //color: $C-font-basic;
+            }
+        }
+        &__place {
+            //color: $C-font-basic;
+            &.next {
+                //color: $C-black;
+            }
+        }
+        &__nodata {
+            display: none;
+        }
+        &__pitcher {
+            @extend .flex-around;
+            box-sizing: border-box;
+            padding: 18px 0 39px;
+        }
+        &__pitcher-name {
+            @include ellipsis(1);
+            width: 50%;
+            text-align: center;
+            font-size: 2.3rem;
+            color: $C-font-light;
+
+        }
+
+    }
+    .stadium {
+        .game_card_wrap__team1,
+        .game_card_wrap__team2 {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .game_card_wrap__team1 {
+            text-align:left;
+        }
+        .game_card_wrap__team2 {
+            text-align:right;
+        }
+        .game_card_wrap__team-log {
+            display: block;
+        }
+        .game_card_wrap__team-name {
+            display: inline-block;
+            vertical-align: top;
+            width: 80px;
+            text-align: center;
+            font-size: $F-size-xsmall;
+            font-family: $F-family-bold;
+            color: $C-font-dark-gray;
+        }
+        .game_card_wrap__logo {
+            @extend .flex-between;
+            padding: 0 20px 0;
+            white-space: nowrap;
+        }
+        .game_card_wrap__point {
+            @extend .flex-center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 75px;
+        }
+        .game_card_wrap__score {
+            overflow: hidden;
+            text-align: center;
+            font-family:$F-family-bold;
+            font-size: 4.8rem;
+            color: $C-font-light;
+        }
+        .game_card_wrap__cancel {
+            font-size: 4.8rem;
+            color: #9b9b9b;
+        }
+    }
+    .double_head {
+        @extend .flex-around;
+        width: 401px;
+        position: relative;
+        &__date {
+            position: absolute;
+            left:0;
+            right: 0;
+            top: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: $F-size-small;
+            color: $C-font-light;
+        }
+        .game_card_wrap {
+            padding-top: 63px;
+            position: relative;
+            height: 100%;
+            box-sizing: border-box;
+            &.none {
+                .game_card_wrap__nodata {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 10px;
+                    height: 160px;
+                    text-align: center;
+                    background: $C-light-gray;
+                    line-height: 160px;
+                    font-size: $F-size-xxbig;
+                    color: $C-black;
+                }
             }
         }
 
     }
-    .gameinfo-box {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
+    .none {
+        .game_card_wrap__nodata {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 62px;
+            height: 160px;
+            text-align: center;
+            background: $C-light-gray;
+            line-height: 160px;
+            font-size: $F-size-xxbig;
+            color: $C-font-light2;
+        }
+    }
+    .cancel {
+        .game_card_wrap__nodata {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 105px;
+            height: 75px;
+            text-align: center;
+            background: $C-light-gray;
+            line-height: 75px;
+            font-size: $F-size-xxbig;
+            color: $C-font-light2;
+        }
+    }
+    .game_card_wrap + .game_card_wrap {
+        &:before {
+            content:'';
+            position: absolute;
+            left: -10px;
+            top:70px;
+            width: 2px;
+            height: 146px;
+            background: $C-light-grayBg;
+        }
+    }
+}
+
+.title-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    text-align: center;
+
+    &__game-title {
+        font-family: $F-family-bold;
+        font-size: $F-size-big;
+        color: $C-black;
+    }
+    &__plus-info {
+        font-size: $F-size-under;
+        color: $C-font-light;
+    }
+}
+.team-box {
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 3px auto 0;
+    &__team-info {
+        @extend .flex-start;
+    }
+    &__team {
+        //width: 180px;
+        //height: 188px;
+    }
+    &__record {
+        //width: 180px;
+        //height: 44px;
+        //border-radius: 22px;
         text-align: center;
+        font-size: $F-size-small;
+        //line-height: 44px;
+        color: $C-font-dark-gray;
+        //background: $C-white;
+    }
+    &__logo {
+        margin-top: 44px;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
 
-        &__info {
-            font-size: $F-size;
-            color: $C-black;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .team-box__record + .team-box__logo {
+        margin-top: 0;
+    }
+}
+.score-box {
+    @extend .flex-center;
+    margin-left: -200px;
+    position: absolute;
+    left: 50%;
+    top: 33px;
+    width: 400px;
 
-            .time + .place {
-                &:before {
-                    content:'';
-                    @extend .bar;
+    &__point {
+        font-family: $F-family-bold;
+        font-size: 12.0rem;
+        color: $C-font-light;
+
+    }
+    &__vs {
+        font-family: $F-family-bold;
+        font-size: 12.0rem;
+        color: $C-font-light2;
+        padding: 8px 0;
+        width: 170px;
+        text-align: center;
+    }
+    &__other {
+        padding: 45px 0 0;
+        font-family: $F-family-bold;
+        font-size: 5.0rem;
+        color: $C-font-dark;
+    }
+
+}
+
+.result-box {
+    @extend .flex-between;
+    width: 810px;
+    margin: 0 auto;
+
+    &.data-full {
+        .result-box__data{
+            &:first-child {
+                &.win {
+                    margin-left: -55px;
+                    text-align: left;
                 }
             }
-            .date + .time {
-                &:before {
-                    content:'';
-                    @extend .bar;
-
+            &:last-child {
+                &.win {
+                    margin-right: -80px;
+                    text-align: right;
                 }
+            }
+        }
+    }
+    &.game_before {
+        .result-box__data {
+            &:first-child {
+                margin-left: -20px;
+            }
+            &:last-child {
+                margin-right: -40px;
+            }
+        }
+    }
+    &__data-last {
+        @extend .flex-start;
+        margin-right: 0;
+        vertical-align: top;
+        justify-content: left;
+    }
+    &__data {
+        @extend .flex-center;
+        min-width: 180px;
+        color: $C-font-light;
+    }
+    &__data-label {
+        font-size: $F-size;
+        font-family: $F-family-bold;
+        color: $C-black;
+    }
+    &__data-name {
+        font-family: $F-family-basic;
+        font-size: $F-size;
+        color: $C-font-light;
+        vertical-align: top;
+        width: 135px;
+        text-align: left;
+        @include multiline-ellipsis(1, $F-size, $base-line-height, inline-block);
+
+        &:before {
+            content:'';
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px 10px 0;
+            width: 3px;
+            height: 26px;
+            background: $C-border-gray4;
+        }
+    }
+
+}
+.gameinfo-box {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &__info {
+        font-size: $F-size;
+        color: $C-black;
+
+        .time + .place {
+            &:before {
+                content:'';
+                @extend .bar;
+            }
+        }
+        .date + .time {
+            &:before {
+                content:'';
+                @extend .bar;
+
             }
         }
     }

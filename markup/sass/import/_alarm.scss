@@ -27,37 +27,37 @@
         }
     }
 
-    //알람카드 UI 추가 부분
-    .alarm_default_card {
-        text-align: center;
+}
+//알람카드 UI 추가 부분
+.alarm_default_card {
+    text-align: center;
 
-        &__ampm {
-            display: inline-block;
-            height: 34px;
-            margin-top: 29px;
-            border-radius: 17px;
-            padding:0 15px;
-            vertical-align: top;
-            text-align: center;
-            font-size: 2.5rem;
-            line-height: 34px;
-            color: $C-font-light;
-            background: $C-light-grayBg;
-        }
-        &__action {
-            margin: 20px 0 11px;
-            text-align: center;
-            font-size: 5.6rem;
-            color: $C-black;
-        }
-        &__item {
-            text-align: center;
-            font-size: $F-size;
-            font-family: $F-family-semi;
-            color: $C-black;
-        }
-        &__nodata {
-            display: none;
-        }
+    &__ampm {
+        display: inline-block;
+        height: 34px;
+        margin-top: 29px;
+        border-radius: 17px;
+        padding:0 15px;
+        vertical-align: top;
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 34px;
+        color: $C-font-light;
+        background: $C-light-grayBg;
+    }
+    &__action {
+        margin: 20px 0 11px;
+        text-align: center;
+        font-size: 5.6rem;
+        color: $C-black;
+    }
+    &__item {
+        text-align: center;
+        font-size: $F-size;
+        font-family: $F-family-semi;
+        color: $C-black;
+    }
+    &__nodata {
+        display: none;
     }
 }

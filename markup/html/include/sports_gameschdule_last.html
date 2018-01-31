@@ -1,24 +1,25 @@
 
 <div class="webview_area">
 	<div class="sports_wrap">
-		<!-- Start:야구 스케줄 보기 -->
+		<!-- Start: 경기일정(이번주, 지난) -->
 		<ul class="card_wrap game_schedule">
-				<!-- Start:정상데이터가 있을 경우 -->
-				<li class="card_wrap__item">
+
+				<!-- Start:정보없음 경우 none 클래스를 추가해줍니다. -->
+				<li class="card_wrap__item none">
 					<div class="game_card_wrap">
 						<!-- [D] 경기일 -->
-						<p class="game_card_wrap__date">8월 1일(토)</p>
-						<!-- [D] 경기팀 로고 -->
+						<p class="game_card_wrap__date">08월 01일(토)</p>
+						<!-- [D] 경기팀 -->
 						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_01.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team1">한화</span>
 							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_02.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team2">SK</span>
 						</div>
-						<!-- [D] 경기팀 이름 -->
+						<!-- [D] 경기 스코어 내가 선택했거나 발화한 팀에는 myteam클래스를 추가해줍니다. 이긴팀 win, 진팀 lose클래스를 추가해줍니다.-->
 						<div class="game_card_wrap__point">
 							<span class="game_card_wrap__score win">33</span>
 							<span class="game_card_wrap__vs2">:</span>
-							<span class="game_card_wrap__score lose">00</span>
+							<span class="game_card_wrap__score lose myteam">00</span>
 						</div>
 						<div class="game_card_wrap__info">
 							<span class="game_card_wrap__info-data">승</span>
@@ -28,21 +29,22 @@
 						<p class="game_card_wrap__nodata">정보없음</p>
 					</div>
 				</li>
-				<!-- //End:정상데이터가 있을 경우 -->
+				<!-- //End:정보없음 경우 -->
 
-				<li class="card_wrap__item">
+				<!-- Start:우천취소 cancel클래스를 추가해줍니다-->
+				<li class="card_wrap__item cancel">
 					<div class="game_card_wrap">
 						<!-- [D] 경기일 -->
-						<p class="game_card_wrap__date">8월 1일(토)</p>
-						<!-- [D] 경기팀 로고 -->
+						<p class="game_card_wrap__date">08월 01일(토)</p>
+						<!-- [D] 경기팀 -->
 						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_03.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team1">SK</span>
 							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_04.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team2">롯데</span>
 						</div>
 						<!-- [D] 경기팀 이름 -->
 						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win">33</span>
+							<span class="game_card_wrap__score myteam win">33</span>
 							<span class="game_card_wrap__vs2">:</span>
 							<span class="game_card_wrap__score lose">00</span>
 						</div>
@@ -51,24 +53,25 @@
 							<span class="game_card_wrap__place">잠실</span>
 						</div>
 						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
-						<p class="game_card_wrap__nodata">경기없음</p>
+						<p class="game_card_wrap__nodata">우천취소</p>
 					</div>
 				</li>
+				<!-- //End:우천취소 -->
 
-
-				<li class="card_wrap__item none">
+				<!-- Start:정상데이터가 있을 경우 (응원팀or발화팀이 있고 경기결과가 이겼을때) -->
+				<li class="card_wrap__item">
 					<div class="game_card_wrap">
 						<!-- [D] 경기일 -->
-						<p class="game_card_wrap__date">8월 1일(토)</p>
-						<!-- [D] 경기팀 로고 -->
+						<p class="game_card_wrap__date">MM월 DD일(토)</p>
+						<!-- [D] 경기팀 -->
 						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_05.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team1">SK</span>
 							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_06.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team2">KIA</span>
 						</div>
-						<!-- [D] 경기팀 이름 -->
+						<!-- [D] 경기 스코어 내가 선택했거나 발화한 팀에는 myteam클래스를 추가해줍니다. 이긴팀 win, 진팀 lose클래스를 추가해줍니다.-->
 						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win">33</span>
+							<span class="game_card_wrap__score myteam win">33</span>
 							<span class="game_card_wrap__vs2">:</span>
 							<span class="game_card_wrap__score lose">00</span>
 						</div>
@@ -77,26 +80,82 @@
 							<span class="game_card_wrap__place">잠실</span>
 						</div>
 						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
-						<p class="game_card_wrap__nodata">우천취소</p>
+						<p class="game_card_wrap__nodata">경기없음</p>
 					</div>
 				</li>
+				<!-- //End:정상데이터가 있을 경우 -->
 
+				<!-- Start:더블헤드:경기 double_head클래스를 추가해줍니다 (응원팀or발화팀이 없고 경기결과가 나왔음)-->
+				<li class="card_wrap__item double_head">
+					<!-- [D] 경기일 -->
+					<p class="double_head__date">08월 01일(토)</p>
+					<!-- 더블헤드 첫번째 경기 -->
+					<div class="game_card_wrap">
+						<!-- [D] 경기팀 -->
+						<div class="game_card_wrap__logo">
+							<span class="game_card_wrap__team1">SK</span>
+							<span class="game_card_wrap__vs">VS</span>
+							<span class="game_card_wrap__team2">KIA</span>
+						</div>
+						<!-- [D] 경기 스코어 내가 선택했거나 발화한 팀에는 myteam클래스를 추가해줍니다. 이긴팀 win, 진팀 lose클래스를 추가해줍니다.-->
+						<div class="game_card_wrap__point">
+							<span class="game_card_wrap__score lose">22</span>
+							<span class="game_card_wrap__vs2">:</span>
+							<span class="game_card_wrap__score win">33</span>
+						</div>
+						<!-- 구장 정보 발화시 응원팀,발화팀이 없을경우 경기 승패 미노출 -->
+						<div class="game_card_wrap__info">
+							<!--<span class="game_card_wrap__info-data">승</span>-->
+							<span class="game_card_wrap__place">잠실</span>
+						</div>
+						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
+						<p class="game_card_wrap__nodata">미정</p>
+					</div>
+					<!-- //더블헤드 첫번째 경기 -->
 
+					<!-- 더블헤드 두번째 경기 -->
+					<div class="game_card_wrap">
+						<!-- [D] 경기팀 -->
+						<div class="game_card_wrap__logo">
+							<span class="game_card_wrap__team1">한화</span>
+							<span class="game_card_wrap__vs">VS</span>
+							<span class="game_card_wrap__team2">두산</span>
+						</div>
+						<!-- [D] 경기 스코어 내가 선택했거나 발화한 팀에는 myteam클래스를 추가해줍니다. 이긴팀 win, 진팀 lose클래스를 추가해줍니다.-->
+						<div class="game_card_wrap__point">
+							<span class="game_card_wrap__score win">1</span>
+							<span class="game_card_wrap__vs2">:</span>
+							<span class="game_card_wrap__score lose">12</span>
+						</div>
+						<!-- 구장 정보 발화시 응원팀,발화팀이 없을경우 경기 승패 미노출 -->
+						<div class="game_card_wrap__info">
+							<!--<span class="game_card_wrap__info-data">승</span>-->
+							<span class="game_card_wrap__place">고덕</span>
+						</div>
+						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
+						<p class="game_card_wrap__nodata">정보없음</p>
+					</div>
+					<!-- //더블헤드 두번째 경기 -->
+				</li>
+				<!-- //End: 더블헤드:경기 -->
+
+				<!-- Start:정상데이터가 있을 경우 (응원팀or발화팀이 있고 경기결과가 졌을때) -->
 				<li class="card_wrap__item">
 					<div class="game_card_wrap">
 						<!-- [D] 경기일 -->
-						<p class="game_card_wrap__date">8월 1일(토)</p>
-						<!-- [D] 경기팀 로고 -->
+						<p class="game_card_wrap__date">08월 01일(토)</p>
+
+						<!-- [D] 경기팀 -->
 						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_07.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team1">삼성</span>
 							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_08.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team2">KIA</span>
 						</div>
 						<!-- [D] 경기팀 이름 -->
 						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win myteam">33</span>
+							<span class="game_card_wrap__score win">33</span>
 							<span class="game_card_wrap__vs2">:</span>
-							<span class="game_card_wrap__score lose">00</span>
+							<span class="game_card_wrap__score  myteam lose">1</span>
 						</div>
 						<div class="game_card_wrap__info">
 							<span class="game_card_wrap__info-data">패</span>
@@ -106,80 +165,41 @@
 						<p class="game_card_wrap__nodata">경기없음</p>
 					</div>
 				</li>
+				<!-- //End:정상데이터가 있을 경우 -->
 
-				<li class="card_wrap__item double_head">
-					<!-- [D] 경기일 -->
-					<p class="double_head__date">8월 1일(토)</p>
-					<div class="game_card_wrap none">
-
-						<!-- [D] 경기팀 로고 -->
-						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_09.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
-							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_10.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
-						</div>
-						<!-- [D] 경기팀 이름 -->
-						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win">33</span>
-							<span class="game_card_wrap__vs2">:</span>
-							<span class="game_card_wrap__score lose">00</span>
-						</div>
-						<div class="game_card_wrap__info">
-							<span class="game_card_wrap__info-data">승</span>
-							<span class="game_card_wrap__place">잠실</span>
-						</div>
-						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
-						<p class="game_card_wrap__nodata">미정</p>
-					</div>
-					<div class="game_card_wrap">
-
-						<!-- [D] 경기팀 로고 -->
-						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_01.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
-							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_10.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
-						</div>
-						<!-- [D] 경기팀 이름 -->
-						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win">33</span>
-							<span class="game_card_wrap__vs2">:</span>
-							<span class="game_card_wrap__score lose">00</span>
-						</div>
-						<div class="game_card_wrap__info">
-							<span class="game_card_wrap__info-data">승</span>
-							<span class="game_card_wrap__place">잠실</span>
-						</div>
-						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
-						<p class="game_card_wrap__nodata">정보없음</p>
-					</div>
-
-				</li>
+				<!-- Start:경기 시작 전 (선발 투수명)-->
 				<li class="card_wrap__item">
 					<div class="game_card_wrap">
 						<!-- [D] 경기일 -->
-						<p class="game_card_wrap__date">8월 1일(토)</p>
-						<!-- [D] 경기팀 로고 -->
+						<p class="game_card_wrap__date">08월 01일(토)</p>
+						<!-- [D] 경기팀 -->
 						<div class="game_card_wrap__logo">
-							<span class="game_card_wrap__team1"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_02.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team1">LG</span>
 							<span class="game_card_wrap__vs">VS</span>
-							<span class="game_card_wrap__team2"><img src="../../assets/images/test/sports/nugu_sports_card_icon_logo_09.png" class="sports_img" alt="프로야구팀 로고이미지"/></span>
+							<span class="game_card_wrap__team2">롯데</span>
 						</div>
-						<!-- [D] 경기팀 이름 -->
-						<div class="game_card_wrap__point">
-							<span class="game_card_wrap__score win">33</span>
-							<span class="game_card_wrap__vs2">:</span>
-							<span class="game_card_wrap__score lose">00</span>
+						<!-- [D] 경기팀 투수이름 -->
+						<div class="game_card_wrap__pitcher">
+							<span class="game_card_wrap__pitcher-name">데이브존</span>
+							<span class="game_card_wrap__pitcher-name">나카시마</span>
 						</div>
+						<!-- [D] 경기 스코어-->
+						<!--<div class="game_card_wrap__point">-->
+							<!--<span class="game_card_wrap__score win">33</span>-->
+							<!--<span class="game_card_wrap__vs2">:</span>-->
+							<!--<span class="game_card_wrap__score lose">00</span>-->
+						<!--</div>-->
 						<div class="game_card_wrap__info">
-							<span class="game_card_wrap__info-data">승</span>
+							<span class="game_card_wrap__info-data">00:00</span>
 							<span class="game_card_wrap__place">잠실</span>
 						</div>
 						<!-- 상단에 none으로 정보없음이 표시되면 활성화 됩니다. 정상데이터에서는 보이지 않는 상태입니다. -->
-						<p class="game_card_wrap__nodata">정보없음</p>
+						<p class="game_card_wrap__nodata">우천취소</p>
 					</div>
 				</li>
+				<!-- //End:경기 시작 전 -->
 				
 			</ul>
-		<!-- End:야구 스케줄 보기 -->
+		<!-- //End: 경기일정(이번주, 지난) -->
 	</div>
 </div>

@@ -151,7 +151,7 @@ module.exports = function (grunt) {
                     require('autoprefixer')(),
                     require("css-mqpacker")()
                 ],
-                browsers: ['last 2 versions','Android']
+                browsers: ['last 2 versions','Android >= 4']
             },
 
             pc: {

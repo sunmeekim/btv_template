@@ -36,52 +36,53 @@
             
         }
     }
-    .iot_default_card {
+
+}
+.iot_default_card {
+    text-align: center;
+    display: block;
+    outline: 0;
+
+    &__order {
+        text-align:right;
+        margin: 9px 9px 0;
+        height: 28px;
+    }
+    &__order-info {
+        display: inline-block;
+        vertical-align: top;
+        height: 28px;
+        padding:0 10px;
+        border: 1px solid $C-font-dark;
+        border-radius: 14px;
+        font-size: 1.6rem;
+        font-family: $F-family-bold;
+        line-height: 29px;
+        color: $C-font-dark;
+
+        &:before {
+            content:'';
+            @include use-sprite(nugu_advice_icon_mic2);
+            margin: 6px 5px 0 0;
+            vertical-align: top;
+        }
+
+    }
+    &__action {
+        @include use-sprite(nugu_smarthome_off);
+        margin: 24px 0 13px;
+        display: inline-block;
+        vertical-align: top;
+        &.on{
+            @include use-sprite(nugu_smarthome_on);
+        }
+    }
+    &__item {
         text-align: center;
-        display: block;
-        outline: 0;
-
-        &__order {
-            text-align:right;
-            margin: 9px 9px 0;
-            height: 28px;
-        }
-        &__order-info {
-            display: inline-block;
-            vertical-align: top;
-            height: 28px;
-            padding:0 10px;
-            border: 1px solid $C-font-dark;
-            border-radius: 14px;
-            font-size: 1.6rem;
-            font-family: $F-family-bold;
-            line-height: 29px;
-            color: $C-font-dark;
-
-            &:before {
-                content:'';
-                @include use-sprite(nugu_advice_icon_mic2);
-                margin: 6px 5px 0 0;
-                vertical-align: top;
-            }
-
-        }
-        &__action {
-            @include use-sprite(nugu_smarthome_off);
-            margin: 24px 0 13px;
-            display: inline-block;
-            vertical-align: top;
-            &.on{
-                @include use-sprite(nugu_smarthome_on);
-            }
-        }
-        &__item {
-            text-align: center;
-            font-size: $F-size;
-            color: $C-font-dark;
-        }
-        &__nodata {
-            display: none;
-        }
+        font-size: $F-size;
+        color: $C-font-dark;
+    }
+    &__nodata {
+        display: none;
     }
 }
