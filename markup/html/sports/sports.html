@@ -63,11 +63,7 @@
                 @@include('sports_baseballgame_double.html')
                 <!-- end: Btv template -->
         </div>
-        <div class="content_area" id="game_double_special">
-                <!-- start: Btv template -->
-                @@include('sports_baseballgame_double_special.html')
-                <!-- end: Btv template -->
-        </div>
+
 
         <div class="help_area">
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
@@ -83,12 +79,12 @@
                 <li class="case__item"><a href="#game_schedule_last" class="case__link">경기일정(이번,지난)</a></li>
                 <li class="case__item"><a href="#game_schedule" class="case__link">경기일정(다음)</a></li>
                 <li class="case__item"><a href="#game_stadium" class="case__link">경기일정(구장별보기)</a></li>
-                <li class="case__item"><a href="#game_info_normal" class="case__link" id="defaultOpen">경기정보(일반)</a></li>
-                <li class="case__item"><a href="#game_before" class="case__link">경기정보(시작전)</a></li>
+                <li class="case__item"><a href="#game_before" class="case__link">경기 시작전(정규,플레이오프..)</a></li>
+                <li class="case__item"><a href="#game_info_normal" class="case__link">경기 중(정규,플레이오프..)</a></li>
+                <li class="case__item"><a href="#game_after" class="case__link">경기 종료(정규,플레이오프..)</a></li>
                 <li class="case__item"><a href="#game_cancel" class="case__link">경기정보(취소)</a></li>
-                <li class="case__item"><a href="#game_after" class="case__link">경기정보(1시간후)</a></li>
-                <li class="case__item"><a href="#game_double" class="case__link">더블헤더(경기종료)</a></li>
-                <li class="case__item"><a href="#game_double_special" class="case__link">더블헤더(경기전,진행중)</a></li>
+                <li class="case__item"><a href="#game_double" class="case__link" id="defaultOpen">더블헤더(경기종료,취소,전)</a></li>
+                <!--<li class="case__item"><a href="#game_double_special" class="case__link">더블헤더(경기중)</a></li>-->
         </ul>
 </div>
 <!-- //케이스 확인하기용 -->

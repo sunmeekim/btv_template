@@ -3,27 +3,27 @@
 /*  Btv_스포츠
 /* ---------------------------------------------------------------------- */
 
-.bar {
-    margin: 5px 12px 0 7px;
+%bar {
+    margin: 5px 7px 0 7px;
     display: inline-block;
     vertical-align: top;
-    width: 3px;
-    height: 26px;
-    background: $C-border-gray4;
+    width: 2px;
+    height: 24px;
+    background: $C-border-gray;
+}
+%img200 {
+    width: 200px;
+    height: 200px;
+}
+%img100 {
+    width: 100px;
+    height: 100px;
 }
 .myteam {
     color: $C-font-dark-gray !important;
     &.win {
         color: $C-font-point !important;
     }
-}
-.card_box348 {
-    width: 348px;
-    height: 232px;
-}
-%img200 {
-    width: 200px;
-    height: 200px;
 }
 .sports_wrap {
     position: relative;
@@ -36,95 +36,66 @@
         @include flex-justify(center);
 
         .game_bar {
-            margin: 50px 50px 0;
+            margin: 10px 10px 0;
             width: 4px;
             height: 142px;
             vertical-align: top;
             background: $C-border-gray3;
         }
         .game_box {
-            width: 662px;
+            width: 800px;
             height: 230px;
             position: relative;
 
             .team-box {
                 width:100%;
+                padding-top: 60px;
                 &__team {
-                    width: 142px ;
-                    height: 155px;
-                }
-                &__logo {
-                    width: 142px;
-                    height: 114px;
-                    img {
-                        width: 142px;
-                        height: 114px;
+                    &:last-child {
+                        .team-box__record {
+                            margin-left: 0;
+                            margin-right: 5px;
+                        }
+
                     }
+                }
+                &__record {
+                    margin-right:5px;
+                }
+
+                &__logo {
+                    @extend %img100;
+                    img {
+                        @extend %img100;
+                    }
+                }
+                &__team-name {
+                    font-size: $F-size-big;
+                }
+                &__team-player {
+                    font-size: $F-size-small;
                 }
             }
             .score-box {
-                margin-left: -179px;
-                width: 358px;
-                top: 50px;
+                margin-left: -120px;
+                width: 240px;
+                top: 60px;
                 &__point {
-                    font-size: 9.0rem;
+                    font-size: 8.0rem;
                 }
                 &__vs {
-                    width: 150px;
+                    //width: 150px;
                     padding: 4px 0;
-                    font-size: 9.0rem;
+                    font-size: 8.0rem;
                 }
                 &__other {
                     padding-top: 20px;
                 }
             }
-            .result-box {
-                width: 662px;
-                &__data {
-                    min-width: 142px;
-                    font-size: $F-size-under;
-                    display: block;
-                }
-                &__data-name {
-                    font-size: $F-size-under;
-                }
-                &__data-last {
-                    @include flex();
-                    @include flex-align(center);
-                    @include flex-justify(center);
-                    margin-right: 0;
-                    width: 100%;
-                }
 
-                .result-box__data-last + .result-box__data-last {
-                    margin-left: 0;
-                }
-                &.data-full {
-                    .result-box__data{
-                        &:first-child {
-                            &.win {
-                                margin-left: 0;
-                                text-align: left;
-                            }
-                            .result-box__data-last {
-                                text-align: left;
-                            }
-                        }
-                        &:last-child {
-                            &.win {
-                                margin-right: 0;
-                                text-align: left;
-                            }
-                            .result-box__data-last {
-                                text-align: left;
-                            }
-                        }
-                    }
-                }
-            }
             .gameinfo-box {
                 position: absolute;
-                bottom: 35px;
+                bottom: 15px;
                 left: 0;
                 right: 0;
                 text-align: center;
@@ -238,10 +209,15 @@
 
 //게임스케쥴(지난,이번,다음)
 .game_schedule {
+
     .card_wrap__item {
         background: $C-light-gray;
         border-radius: 0;
         position: relative;
+        &.card_box348 {
+            width: 348px;
+            height: 232px;
+        }
     }
     .game_card_wrap {
         &__date,
@@ -300,7 +276,7 @@
             color: $C-font-light;
         }
         &__vs2 {
-            //flex:1;
+
             padding: 0 5px;
             font-size: $F-size-xxxbig;
             color: $C-font-light2;
@@ -318,28 +294,8 @@
             right: 0;
             text-align: center;
         }
-        &__info-data {
-            //color: $C-black;
 
-            &:after {
-                content: '';
-                margin: 5px 10px 0;
-                display: inline-block;
-                vertical-align: top;
-                width: 2px;
-                height: 20px;
-                background: $C-border-gray;
-            }
-            &.start_time {
-                //color: $C-font-basic;
-            }
-        }
-        &__place {
-            //color: $C-font-basic;
-            &.next {
-                //color: $C-black;
-            }
-        }
+
         &__nodata {
             display: none;
         }
@@ -429,7 +385,7 @@
             color: $C-font-light;
         }
         .game_card_wrap {
-            padding-top: 63px;
+            padding-top: 53px;
             position: relative;
             height: 100%;
             box-sizing: border-box;
@@ -492,6 +448,14 @@
             background: $C-light-grayBg;
         }
     }
+    .game_card_wrap__info-data + .game_card_wrap__place {
+        &:before {
+            @extend %bar;
+            height: 20px;
+            margin: 5px 10px 0 7px;
+            content: '';
+        }
+    }
 }
 
 .title-box {
@@ -512,85 +476,94 @@
     }
 }
 .team-box {
-    width: 1300px;
     @include flex();
     @include flex-justify(space-between);
     @include flex-align(center);
+    width: 1300px;
+    margin: 0 auto;
 
-    margin: 3px auto 0;
     &__team {
         &:last-child {
+            .team-box__record {
+                margin-left: 25px;
+                margin-right: 0;
+            }
             .team-box__team-info {
                 @include flex-direction (row-reverse);
+
             }
-            .team-box__record {
+            .team-box__team-name,
+            .team-box__team-record,
+            .team-box__team-player {
                 text-align: left;
             }
         }
+    }
+    &__record {
+        width: 175px;
+        margin-right: 25px;
     }
     &__team-info {
         @include flex();
         @include flex-direction (row);
         @include flex-justify(center);
         @include flex-align(center);
-
     }
-    &__record {
+    &__team-name {
         text-align: right;
+        font-family: $F-family-bold;
+        font-size: $F-size-xbig;
+        color: $C-font-dark-gray;
     }
+    &__team-record {
+        text-align: right;
+        font-size: $F-size-under;
+        color: $C-font-dark-gray;
+        letter-spacing: -1px;
+    }
+    &__team-player {
+        padding-top: 4px;
+        text-align: right;
+        @include multiline-ellipsis(1,$F-size-under,$base-line-height);
+        //font-size: $F-size-under;
+        color: $C-font-light;
 
-    //&__team {
-    //    //@include clear();
-    //    vertical-align: middle;
-    //    &:last-child {
-    //
-    //    }
-    //}
-    //&__record {
-    //    float:left;
-    //    width: 170px;
-    //    text-align: center;
-    //    font-size: $F-size-small;
-    //    color: $C-font-dark-gray;
-    //}
-    //&__logo {
-    //    //float:left;
-    //    overflow: hidden;
-    //    @extend %img200;
-    //
-    //    img {
-    //        @extend %img200;
-    //        vertical-align: middle;
-    //    }
-    //}
-
-    .team-box__record + .team-box__logo {
-        margin-top: 0;
+    }
+    .player {
+        &:before {
+            content: '';
+            margin: 7px 10px 0;
+            display: inline-block;
+            vertical-align: top;
+            width: 2px;
+            height: 24px;
+            background: $C-border-gray;
+        }
     }
 }
 .score-box {
 
     @include flex();
     @include flex-align(center);
-    @include flex-justify(center);
-    margin-left: -200px;
+    @include flex-justify(space-around);
+    margin-left: -243px;
     position: absolute;
     left: 50%;
-    top: 33px;
-    width: 400px;
+    top: 35px;
+    width: 486px;
 
     &__point {
         font-family: $F-family-bold;
-        font-size: 12.0rem;
+        font-size: 10.0rem;
         color: $C-font-light;
-
+        text-align: center;
     }
     &__vs {
+        box-sizing: border-box;
         font-family: $F-family-bold;
-        font-size: 12.0rem;
-        color: $C-font-light2;
+        font-size: 10.0rem;
+        color: $C-border-gray6;
         padding: 8px 0;
-        width: 170px;
         text-align: center;
     }
     &__other {
@@ -602,11 +575,10 @@
 
 }
 .result-box {
-
     @include flex();
     @include flex-align(center);
     @include flex-justify(space-between);
-    width: 810px;
+    width: 1300px;
     margin: 0 auto;
 
     &.data-full {
@@ -665,22 +637,13 @@
         @include multiline-ellipsis(1, $F-size, $base-line-height, inline-block);
 
         &:before {
-            content:'';
-            display: inline-block;
-            vertical-align: top;
-            margin: 5px 10px 0;
-            width: 3px;
-            height: 26px;
-            background: $C-border-gray4;
+            @extend %bar;
         }
     }
 
 }
 .gameinfo-box {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
+    margin-top: -30px;
     text-align: center;
 
     &__info {
@@ -690,13 +653,13 @@
         .time + .place {
             &:before {
                 content:'';
-                @extend .bar;
+                @extend %bar;
             }
         }
         .date + .time {
             &:before {
                 content:'';
-                @extend .bar;
+                @extend %bar;
 
             }
         }
