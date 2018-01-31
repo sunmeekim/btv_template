@@ -2,19 +2,19 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_어학사전
 /* ---------------------------------------------------------------------- */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .dictionary_wrap {
-      @extend .flex-center;
-      margin-top: 4px;
-      overflow: hidden;
-      text-align: center;
+  @include flex();
+  @include flex-justify(center);
+  @include flex-align(center);
+  margin-top: 4px;
+  overflow: hidden;
+  text-align: center;
 }
 .dictionary_box {
-  @extend .flex-center;
+  @include flex();
+  @include flex-justify(center);
+  @include flex-align(center);
   max-width: 1528px;
   height: 233px;
   overflow: hidden;

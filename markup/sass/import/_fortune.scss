@@ -2,19 +2,19 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_운세
 /* ---------------------------------------------------------------------- */
-.flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+%fortune_d_img {
+      width: 230px;
+      height: 230px;
 }
 .fortune_wrap {
-      @extend .flex-center;
-      .fortune_d_img {
-            width: 230px;
-            height: 230px;
-      }
+      @include flex();
+      @include flex-justify(center);
+      @include flex-align(center);
+
+
       &__img {
-            @extend .fortune_d_img;
+            @extend %fortune_d_img;
             float: left;
             border-radius: 50%;
             overflow: hidden;

@@ -2,25 +2,7 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_스포츠
 /* ---------------------------------------------------------------------- */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.flex-around {
-    display: flex;
-    justify-content: space-around;
-}
+
 .bar {
     margin: 5px 12px 0 7px;
     display: inline-block;
@@ -39,13 +21,20 @@
     width: 348px;
     height: 232px;
 }
+%img200 {
+    width: 200px;
+    height: 200px;
+}
 .sports_wrap {
     position: relative;
     margin-top: 12px;
 
     //더블헤더경기보기
     &.double {
-        @extend .flex-center;
+        @include flex();
+        @include flex-align(center);
+        @include flex-justify(center);
+
         .game_bar {
             margin: 50px 50px 0;
             width: 4px;
@@ -100,7 +89,9 @@
                     font-size: $F-size-under;
                 }
                 &__data-last {
-                    @extend .flex-center;
+                    @include flex();
+                    @include flex-align(center);
+                    @include flex-justify(center);
                     margin-right: 0;
                     width: 100%;
                 }
@@ -148,7 +139,10 @@
 }
 //팀순위보기
 .teamrank_wrap {
-    @extend .flex-center;
+    @include flex();
+    @include flex-align(center);
+    @include flex-justify(center);
+
     margin-top: 10px;
     .sports_img {
         width: 50px;
@@ -263,7 +257,9 @@
             color: $C-black;
         }
         &__logo {
-            @extend .flex-around;
+
+            @include flex();
+            @include flex-justify(space-around);
             padding: 15px 21px 0;
             white-space: nowrap;
             box-sizing: border-box;
@@ -290,7 +286,9 @@
             text-align: center;
         }
         &__point {
-            @extend .flex-center;
+            @include flex();
+            @include flex-justify(center);
+            @include flex-align(center);
             box-sizing: border-box;
             padding-top: 5px;
         }
@@ -302,14 +300,16 @@
             color: $C-font-light;
         }
         &__vs2 {
-            flex:left;
+            //flex:1;
             padding: 0 5px;
             font-size: $F-size-xxxbig;
             color: $C-font-light2;
 
         }
         &__info {
-            @extend .flex-center;
+            @include flex();
+            @include flex-justify(center);
+            @include flex-align(center);
             font-size: $F-size-xsmall;
             color: $C-font-light;
             position:absolute;
@@ -344,7 +344,8 @@
             display: none;
         }
         &__pitcher {
-            @extend .flex-around;
+            @include flex();
+            @include flex-justify(space-around);
             box-sizing: border-box;
             padding: 18px 0 39px;
         }
@@ -385,12 +386,16 @@
             color: $C-font-dark-gray;
         }
         .game_card_wrap__logo {
-            @extend .flex-between;
+            @include flex();
+            @include flex-justify(space-between);
+            @include flex-align(center);
             padding: 0 20px 0;
             white-space: nowrap;
         }
         .game_card_wrap__point {
-            @extend .flex-center;
+            @include flex();
+            @include flex-justify(center);
+            @include flex-align(center);
             position: absolute;
             left: 0;
             right: 0;
@@ -409,7 +414,8 @@
         }
     }
     .double_head {
-        @extend .flex-around;
+        @include flex();
+        @include flex-justify(space-around);
         width: 401px;
         position: relative;
         &__date {
@@ -507,43 +513,66 @@
 }
 .team-box {
     width: 1300px;
-    display: flex;
-    justify-content: space-between;
-    margin: 3px auto 0;
-    &__team-info {
-        @extend .flex-start;
-    }
-    &__team {
-        //width: 180px;
-        //height: 188px;
-    }
-    &__record {
-        //width: 180px;
-        //height: 44px;
-        //border-radius: 22px;
-        text-align: center;
-        font-size: $F-size-small;
-        //line-height: 44px;
-        color: $C-font-dark-gray;
-        //background: $C-white;
-    }
-    &__logo {
-        margin-top: 44px;
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
+    @include flex();
+    @include flex-justify(space-between);
+    @include flex-align(center);
 
-        img {
-            width: 200px;
-            height: 200px;
+    margin: 3px auto 0;
+    &__team {
+        &:last-child {
+            .team-box__team-info {
+                @include flex-direction (row-reverse);
+            }
+            .team-box__record {
+                text-align: left;
+            }
         }
     }
+    &__team-info {
+        @include flex();
+        @include flex-direction (row);
+        @include flex-justify(center);
+        @include flex-align(center);
+
+    }
+    &__record {
+        text-align: right;
+    }
+
+    //&__team {
+    //    //@include clear();
+    //    vertical-align: middle;
+    //    &:last-child {
+    //
+    //    }
+    //}
+    //&__record {
+    //    float:left;
+    //    width: 170px;
+    //    text-align: center;
+    //    font-size: $F-size-small;
+    //    color: $C-font-dark-gray;
+    //}
+    //&__logo {
+    //    //float:left;
+    //    overflow: hidden;
+    //    @extend %img200;
+    //
+    //    img {
+    //        @extend %img200;
+    //        vertical-align: middle;
+    //    }
+    //}
+
     .team-box__record + .team-box__logo {
         margin-top: 0;
     }
 }
 .score-box {
-    @extend .flex-center;
+
+    @include flex();
+    @include flex-align(center);
+    @include flex-justify(center);
     margin-left: -200px;
     position: absolute;
     left: 50%;
@@ -572,9 +601,11 @@
     }
 
 }
-
 .result-box {
-    @extend .flex-between;
+
+    @include flex();
+    @include flex-align(center);
+    @include flex-justify(space-between);
     width: 810px;
     margin: 0 auto;
 
@@ -605,13 +636,17 @@
         }
     }
     &__data-last {
-        @extend .flex-start;
+        @include flex();
+        @include flex-align(center);
+        @include flex-justify(flex-start);
         margin-right: 0;
         vertical-align: top;
         justify-content: left;
     }
     &__data {
-        @extend .flex-center;
+        @include flex();
+        @include flex-align(center);
+        @include flex-justify(center);
         min-width: 180px;
         color: $C-font-light;
     }

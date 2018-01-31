@@ -191,6 +191,13 @@ module.exports = function (grunt) {
                         '!**/spr_*/**/*.png'
                     ],
                     dest: 'markup/dist/assets/images'
+                }, {
+                  expand: true,
+                  cwd: './markup/js',
+                  src: [
+                    '**/*'
+                  ],
+                  dest: 'markup/dist/assets/js'
                 }]
             }
         },

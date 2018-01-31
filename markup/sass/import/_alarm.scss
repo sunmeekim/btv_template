@@ -3,7 +3,7 @@
 /*  Btv_ALARM
 /* ---------------------------------------------------------------------- */
 .alarm_wrap {
-    justify-content: center;
+    @include flex-justify(center);
     padding-top: 6px;
     //기본 카드 UI 수정 부분
     .card_wrap__item {

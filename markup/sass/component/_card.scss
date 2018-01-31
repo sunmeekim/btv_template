@@ -3,8 +3,8 @@
 /*  card UI
 /* ---------------------------------------------------------------------- */
 .card_wrap {
-    display: flex;
-    justify-content: center;
+    @include flex();
+    @include flex-justify(center);
 
 }
 .card_wrap__item {
@@ -17,9 +17,8 @@
     margin: 0 5px;
 }
 .card_wrap2 {
-    display: flex;
-    justify-content: center;
-
+    @include flex();
+    @include flex-justify(center);
 }
 .card_wrap2__item {
     width: 269px;
