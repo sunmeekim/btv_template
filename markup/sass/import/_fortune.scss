@@ -12,20 +12,17 @@
       @include flex-justify(center);
       @include flex-align(center);
 
-
       &__img {
+            @include overflowHide;
+            @include border-radius-multi(50%,50%,50%,50%);
             @extend %fortune_d_img;
-            float: left;
-            border-radius: 50%;
-            overflow: hidden;
             margin-top: 6px;
       }
       &__info {
-            float: left;
-            margin: 17px 0 0 40px;
+            margin: 0 0 0 40px;
+            text-align: left;
       }
       &__title {
-            width: 995px;
             font-size: $F-size-xxxxbig;
             font-family: $F-family-semi;
             color: $C-black;
@@ -36,10 +33,12 @@
             color: $C-black;
       }
       &__desc {
-            margin-top: 13px;
-            width: 995px;
-            color: $C-font-dark;
             @include multiline-ellipsis(3,$F-size,1.55,block);
+            max-width: 955px;
+            margin-top: 13px;
+            width: 100%;
+            color: $C-font-dark;
+
       }
       .fortune_wrap__title-year + .fortune_wrap__zodiac {
             color: $C-black;

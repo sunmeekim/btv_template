@@ -2,427 +2,454 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_쇼핑
 /* ---------------------------------------------------------------------- */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+%img186 {
+    width: 186px;
+    height: 186px;
 }
-.flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+%img234 {
+    width: 234px;
+    height: 234px;
 }
-.flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+%img1300 {
+    width: 1300px;
+    height: 186px;
 }
+%img807 {
+    width:807px;
+    height: 186px;
+}
+%img900 {
+    width:900px;
+    height: 186px;
+}
+%img721 {
+    width:721px;
+    height: 234px;
+}
+%bar {
+    @include absolute(0,null, null, 0);
+    width: 2px;
+    height: 140px;
+    background: $C-border-gray;
+}
+%imgbar {
+    @include absolute(0,0,0,0);
+    @extend %img186;
+    border-right: 1px solid $C-border-gray5;
+}
+%imgbar_l {
+    @include absolute(0,0,0,0);
+    @extend %img234;
+    border-right: 1px solid $C-border-gray5;
+}
+%btn {
+    @include border-radius-multi(1px,1px,1px,1px);
+    width: 188px;
+    display: block;
+    border: 5px solid $C-white;
+    outline: 1px solid $C-border-gray5;
+    font-size: $F-size;
+    font-family: $F-family-bold;
+    cursor: pointer;
+    background: $C-white;
+    &:focus,
+    .active {
+        border: 5px solid $C-font-point;
+        outline: 1px solid $C-font-point;
+        color: $C-font-point;
+    }
+}
+
 .shopping_wrap {
-    @extend .flex-center;
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
     margin-top: 28px;
-    .shopping_menu_img {
-        width: 186px;
-        height: 186px;
-    }
-    .shopping_mybox .shopping_menu_img {
-        width: 234px;
-        height: 234px;
-    }
-    .shopping_box {
-        @extend .flex-start;
-        width:900px;
-        height: 186px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &__img {
-            @extend .shopping_menu_img;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            background: $C-black;
-
-            &:before {
-                position: absolute;
-                width: 185px;
-                height: 186px;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__ordertext {
-            margin-left: 45px;
-            max-width: 505px;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-       
-    }
-    .shopping_box2 {
-        @extend .flex-start;
-        width:900px;
-        height: 186px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &__img {
-            @extend .shopping_menu_img;
-            position: relative;
-            background: $C-black;
-            display: inline-block;
-            vertical-align: top;
-            &:before {
-                position: absolute;
-                width: 185px;
-                height: 186px;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__info {
-            margin: 0 30px;
-        }
-        &__title {
-            @include clear;
-            @extend .flex-start;
-            width: 650px;
-            padding-bottom: 5px;
-        }
-        &__title-main {
-            min-width: 70%;
-
-            .shopping_box2__text-ellipsis {
-                @include ellipsis;
-                font-family: $F-family-semi;
-                font-size: $F-size-xbig;
-            }
-        }
-        &__title-sub {
-            min-width: 30%;
-
-            .shopping_box2__text-ellipsis {
-                @include ellipsis;
-                font-size: $F-size;
-                margin-left:10px;
-            }
-        }
-
-        &__data {
-            @extend .flex-between;
-            margin-top: 2px;
-        }
-        &__data-name {
-            font-size: $F-size-under;
-            color: $C-font-point;
-        }
-        &__data-delivery {
-            font-size: $F-size-under;
-            margin-top: -3px;
-        }
-        &__before-price {
-            display: inline-block;
-            vertical-align: top;
-            text-decoration: line-through;
-            color: $C-font-light;
-            font-size: $F-size-under;
-            margin:18px 10px 0;
-        }
-        &__after-price {
-            display: inline-block;
-            vertical-align: top;
-            font-size: 5.4rem;
-            font-family: $F-family-semi;
-            
+}
+.shopping_menu_img {
+    @extend %img186;
+}
+.shopping_btnbox {
+    margin-left: 10px;
+    &__button {
+        @extend %btn;
+        height: 90px;
+        & + .shopping_btnbox__button {
+            margin-top: 9px;
         }
     }
-    .shopping_box3 {
-        @extend .flex-start;
+    &__button-large {
+        @extend %btn;
+        height: 188px;
+    }
+}
+
+.shopping_box {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img900;
+    border: 1px solid $C-border-gray5;
+    background: $C-light-gray;
+
+    &__img {
+        @extend %img186;
         position: relative;
-        width: 1300px;
-        height: 186px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &.end {
-            margin-top: 30px;
-        }
-    }
-    .shopping_info {
-        @extend .flex-start;
-        width:807px;
-        height: 186px;
-
-        &__img {
-            @extend .shopping_menu_img;
-            position: relative;
-            background: $C-black;
-            display: inline-block;
-            vertical-align: middle;
-            &:before {
-                position: absolute;
-                width: 185px;
-                height: 186px;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__info {
-            margin: 0 30px;
-        }
-        &__title {
-            @include clear;
-            @extend .flex-start;
-            width: 550px;
-            padding-bottom: 5px;
-        }
-        &__title-main {
-            min-width: 30%;
-
-            .shopping_info__text-ellipsis {
-                @include ellipsis;
-                font-family: $F-family-semi;
-                font-size: $F-size-xbig;
-            }
-        }
-        &__title-sub {
-            max-width: 70%;
-
-            .shopping_info__text-ellipsis {
-                @include ellipsis;
-                font-size: $F-size-under;
-            }
-        }
-        &__data {
-            @extend .flex-between;
-            margin-top: 16px;
-        }
-        &__data-name {
-            font-size: $F-size-under;
-            color: $C-font-point;
-        }
-        &__data-delivery {
-            font-size: $F-size-under;
-            margin-top: -3px;
-            
-        }
-        &__before-price {
-            text-decoration: line-through;
-            color: $C-font-light;
-            font-size: $F-size-under;
-        }
-        &__after-price {
-            font-size: 5.4rem;
-            font-family: $F-family-semi;
-        }
-    }
-    .delivery_info {
-        max-width: 540px;
-        vertical-align: top;
+        display: inline-block;
+        vertical-align: middle;
+        background: $C-black;
 
         &:before {
-            content: '';
-            width: 2px;
-            height: 140px;
-            position: absolute;
-            left: 800px;
-            top: 24px;
-            background: $C-border-gray;
-        }
-        &__wrap {
-            margin: 0 30px 0 35px;
-        }
-        &__title {
-            font-size: $F-size-under;
-            font-family: $F-family-semi;
-            padding-bottom: 5px;
-        }
-        &__data {
-            color: $C-font-light;
-            @include multiline-ellipsis(2,$F-size-under,$base-line-height);
+            @extend %imgbar;
+            content:'';
         }
     }
-    .shopping_btnbox {
-        margin-left: 10px;
-        &__button {
-            width: 188px;
-            height: 90px;
-            display: block;
-            border: 5px solid $C-white;
-            border-radius: 1px;
-            outline: 1px solid $C-border-gray2;
-            font-size: $F-size-under;
-            font-family: $F-family-semi;
-            cursor: pointer;
-            background: $C-white;
+    &__ordertext {
+        margin-left: 45px;
+        max-width: 505px;
+        text-align: center;
+        font-size: 2.5rem;
+    }
 
-            & + .shopping_btnbox__button {
-                margin-top: 9px;
-            }
-            &.active {
-                border: 5px solid $C-font-point;
-                outline: 1px solid $C-font-point;
-                color: $C-font-point;
-            }
-        }
-        &__button-large {
-            width: 188px;
-            height: 188px;
-            display: block;
-            border: 5px solid $C-white;
-            border-radius: 1px;
-            outline: 1px solid $C-border-gray2;
-            font-size: $F-size;
-            font-family: $F-family-semi;
-            cursor: pointer;
-            background: $C-white;
+}
+.shopping_box2 {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    width:900px;
+    height: 186px;
+    border: 1px solid $C-border-gray5;
+    border-radius: 1px;
+    background: $C-light-gray;
 
-            &.active {
-                border: 5px solid $C-font-point;
-                outline: 1px solid $C-font-point;
-                color: $C-font-point;
-            }
+    &__img {
+        @extend %img186;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        background: $C-black;
+        &:before {
+            @extend %imgbar;
+            content:'';
         }
     }
-    .shopping_mybox {
-        margin-top: -23px;
-        width:721px;
-        height: 234px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &__title {
-            margin: 0 30px;
-            display: block;
-            border-bottom: 2px solid $C-border-gray;
-            padding: 13px 0 2px;
-            text-align: center;
-            font-size: $F-size-xsmall;
-        }
-        + .shopping_mybox {
-            margin-left: 10px;
-        }
-        &__title-date{
-            &:before {
-                content:'';
-                width: 2px;
-                background: $C-border-gray;
-                height:24px;
-                display: inline-block;
-                vertical-align: top;
-                margin: 5px 14px 0;
-            }
-        }
+    &__info {
+        margin: 0 30px;
     }
-    .shopping_myinfo {
-        @extend .flex-start;
-        height: 234px;
-
-        &__img {
-            width: 234px;
-            height: 234px;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            background: $C-black;
-
-            &:before {
-                position: absolute;
-                width: 233px;
-                height: 234px;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__info {
-            margin: 0 30px;
-        }
-        &__order-info {
-            //margin-top: 22px;
-            height: 56px;
-            border-bottom: 2px solid $C-border-gray;
-        }
-        &__order-state {
-            display:inline-block;
-            vertical-align: top;
-            height:36px;
-            border-radius: 18px;
-            padding: 0 15px;
-            color: $C-white;
-            font-size: $F-size-xsmall;
+    &__title {
+        @include clear;
+        @include flex();
+        @include flex-justify(flex-start);
+        @include flex-align(center);
+        width: 650px;
+        padding-bottom: 5px;
+    }
+    &__text-ellipsis {
+        @include ellipsis;
+    }
+    &__title-main {
+        min-width: 70%;
+        text-align: left;
+        .shopping_box2__text-ellipsis {
             font-family: $F-family-bold;
-            line-height: 36px;
-            background: $C-font-point;
+            font-size: $F-size-xbig;
         }
-        &__state-date {
-            margin: 2px 0 0 10px;
+    }
+    &__title-sub {
+        min-width: 30%;
+        .shopping_box2__text-ellipsis {
+            font-size: $F-size;
+            margin-left:10px;
+        }
+    }
+    &__data {
+        @include flex();
+        @include flex-justify(space-between);
+        @include flex-align(center);
+        margin-top: 2px;
+    }
+    &__data-detail {
+        text-align: left;
+    }
+    &__data-name {
+        font-size: $F-size-under;
+        color: $C-font-point;
+    }
+    &__data-delivery {
+        font-size: $F-size-under;
+        margin-top: -3px;
+    }
+    &__before-price {
+        margin:18px 10px 0;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: line-through;
+        color: $C-font-light;
+        font-size: $F-size-under;
+    }
+    &__after-price {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 5.4rem;
+        font-family: $F-family-semi;
+
+    }
+}
+
+/* 배송 정보와 상품 정보를 함께 볼 때 */
+.shopping_box3 {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img1300;
+    position: relative;
+    border: 1px solid $C-border-gray5;
+    background: $C-light-gray;
+
+    &.end {
+        margin-top: 30px;
+    }
+}
+.shopping_info {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    @extend %img807;
+
+    &__img {
+        @extend %img186;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        &:before {
+            @extend %imgbar;
+            content:'';
+        }
+    }
+    &__info {
+        margin: 0 30px;
+    }
+    &__title {
+        @include clear;
+        @include flex();
+        @include flex-justify(flex-start);
+        @include flex-align(center);
+        max-width: 550px;
+        padding-bottom: 5px;
+    }
+    &__text-ellipsis {
+        @include ellipsis;
+    }
+    &__title-main {
+        min-width: 30%;
+        text-align: left;
+        font-family: $F-family-bold;
+        font-size: $F-size-xbig;
+    }
+    &__title-sub {
+        max-width: 70%;
+        text-align: left;
+        font-size: $F-size-under;
+    }
+    &__data {
+        @include flex();
+        @include flex-justify(space-between);
+        @include flex-align(center);
+        margin-top: 16px;
+    }
+    &__data-detail {
+        text-align: left;
+    }
+    &__data-name {
+        font-size: $F-size-under;
+        color: $C-font-point;
+    }
+    &__data-delivery {
+        margin-top: -3px;
+        font-size: $F-size-under;
+    }
+    &__data-price {
+        @include flex();
+        @include flex-justify(center);
+        @include flex-align(center);
+    }
+    &__before-price {
+        padding-right: 10px;
+        text-decoration: line-through;
+        color: $C-font-light;
+        font-size: $F-size-under;
+    }
+    &__after-price {
+        font-size: 5.4rem;
+        font-family: $F-family-bold;
+    }
+}
+.delivery_info {
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
+    height: 186px;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+    &:before {
+        @extend %bar;
+        top: 23px;
+        content: '';
+    }
+    &__wrap {
+        margin: 0 30px 0 35px;
+    }
+    &__title {
+        padding-bottom: 5px;
+        font-size: $F-size-under;
+        font-family: $F-family-semi;
+    }
+    &__data {
+        @include multiline-ellipsis(2,$F-size-under,$base-line-height);
+        color: $C-font-light;
+    }
+}
+
+/* 추천 상품이나 내 상품을 볼 때 */
+.shopping_mybox {
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img721;
+    margin-top: -23px;
+    border: 1px solid $C-border-gray5;
+    background: $C-light-gray;
+    .shopping_menu_img {
+        @extend %img234;
+    }
+    &__title {
+        margin: 0 30px;
+        display: block;
+        border-bottom: 2px solid $C-border-gray;
+        padding: 13px 0 2px;
+        text-align: center;
+        font-size: $F-size-xsmall;
+    }
+    + .shopping_mybox {
+        margin-left: 10px;
+    }
+    &__title-date{
+        &:before {
+            margin: 5px 14px 0;
             display: inline-block;
             vertical-align: top;
-            font-size: $F-size-small;
-            color:$C-font-dark;
-
-        }
-        &__title {
-            @include clear;
-            @extend .flex-start;
-            width: 427px;
-            padding-top: 20px;
-        }
-        &__title-main {
-            min-width: 30%;
-
-            .shopping_myinfo__text-ellipsis {
-                @include ellipsis;
-                font-size: $F-size-xbig;
-                font-family: $F-family-semi;
-            }
-        }
-        &__title-sub {
-            max-width: 70%;
-
-            .shopping_myinfo__text-ellipsis {
-                @include ellipsis;
-                font-size: $F-size-small;
-            }
-        }
-
-        &__data {
-            @extend .flex-between;
-            align-items: flex-start;
-        }
-        &__data-detail {
-            white-space: nowrap;
-        }
-        &__data-name {
-            font-size: $F-size-xsmall;
-            color: $C-font-point;
-        }
-        &__data-delivery {
-            margin-top: 7px;
-            display: inline-block;
-            vertical-align: top;
-            font-size: $F-size-under;
-        }
-        &__data-price {
-            display: block;
-            text-align: right;
-        }
-        &__before-price {
-            text-decoration: line-through;
-            color: $C-font-light;
-            font-size: $F-size-xsmall;
-        }
-        &__after-price {
-            display: inline-block;
-            vertical-align: top;
-            font-size: $F-size-xxxbig;
-            font-family: $F-family-semi;
+            width: 2px;
+            height:24px;
+            background: $C-border-gray;
+            content:'';
         }
     }
 }
+.shopping_myinfo {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    height: 234px;
+
+    &__img {
+        @extend %img234;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background: $C-black;
+
+        &:before {
+            @extend %imgbar_l;
+            content:'';
+        }
+    }
+    &__info {
+        margin: 0 30px;
+    }
+    &__order-info {
+        height: 56px;
+        border-bottom: 2px solid $C-border-gray;
+        text-align: left;
+    }
+    &__order-state {
+        display:inline-block;
+        vertical-align: top;
+        height:36px;
+        border-radius: 18px;
+        padding: 0 15px;
+        color: $C-white;
+        font-size: $F-size-xsmall;
+        font-family: $F-family-bold;
+        line-height: 36px;
+        background: $C-font-point;
+    }
+    &__state-date {
+        margin: 2px 0 0 10px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: $F-size-small;
+        color:$C-font-dark;
+
+    }
+    &__title {
+        @include clear;
+        @include flex();
+        @include flex-justify(flex-start);
+        @include flex-align(center);
+        width: 427px;
+        padding-top: 20px;
+        text-align: left;
+    }
+    &__text-ellipsis {
+        @include ellipsis;
+    }
+    &__title-main {
+        min-width: 30%;
+        font-size: $F-size-xbig;
+        font-family: $F-family-semi;
+    }
+    &__title-sub {
+        max-width: 70%;
+        font-size: $F-size-small;
+    }
+    &__data {
+        @include flex();
+        @include flex-justify(space-between);
+        @include flex-align(flex-start);
+    }
+    &__data-detail {
+        white-space: nowrap;
+    }
+    &__data-name {
+        font-size: $F-size-xsmall;
+        color: $C-font-point;
+    }
+    &__data-delivery {
+        margin-top: 7px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: $F-size-under;
+    }
+    &__data-price {
+        display: block;
+        text-align: right;
+    }
+    &__before-price {
+        text-decoration: line-through;
+        color: $C-font-light;
+        font-size: $F-size-xsmall;
+    }
+    &__after-price {
+        display: inline-block;
+        vertical-align: top;
+        font-size: $F-size-xxxbig;
+        font-family: $F-family-semi;
+    }
+}
+
+/* 상단 설명 텍스트 있을 경우 */
 .order_text {
     text-align: center;
     font-size: $F-size-big;
@@ -430,18 +457,18 @@
 
     &.price {
         &:before {
-            content:'';
             @include use-sprite(ico_check);
             vertical-align: top;
             margin: 3px 5px 0 0;
+            content:'';
         }
     }
     .order_ico_text {
+        @include border-radius-multi(18px,18px,18px,18px);
         margin: 0 5px;
         display: inline-block;
         border: 2px solid $C-black;
         height: 36px;
-        border-radius: 18px;
         padding:0 15px;
         vertical-align: top;
         line-height: 36px;
@@ -449,10 +476,10 @@
         font-size: $F-size-under;
 
         &:before {
-            content:'';
             @include use-sprite(ico_order_mic);
             vertical-align: top;
             margin: 5px 5px 0 0;
+            content:'';
         }
     }
 }

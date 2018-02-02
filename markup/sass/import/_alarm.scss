@@ -12,7 +12,6 @@
         margin: 0 5px;
 
         &.active {
-            
             .alarm_default_card__action,
             .alarm_default_card__item {
                 color: $C-font-point;
@@ -31,16 +30,15 @@
 //알람카드 UI 추가 부분
 .alarm_default_card {
     text-align: center;
-
     &__ampm {
         display: inline-block;
+        vertical-align: top;
         height: 34px;
         margin-top: 29px;
         border-radius: 17px;
         padding:0 15px;
-        vertical-align: top;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: $F-size-xsmall;
         line-height: 34px;
         color: $C-font-light;
         background: $C-light-grayBg;

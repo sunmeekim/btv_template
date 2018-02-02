@@ -3,59 +3,51 @@
 /*  Btv_회원관련
 /* ---------------------------------------------------------------------- */
 .member_wrap {
-
       height: 250px;
       text-align: center;
-
-      .member_block {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-           .none_service {
-                 
-                 margin: 30px 15px 0;
-
-                 &.dailybrifing {
-                        @include use-sprite(m_icon1, $spr_member, $spr_member_2x);
-                 }
-                 &.fortune {
-                        @include use-sprite(m_icon2, $spr_member, $spr_member_2x);
-                 }
-                 &.sports {
-                        @include use-sprite(m_icon3, $spr_member, $spr_member_2x);
-                 }
-                 &.traffic {
-                        @include use-sprite(m_icon4, $spr_member, $spr_member_2x);
-                 }
-                 &.emergency {
-                        @include use-sprite(m_icon5, $spr_member, $spr_member_2x);
-                 }
-
-           }
-
+}
+.member_block {
+      @include flex();
+      @include flex-justify(center);
+      @include flex-align(center);
+}
+.none_service {
+      margin: 30px 15px 0;
+      &.dailybrifing {
+            @include use-sprite(m_icon1, $spr_member, $spr_member_2x);
       }
-      .join_block {
-            margin-top: 50px;
-            .btn_app_link {
-                  display: inline-block;
-                  vertical-align: top;
-                  width: 329px;
-                  height: 80px;
-                  background: $C-white;
-                  border: 2px solid $C-white;
-                  border-radius: 0;
-                  outline: 1px solid #d9d9d9;
-                  text-align: center;
-                  color: $C-black;
-                  font-family: $F-family-bold;
-                  font-size: $F-size;
-                  &:focus {
-                        border: 2px solid $C-font-point;
-                        outline: 1px solid $C-font-point;
-                        color: $C-font-point; 
-                  }
+      &.fortune {
+            @include use-sprite(m_icon2, $spr_member, $spr_member_2x);
+      }
+      &.sports {
+            @include use-sprite(m_icon3, $spr_member, $spr_member_2x);
+      }
+      &.traffic {
+            @include use-sprite(m_icon4, $spr_member, $spr_member_2x);
+      }
+      &.emergency {
+            @include use-sprite(m_icon5, $spr_member, $spr_member_2x);
+      }
+}
+.join_block {
+      margin-top: 50px;
+      .btn_app_link {
+            @include border-radius-multi(0,0,0,0);
+            display: inline-block;
+            vertical-align: top;
+            width: 329px;
+            height: 80px;
+            border: 2px solid $C-white;
+            outline: 1px solid $C-border-gray5;
+            text-align: center;
+            color: $C-black;
+            font-family: $F-family-bold;
+            font-size: $F-size;
+            background: $C-white;
+            &:focus {
+                  border: 2px solid $C-font-point;
+                  outline: 1px solid $C-font-point;
+                  color: $C-font-point;
             }
       }
-
 }

@@ -93,11 +93,15 @@
 }
 
 @mixin overflowY{
-	overflow: hidden;
+	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
 
+@mixin overflowHide {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
 // 기본 Tablets 설정값
 @mixin gMobileTablet($width: 600px, $height: 450px) {
 	@media screen and (min-width: $width) and (min-height: $height){
@@ -113,7 +117,7 @@
 }
 
 @mixin g_invisible {
-	overflow: hidden;
+	@include overflowHide;
 	position: absolute;
 	clip: rect(0 0 0 0);
 	width: 1px;
@@ -133,8 +137,8 @@
 }
 
 @mixin ellipsis($display: inline-block, $max-width: 100%) {
+	@include overflowHide;
 	display: $display;
-	overflow: hidden;
 	max-width: $max-width;
 	white-space: nowrap;
 	word-break: normal;
@@ -156,7 +160,7 @@
 		$font-size-number : strip-unit($font-size) * 10 !global;
 	}
 
-	overflow:hidden;
+	@include overflowHide;
 	display:$display;
 	display:-webkit-box;
 	max-height:$font-size-number * $line-height * $lines + px;
@@ -174,7 +178,7 @@
 // 	width: 1px;
 // 	height: $height + px;
 // 	background-color: $background;
-// 	overflow: hidden;
+// 	@include overflowHide;
 // 	color: rgba(0,0,0,0);
 // 	vertical-align: middle;
 // }
@@ -189,6 +193,21 @@
 	left: $left;
 }
 
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+@mixin border-radius-multi($topLeft: null, $topRight: null, $bottomLeft: null, $bottomRight: null) {
+
+	border-top-left-radius: $topLeft;
+	border-top-right-radius: $topRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-bottom-right-radius: $bottomRight;
+	-webkit-border-top-left-radius: $topLeft;
+	-webkit-border-top-right-radius: $topRight;
+	-webkit-border-bottom-left-radius: $bottomLeft;
+	-webkit-border-bottom-right-radius: $bottomRight;
+}
 @mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
 	position: fixed;
 	top: $top;
@@ -320,4 +339,15 @@ $defaultSize-tablet: 12px;
 	&:-ms-input-placeholder {
 		color: $color;
 	}
+}
+
+//transform scale
+@mixin transformScale($scale){
+	transform: scale($scale);
+	-webkit-transform: scale($scale);
+}
+//transform scale
+@mixin transformRotate($rotate) {
+	transform: rotate($rotate);
+	-webkit-transform: rotate($rotate);
 }

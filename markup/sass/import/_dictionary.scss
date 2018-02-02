@@ -2,36 +2,40 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_어학사전
 /* ---------------------------------------------------------------------- */
-
+%img230 {
+  width: 230px;
+  height: 230px;
+}
 .dictionary_wrap {
   @include flex();
   @include flex-justify(center);
   @include flex-align(center);
   margin-top: 4px;
-  overflow: hidden;
+  @include overflowHide;
   text-align: center;
 }
 .dictionary_box {
   @include flex();
   @include flex-justify(center);
   @include flex-align(center);
-  max-width: 1528px;
+  max-width: $G-contents;
   height: 233px;
-  overflow: hidden;
+  @include overflowHide;
 
   &:before {
-    content:'';
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
+    @include overflowHide;
+    @include border-radius-multi(50%,50%,50%,50%);
+    @extend %img230;
+    display: inline-block;
+    vertical-align: top;
     margin-right: 40px;
-    overflow: hidden;
-    background: url('/images/dictionary/nugu_dictionary_image.png') no-repeat 0 0;
+    background: url($S-local-img +'/dictionary/nugu_dictionary_image.png') no-repeat 0 0;
+    content:'';
   }
 
   &__info {
     word-break: keep-all;
-    font-size: 3.6rem;
+    font-size: $F-size-xxbig;
     line-height: 1.5;
   }
   .data {

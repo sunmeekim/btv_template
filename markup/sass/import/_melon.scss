@@ -2,25 +2,62 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_melon
 /* ---------------------------------------------------------------------- */
+.voice_order {
+    @include absolute(10px, 10px, null, null);
+    @include border-radius-multi(14px,14px,14px,14px);
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    font-size: $F-size-xxsmall;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+    background-color: rgba(255,255,255,.5);
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+        content:'';
+    }
+
+}
+%voice_order_focus {
+    color: $C-white;
+    border-color: $C-font-point;
+    background: $C-font-point;
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2_on);
+        content:'';
+    }
+}
+%active {
+    @include absolute(-1px, -1px, -1px, -1px);
+    border: 6px solid $C-font-point;
+}
+%img158 {
+    width: 158px;
+    height: 158px;
+}
+%img148 {
+    width: 148px;
+    height: 148px;
+}
 .playerlst {
     margin-top: 7px;
     width: 269px;
+
     &.active,
     &:focus {
-
         outline: 0;
-
         .playerlst__img {
 
             &:before {
-                content:'';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 148px;
-                height: 148px;
+                @include absolute(0 , null, null, 0);
+                @extend %img148;
                 border: 5px solid $C-font-point;
                 z-index: 2;
+                content:'';
             }
         }
         .playerlst__count {
@@ -29,53 +66,38 @@
             color: $C-white;
 
             &:before {
-                content:'';
                 @include use-sprite(nugu_advice_icon_mic2_on);
                 vertical-align: top;
                 margin: 6px 5px 0 0;
+                content:'';
             }
         }
-        
     }
     &__img {
-        width: 158px;
-        height: 158px;
+        @extend %img158;
         position: relative;
         margin : 0 auto;
-
+        outline: 0;
+        &:focus {
+            &:before {
+                @extend %active;
+                content:'';
+            }
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+        }
         .playerlst_d_img {
-            width: 158px;
-            height: 158px;
+            @extend %img158;
         }
         
-    }
-    &__img &__count {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        height: 28px;
-        border: 1px solid $C-font-dark;
-        border-radius: 14px;
-        padding:0 10px;
-        font-size: 1.6rem;
-        line-height: 29px;
-        font-family: $F-family-bold;
-        color: $C-font-dark;
-        background: rgba(255,255,255,.3);
-
-        &:before {
-            content:'';
-            @include use-sprite(nugu_advice_icon_mic2);
-            vertical-align: top;
-            margin: 6px 5px 0 0;
-        }
     }
     &__title {
         @include ellipsis (block, 100%);
+        margin-top: 10px;
         text-align: center;
         font-size: $F-size;
         color: $C-black;
-        margin-top: 10px;
     }
     &__total {
         @include ellipsis (block, 100%);

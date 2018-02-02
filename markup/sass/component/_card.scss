@@ -8,12 +8,12 @@
 
 }
 .card_wrap__item {
+    @include border-radius-multi(2px, 2px, 2px, 2px);
     width: 196px;
     height: 232px;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    background:#fff;
-    box-shadow: 0 0 1px 0 #f2f2f2;
+    border: 1px solid $C-border-gray5;
+    background: $C-white;
+    box-shadow: 0 0 1px 0 $C-light-gray;
     margin: 0 5px;
 }
 .card_wrap2 {
@@ -21,8 +21,9 @@
     @include flex-justify(center);
 }
 .card_wrap2__item {
+    margin: 0 15px;
     width: 269px;
     height: 250px;
     text-align: center;
-    margin: 0 15px;
+
 }

@@ -68,7 +68,8 @@ textarea {
 hr {
 	box-sizing: content-box; /* 1 */
 	height: 0; /* 1 */
-	overflow: visible; /* 2 */
+	overflow-x: visible; /* 2 */
+	overflow-y: visible; /* 2 */
 }
 button {
 	margin: 0;
@@ -194,7 +195,7 @@ img {
 }
 
 svg:not(:root) {
-	overflow: hidden;
+	@include overflowHide;
 }
 
 code,
@@ -254,7 +255,7 @@ i, cite, em, var, address, dfn {
 }
 
 .g_invisible {
-	overflow: hidden;
+	@include overflowHide;
 	position: absolute;
 	clip: rect(0 0 0 0);
 	width: 1px;
@@ -266,18 +267,14 @@ i, cite, em, var, address, dfn {
 .g_skip {
 	@include g_invisible;
 }
-
 .g_btn-skip {
-	position: absolute;
-	left: 0;
-	top: -30px;
+	@include absolute(-30px, null, null, 0);
 	width: 128px;
 	background-color: #191919;
 	border: 1px solid $C-brand;
 	text-align: center;
 	outline: none;
 }
-
 .g_btn-skip:active,
 .g_btn-skip:focus {
 	top: 2px;
@@ -287,7 +284,6 @@ i, cite, em, var, address, dfn {
 }
 
 .g_btn-skip__inner {
-
 	display: inline-block;
 	padding-top: 2px;
 	font-size: 12px;

@@ -2,323 +2,345 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_주문
 /* ---------------------------------------------------------------------- */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+%img186 {
+    width: 186px;
+    height: 186px;
 }
-.flex-start {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+%img232 {
+    width: 232px;
+    height: 232px;
+}
+%img420 {
+    width: 420px;
+    height: 130px;
+}
+%img712 {
+    width:712px;
+    height: 232px;
+}
+%img760 {
+    width:760px;
+    height: 186px;
+}
+%img1300 {
+    width: 1300px;
+    height: 186px;
+}
+%active {
+    color: $C-font-point;
+    &:before {
+        @include absolute(-1px,-1px,-1px,-1px);
+        border: 6px solid $C-font-point;
+        content:'';
+    }
+}
+%bar140 {
+    @include absolute(24px, null, null, 0);
+    width: 2px;
+    height: 140px;
+    background: $C-border-gray;
 }
 .order_wrap {
-    @extend .flex-center;
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
     margin-top: 30px;
+}
+.order_menu_img {
+    @extend %img186;
+}
+.order_box {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img760;
+    border: 1px solid $C-border-gray5;
+    background: $C-light-gray;
 
-    .order_menu_img {
-        width: 186px;
-        height: 186px;
-    }
-    .order_box {
-        @extend .flex-start;
-        width:760px;
-        height: 186px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &__img {
-            @extend .order_menu_img;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-
-            background: $C-black;
-
-            &:before {
-                @extend .order_menu_img;
-                position: absolute;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__ordertext {
-           max-width: 505px;
-           margin-left: 45px;
-           text-align: left;
-           font-size: 2.5rem;
-        }
-        &__ordermenu {
-            font-size: $F-size-xxxbig;
-            font-family: $F-family-bold;
-            word-break: keep-all;
-        }
-    }
-    .order_box2 {
-        @extend .flex-start;
+    &__img {
+        @extend %img186;
         position: relative;
-        width: 1300px;
-        height: 186px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-    }
-    .order_info {
-        float: left;
-        width: 628px;
-
-        &__img {
-            @extend .order_menu_img;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            background: $C-black;
-            &:before {
-                @extend .order_menu_img;
-                position: absolute;
-                border-right: 1px solid #d9d9d9;
-                content:'';
-            }
-        }
-        &__box {
-            display: inline-block;
-            vertical-align: top;
-            width: 380px;
-            margin: 0 20px 0 26px;
-        }
-        &__menu {
-            @include ellipsis;
-            margin-top: 26px;
-            vertical-align: top;
-            font-size: $F-size-xbig;
-            font-family: $F-family-semi;
-        }
-        &__menu-detaile {
-            @include ellipsis;
-            display: block;
-            vertical-align: top;
-            font-size: $F-size-under;
-            color: $C-font-light;
-        }
-        &__value {
-            @include clear;
-        }
-        &__price-data {
-            float: right;
-            font-size: 4.4rem;
-            font-family: $F-family-semi;
-            color: $C-black;
-        }
-        &__discount {
-            float:left;
-            margin-top: 12px;
-            color: $C-font-point;
-            font-size: $F-size-under;
-        }
-    }
-    .delivery_info {
-        width: 630px;
-        vertical-align: top;
-
+        display: inline-block;
+        vertical-align: middle;
+        background: $C-black;
         &:before {
-            content: '';
-            width: 2px;
-            height: 140px;
-            position: absolute;
-            left: 628px;
-            top: 24px;
-            background: $C-border-gray;
-
-        }
-        &__list {
-            margin-left: 32px;
-            height: 140px;
-        }
-        &__item {
-            @include clear();
-            @include ellipsis(block);
-            vertical-align: top;
-            min-height: 50px;
-        }
-        &__item-title {
-            float: left;
-            font-size: $F-size-under;
-            font-family: $F-family-semi;
-        }
-        &__item-data {
-            @include ellipsis;
-            float: left;
-            margin-left: 10px;
-            max-width: 480px;
-            font-size: $F-size-under;
-            color:$C-font-light;
-           
-            &.active {
-                color: $C-font-point;
-            }
+            @include absolute(0,0,0,0);
+            @extend %img186;
+            border-right: 1px solid $C-border-gray2;
+            content:'';
         }
     }
-    .order_btnbox {
+    &__ordertext {
+        max-width: 505px;
+        margin-left: 45px;
+        text-align: left;
+        font-size: 2.5rem;
+    }
+    &__ordermenu {
+        font-size: $F-size-xxxbig;
+        font-family: $F-family-bold;
+        word-break: keep-all;
+    }
+}
+.order_box2 {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img1300;
+    position: relative;
+    border: 1px solid $C-border-gray5;
+    background: $C-light-gray;
+}
+.order_info {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    width: 628px;
+
+    &__img {
+        @extend %img186;
+        position: relative;
+        background: $C-black;
+        &:before {
+            @include absolute(0,0,0,0);
+            @extend %img186;
+            border-right: 1px solid $C-border-gray5;
+            content:'';
+        }
+    }
+    &__box {
+        max-width: 433px;
+        box-sizing: border-box;
+        padding: 0 20px 0 26px;
+        text-align: left;
+    }
+    &__menu {
+        @include ellipsis;
+        vertical-align: top;
+        font-size: $F-size-xbig;
+        font-family: $F-family-semi;
+    }
+    &__menu-detail {
+        @include ellipsis;
+        vertical-align: top;
+        font-size: $F-size-under;
+        color: $C-font-light;
+    }
+    &__value {
+        @include clear;
+    }
+    &__price-data {
+        float: right;
+        font-size: 4.4rem;
+        font-family: $F-family-bold;
+        color: $C-black;
+    }
+    &__discount {
+        float:left;
+        margin-top: 12px;
+        color: $C-font-point;
+        font-size: $F-size-under;
+    }
+}
+.delivery_info {
+    position: relative;
+    width: 630px;
+    vertical-align: top;
+
+    &:before {
+        @extend %bar140;
+        top: 0;
+        content: '';
+    }
+    &__list {
+        margin: 12px 0 0 32px;
+        height: 140px;
+    }
+    &__item {
+        @include clear();
+        @include ellipsis(block);
+        vertical-align: top;
+        min-height: 50px;
+    }
+    &__item-title {
+        float: left;
+        font-size: $F-size-under;
+        font-family: $F-family-semi;
+    }
+    &__item-data {
+        @include ellipsis;
+        float: left;
         margin-left: 10px;
+        max-width: 480px;
+        font-size: $F-size-under;
+        color:$C-font-light;
 
-        &__button,
-        &__button-large {
-            display: block;
-            width: 188px;
-            height: 90px;
-            border: 5px solid $C-white;
-            border-radius: 1px;
-            outline: 1px solid $C-border-gray2;
-            font-size: $F-size-under;
-            font-family: $F-family-semi;
-            cursor: pointer;
-            background: $C-white;
-
-            & + .order_btnbox__button {
-                margin-top: 9px;
-            }
-            &.active {
-                border: 5px solid $C-font-point;
-                outline: 1px solid $C-font-point;
-                color: $C-font-point;
-            }
-        }
-        &__button-large {
-            height: 188px;
-        }
-    }
-    .order_mybox {
-        width:712px;
-        height: 232px;
-        margin-top: -25px;
-        border: 1px solid $C-border-gray2;
-        border-radius: 1px;
-        background: $C-light-gray;
-
-        &__title {
-            display: block;
-            height: 46px;
-            padding-top: 19px;
-            border-bottom: 2px solid $C-border-gray;
-            font-size: $F-size;
-            font-family: $F-family-semi;
-            color:$C-font-dark;
-        }
-        + .order_mybox {
-            margin-left: 10px;
-        }
-    }
-    .order_myinfo {
-        .order_menu_img {
-            width: 232px;
-            height: 232px;
-        }
-        &__img {
-            @extend .order_menu_img;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            background: $C-black;
-
-            &:before {
-                position: absolute;
-                width: 231px;
-                height: 232px;
-                border-right: 1px solid $C-border-gray2;
-                content:'';
-            }
-        }
-        &__box {
-            display: inline-block;
-            vertical-align: top;
-            width: 420px;
-            height: 130px;
-            margin: 0 25px;
-        }
-        &__menu {
-            @include ellipsis(block,100%);
-            vertical-align: top;
-            margin-top: 12px;
-            font-size: $F-size-xbig;
-            font-family: $F-family-semi;
-        }
-        &__menu-detaile {
-            @include ellipsis(block,100%);
-            vertical-align: top;
-            margin-top: 2px;
-            font-size: $F-size-under;
-            color: $C-font-light;
-        }
-        &__value {
-            @include clear;
-        }
-
-        &__price-data {
-            float:right;
-            font-size: $F-size-xxxbig;
-            font-family: $F-family-semi;
-        }
-        &__discount {
-            float:left;
-            margin-top: 10px;
-            font-size: $F-size-under;
+        &.active {
             color: $C-font-point;
-        }
-        &__nondata {
-            display: none;
-        }
-        &.none {
-
-            .order_myinfo__nondata {
-                display: block;
-                text-align: center;
-                margin-top: 94px;
-            }
-            .order_myinfo__nondata-logo {
-                @include use-sprite(ico_logo);
-                vertical-align: middle;
-                margin: 3px 5px 0 0;
-            }
-            .order_myinfo__nondata-text {
-                font-size: $F-size-small;
-                color: $C-font-light;
-            }
-            .order_myinfo__img,
-            .order_myinfo__box {
-                display: none;
-            }
         }
     }
 }
+.order_btnbox {
+    margin-left: 10px;
+    position: relative;
+    &__button,
+    &__button-large {
+        @include border-radius-multi(1px, 1px, 1px, 1px);
+        @extend %img186;
+        position: relative;
+        display: block;
+        border:1px solid $C-border-gray5;
+        outline: 0;
+        font-size: $F-size-under;
+        font-family: $F-family-semi;
+        cursor: pointer;
+        background: $C-white;
+
+        &.active,
+        &:focus {
+            @extend %active;
+        }
+    }
+    &__button {
+        height:90px;
+    }
+
+}
+.order_btnbox__button + .order_btnbox__button {
+    margin-top: 9px;
+}
+.order_mybox {
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img712;
+    margin-top: -25px;
+    border: 1px solid $C-border-gray5;
+    text-align: left;
+    background: $C-light-gray;
+
+    &__title {
+        display: block;
+        height: 46px;
+        padding-top: 19px;
+        border-bottom: 2px solid $C-border-gray;
+        text-align: left;
+        font-size: $F-size;
+        font-family: $F-family-semi;
+        color:$C-font-dark;
+    }
+    + .order_mybox {
+        margin-left: 10px;
+    }
+}
+.order_myinfo {
+    .order_menu_img {
+        @extend %img232;
+    }
+    &__img {
+        @extend %img232;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background: $C-black;
+
+        &:before {
+            @include absolute(0,0,0,0);
+            @extend %img232;
+            position: absolute;
+            border-right: 1px solid $C-border-gray5;
+            content:'';
+        }
+    }
+    &__box {
+        @extend %img420;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 25px;
+    }
+    &__menu {
+        @include ellipsis(block,100%);
+        vertical-align: top;
+        margin-top: 12px;
+        font-size: $F-size-xbig;
+        font-family: $F-family-semi;
+    }
+    &__menu-detaile {
+        @include ellipsis(block,100%);
+        vertical-align: top;
+        margin-top: 2px;
+        font-size: $F-size-under;
+        color: $C-font-light;
+    }
+    &__value {
+        @include clear;
+    }
+    &__price-data {
+        float:right;
+        font-size: $F-size-xxxbig;
+        font-family: $F-family-semi;
+    }
+    &__discount {
+        float:left;
+        margin-top: 10px;
+        font-size: $F-size-under;
+        color: $C-font-point;
+    }
+    &__nondata {
+        display: none;
+    }
+    &.none {
+
+        .order_myinfo__nondata {
+            display: block;
+            text-align: center;
+            margin-top: 94px;
+        }
+        .order_myinfo__nondata-logo {
+            @include use-sprite(ico_logo);
+            vertical-align: middle;
+            margin: 3px 5px 0 0;
+        }
+        .order_myinfo__nondata-text {
+            font-size: $F-size-small;
+            color: $C-font-light;
+        }
+        .order_myinfo__img,
+        .order_myinfo__box {
+            display: none;
+        }
+    }
+}
+
 .order_text {
     text-align: center;
     font-size: $F-size-big;
 
     &.price {
         &:before {
-            content:'';
             @include use-sprite(ico_check);
             margin: 5px 7px 0 0;
             vertical-align: top;
+            content:'';
         }
     }
     .order_ico_text {
+        @include border-radius-multi(18px,18px,18px,18px);
         display: inline-block;
+        vertical-align: top;
         margin: 0 5px;
         height: 36px;
-        border: 2px solid #000;
-        border-radius: 18px;
+        border: 2px solid $C-black;
         padding:0 15px;
         line-height: 36px;
-        vertical-align: top;
         font-family: $F-family-semi;
         font-size: $F-size-under;
         &:before {
-            content:'';
             @include use-sprite(ico_order_mic);
             margin: 4px 5px 0 0;
             vertical-align: top;
+            content:'';
         }
     }
     + .order_wrap{

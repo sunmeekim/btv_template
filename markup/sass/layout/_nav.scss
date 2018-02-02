@@ -8,7 +8,7 @@
     top: 10px;
     width: 50px;
     height: 50px;
-    overflow: hidden;
+    @include overflowHide;
     background: #eee;
     border: 1px solid #ccc;
     border-radius: 50%;

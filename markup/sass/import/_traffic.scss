@@ -2,59 +2,60 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_교통정보
 /* ---------------------------------------------------------------------- */
-.flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+%img230 {
+      width: 230px;
+      height: 230px;
 }
-
 .traffic_wrap {
-      @extend .flex-center;
+      @include flex();
+      @include flex-justify(center);
+      @include flex-align(center);
+      @include overflowHide;
+      margin-top: -3px;
       height: 250px;
       text-align: center;
-      overflow: hidden;
-      margin-top: -3px;
-      
-      .traffic_block {
-            @extend .flex-center;
-            max-width: 1300px;
-            &:before {
-                  content:'';
-                  width: 230px;
-                  height: 230px;
-                  border-radius: 50%;
-                  overflow: hidden;
-                  background: url('/images/traffic/nugu_traffic_image.png') no-repeat 0 0;
-            }
-      }
-      .traffic {
-            margin-left:40px;
-            text-align: left;
-            &__title {
-                  font-family: $F-family-semi;
-                  font-size: $F-size-xxxxbig;
-                  color: $C-black;
-            }
-            &__info {
-                  margin-top: 16px;
-                  font-size: $F-size;
-            }
-            &__arrive {
-                  margin-top: 18px;
-                  font-size: $F-size-under;
-                  color: $C-font-light; 
-            }
-            &__arrive-title {
-                  padding-right: 15px;
-                  font-family: $F-family-bold;
-                  color: $C-font-dark;
 
-                  &:before {
-                        content:'';
-                        @include use-sprite(nugu_traffic_graph_icon_arrival_copy);
-                        vertical-align: top;
-                        margin: 2px 5px 0 0;
-                  }
+}
+.traffic_block {
+      @include flex();
+      @include flex-justify(center);
+      @include flex-align(center);
+      max-width: 1300px;
+      &:before {
+            @include overflowHide;
+            @extend %img230;
+            border-radius: 50%;
+            background: url($S-local-img + '/traffic/nugu_traffic_image.png') no-repeat 0 0;
+            content:'';
+      }
+}
+.traffic {
+      margin-left:40px;
+      text-align: left;
+      &__title {
+            font-family: $F-family-semi;
+            font-size: $F-size-xxxxbig;
+            color: $C-black;
+      }
+      &__info {
+            margin-top: 16px;
+            font-size: $F-size;
+      }
+      &__arrive {
+            margin-top: 18px;
+            font-size: $F-size-under;
+            color: $C-font-light;
+      }
+      &__arrive-title {
+            padding-right: 15px;
+            font-family: $F-family-bold;
+            color: $C-font-dark;
+
+            &:before {
+                  @include use-sprite(nugu_traffic_graph_icon_arrival_copy);
+                  vertical-align: top;
+                  margin: 2px 5px 0 0;
+                  content:'';
             }
       }
 }

@@ -3,21 +3,36 @@
 /*  Pagenate UI
 /* ---------------------------------------------------------------------- */
 
+%remotebtn {
+    @include border-radius-multi(14px,14px,14px,14px);
+    display: inline-block;
+    vertical-align: top;
+    height: 28px;
+    width: 73px;
+    border: 1px solid $C-border-gray5;
+    text-align: center;
+    background: #fcfcfc;
+
+}
+%remotebtn_s {
+    @include border-radius-multi(13px,13px,13px,13px);
+    display: inline-block;
+    vertical-align: top;
+    height: 26px;
+    width: 73px;
+    border: 1px solid $C-border-gray5;
+    text-align: center;
+    background: #fcfcfc;
+
+}
 .pagenate {
-    position: absolute;
-    // width: 100%;
-    width: 1920px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include absolute(0,0,0,0);
+    width: $G-contents-wide;
     z-index: 1;
     margin: 0 auto;
     
     &__prev {
-        position: absolute;
-        left:50px;
-        top: 50%;
+        @include absolute(50%,null,null,50px);
         margin-top: -83px;
         width: 140px;
         text-align: center;
@@ -30,12 +45,9 @@
         margin-top: 13px;
     }
     &__next {
-        position: absolute;
-        right:50px;
-        top: 50%;
+        @include absolute(50%,50px,null,null);
         margin-top: -83px;
         width: 140px;
-        
         text-align: center;
         &.disabled {
             @include opacity(.3);
@@ -45,7 +57,6 @@
         @include use-sprite(btn__next);
         margin-top: 13px;
     }
-
     &__paging {
         font-family: $F-family-bold;
         font-size: 1.9rem;
@@ -61,37 +72,23 @@
         margin-top: 3px;
     }
     &__remote_prev {
-        border: 1px solid #d9d9d9;
-        border-radius: 14px;
-        background: #fcfcfc;
-        height: 28px;
-        width: 73px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
+        @extend %remotebtn;
 
         &:before {
-            content:'';
             @include use-sprite(btn__prev2);
             vertical-align: top;
             margin-top: 6px;
+            content:'';
         }
     }
     &__remote_next {
-        border: 1px solid #d9d9d9;
-        border-radius: 14px;
-        background: #fcfcfc;
-        height: 28px;
-        width: 73px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
+        @extend %remotebtn;
 
         &:before {
-            content:'';
             @include use-sprite(btn__next2);
             vertical-align: top;
             margin-top: 6px;
+            content:'';
         }
     }
     &__voice_wrap {
@@ -99,10 +96,10 @@
         margin-top: 15px;
     }
     &__voice_ordertxt {
+        @include border-radius-multi(16px,16px,16px,16px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid #d9d9d9;
-        border-radius: 16px;
+        border: 1px solid $C-border-gray2;
         height: 32px;
         padding: 0 10px;
         font-size: 1.9rem;
@@ -112,29 +109,22 @@
         background: #fcfcfc;
 
         &:before {
-            content:'';
             @include use-sprite(nugu_advice_icon_mic);
             vertical-align: top;
             margin: 7px 3px 0 0;
+            content:'';
         }
 
     }
     
 }
 .pagenate_s {
-    position: absolute;
-    //width: 1110px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include absolute(0,0,0,0);
     z-index: 1;
     margin: 0 auto;
 
     &__prev {
-        position: absolute;
-        left:0;
-        top: 50%;
+        @include absolute(50%,null,null,0);
         margin-top: -77px;
         width: 123px;
         text-align: center;
@@ -147,9 +137,7 @@
         margin-top: 8px;
     }
     &__next {
-        position: absolute;
-        right:0;
-        top: 50%;
+        @include absolute(50%,0,null,null);
         margin-top: -77px;
         width: 123px;
         text-align: center;
@@ -162,7 +150,6 @@
         @include use-sprite(btn_s_next);
         margin-top: 8px;
     }
-
     &__paging {
         font-size: 2.0rem;
         color: $C-font-light;
@@ -177,29 +164,21 @@
         margin-top: 3px;
     }
     &__remote_prev {
-        border: 1px solid #d9d9d9;
-        border-radius: 13px;
-        background: #fcfcfc;
-        height: 26px;
-        width: 73px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
+        @extend %remotebtn_s;
         &:before {
-            content:'';
             @include use-sprite(btn_s_prev2);
             vertical-align: top;
             margin-top: 7px;
+            content:'';
         }
     }
     &__remote_next {
-        @extend .pagenate_s__remote_prev;
-
+        @extend %remotebtn_s;
         &:before {
-            content:'';
             @include use-sprite(btn_s_next2);
-            vertical-align: top;
             margin-top: 7px;
+            vertical-align: top;
+            content:'';
         }
     }
     &__voice_wrap {
@@ -207,10 +186,10 @@
         margin-top: 15px;
     }
     &__voice_ordertxt {
+        @include border-radius-multi(14px,14px,14px,14px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid #d9d9d9;
-        border-radius: 14px;
+        border: 1px solid $C-border-gray2;
         height: 28px;
         padding: 0 10px;
         font-family: $F-family-bold;
@@ -220,48 +199,11 @@
         background: #fcfcfc;
 
         &:before {
-            content:'';
             @include use-sprite(nugu_general_grammer_mic);
-            vertical-align: top;
             margin: 4px 3px 0 0;
+            vertical-align: top;
+            content:'';
         }
 
     }
 }
-
-
-
-
-//.fortune {
-//    .pagenate__voice_wrap,
-//    .pagenate__remote_wrap,
-//    .pagenate__paging {
-//        display: none !important;
-//    }
-//    .pagenate__btn-next,
-//    .pagenate__btn-prev {
-//        background-image: none;
-//        width:15px;
-//        height:15px;
-//        border-radius: 50%;
-//        background-color: #ff4909;
-//    }
-//    .pagenate__prev {
-//        left: auto;
-//        right:50px;
-//        top: 230px;
-//        &.disabled {
-//            .pagenate__btn-prev {
-//                background-color: #d8d8d8;
-//            }
-//        }
-//    }
-//    .pagenate__next {
-//        top: 260px;
-//        &.disabled {
-//            .pagenate__btn-next {
-//                background-color: #d8d8d8;
-//            }
-//        }
-//    }
-//}

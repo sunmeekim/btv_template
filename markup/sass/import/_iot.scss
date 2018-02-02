@@ -2,77 +2,82 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_IOT
 /* ---------------------------------------------------------------------- */
+.voice_order {
+    @include absolute(15px, 15px, null, null);
+    @include border-radius-multi(14px,14px,14px,14px);
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    font-size: 1.6rem;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+        content:'';
+    }
+
+}
+%voice_order_focus {
+    color: $C-white;
+    background: $C-font-point;
+    border-color: $C-font-point;
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2_on);
+        content:'';
+    }
+}
+%active {
+    @include absolute(-1px, -1px, -1px, -1px);
+    border: 6px solid $C-font-point;
+}
 .iot_wrap {
-    justify-content: center;
+    @include flex-justify(center);
     padding-top: 6px;
+
     .card_wrap__item {
         position: relative;
         background: $C-light-gray;
         margin: 0 5px;
         outline: 0;
-
-        &.active,
-        &:focus {
-            &:before {
-                content:'';
-                width: 186px;
-                height: 222px;
-                position: absolute;
-                left: -1px;
-                top: -1px;
-                border: 6px solid $C-font-point;
-            }
-            .iot_default_card__order-info {
-                border-color: $C-font-point;
-                background: $C-font-point;
-                color: $C-white;
-                &:before {
-                    content:'';
-                    @include use-sprite(nugu_advice_icon_mic2_on);
-                    margin: 6px 5px 0 0;
-                    vertical-align: top;
-                }
-            }
-            
-        }
     }
 
 }
 .iot_default_card {
-    text-align: center;
+    position: relative;
     display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     outline: 0;
+    text-align: center;
 
-    &__order {
-        text-align:right;
-        margin: 9px 9px 0;
-        height: 28px;
-    }
-    &__order-info {
-        display: inline-block;
-        vertical-align: top;
-        height: 28px;
-        padding:0 10px;
-        border: 1px solid $C-font-dark;
-        border-radius: 14px;
-        font-size: 1.6rem;
-        font-family: $F-family-bold;
-        line-height: 29px;
-        color: $C-font-dark;
-
+    &.active,
+    &:focus {
         &:before {
+            @extend %active;
             content:'';
-            @include use-sprite(nugu_advice_icon_mic2);
-            margin: 6px 5px 0 0;
-            vertical-align: top;
         }
-
+        .voice_order {
+            @extend %voice_order_focus;
+        }
+        .iot_default_card__item {
+            color: $C-font-point;
+        }
+    }
+    &:disabled {
+        @include opacity(.3);
     }
     &__action {
         @include use-sprite(nugu_smarthome_off);
-        margin: 24px 0 13px;
         display: inline-block;
         vertical-align: top;
+        margin: 32px 0 12px;
+
         &.on{
             @include use-sprite(nugu_smarthome_on);
         }

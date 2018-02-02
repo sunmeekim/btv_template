@@ -2,7 +2,8 @@
     @if $important {
         $important : unquote('!important');
     }
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: inline-block;
     text-indent: -999px;
     background-image: url('{{{spritesheet.escaped_image}}}') $important;
