@@ -10,7 +10,6 @@
 	z-index:100;
 
 }
-
 .content_area {
 	position: relative;
 	height: 260px;
@@ -44,25 +43,21 @@
 		padding-top: 25px;
 	}
 	.top_help-tip {
-		position: absolute;
-		right: 65px;
-		top: 0;
-		vertical-align: top;
+		@include absolute(0, 65px, null, null);
 		margin: 30px 0 0 116px;
+		vertical-align: top;
 		font-family: $F-family-basic;
-		font-size: $F-size-xsmall;
-		color: #999;
+		font-size: $F-size-24;
+		color: $C-font-gray_99;
 		&:before {
-			content: '';
 			@include use-sprite(nugu_help_tip);
-			vertical-align: top;
 			margin: 3px 7px 0 0;
+			vertical-align: top;
+			content: '';
 		}
 	}
 	.service_logo {
-		position: absolute;
-		right: 65px;
-		top: 30px;
+		@include absolute(30px, 65px, null, null);
 		&.melon {
 			@include use-sprite(nugu_melon_control_logo);
 		}
@@ -80,20 +75,20 @@
 	color: $C-font-light;
 	
 	.bottom_text-area {
-		font-size:$F-size-small;
+		@include border-radius-multi(19px,19px,19px,19px);
 		display: inline-block;
 		vertical-align: top;
-		border: 1px solid #999;
+		border: 1px solid $C-font-gray_99;
 		height: 38px;
-		border-radius: 19px;
 		padding: 0 20px;
 		line-height: 38px;
+		font-size:$F-size-small;
 		color: $C-font-light;
 		&:before {
-			content:'';
 			@include use-sprite(nugu_general_grammer_mic);
-			vertical-align: top;
 			margin:7px 5px 0 0;
+			vertical-align: top;
+			content:'';
 		}
 	}
 }

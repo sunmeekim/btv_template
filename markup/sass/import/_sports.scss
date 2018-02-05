@@ -9,7 +9,15 @@
     vertical-align: top;
     width: 2px;
     height: 24px;
-    background: $C-border-gray;
+    background: $C-border-gray_cc;
+}
+%bar2 {
+    margin: 0 10px;
+    width: 2px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: $C-border-gray_b2;
 }
 %img46 {
     width: 46px;
@@ -63,7 +71,7 @@
             width: 4px;
             height: 142px;
             vertical-align: top;
-            background: $C-border-gray3;
+            background: $C-border-gray_d1;
         }
         .game_box {
             @extend %box800;
@@ -75,8 +83,8 @@
             &__team {
                 &:last-child {
                     .team-box__record {
-                        margin-left: 0;
                         margin-right: 5px;
+                        margin-left: 0;
                     }
 
                 }
@@ -84,7 +92,6 @@
             &__record {
                 margin-right:5px;
             }
-
             &__logo {
                 @extend %img100;
                 img {
@@ -103,12 +110,11 @@
             width: 240px;
             top: 60px;
             &__point {
-                font-size: 8.0rem;
+                font-size: $F-size-80;
             }
             &__vs {
-                //width: 150px;
                 padding: 4px 0;
-                font-size: 8.0rem;
+                font-size: $F-size-80;
             }
             &__other {
                 padding-top: 20px;
@@ -122,7 +128,6 @@
             }
         }
     }
-
 }
 
 //팀순위보기
@@ -148,7 +153,7 @@
         background: $C-white;
 
         &:nth-child(2n) {
-            background: $C-light-grayBg3;
+            background: $C-light-gray_f8;
         }
         &.winner {
             .teamrank_wrap__item-logo {
@@ -176,7 +181,6 @@
                 display: none;
             }
         }
-
     }
     &__item-ranking {
         width: 57px;
@@ -186,7 +190,6 @@
     }
     &__item-logo {
         width: 63px;
-
         .sports_img {
             vertical-align: middle;
             margin-top: -4px;
@@ -197,19 +200,14 @@
         font-family: $F-family-bold;
     }
     &__item-game {
-        font-size: 2.2rem;
+        font-size: $F-size-22;
     }
     &__item-diff,
     &__item-scoring,
     &__item-winrate {
-        font-size: 2.2rem;
+        font-size: $F-size-22;
         &:before {
-            margin: 0 10px;
-            width: 2px;
-            height: 20px;
-            display: inline-block;
-            vertical-align: middle;
-            background: $C-border-gray4;
+            @extend %bar2;
             content:'';
         }
     }
@@ -219,7 +217,7 @@
 .game_schedule {
 
     .card_wrap__item {
-        background: $C-light-gray;
+        background: $C-light-gray_fc;
         border-radius: 0;
         position: relative;
         &.card_box348 {
@@ -249,11 +247,11 @@
         &__team1,
         &__team2 {
             flex:1;
+            vertical-align: middle;
+            text-align: center;
             font-size: $F-size-small;
             font-family: $F-family-bold;
             color: $C-black;
-            text-align: center;
-            vertical-align: middle;
             &.yet {
                 color: $C-font-light;
                 font-family: $F-family-basic;
@@ -261,8 +259,8 @@
         }
         &__vs {
             padding: 0 10px;
-            color: #9b9b9b;
-            font-size: $F-size-xsmall;
+            color: $C-font-gray_9b;
+            font-size: $F-size-24;
             text-align: center;
         }
         &__point {
@@ -276,12 +274,12 @@
             @include overflowHide;
             text-align: center;
             font-family:$F-family-bold;
-            font-size: 4.8rem;
+            font-size: $F-size-48;
             color: $C-font-light;
         }
         &__vs2 {
             padding: 0 5px;
-            font-size: $F-size-xxxbig;
+            font-size: $F-size-42;
             color: $C-font-light2;
         }
         &__info {
@@ -289,7 +287,7 @@
             @include flex-justify(center);
             @include flex-align(center);
             @include absolute(null, 0, 13px, 0);
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: $C-font-light;
             text-align: center;
         }
@@ -306,7 +304,7 @@
             @include ellipsis(1);
             width: 50%;
             text-align: center;
-            font-size: 2.3rem;
+            font-size: $F-size-23;
             color: $C-font-light;
 
         }
@@ -333,7 +331,7 @@
             vertical-align: top;
             width: 80px;
             text-align: center;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             font-family: $F-family-bold;
             color: $C-font-dark-gray;
         }
@@ -354,12 +352,12 @@
             @include overflowHide;
             text-align: center;
             font-family:$F-family-bold;
-            font-size: 4.8rem;
+            font-size: $F-size-48;
             color: $C-font-light;
         }
         .game_card_wrap__cancel {
-            font-size: 4.8rem;
-            color: #9b9b9b;
+            font-size: $F-size-48;
+            color: $C-font-gray_9b;
         }
     }
     .double_head {
@@ -385,9 +383,9 @@
                     display: block;
                     height: 160px;
                     text-align: center;
-                    background: $C-light-gray;
+                    background: $C-light-gray_fc;
                     line-height: 160px;
-                    font-size: $F-size-xxbig;
+                    font-size: $F-size-36;
                     color: $C-black;
                 }
             }
@@ -401,9 +399,9 @@
             height: 160px;
             text-align: center;
             line-height: 160px;
-            font-size: $F-size-xxbig;
+            font-size: $F-size-36;
             color: $C-font-light2;
-            background: $C-light-gray;
+            background: $C-light-gray_fc;
         }
     }
     .cancel {
@@ -413,9 +411,9 @@
             height: 75px;
             text-align: center;
             line-height: 75px;
-            font-size: $F-size-xxbig;
+            font-size: $F-size-36;
             color: $C-font-light2;
-            background: $C-light-gray;
+            background: $C-light-gray_fc;
         }
     }
     .game_card_wrap + .game_card_wrap {
@@ -423,7 +421,7 @@
             @include absolute(70px, null, null, -10px);
             width: 2px;
             height: 146px;
-            background: $C-light-grayBg;
+            background: $C-light-gray_e6;
             content:'';
         }
     }
@@ -436,7 +434,6 @@
         }
     }
 }
-
 .title-box {
     @include absolute(-10px, 0, null, 0);
     text-align: center;
@@ -490,7 +487,7 @@
     &__team-name {
         text-align: right;
         font-family: $F-family-bold;
-        font-size: $F-size-xbig;
+        font-size: $F-size-34;
         color: $C-font-dark-gray;
     }
     &__team-record {
@@ -525,21 +522,21 @@
     &__point {
         text-align: center;
         font-family: $F-family-bold;
-        font-size: 10.0rem;
+        font-size: $F-size-100;
         color: $C-font-light;
     }
     &__vs {
         box-sizing: border-box;
         padding: 8px 0;
-        font-family: $F-family-bold;
-        font-size: 10.0rem;
-        color: $C-border-gray6;
         text-align: center;
+        font-family: $F-family-bold;
+        font-size: $F-size-100;
+        color: $C-border-gray_b7;
     }
     &__other {
         padding: 45px 0 0;
         font-family: $F-family-bold;
-        font-size: 5.0rem;
+        font-size: $F-size-50;
         color: $C-font-dark;
     }
 

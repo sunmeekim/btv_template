@@ -10,17 +10,17 @@
   @include flex();
   @include flex-justify(center);
   @include flex-align(center);
-  margin-top: 4px;
   @include overflowHide;
+  margin-top: 4px;
   text-align: center;
 }
 .dictionary_box {
   @include flex();
   @include flex-justify(center);
   @include flex-align(center);
+  @include overflowHide;
   max-width: $G-contents;
   height: 233px;
-  @include overflowHide;
 
   &:before {
     @include overflowHide;
@@ -35,14 +35,15 @@
 
   &__info {
     word-break: keep-all;
-    font-size: $F-size-xxbig;
+    font-size: $F-size-36;
     line-height: 1.5;
   }
   .data {
-    &:only-child {
-      font-size: 4.8rem;
-    }
     @include ellipsis(block,1030px);
     text-align: left;
+
+    &:only-child {
+      font-size: $F-size-48;
+    }
   }
 }

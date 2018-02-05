@@ -2,6 +2,28 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_도움말
 /* ---------------------------------------------------------------------- */
+
+%voice_order_focus {
+    color: $C-white;
+    background: $C-font-point;
+    border-color: $C-font-point;
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2_on);
+        content:'';
+    }
+}
+%active {
+    @include absolute(-1px, -1px, -1px, -1px);
+    border: 6px solid $C-font-point;
+}
+%card_help-wide {
+    width: 472px;
+    height: 234px;
+}
+.help_s_img {
+    width: 126px;
+    height: 126px;
+}
 .voice_order {
     @include absolute(15px, 15px, null, null);
     @include border-radius-multi(14px,14px,14px,14px);
@@ -21,33 +43,15 @@
     }
 
 }
-%voice_order_focus {
-    color: $C-white;
-    background: $C-font-point;
-    border-color: $C-font-point;
-    &:before {
-        @include use-sprite(nugu_advice_icon_mic2_on);
-        content:'';
-    }
-}
-%active {
-    @include absolute(-1px, -1px, -1px, -1px);
-    border: 6px solid $C-font-point;
-}
-.help_s_img {
-    width: 126px;
-    height: 126px;
-}
-
 /* 서비스 도움말 카드(기본) */
 .help_wrap {
     @include flex-justify(center);
     margin-top: 0;
     padding-top: 7px;
     .card_wrap__item {
-        position: relative;
         margin: 0 5px;
-        background: $C-light-gray;
+        position: relative;
+        background: $C-light-gray_fc;
     }
 }
 .help_default_card {
@@ -58,6 +62,7 @@
     box-sizing: border-box;
     outline: 0;
     text-align: center;
+
     &:focus {
         &:before {
             @extend %active;
@@ -74,9 +79,9 @@
         @include opacity(.3);
     }
     &__order {
-        text-align:right;
         margin: 9px 9px 0;
         height: 40px;
+        text-align:right;
     }
     &__order-info {
         @include border-radius-multi(14px,14px,14px,14px);
@@ -85,8 +90,8 @@
         height: 28px;
         border: 1px solid $C-font-dark;
         padding:0 10px;
-        font-size: 1.6rem;
         line-height: 29px;
+        font-size: $F-size-16;
         font-weight: bold;
         color: $C-font-dark;
         &:before {
@@ -117,10 +122,9 @@
 .help_card_wrap {
     margin-top: 7px;
     .card_wrap__item {
-        width: 472px;
-        height: 234px;
+        @extend %card_help-wide;
         margin: 0 5px;
-        background: $C-light-gray;
+        background: $C-light-gray_fc;
         &.none {
             display: none;
         }
@@ -128,9 +132,10 @@
 }
 .help_card {
     margin:0 30px;
+
     &__title {
         padding:12px 0 9px;
-        border-bottom:2px solid $C-border-gray;
+        border-bottom:2px solid $C-border-gray_cc;
         font-size: $F-size-under;
         text-align:center;
     }
@@ -139,7 +144,7 @@
     }
     &__list-item {
         padding-top: 3px;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
         color: $C-font-light;
         &:before {
             @include use-sprite(nugu_advice_icon_mic);

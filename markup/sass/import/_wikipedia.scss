@@ -10,10 +10,10 @@
       @include flex();
       @include flex-justify(center);
       @include flex-align(center);
-      height: 250px;
-      text-align: center;
       @include overflowHide;
       margin-top: -3px;
+      height: 250px;
+      text-align: center;
       .wikipedia_block {
             @include flex();
             @include flex-justify(center);
@@ -27,19 +27,15 @@
                   background: url($S-local-img + '/wikipedia/nugu_wiki_image.png') no-repeat 0 0;
                   content:'';
             }
-
             .data {
                   @include multiline-ellipsis(5,$F-size,1.55,block);
                   max-width: 1030px;
                   margin-left: 40px;
                   text-align: left;
                   vertical-align: top;
-
                   strong {
                         color:$C-font-point;
                   }   
             }
-
-
       }
 }

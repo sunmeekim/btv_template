@@ -117,7 +117,7 @@
     @extend .homeshopping_img;
     align-items: center;
     position: relative;
-    border: 1px solid $C-border-gray5;
+    border: 1px solid $C-border-gray_d9;
     background: $C-white;
     font-family: $F-family-bold;
     text-align: center;
@@ -157,7 +157,7 @@
         display: block;
         width: 186px;
         height: 88px;
-        border: 1px solid $C-border-gray5;
+        border: 1px solid $C-border-gray_d9;
         background: $C-white;
         text-align: center;
         line-height: 88px;
@@ -292,7 +292,7 @@
 
             margin: 5px 0 0 0;
             padding-top: 5px;
-            border-top: 1px solid $C-border-gray5;
+            border-top: 1px solid $C-border-gray_d9;
 
         }
         &__opt-item {
@@ -320,7 +320,7 @@
         }
         .card_wrap__item {
             @extend .option_box194;
-            background: $C-light-gray;
+            background: $C-light-gray_fc;
             &.disabled {
                 .homeshopping_option__value {
                     @include opacity(.4);
@@ -384,13 +384,13 @@
     .homeshopping_policy {
         @extend .homeshopping_box1298;
         @extend .flex-between;
-        background: $C-light-gray;
-        border: 1px solid $C-border-gray5;
+        background: $C-light-gray_fc;
+        border: 1px solid $C-border-gray_d9;
         .homeshopping_select {
             @extend .flex-start;
             @extend .homeshopping_box630;
             border: 0;
-            background: $C-light-gray;
+            background: $C-light-gray_fc;
             &__info {
                 @extend .flex-center;
             }
@@ -412,7 +412,7 @@
             top: 25px;
             width: 2px;
             height: 138px;
-            background: $C-border-gray;
+            background: $C-border-gray_cc;
             content: '';
         }
         &__contents {
@@ -423,7 +423,7 @@
         &__attend {
             padding-top: 20px;
             text-align: center;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: #9b9b9b;
         }
     }
@@ -445,7 +445,7 @@
             display: inline-block;
             vertical-align: top;
             padding-left: 5px;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: $C-font-dark;
         }
         &__title-main {
@@ -462,12 +462,12 @@
             padding-top: 5px;
         }
         &__opt-item {
-            @include multiline-ellipsis(1,$F-size-xsmall,$base-line-height);
+            @include multiline-ellipsis(1,$F-size-24,$base-line-height);
             width: auto;
             position: relative;
             padding-right: 5px;
             font-family: $F-family-bold;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: #9b9b9b;
 
             &:last-child {
@@ -487,19 +487,19 @@
         &__value-label {
             padding-top: 7px;
             font-family: $F-family-bold;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: $C-font-point;
         }
     }
     .homeshopping_order {
         @extend .homeshopping_box1298;
         @extend .flex-between;
-        background: $C-light-gray;
-        border: 1px solid $C-border-gray5;
+        background: $C-light-gray_fc;
+        border: 1px solid $C-border-gray_d9;
         .homeshopping_select {
             @extend .flex-start;
             border: 0;
-            background: $C-light-gray;
+            background: $C-light-gray_fc;
             &__info {
                 width: 100%;
                 box-sizing: border-box;
@@ -518,13 +518,13 @@
                 padding-top: 5px;
             }
             &__opt-item {
-                @include multiline-ellipsis(1,$F-size-xsmall,$base-line-height);
+                @include multiline-ellipsis(1,$F-size-24,$base-line-height);
                 width: auto;
                 max-width: none;
                 position: relative;
                 padding-right: 5px;
                 font-family: $F-family-bold;
-                font-size: $F-size-xsmall;
+                font-size: $F-size-24;
                 color: #9b9b9b;
 
                 &:last-child {
@@ -547,7 +547,7 @@
             top: 25px;
             width: 2px;
             height: 138px;
-            background: $C-border-gray;
+            background: $C-border-gray_cc;
             content: '';
         }
         &__label {
@@ -559,7 +559,7 @@
             margin: 8px 0 0 0;
         }
         &__name {
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: $C-black;
         }
         &__price {
@@ -568,7 +568,7 @@
         }
         &__detail {
             padding-top: 8px;
-            font-size: $F-size-xsmall;
+            font-size: $F-size-24;
             color: #9b9b9b;
         }
     }
@@ -582,7 +582,7 @@
             top:7px;
             width: 1px;
             height: 20px;
-            background: $C-border-gray5;
+            background: $C-border-gray_d9;
         }
     }
     .homeshopping_track__opt-item + .homeshopping_track__opt-item {
@@ -594,7 +594,7 @@
             top:4px;
             width: 1px;
             height: 20px;
-            background: $C-border-gray5;
+            background: $C-border-gray_d9;
         }
     }
 

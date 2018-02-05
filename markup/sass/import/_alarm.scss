@@ -7,10 +7,9 @@
     padding-top: 6px;
     //기본 카드 UI 수정 부분
     .card_wrap__item {
-        position: relative;
-        background: $C-light-gray;
         margin: 0 5px;
-
+        position: relative;
+        background: $C-light-gray_fc;
         &.active {
             .alarm_default_card__action,
             .alarm_default_card__item {
@@ -31,22 +30,22 @@
 .alarm_default_card {
     text-align: center;
     &__ampm {
+        margin-top: 29px;
         display: inline-block;
         vertical-align: top;
         height: 34px;
-        margin-top: 29px;
         border-radius: 17px;
         padding:0 15px;
         text-align: center;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
         line-height: 34px;
         color: $C-font-light;
-        background: $C-light-grayBg;
+        background: $C-light-gray_e6;
     }
     &__action {
         margin: 20px 0 11px;
         text-align: center;
-        font-size: 5.6rem;
+        font-size: $F-size-56;
         color: $C-black;
     }
     &__item {

@@ -14,41 +14,35 @@
     animation: 3s linear infinite sky_s01;
 
     .bA {
-        position: absolute;
-        top: 120px;
-        left: 10px;
+        @include absolute(120px, null, null, 10px);
         width: 38px;
         height: 10px;
         padding-left: 192px;
         div {
             @include opacity(0);
+            @include border-radius-multi(10px,10px,10px,10px);
             float: left;
             width: 0;
             height: 10px;
             background: #FFC318;
-            border-radius: 10px;
             animation: 3s ease-in-out infinite sky_s01-Aa;
         }
     }
     .bB {
         @include opacity(0);
-        position: absolute;
-        top: 40px;
-        right: 44px;
+        @include absolute(40px, 44px,null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 20px;
         height: 20px;
         border: 5px solid #FFC318;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s01-Ba;
     }
     .bC {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        @include absolute(50%, null, null, 50%);
+        @include border-radius-multi(112px,112px,112px,112px);
         width: 112px;
         height: 112px;
         margin: -56px 0 0 -56px;
-        border-radius: 112px;
         background: #FFC318;
     }
     .mA {
@@ -271,9 +265,7 @@
 .sky_s01_night {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 36px;
-        left: 27px;
+        @include absolute(36px, null, null, 27px);
         width: 192px;
         height: 192px;
         background: url($S-local-img +'/weather_animation/nugu_wa_01.png') no-repeat;
@@ -282,9 +274,7 @@
     }
     .bB {
         @include opacity(0);
-        position: absolute;
-        top: 57px;
-        right: 67px;
+        @include absolute(57px, 67px, null, null);
         width: 20px;
         height: 20px;
         background: url($S-local-img +'/weather_animation/nugu_wa_02.png') no-repeat;
@@ -293,25 +283,21 @@
     }
     .bC {
         @include opacity(0);
-        position: absolute;
-        top: 30px;
-        right: 22px;
+        @include absolute(30px, 22px, null, null);
+        @include transformScale(0.8);
         width: 20px;
         height: 20px;
         background: url($S-local-img + '/weather_animation/nugu_wa_02.png') no-repeat;
         background-size: 20px auto;
-        @include transformScale(0.8);
         animation: 3s ease-in-out .6s infinite sky_s01_night-C;
     }
     .bD {
         @include opacity(0);
-        position: absolute;
-        top: 97px;
-        right: 24px;
+        @include absolute(97px, 24px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 16px;
         height: 16px;
         border: 5px solid #FFC318;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s01_night-D;
     }
 }
@@ -406,54 +392,44 @@
 .sky_s02 {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 11px;
-        left: 13px;
+        @include absolute(11px, null, null, 13px);
         width: 206px;
         height: 206px;
         animation: 3s linear infinite sky_s02;
     }
     .bAA {
-        position: absolute;
-        top: 103px;
-        left: 0;
+        @include absolute(103px, null, null, 0);
         width: 33px;
         height: 10px;
         padding-left: 173px;
         div {
             @include opacity(0);
+            @include border-radius-multi(10px,10px,10px,10px);
             float: left;
             width: 0;
             height: 10px;
             background: #FFC318;
-            border-radius: 10px;
             animation: 3s ease-in-out infinite sky_s02-Aa;
         }
     }
     .bAB {
         @include opacity(0);
-        position: absolute;
-        top: 33px;
-        right: 32px;
+        @include absolute(33px, 32px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #FFC318;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s02-B;
     }
     .bC {
-        position: absolute;
-        top: 64px;
-        left: 65px;
+        @include absolute(64px, null, null, 65px);
+        @include border-radius-multi(112px,112px,112px,112px);
         width: 100px;
         height: 100px;
-        border-radius: 112px;
         background: #FFC318;
     }
     .bD {
-        position: absolute;
-        bottom: 16px;
-        right: 12px;
+        @include absolute(null, 12px, 16px, null);
         width: 205px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_03.png') no-repeat;
@@ -575,9 +551,7 @@
 .sky_s02_night {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 35px;
-        left: 11px;
+        @include absolute(35px, null, null, 11px);
         width: 126px;
         height: 126px;
         background: url($S-local-img + '/weather_animation/nugu_wa_04.png') no-repeat;
@@ -586,19 +560,15 @@
     }
     .bB {
         @include opacity(0);
-        position: absolute;
-        top: 44px;
-        right: 81px;
+        @include absolute(44px, 81px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #FFC318;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s02_night-B;
     }
     .bC {
-        position: absolute;
-        bottom: 16px;
-        right: 24px;
+        @include absolute(null, 24px, 16px, null);
         width: 205px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_03.png') no-repeat;
@@ -648,9 +618,7 @@
     background: url($S-local-img + '/weather_animation/sample/sky_s013.png') no-repeat;
     .bA {
         @include opacity(0);
-        position: absolute;
-        top: 40px;
-        left: 15px;
+        @include absolute(40px, null, null, 15px);
         width: 142px;
         height: 98px;
         background: url($S-local-img + '/weather_animation/nugu_wa_05.png') no-repeat;
@@ -659,19 +627,15 @@
     }
     .bB {
         @include opacity(0);
-        position: absolute;
-        top: 49px;
-        right: 31px;
+        @include absolute(49px, 31px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #C5D3D5;
-        border-radius: 50px;
         animation: 4s ease-in-out infinite sky_s03-B;
     }
     .bC {
-        position: absolute;
-        bottom: 31px;
-        right: 12px;
+        @include absolute(null, 12px, 31px, null);
         width: 205px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_03.png') no-repeat;
@@ -683,17 +647,14 @@
         @include opacity(0);
         margin-left: -25px;
     }
-
     40% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     to {
         @include opacity(0);
         margin-left: 40px;
@@ -704,27 +665,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     10% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     25% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -733,76 +689,63 @@
 .sky_s04 {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 21px;
-        left: 15px;
+        @include absolute(21px, null, null, 15px);
         width: 142px;
         height: 98px;
         background: url($S-local-img + '/weather_animation/nugu_wa_05.png') no-repeat;
         background-size: 142px auto;
     }
     .bB {
-        position: absolute;
-        top: 46px;
-        right: 12px;
+        @include absolute(46px, 12px, null, null);
         width: 206px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_06.png') no-repeat;
         background-size: 206px auto;
     }
     .bC {
-        position: absolute;
-        bottom: 0px;
-        left: 72px;
+        @include absolute(null, null, 0, 72px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
     }
     .bCA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s04-Ca;
         }
     }
     .bCB {
-        position: absolute;
-        top: 77px;
-        right: 5px;
+        @include absolute(77px, 5px, null, null);
         width: 48px;
         height: 10px;
         div {
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 48px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s04-Cc;
         }
     }
     .bCC {
         @include opacity(0);
-        position: absolute;
-        top: 72px;
-        right: 61px;
+        @include absolute(72px, 61px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 10px;
         height: 10px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s04-Cd;
     }
     .mB {
-        top: 37px;
-        left: 40px;
+        @include absolute(37px, null, null, 40px);
     }
     .mA div {
         animation-name: sky_s04-Ca;
@@ -819,18 +762,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -842,18 +782,15 @@
         @include opacity(0);
         width: 0;
     }
-
     25% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -865,18 +802,15 @@
         @include opacity(0);
         width: 0;
     }
-
     15% {
         @include opacity(1);
         width: 48px;
     }
-
     80% {
         @include opacity(1);
         width: 48px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -888,27 +822,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -917,18 +846,14 @@
 .sky_s05 {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 21px;
-        left: 15px;
+        @include absolute(21px, null, null, 15px);
         width: 142px;
         height: 98px;
         background: url($S-local-img + '/weather_animation/nugu_wa_05.png') no-repeat;
         background-size: 142px auto;
     }
     .bB {
-        position: absolute;
-        top: 46px;
-        right: 12px;
+        @include absolute(46px, 12px, null, null);
         width: 206px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_06.png') no-repeat;
@@ -936,49 +861,41 @@
     }
     .bCA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s05-Ca;
         div {
+            @include border-radius-multi(50px,50px,50px,50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s05-CAi;
         }
     }
     .bCB {
         @include opacity(0);
-        position: absolute;
-        top: 215px;
-        left: 165px;
+        @include absolute(215px, null, null, 165px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s05-Ce;
     }
     .mA {
-        top: 163px;
-        left: 103px;
+        @include absolute(163px, null, null, 103px);
         animation-name: sky_s05-Ca;
     }
     .mB {
-        top: 176px;
-        left: 152px;
+        @include absolute(176px, null, null, 152px);
         animation-name: sky_s05-Cb;
     }
     .mC {
-        top: 202px;
-        left: 123px;
+        @include absolute(202px, null, null, 123px);
         animation-name: sky_s05-Cc;
     }
     .mD {
-        top: 217px;
-        left: 79px;
+        @include absolute(217px, null, null, 79px);
         animation-name: sky_s05-Cd;
     }
     .mA div {
@@ -998,11 +915,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -1012,11 +927,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1026,11 +939,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1040,11 +951,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     70% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1054,11 +963,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1068,27 +975,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1097,77 +999,64 @@
 .sky_s06 {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 21px;
-        left: 15px;
+        @include absolute(21px, null, null, 15px);
         width: 142px;
         height: 98px;
         background: url($S-local-img + '/weather_animation/nugu_wa_05.png') no-repeat;
         background-size: 142px auto;
     }
     .bB {
-        position: absolute;
-        top: 46px;
-        right: 12px;
+        @include absolute(46px, 12px, null, null);
         width: 206px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_06.png') no-repeat;
         background-size: 206px auto;
     }
     .bC {
-        position: absolute;
-        bottom: 0px;
-        left: 72px;
+        @include absolute(null, null, 0, 72px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
     }
     .bCA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s06-Ca;
         }
     }
     .bDA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s06-Da;
         div {
+            @include border-radius-multi(50px,50px,50px,50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s06-DAi;
         }
     }
     .bDB {
         @include opacity(0);
-        position: absolute;
-        top: 215px;
-        left: 143px;
+        @include absolute(215px, null, null, 143px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s06-Dc;
     }
     .mB {
-        top: 32px;
-        left: 40px;
+        @include absolute(32px, null, null, 40px);
     }
     .mA div {
         animation-name: sky_s06-Ca;
@@ -1176,13 +1065,11 @@
         animation-name: sky_s06-Cb;
     }
     .mC {
-        top: 170px;
-        left: 162px;
+        @include absolute(170px, null, null, 162px);
         animation-name: sky_s06-Da;
     }
     .mD {
-        top: 200px;
-        left: 182px;
+        @include absolute(200px, null, null, 182px);
         animation-name: sky_s06-Db;
     }
     .mC div {
@@ -1197,18 +1084,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1220,18 +1104,15 @@
         @include opacity(0);
         width: 0;
     }
-
     25% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1242,11 +1123,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -1256,11 +1135,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1270,11 +1147,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1284,27 +1159,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1315,9 +1185,7 @@
     background: url($S-local-img + '/weather_animation/sample/sky_s013.png') no-repeat;
     .bA {
         @include opacity(0);
-        position: absolute;
-        top: 40px;
-        left: 15px;
+        @include absolute(40px, 0, 0, 15px);
         width: 142px;
         height: 98px;
         background: url($S-local-img + '/weather_animation/nugu_wa_05.png') no-repeat;
@@ -1326,19 +1194,15 @@
     }
     .bB {
         @include opacity(0);
-        position: absolute;
-        top: 49px;
-        right: 31px;
+        @include absolute(49px, 31px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #C5D3D5;
-        border-radius: 50px;
         animation: 4s ease-in-out infinite sky_s07-B;
     }
     .bC {
-        position: absolute;
-        bottom: 31px;
-        right: 12px;
+        @include absolute(null, 12px, 31px, null);
         width: 205px;
         height: 142px;
         background: url($S-local-img + '/weather_animation/nugu_wa_03.png') no-repeat;
@@ -1350,17 +1214,14 @@
         @include opacity(0);
         margin-left: -25px;
     }
-
     40% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     to {
         @include opacity(0);
         margin-left: 40px;
@@ -1371,27 +1232,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     10% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     25% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1400,67 +1256,56 @@
 .sky_s08 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
         background-size: 226px auto;
     }
     .bC {
-        position: absolute;
-        bottom: 7px;
-        left: 61px;
+        @include absolute(null, null, 7px, 61px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
     }
     .bCA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s08-Ca;
         }
     }
     .bCB {
-        position: absolute;
-        top: 77px;
-        right: 5px;
+        @include absolute(77px, 5px, null, null);
         width: 48px;
         height: 10px;
         div {
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 48px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s08-Cc;
         }
     }
     .bCC {
         @include opacity(0);
-        position: absolute;
-        top: 72px;
-        right: 61px;
+        @include absolute(72px, 61px, null, null);
+        @include border-radius-multi(50px, 50px, 50px, 50px);
         width: 10px;
         height: 10px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s08-Cd;
     }
     .mB {
-        top: 37px;
-        left: 40px;
+        @include absolute(37px, null, null, 40px);
     }
     .mA div {
         animation-name: sky_s08-Ca;
@@ -1477,18 +1322,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1500,18 +1342,15 @@
         @include opacity(0);
         width: 0;
     }
-
     25% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1523,18 +1362,15 @@
         @include opacity(0);
         width: 0;
     }
-
     15% {
         @include opacity(1);
         width: 48px;
     }
-
     80% {
         @include opacity(1);
         width: 48px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1546,27 +1382,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1575,9 +1406,7 @@
 .sky_s09 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
@@ -1585,49 +1414,41 @@
     }
     .bCA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s09-Ca;
         div {
+            @include border-radius-multi(50px, 50px, 50px, 50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s09-CAi;
         }
     }
     .bCB {
         @include opacity(0);
-        position: absolute;
-        top: 207px;
-        left: 157px;
+        @include absolute(207px, null, null, 157px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s09-Ce;
     }
     .mA {
-        top: 155px;
-        left: 95px;
+        @include absolute(155px, null, null, 95px);
         animation-name: sky_s09-Ca;
     }
     .mB {
-        top: 168px;
-        left: 144px;
+        @include absolute(168px, null, null, 144px);
         animation-name: sky_s09-Cb;
     }
     .mC {
-        top: 194px;
-        left: 115px;
+        @include absolute(194px, null, null, 115px);
         animation-name: sky_s09-Cc;
     }
     .mD {
-        top: 209px;
-        left: 71px;
+        @include absolute(209px, null, null, 71px);
         animation-name: sky_s09-Cd;
     }
     .mA div {
@@ -1647,11 +1468,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -1661,11 +1480,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1675,11 +1492,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1689,11 +1504,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     70% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1703,11 +1516,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1717,27 +1528,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1746,68 +1552,58 @@
 .sky_s10 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
         background-size: 226px auto;
     }
     .bC {
-        position: absolute;
-        bottom: 7px;
-        left: 62px;
+        @include absolute(null, null, 7px, 62px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
+
     }
     .bCA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0,null,null,0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s10-Ca;
         }
     }
     .bDA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s10-Da;
         div {
+            @include border-radius-multi(50px, 50px, 50px, 50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s10-DAi;
         }
     }
     .bDB {
         @include opacity(0);
-        position: absolute;
-        top: 207px;
-        left: 132px;
+        @include absolute(207px, null, null, 132px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s10-Dc;
     }
     .mB {
-        top: 32px;
-        left: 40px;
+        @include absolute(32px, null, null, 40px);
     }
     .mA div {
         animation-name: sky_s10-Ca;
@@ -1816,13 +1612,11 @@
         animation-name: sky_s10-Cb;
     }
     .mC {
-        top: 167px;
-        left: 154px;
+        @include absolute(167px, null, null, 154px);
         animation-name: sky_s10-Da;
     }
     .mD {
-        top: 197px;
-        left: 174px;
+        @include absolute(197px, null, null, 174px);
         animation-name: sky_s10-Db;
     }
     .mC div {
@@ -1837,18 +1631,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1860,18 +1651,15 @@
         @include opacity(0);
         width: 0;
     }
-
     25% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -1882,11 +1670,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -1896,11 +1682,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1910,11 +1694,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1924,27 +1706,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     30% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     35% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -1953,9 +1730,7 @@
 .sky_s11 {
     @extend %weather_box;
     .bA {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
@@ -1963,9 +1738,7 @@
     }
     .bBA {
         @include opacity(0);
-        position: absolute;
-        top: 133px;
-        left: 83px;
+        @include absolute(133px, null, null, 83px);
         width: 45px;
         height: 85px;
         background: url($S-local-img + '/weather_animation/nugu_wa_08.png') no-repeat;
@@ -1974,23 +1747,19 @@
     }
     .bBB {
         @include opacity(0);
-        position: absolute;
-        top: 200px;
-        left: 159px;
+        @include absolute(200px, null, null, 159px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 10px;
         height: 10px;
         border: 5px solid #FFC318;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s11-Bc;
     }
     .mA {
-        top: 133px;
-        left: 83px;
+        @include absolute(133px, null, null, 83px);
         animation-name: sky_s11-Ba;
     }
     .mB {
-        top: 119px;
-        left: 134px;
+        @include absolute(119px, null, null, 134px);
         animation-name: sky_s11-Bb;
     }
 }
@@ -1998,52 +1767,42 @@
     from {
         @include opacity(0);
     }
-
     5% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     10% {
         @include opacity(.5);
         margin: 0;
     }
-
     15% {
         @include opacity(0);
         margin: 0;
     }
-
     20% {
         @include opacity(1);
         margin: 0;
     }
-
     25% {
         @include opacity(0);
         margin: 0;
     }
-
     40% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     45% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     85% {
         @include opacity(0);
         margin: 0;
     }
-
     to {
         @include opacity(0);
     }
@@ -2052,47 +1811,38 @@
     from {
         @include opacity(0);
     }
-
     7% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     17% {
         @include opacity(1);
         margin: 0;
     }
-
     22% {
         @include opacity(1);
         margin: 0;
     }
-
     27% {
         @include opacity(0);
         margin: 0;
     }
-
     45% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     50% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     85% {
         @include opacity(0);
         margin: 0;
     }
-
     to {
         @include opacity(0);
     }
@@ -2102,27 +1852,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     40% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     50% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     55% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2131,69 +1876,57 @@
 .sky_s12 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
         background-size: 226px auto;
     }
     .bC {
-        position: absolute;
-        bottom: 7px;
-        left: 61px;
+        @include absolute(null, null, 7px, 61px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
     }
     .bCA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s12-Ca;
         }
     }
     .bCB {
-        position: absolute;
-        top: 77px;
-        right: 5px;
+        @include absolute(77px, 5px, null, null);
         width: 48px;
         height: 10px;
         div {
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 48px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s12-Cc;
         }
     }
     .bCC {
         @include opacity(0);
-        position: absolute;
-        top: 72px;
-        right: 61px;
+        @include absolute(72px, 61px, null, null);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 10px;
         height: 10px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s12-Cd;
     }
     .bDA {
         @include opacity(0);
-        position: absolute;
-        top: 133px;
-        left: 83px;
+        @include absolute(133px, null, null, 83px);
         width: 45px;
         height: 85px;
         background: url($S-local-img + '/weather_animation/nugu_wa_08.png') no-repeat;
@@ -2201,13 +1934,11 @@
         animation: 3s ease-in-out infinite sky_s12-Ba;
     }
     .mE {
-        top: 123px;
-        left: 105px;
+        @include absolute(123px, null, null, 105px);
         animation-name: sky_s12-De;
     }
     .mB {
-        top: 37px;
-        left: 40px;
+        @include absolute(37px, null, null, 40px);
     }
     .mA div {
         animation-name: sky_s12-Ca;
@@ -2221,18 +1952,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -2244,18 +1972,15 @@
         @include opacity(0);
         width: 0;
     }
-
     15% {
         @include opacity(1);
         width: 48px;
     }
-
     80% {
         @include opacity(1);
         width: 48px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;
@@ -2267,27 +1992,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     10% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     25% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2296,47 +2016,38 @@
     from {
         @include opacity(0);
     }
-
     7% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     17% {
         @include opacity(1);
         margin: 0;
     }
-
     22% {
         @include opacity(1);
         margin: 0;
     }
-
     27% {
         @include opacity(0);
         margin: 0;
     }
-
     45% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     50% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     85% {
         @include opacity(0);
         margin: 0;
     }
-
     to {
         @include opacity(0);
     }
@@ -2345,9 +2056,7 @@
 .sky_s13 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
@@ -2355,9 +2064,7 @@
     }
     .bCA {
         @include opacity(0);
-        position: absolute;
-        top: 133px;
-        left: 83px;
+        @include absolute(133, null, null, 83px);
         width: 45px;
         height: 85px;
         background: url($S-local-img + '/weather_animation/nugu_wa_08.png') no-repeat;
@@ -2366,44 +2073,37 @@
     }
     .bDA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s13-Da;
         div {
+            @include border-radius-multi(50px, 50px, 50px, 50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s13-DAi;
         }
     }
     .bDB {
         @include opacity(0);
-        position: absolute;
-        top: 207px;
-        left: 124px;
+        @include absolute(207px, null, null, 124px);
+        @include border-radius-multi(50px,50px,50px,50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s13-Dc;
     }
     .mA {
-        top: 130px;
-        left: 78px;
+        @include absolute(130px, null, null, 78px);
         animation-name: sky_s13-Ca;
     }
     .mC {
-        top: 167px;
-        left: 146px;
+        @include absolute(167px, null, null, 146px);
         animation-name: sky_s13-Da;
     }
     .mD {
-        top: 197px;
-        left: 166px;
+        @include absolute(197px, null, null, 166px);
         animation-name: sky_s13-Db;
     }
     .mC div {
@@ -2417,47 +2117,38 @@
     from {
         @include opacity(0);
     }
-
     7% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     17% {
         @include opacity(1);
         margin: 0;
     }
-
     22% {
         @include opacity(1);
         margin: 0;
     }
-
     27% {
         @include opacity(0);
         margin: 0;
     }
-
     45% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     50% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     85% {
         @include opacity(0);
         margin: 0;
     }
-
     to {
         @include opacity(0);
     }
@@ -2466,11 +2157,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -2480,11 +2169,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2494,11 +2181,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2508,27 +2193,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     10% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     25% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2537,9 +2217,7 @@
 .sky_s14 {
     @extend %weather_box;
     .bB {
-        position: absolute;
-        top: 19px;
-        right: 12px;
+        @include absolute(19px, 12px, null, null);
         width: 226px;
         height: 162px;
         background: url($S-local-img + '/weather_animation/nugu_wa_07.png') no-repeat;
@@ -2547,9 +2225,7 @@
     }
     .bCA {
         @include opacity(0);
-        position: absolute;
-        top: 133px;
-        left: 83px;
+        @include absolute(133px, null, null, 83px);
         width: 45px;
         height: 85px;
         background: url($S-local-img + '/weather_animation/nugu_wa_08.png') no-repeat;
@@ -2558,68 +2234,57 @@
     }
     .bDA {
         @include opacity(0);
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 19px;
         height: 19px;
         animation: 3s ease-in-out infinite sky_s14-Da;
         div {
+            @include border-radius-multi(50px,50px,50px,50px);
             width: 19px;
             height: 19px;
             background: #00BCD4;
-            border-radius: 50px;
             animation: 2s ease-in-out infinite sky_s14-DAi;
         }
     }
     .bDB {
         @include opacity(0);
-        position: absolute;
-        top: 207px;
-        left: 135px;
+        @include absolute(207px, null, null, 135px);
+        @include border-radius-multi(50px, 50px, 50px, 50px);
         width: 15px;
         height: 15px;
         border: 5px solid #00BCD4;
-        border-radius: 50px;
         animation: 3s ease-in-out infinite sky_s14-Dc;
     }
     .bE {
-        position: absolute;
-        bottom: 7px;
-        left: 61px;
+        @include absolute(null, null, 7px, 61px);
+        @include transformRotate(-65deg);
         width: 119px;
         height: 92px;
-        @include transformRotate(-65deg);
     }
     .bEA {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include absolute(0, null, null, 0);
         width: 78px;
         height: 10px;
         div {
             @include opacity(0);
+            @include border-radius-multi(100px,100px,100px,100px);
             float: right;
             width: 78px;
             height: 10px;
             background: #00BCD4;
-            border-radius: 100px;
             animation: 3s ease-in-out infinite sky_s14-Ef;
         }
     }
     .mA {
-        top: 123px;
-        left: 105px;
+        @include absolute(123px, null, null, 105px);
         animation-name: sky_s14-Ca;
     }
     .mC {
-        top: 169px;
-        left: 156px;
+        @include absolute(169px, null, null, 156px);
         animation-name: sky_s14-Da;
     }
     .mD {
-        top: 199px;
-        left: 174px;
+        @include absolute(199px, null, null, 174px);
         animation-name: sky_s14-Db;
     }
     .mC div {
@@ -2636,47 +2301,38 @@
     from {
         @include opacity(0);
     }
-
     7% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     17% {
         @include opacity(1);
         margin: 0;
     }
-
     22% {
         @include opacity(1);
         margin: 0;
     }
-
     27% {
         @include opacity(0);
         margin: 0;
     }
-
     45% {
         @include opacity(0);
         margin: -3px 0 0 3px;
     }
-
     50% {
         @include opacity(1);
         margin: 0;
     }
-
     70% {
         @include opacity(1);
         margin: 0;
     }
-
     85% {
         @include opacity(0);
         margin: 0;
     }
-
     to {
         @include opacity(0);
     }
@@ -2685,11 +2341,9 @@
     from {
         margin-left: -5px;
     }
-
     50% {
         margin-left: 5px;
     }
-
     to {
         margin-left: -5px;
     }
@@ -2699,11 +2353,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     30% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2713,11 +2365,9 @@
         @include opacity(0);
         margin-top: -10px;
     }
-
     50% {
         @include opacity(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2727,27 +2377,22 @@
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     10% {
         @include opacity(0);
         @include transformScale(0.7);
     }
-
     20% {
         @include opacity(1);
         @include transformScale(1.2);
     }
-
     25% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     80% {
         @include opacity(1);
         @include transformScale(1);
     }
-
     to {
         @include opacity(0);
     }
@@ -2757,18 +2402,15 @@
         @include opacity(0);
         width: 0;
     }
-
     10% {
         @include opacity(1);
         width: 78px;
     }
-
     80% {
         @include opacity(1);
         width: 78px;
         float: left;
     }
-
     to {
         @include opacity(0);
         width: 0;

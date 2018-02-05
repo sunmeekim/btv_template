@@ -2,29 +2,9 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_melon
 /* ---------------------------------------------------------------------- */
-.voice_order {
-    @include absolute(10px, 10px, null, null);
-    @include border-radius-multi(14px,14px,14px,14px);
-    height: 28px;
-    padding:0 10px;
-    border: 1px solid $C-font-dark;
-    font-size: $F-size-xxsmall;
-    font-family: $F-family-bold;
-    line-height: 29px;
-    color: $C-font-dark;
-    background-color: rgba(255,255,255,.5);
-
-    &:before {
-        @include use-sprite(nugu_advice_icon_mic2);
-        margin: 6px 5px 0 0;
-        vertical-align: top;
-        content:'';
-    }
-
-}
 %voice_order_focus {
-    color: $C-white;
     border-color: $C-font-point;
+    color: $C-white;
     background: $C-font-point;
     &:before {
         @include use-sprite(nugu_advice_icon_mic2_on);
@@ -43,6 +23,26 @@
     width: 148px;
     height: 148px;
 }
+.voice_order {
+    @include absolute(10px, 10px, null, null);
+    @include border-radius-multi(14px,14px,14px,14px);
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    font-size: $F-size-16;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+    background-color: rgba(255,255,255,.5);
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+        content:'';
+    }
+
+}
 .playerlst {
     margin-top: 7px;
     width: 269px;
@@ -51,7 +51,6 @@
     &:focus {
         outline: 0;
         .playerlst__img {
-
             &:before {
                 @include absolute(0 , null, null, 0);
                 @extend %img148;
@@ -64,11 +63,10 @@
             border-color: $C-font-point;
             background: $C-font-point;
             color: $C-white;
-
             &:before {
                 @include use-sprite(nugu_advice_icon_mic2_on);
-                vertical-align: top;
                 margin: 6px 5px 0 0;
+                vertical-align: top;
                 content:'';
             }
         }

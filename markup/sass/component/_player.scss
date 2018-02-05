@@ -22,7 +22,7 @@
       @include overflowHide;
       @include absolute(0, null, null, 0);
       @extend %img74;
-      border: 3px solid #ff611b;
+      border: 3px solid $C-font-point;
       content:'';
     }
   }
@@ -75,7 +75,6 @@
     .banner_area {
         display: none;
     }
-
     &__img {
         @extend %img230;
         position: relative;
@@ -102,15 +101,15 @@
         }
         &.mask {
             &:before {
+                $list :rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%; //그라데이션 변수
+                @include gradient(to bottom, $list);
                 @include border-radius-multi(50%,50%,50%,50%);
-                @extend %img230;
                 @include overflowHide;
                 @include absolute(null, 0, 0, 0);
-                background: linear-gradient(to bottom, rgba(30,87,153,0) 50%,rgba(0,0,0,0.6) 100%);
+                @extend %img230;
                 content:'';
             }
         }
-        
         .player_p_img {
             @extend %img230;
         }
@@ -121,7 +120,7 @@
         display: block;
         width: 230px;
         text-align: center;
-        font-size: 2.2rem;
+        font-size: $F-size-22;
         color: $C-white;
     }
     &__info {
@@ -131,7 +130,7 @@
     &__title {
         @include ellipsis (block,820px);
         font-family: $F-family-bold;
-        font-size: $F-size-xxbig;
+        font-size: $F-size-36;
         color: $C-font-dark;
     }
     &__detail {
@@ -149,8 +148,8 @@
         @include flex();
         @include flex-justify(space-between);
         @include flex-align(flex-start);
-        width: 820px;
         margin-top: 13px;
+        width: 820px;
 
         &.disabled {
             .player__start,
@@ -168,13 +167,13 @@
         width: 620px;
         height: 5px;
         text-align:left;
-        background: #cbcbcb;
+        background: $C-light-gray_cb;
     }
     &__progress-bar {
         display: inline-block;
         vertical-align: top;
         height: 5px;
-        background: #ff4909;
+        background: $C-font-point;
     }
     &__start,
     &__end {
@@ -201,16 +200,14 @@
         margin-top: 22px;
         width: 70px;
         height: 30px;
-        border: 1px solid #e2e2e2;
+        border: 1px solid $C-light-gray_e2;
         text-align: center;
-        font-size: $F-size-xsmall;
-        color: #ff4909;
+        font-size: $F-size-24;
+        color: $C-font-point;
         font-family: $F-family-bold;
         background: $C-white;
     }
 }
-
-
 .btn {
     &__prev {
         @include use-sprite(nugu_melon_control_back_nor);

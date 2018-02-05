@@ -9,21 +9,15 @@
     vertical-align: top;
     height: 28px;
     width: 73px;
-    border: 1px solid $C-border-gray5;
+    border: 1px solid $C-border-gray_d9;
     text-align: center;
-    background: #fcfcfc;
-
+    background: $C-light-gray_fc;
 }
 %remotebtn_s {
     @include border-radius-multi(13px,13px,13px,13px);
-    display: inline-block;
-    vertical-align: top;
-    height: 26px;
+    @extend %remotebtn;
     width: 73px;
-    border: 1px solid $C-border-gray5;
-    text-align: center;
-    background: #fcfcfc;
-
+    height: 26px;
 }
 .pagenate {
     @include absolute(0,0,0,0);
@@ -59,7 +53,7 @@
     }
     &__paging {
         font-family: $F-family-bold;
-        font-size: 1.9rem;
+        font-size: $F-size-19;
         color: $C-font-light;
         text-align: center;
         margin-top: 3px;
@@ -76,18 +70,17 @@
 
         &:before {
             @include use-sprite(btn__prev2);
-            vertical-align: top;
             margin-top: 6px;
+            vertical-align: top;
             content:'';
         }
     }
     &__remote_next {
         @extend %remotebtn;
-
         &:before {
             @include use-sprite(btn__next2);
-            vertical-align: top;
             margin-top: 6px;
+            vertical-align: top;
             content:'';
         }
     }
@@ -99,19 +92,19 @@
         @include border-radius-multi(16px,16px,16px,16px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid $C-border-gray2;
+        border: 1px solid $C-border-gray_9d;
         height: 32px;
         padding: 0 10px;
-        font-size: 1.9rem;
+        font-size: $F-size-19;
         color: $C-font-light;
         font-family: $F-family-bold;
         line-height: 32px;
-        background: #fcfcfc;
+        background: $C-light-gray_fc;
 
         &:before {
             @include use-sprite(nugu_advice_icon_mic);
-            vertical-align: top;
             margin: 7px 3px 0 0;
+            vertical-align: top;
             content:'';
         }
 
@@ -151,10 +144,10 @@
         margin-top: 8px;
     }
     &__paging {
-        font-size: 2.0rem;
-        color: $C-font-light;
-        text-align: center;
         margin-top: 3px;
+        text-align: center;
+        font-size: $F-size-20;
+        color: $C-font-light;
         .current {
             color: $C-font-dark;
         }
@@ -167,8 +160,8 @@
         @extend %remotebtn_s;
         &:before {
             @include use-sprite(btn_s_prev2);
-            vertical-align: top;
             margin-top: 7px;
+            vertical-align: top;
             content:'';
         }
     }
@@ -189,11 +182,11 @@
         @include border-radius-multi(14px,14px,14px,14px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid $C-border-gray2;
+        border: 1px solid $C-border-gray_9d;
         height: 28px;
         padding: 0 10px;
         font-family: $F-family-bold;
-        font-size: 1.9rem;
+        font-size: $F-size-19;
         color: $C-font-light;
         line-height: 28px;
         background: #fcfcfc;

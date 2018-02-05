@@ -34,7 +34,7 @@
       text-align: left;
       &__title {
             font-family: $F-family-semi;
-            font-size: $F-size-xxxxbig;
+            font-size: $F-size-46;
             color: $C-black;
       }
       &__info {
@@ -53,8 +53,8 @@
 
             &:before {
                   @include use-sprite(nugu_traffic_graph_icon_arrival_copy);
-                  vertical-align: top;
                   margin: 2px 5px 0 0;
+                  vertical-align: top;
                   content:'';
             }
       }

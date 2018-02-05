@@ -2,28 +2,33 @@
 /* ---------------------------------------------------------------------- */
 /*  card UI
 /* ---------------------------------------------------------------------- */
+%card_basic-size {
+    width: 196px;
+    height: 232px;
+}
+%card_wide-size {
+    width: 269px;
+    height: 250px;
+}
 .card_wrap {
     @include flex();
     @include flex-justify(center);
-
 }
 .card_wrap__item {
     @include border-radius-multi(2px, 2px, 2px, 2px);
-    width: 196px;
-    height: 232px;
-    border: 1px solid $C-border-gray5;
-    background: $C-white;
-    box-shadow: 0 0 1px 0 $C-light-gray;
+    @extend %card_basic-size;
     margin: 0 5px;
+    border: 1px solid $C-border-gray_d9;
+    box-shadow: 0 0 1px 0 $C-light-gray_fc;
+    background: $C-white;
 }
 .card_wrap2 {
     @include flex();
     @include flex-justify(center);
 }
 .card_wrap2__item {
+    @extend %card_wide-size;
     margin: 0 15px;
-    width: 269px;
-    height: 250px;
     text-align: center;
 
 }

@@ -39,7 +39,12 @@
     @include absolute(24px, null, null, 0);
     width: 2px;
     height: 140px;
-    background: $C-border-gray;
+    background: $C-border-gray_cc;
+}
+%imgbar {
+    @include absolute(0,0,0,0);
+    @extend %img186;
+    border-right: 1px solid $C-border-gray_d9;
 }
 .order_wrap {
     @include flex();
@@ -56,8 +61,8 @@
     @include flex-align(center);
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img760;
-    border: 1px solid $C-border-gray5;
-    background: $C-light-gray;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
 
     &__img {
         @extend %img186;
@@ -66,20 +71,18 @@
         vertical-align: middle;
         background: $C-black;
         &:before {
-            @include absolute(0,0,0,0);
-            @extend %img186;
-            border-right: 1px solid $C-border-gray2;
+            @extend %imgbar;
             content:'';
         }
     }
     &__ordertext {
-        max-width: 505px;
         margin-left: 45px;
+        max-width: 505px;
         text-align: left;
-        font-size: 2.5rem;
+        font-size: $F-size-25;
     }
     &__ordermenu {
-        font-size: $F-size-xxxbig;
+        font-size: $F-size-42;
         font-family: $F-family-bold;
         word-break: keep-all;
     }
@@ -91,8 +94,8 @@
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img1300;
     position: relative;
-    border: 1px solid $C-border-gray5;
-    background: $C-light-gray;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
 }
 .order_info {
     @include flex();
@@ -105,9 +108,7 @@
         position: relative;
         background: $C-black;
         &:before {
-            @include absolute(0,0,0,0);
-            @extend %img186;
-            border-right: 1px solid $C-border-gray5;
+            @extend %imgbar;
             content:'';
         }
     }
@@ -120,7 +121,7 @@
     &__menu {
         @include ellipsis;
         vertical-align: top;
-        font-size: $F-size-xbig;
+        font-size: $F-size-34;
         font-family: $F-family-semi;
     }
     &__menu-detail {
@@ -134,13 +135,13 @@
     }
     &__price-data {
         float: right;
-        font-size: 4.4rem;
+        font-size: $F-size-44;
         font-family: $F-family-bold;
         color: $C-black;
     }
     &__discount {
-        float:left;
         margin-top: 12px;
+        float:left;
         color: $C-font-point;
         font-size: $F-size-under;
     }
@@ -192,7 +193,7 @@
         @extend %img186;
         position: relative;
         display: block;
-        border:1px solid $C-border-gray5;
+        border:1px solid $C-border-gray_d9;
         outline: 0;
         font-size: $F-size-under;
         font-family: $F-family-semi;
@@ -216,15 +217,15 @@
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img712;
     margin-top: -25px;
-    border: 1px solid $C-border-gray5;
+    border: 1px solid $C-border-gray_d9;
     text-align: left;
-    background: $C-light-gray;
+    background: $C-light-gray_fc;
 
     &__title {
         display: block;
         height: 46px;
         padding-top: 19px;
-        border-bottom: 2px solid $C-border-gray;
+        border-bottom: 2px solid $C-border-gray_cc;
         text-align: left;
         font-size: $F-size;
         font-family: $F-family-semi;
@@ -249,27 +250,27 @@
             @include absolute(0,0,0,0);
             @extend %img232;
             position: absolute;
-            border-right: 1px solid $C-border-gray5;
+            border-right: 1px solid $C-border-gray_d9;
             content:'';
         }
     }
     &__box {
         @extend %img420;
+        margin: 0 25px;
         display: inline-block;
         vertical-align: top;
-        margin: 0 25px;
     }
     &__menu {
         @include ellipsis(block,100%);
-        vertical-align: top;
         margin-top: 12px;
-        font-size: $F-size-xbig;
+        vertical-align: top;
+        font-size: $F-size-34;
         font-family: $F-family-semi;
     }
     &__menu-detaile {
         @include ellipsis(block,100%);
-        vertical-align: top;
         margin-top: 2px;
+        vertical-align: top;
         font-size: $F-size-under;
         color: $C-font-light;
     }
@@ -278,7 +279,7 @@
     }
     &__price-data {
         float:right;
-        font-size: $F-size-xxxbig;
+        font-size: $F-size-42;
         font-family: $F-family-semi;
     }
     &__discount {
@@ -294,13 +295,13 @@
 
         .order_myinfo__nondata {
             display: block;
-            text-align: center;
             margin-top: 94px;
+            text-align: center;
         }
         .order_myinfo__nondata-logo {
             @include use-sprite(ico_logo);
-            vertical-align: middle;
             margin: 3px 5px 0 0;
+            vertical-align: middle;
         }
         .order_myinfo__nondata-text {
             font-size: $F-size-small;

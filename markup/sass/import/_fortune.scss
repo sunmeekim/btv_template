@@ -23,7 +23,7 @@
             text-align: left;
       }
       &__title {
-            font-size: $F-size-xxxxbig;
+            font-size: $F-size-46;
             font-family: $F-family-semi;
             color: $C-black;
       }
@@ -34,8 +34,8 @@
       }
       &__desc {
             @include multiline-ellipsis(3,$F-size,1.55,block);
-            max-width: 955px;
             margin-top: 13px;
+            max-width: 955px;
             width: 100%;
             color: $C-font-dark;
 

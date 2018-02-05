@@ -8,7 +8,7 @@
     .card_wrap__item {
         position: relative;
         margin: 0 5px;
-        background: $C-light-gray;
+        background: $C-light-gray_fc;
         &.past{
             .schedule_default_card__time,
             .schedule_default_card__action {
@@ -19,9 +19,9 @@
 }
 .schedule_default_card {
     &__time {
-        height: 66px;
         margin: 0 20px;
-        border-bottom: 1px solid #e2e2e2;
+        height: 66px;
+        border-bottom: 1px solid $C-light-gray_e2;
         text-align: center;
     }
     &__action {
@@ -40,7 +40,7 @@
     &__day {
         margin: 10px 0 9px;
         text-align: center;
-        font-size: 6.8rem;
+        font-size: $F-size-68;
         color: $C-black;
     }
     &__week {
@@ -57,9 +57,9 @@
         margin-top: 19px;
         padding:0 15px;
         line-height: 32px;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
         color: $C-font-light;
-        background: $C-light-grayBg;
+        background: $C-light-gray_e6;
     }
     .time {
         display: inline-block;

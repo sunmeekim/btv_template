@@ -19,7 +19,7 @@
 }
 //오늘의 날씨이미지
 %img250 {
-    width:250px;
+    width: 250px;
     height: 250px;
 }
 //대기지수 큰이미지
@@ -63,12 +63,12 @@
             display: none;
         }
         .weather_card_wrap__date {
-            color: $C-border-gray4;
+            color: $C-border-gray_b2;
         }
         .weather_card_wrap__nodata {
             margin-top: 65px;
             display: block;
-            color: $C-border-gray4;
+            color: $C-border-gray_b2;
             font-size: $F-size-big;
         }
     }
@@ -111,7 +111,7 @@
     margin-top: 6px;
     .card_wrap__item {
         &.none {
-            background: $C-light-grayBg2;
+            background: $C-light-gray_f3;
         }
     }
 }
@@ -123,9 +123,9 @@
     width:100%;
 }
 .weather_daily_represent {
-    width: 820px;
     @include flex();
     @include flex-justify(center);
+    width: 820px;
 
     &__img {
         @extend %img250;
@@ -135,7 +135,7 @@
     }
     &__title {
         font-family: $F-family-bold;
-        font-size: $F-size-xxxbig;
+        font-size: $F-size-42;
         color: $C-font-point;
     }
     &__detail {
@@ -146,7 +146,7 @@
     &__degree {
         margin-top: 5px;
         font-family: $F-family-bold;
-        font-size: 8.6rem;
+        font-size: $F-size-86;
         color: $C-black;
 
         .data {
@@ -161,7 +161,7 @@
     }
     &__better {
         font-family: $F-family-bold;
-        font-size: $F-size-xxbig;
+        font-size: $F-size-36;
         color: $C-font-dark-gray;
     }
     &__degree_more {
@@ -196,7 +196,7 @@
         vertical-align: top;
         width: 190px;
         height: 44px;
-        border: 1px solid $C-border-gray;
+        border: 1px solid $C-border-gray_cc;
         text-align: center;
         line-height: 44px;
         color: $C-font-dark;
@@ -238,11 +238,10 @@
     &__degree {
         padding-top:10px;
         font-family: $F-family-bold;
-        font-size: $F-size-xxbig;
+        font-size: $F-size-36;
         color: $C-black;
     }
 }
-
 .weather_daily_represent__special + .weather_daily_represent__info {
     margin-left: 0;
     margin-top: 19px;
@@ -284,13 +283,13 @@
         text-align: left;
     }
     &__weather_title {
-        font-size: $F-size-xxxxbig;
+        font-size: $F-size-46;
         color: $C-font-point;
         font-family: $F-family-bold;
     }
     &__temp {
         margin-top: 12px;
-        font-size: $F-size-xxxbig;
+        font-size: $F-size-42;
         .degree_high,
         .degree_low {
             display: inline-block;
@@ -368,13 +367,13 @@
     }
     &__title {
         font-family: $F-family-semi;
-        font-size: $F-size-xxbig;
+        font-size: $F-size-36;
         color: $C-font-dark;
     }
     &__status {
         @extend %status-color;
         margin-top: 18px;
-        font-size: 6.0rem;
+        font-size: $F-size-60;
         color: $C-font-point;
         font-family: $F-family-bold;
     }
@@ -386,7 +385,7 @@
         vertical-align: top;
         margin: 0 auto;
         font-family: $F-family-bold;
-        font-size: 4.0rem;
+        font-size: $F-size-40;
         color: $C-font-dark;
 
     }
@@ -419,7 +418,7 @@
     }
     &__info_data {
         @extend %status-color;
-        font-size: 4.8rem;
+        font-size: $F-size-48;
         font-family: $F-family-bold;
     }
     &__data_value {
@@ -428,7 +427,7 @@
         margin: 15px auto 0;
         line-height: 42px;
         color: $C-font-dark;
-        font-size: $F-size-xxbig;
+        font-size: $F-size-36;
         font-family: $F-family-bold;
         .data {
             display: inline-block;

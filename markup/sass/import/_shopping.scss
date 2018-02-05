@@ -31,24 +31,24 @@
     @include absolute(0,null, null, 0);
     width: 2px;
     height: 140px;
-    background: $C-border-gray;
+    background: $C-border-gray_cc;
 }
 %imgbar {
     @include absolute(0,0,0,0);
     @extend %img186;
-    border-right: 1px solid $C-border-gray5;
+    border-right: 1px solid $C-border-gray_d9;
 }
 %imgbar_l {
     @include absolute(0,0,0,0);
     @extend %img234;
-    border-right: 1px solid $C-border-gray5;
+    border-right: 1px solid $C-border-gray_d9;
 }
 %btn {
     @include border-radius-multi(1px,1px,1px,1px);
     width: 188px;
     display: block;
     border: 5px solid $C-white;
-    outline: 1px solid $C-border-gray5;
+    outline: 1px solid $C-border-gray_d9;
     font-size: $F-size;
     font-family: $F-family-bold;
     cursor: pointer;
@@ -91,8 +91,8 @@
     @include flex-align(center);
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img900;
-    border: 1px solid $C-border-gray5;
-    background: $C-light-gray;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
 
     &__img {
         @extend %img186;
@@ -110,7 +110,7 @@
         margin-left: 45px;
         max-width: 505px;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: $F-size-25;
     }
 
 }
@@ -118,11 +118,10 @@
     @include flex();
     @include flex-justify(flex-start);
     @include flex-align(center);
-    width:900px;
-    height: 186px;
-    border: 1px solid $C-border-gray5;
-    border-radius: 1px;
-    background: $C-light-gray;
+    @include border-radius-multi(1px,1px,1px,1px);
+    @extend %img900;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
 
     &__img {
         @extend %img186;
@@ -154,7 +153,7 @@
         text-align: left;
         .shopping_box2__text-ellipsis {
             font-family: $F-family-bold;
-            font-size: $F-size-xbig;
+            font-size: $F-size-34;
         }
     }
     &__title-sub {
@@ -192,7 +191,7 @@
     &__after-price {
         display: inline-block;
         vertical-align: top;
-        font-size: 5.4rem;
+        font-size: $F-size-54;
         font-family: $F-family-semi;
 
     }
@@ -206,9 +205,8 @@
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img1300;
     position: relative;
-    border: 1px solid $C-border-gray5;
-    background: $C-light-gray;
-
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
     &.end {
         margin-top: 30px;
     }
@@ -247,7 +245,7 @@
         min-width: 30%;
         text-align: left;
         font-family: $F-family-bold;
-        font-size: $F-size-xbig;
+        font-size: $F-size-34;
     }
     &__title-sub {
         max-width: 70%;
@@ -283,7 +281,7 @@
         font-size: $F-size-under;
     }
     &__after-price {
-        font-size: 5.4rem;
+        font-size: $F-size-54;
         font-family: $F-family-bold;
     }
 }
@@ -319,18 +317,18 @@
     @include border-radius-multi(1px,1px,1px,1px);
     @extend %img721;
     margin-top: -23px;
-    border: 1px solid $C-border-gray5;
-    background: $C-light-gray;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
     .shopping_menu_img {
         @extend %img234;
     }
     &__title {
         margin: 0 30px;
         display: block;
-        border-bottom: 2px solid $C-border-gray;
+        border-bottom: 2px solid $C-border-gray_cc;
         padding: 13px 0 2px;
         text-align: center;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
     }
     + .shopping_mybox {
         margin-left: 10px;
@@ -342,7 +340,7 @@
             vertical-align: top;
             width: 2px;
             height:24px;
-            background: $C-border-gray;
+            background: $C-border-gray_cc;
             content:'';
         }
     }
@@ -370,17 +368,17 @@
     }
     &__order-info {
         height: 56px;
-        border-bottom: 2px solid $C-border-gray;
+        border-bottom: 2px solid $C-border-gray_cc;
         text-align: left;
     }
     &__order-state {
+        @include border-radius-multi(18px,18px,18px,18px);
         display:inline-block;
         vertical-align: top;
         height:36px;
-        border-radius: 18px;
         padding: 0 15px;
         color: $C-white;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
         font-family: $F-family-bold;
         line-height: 36px;
         background: $C-font-point;
@@ -407,7 +405,7 @@
     }
     &__title-main {
         min-width: 30%;
-        font-size: $F-size-xbig;
+        font-size: $F-size-34;
         font-family: $F-family-semi;
     }
     &__title-sub {
@@ -423,7 +421,7 @@
         white-space: nowrap;
     }
     &__data-name {
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
         color: $C-font-point;
     }
     &__data-delivery {
@@ -439,12 +437,12 @@
     &__before-price {
         text-decoration: line-through;
         color: $C-font-light;
-        font-size: $F-size-xsmall;
+        font-size: $F-size-24;
     }
     &__after-price {
         display: inline-block;
         vertical-align: top;
-        font-size: $F-size-xxxbig;
+        font-size: $F-size-42;
         font-family: $F-family-semi;
     }
 }
@@ -477,8 +475,8 @@
 
         &:before {
             @include use-sprite(ico_order_mic);
-            vertical-align: top;
             margin: 5px 5px 0 0;
+            vertical-align: top;
             content:'';
         }
     }
