@@ -1,0 +1,707 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_쇼핑
+/* ---------------------------------------------------------------------- */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+%box1298_186 {
+    width: 1298px;
+    height: 186px;
+}
+%box710_186 {
+    width: 710px;
+    height: 186px;
+}
+%box710_232 {
+    width: 710px;
+    height: 232px;
+}
+%box630_186 {
+    width: 630px;
+    height: 186px;
+}
+%box577_186 {
+    width: 577px;
+    height: 186px;
+}
+%box194_186 {
+    width: 194px;
+    height: 186px;
+}
+%box262_186 {
+    width: 262px;
+    height: 186px;
+}
+%bar {
+    @include absolute(7px, null, null, 0);
+    width: 1px;
+    height: 20px;
+    background: $C-border-gray_d9;
+}
+%bar138 {
+    @include absolute(25px, null, null, 0);
+    width: 2px;
+    height: 138px;
+    background: $C-border-gray_cc;
+}
+%img186 {
+    width: 186px;
+    height: 186px;
+}
+%img232 {
+    width: 232px;
+    height: 232px;
+}
+%boxborder {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.2);
+    background: $C-light-gray_fc;
+}
+%voice_order_focus {
+    border-color: $C-font-point;
+    color: $C-white;
+    background: $C-font-point;
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2_on);
+        content:'';
+    }
+}
+.voice_order {
+    @include absolute(15px, 15px, null, null);
+    @include border-radius-multi(14px,14px,14px,14px);
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    font-size: $F-size-16;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+        content:'';
+    }
+}
+.homeshopping_box710 {
+    @extend %box710_186;
+    @extend %boxborder;
+}
+.homeshopping_box710_v2 {
+    @extend %box710_232;
+    @extend %boxborder;
+}
+.homeshopping_box630 {
+    @extend %box630_186;
+    position: relative;
+}
+.homeshopping_box577 {
+    @extend %box577_186;
+    @extend %boxborder;
+}
+.homeshopping_box1298 {
+    @extend %box1298_186;
+}
+.homeshopping_img {
+    @extend %img186;
+}
+.homeshopping_img_v2 {
+    @extend %img232;
+}
+
+.homeshopping_wrap {
+    @include flex();
+    @include flex-justify(center);
+    margin-top: 28px;
+}
+
+//홈쇼핑 상품목록보기
+.homeshopping_lst {
+    @include flex();
+    @include flex-justify(flex-start);
+    @extend %box710_186;
+    @extend %boxborder;
+    &:focus {
+        &:before {
+            @include absolute(-1px, -1px, -1px, -1px);
+            border: 6px solid $C-font-point;
+            content:'';
+        }
+        .voice_order {
+            @extend %voice_order_focus;
+        }
+    }
+    &.disabled {
+        .homeshopping_lst__title-main {
+            @include opacity(.4);
+        }
+        .homeshopping_lst__value-price {
+            display: none;
+        }
+        .homeshopping_lst__value-label {
+            @include opacity(.4);
+            color:$C-font-light;
+        }
+    }
+    &.counsel {
+        .homeshopping_lst__value-price {
+            display: none;
+        }
+        .homeshopping_lst__value-label {
+            color:$C-font-light;
+        }
+    }
+    .voice_order {
+        @include absolute(15px, auto, auto, 30px);
+    }
+
+    &__img {
+        @extend %img186;
+        display: block;
+        border-right: 1px solid rgba(0,0,0,.2);
+    }
+    &__info {
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 20px 0 30px;
+
+    }
+    &__title {
+        margin-top: 57px;
+        height: 74px;
+    }
+    &__title-main {
+        @include multiline-ellipsis(2,$F-size-under,1.1);
+        font-family: $F-family-bold;
+        color: $C-black;
+    }
+    &__value {
+        @include clear();
+        width: 100%;
+    }
+    &__value-label {
+        float:left;
+        font-size: $F-size-small;
+        color: $C-font-point;
+    }
+    &__value-price {
+        float: right;
+        font-size: $F-size;
+        color: $C-font-light;
+    }
+
+}
+
+//선택 된 상품 보기 박스
+.homeshopping_select {
+    @include flex();
+    @include flex-justify(flex-start);
+    @extend %box577_186;
+    @extend %boxborder;
+    &__img {
+        @extend %img186;
+        display: block;
+        border-right: 1px solid rgba(0,0,0,.2);
+    }
+    &__info {
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    &__title-main {
+        @include multiline-ellipsis(2,$F-size-27,1.1);
+        font-family: $F-family-bold;
+        color: $C-black;
+    }
+    &__value {
+        @include clear();
+        width: 100%;
+        padding-top: 7px;
+    }
+    &__value-label {
+        float:left;
+        font-size: $F-size-small;
+        color: $C-font-gray_9b;
+    }
+    &__value-price {
+        float: right;
+        font-size: $F-size-under;
+        color: $C-font-light;
+    }
+    &__opt {
+        @include flex();
+        @include flex-justify(flex-start);
+        margin: 7px 0 0 0;
+        border-top: 1px solid $C-border-gray_d9;
+        padding-top: 7px;
+    }
+    &__opt-item {
+        @include multiline-ellipsis(1,$F-size-small,$base-line-height);
+        position: relative;
+        max-width: 33.33%;
+        padding-right: 5px;
+        font-family: $F-family-bold;
+        color: $C-font-gray_9b;
+        &:focus,
+        &.active {
+            color: $C-font-point;
+        }
+
+    }
+}
+.homeshopping_policy .homeshopping_select {
+    @extend %box630_186;
+    position: relative;
+    border: 0;
+    background: $C-light-gray_fc;
+    &__info {
+        @include flex();
+        @include flex-justify(center);
+        @include flex-align(center);
+        text-align: left;
+    }
+    &__value-label {
+        color: $C-font-light;
+    }
+}
+.homeshopping_order .homeshopping_select {
+    border: 0;
+    background: $C-light-gray_fc;
+    &__info {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 10px 20px 30px;
+    }
+    &__value-label {
+        color: $C-font-point;
+    }
+    &__value-price {
+        font-family: $F-family-bold;
+    }
+    &__opt {
+        @include flex();
+        @include flex-justify(flex-start);
+        margin: 5px 0 0 0;
+        padding-top: 5px;
+    }
+    &__opt-item {
+        @include multiline-ellipsis(1,$F-size-24,$base-line-height);
+        padding-right: 5px;
+        width: auto;
+        max-width: none;
+        position: relative;
+        font-family: $F-family-bold;
+        color: $C-font-gray_9b;
+
+        &:last-child {
+            min-width: 65px;
+        }
+
+    }
+}
+
+//홈쇼핑 몹션 선택 보기 박스
+.homeshopping_option {
+    position: relative;
+    margin-left: 40px;
+    width: 1110px;
+    .card_wrap__item {
+        @extend %box194_186;
+        background: $C-light-gray_fc;
+        &.disabled {
+            .homeshopping_option__value {
+                @include opacity(.4);
+            }
+        }
+        &.quantity {
+            @extend %box262_186;
+            .homeshopping_option__link {
+                @extend %box262_186;
+            }
+        }
+    }
+    &__lst {
+        margin: 0 auto;
+        width: 815px;
+    }
+    &__link {
+        @extend %box194_186;
+        position: relative;
+        display: block;
+        text-align: right;
+
+        &:focus,
+        &.active {
+            outline: 0;
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+            &:before {
+                @include absolute(-1px,-1px,-1px,-1px);
+                border: 6px solid $C-font-point;
+                content: '';
+
+            }
+        }
+    }
+    &__value {
+        @include flex();
+        @include flex-justify(center);
+        @include flex-align(center);
+        margin-top: 0;
+        box-sizing: border-box;
+        padding: 38px 10px 0;
+        height: 100%;
+        text-align: center;
+        color: $C-black;
+        font-family: $F-family-bold;
+        .data {
+            @include multiline-ellipsis(4,$F-size,1.1);
+            em {
+                font-family: $F-family-basic;
+            }
+        }
+    }
+}
+
+//주문 전 정보 제공 동의 보기 박스
+.homeshopping_policy {
+    @include flex();
+    @include flex-justify(flex-start);
+    @extend %box1298_186;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
+}
+.homeshopping_agreement {
+    @include flex();
+    @include flex-align(center);
+    @include flex-justify(center);
+    position: relative;
+    margin-left: 18px;
+    width: 650px;
+    box-sizing: border-box;
+    padding: 30px;
+    &:before {
+        @extend %bar138;
+        content: '';
+    }
+    &__contents {
+        text-align: center;
+        font-size: $F-size-under;
+        color: $C-black;
+    }
+    &__attend {
+        padding-top: 20px;
+        text-align: center;
+        font-size: $F-size-24;
+        color: $C-font-gray_9b;
+    }
+}
+
+// 상담 신청 상품 목록 보기
+.homeshopping_track {
+    @include flex();
+    @include flex-justify(center);
+    @extend %box710_232;
+    @extend %boxborder;
+    margin-top: -20px;
+    &__img {
+        @extend %img232;
+        display: block;
+        border-right: 1px solid rgba(0,0,0,.2);
+    }
+    &__info {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 20px 20px 30px;
+    }
+    &__date {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 5px;
+        font-size: $F-size-24;
+        color: $C-font-dark;
+    }
+    &__title {
+        min-height: 140px;
+    }
+    &__title-main {
+        @include multiline-ellipsis(2,$F-size-27,1.1);
+        margin-top: 12px;
+        font-family: $F-family-bold;
+        color: $C-black;
+    }
+    &__opt {
+        @include flex();
+        @include flex-justify(flex-start);
+        margin: 5px 0 0 0;
+        padding-top: 5px;
+    }
+    &__opt-item {
+        @include multiline-ellipsis(1,$F-size-24,$base-line-height);
+        position: relative;
+        width: auto;
+        padding-right: 5px;
+        color: $C-font-gray_9b;
+
+        &:last-child {
+            min-width: 65px;
+        }
+
+    }
+    &__value {
+        @include clear();
+        margin-top: 10px;
+    }
+    &__value-price {
+        float: left;
+        font-size: $F-size-under;
+        font-family: $F-family-bold;
+        color: $C-font-light;
+    }
+    &__value-label {
+        float: right;
+        padding-top: 7px;
+        font-size: $F-size-24;
+        color: $C-font-point;
+    }
+}
+
+// 주문한 상품 보기
+.homeshopping_order {
+    @include flex();
+    @include flex-justify(flex-start);
+    @extend %box1298_186;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
+}
+.homeshopping_payment,
+.homeshopping_custom {
+    position: relative;
+    margin-left: 50px;
+    width: 670px;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+
+    &:before {
+        @extend %bar138;
+        content: '';
+    }
+    &__11pay {
+        @include use-sprite(nugu_11pay);
+        margin: 8px 0 0 0;
+        vertical-align: top;
+    }
+    &__nugu {
+        @include use-sprite(ico_logo);
+        margin: 5px 5px 0 0;
+        vertical-align: top;
+    }
+    &__name {
+        font-size: $F-size-24;
+        color: $C-black;
+    }
+    &__price {
+        font-size: $F-size-40;
+        font-family: $F-family-bold;
+    }
+    &__detail {
+        padding-top: 8px;
+        font-size: $F-size-24;
+        color: $C-font-gray_9b;
+    }
+    &__detail2 {
+        padding-top: 8px;
+        letter-spacing: -1px;
+        font-size: $F-size-24;
+        color: $C-font-light;
+    }
+}
+.homeshopping_delivery {
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
+    margin-left: 50px;
+    position: relative;
+    width: 570px;
+    padding: 30px;
+    &:before {
+        @extend %bar138;
+        content: '';
+    }
+    &__wrap {
+        text-align: left;
+    }
+    &__title {
+        font-size: $F-size-under;
+        font-family: $F-family-bold;
+        color: $C-font-dark-gray;
+    }
+    &__detail {
+        @include multiline-ellipsis(2,$F-size-under,$base-line-height);
+        margin-top: 10px;
+        color: $C-font-light;
+    }
+}
+
+.homeshopping_lst + .homeshopping_lst {
+    margin-left: 10px;
+}
+.homeshopping_track + .homeshopping_track {
+    margin-left: 10px;
+}
+.homeshopping_select__opt-item + .homeshopping_select__opt-item {
+    padding: 0 10px;
+    &:before {
+        @extend %bar;
+        content:'';
+    }
+}
+.homeshopping_track__opt-item + .homeshopping_track__opt-item {
+    padding: 0 10px;
+    &:before {
+        @extend %bar;
+        top: 4px;
+        content:'';
+    }
+}
+
+
+.option_box194 {
+    @extend %box194_186;
+}
+.quantity_box262 {
+    @extend %box262_186;
+}
+.bedge {
+    @include border-radius-multi(16px,16px,16px,16px);
+    display: inline-block;
+    vertical-align: top;
+    height: 32px;
+    padding:0 15px;
+    font-size: $F-size-20;
+    font-family: $F-family-bold;
+    line-height: 32px;
+    color: $C-white;
+    background: $C-font-point;
+}
+.btnbox {
+    margin-left: 10px;
+}
+.btn_large {
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
+    @extend %img186;
+    position: relative;
+    border: 1px solid $C-border-gray_d9;
+    text-align: center;
+    font-family: $F-family-bold;
+    background: $C-white;
+    &:focus,
+    &.active {
+        outline: 0;
+        &:before {
+            @include absolute(-1px, -1px, -1px, -1px);
+            border: 6px solid $C-font-point;
+            content: '';
+        }
+    }
+
+}
+.btn_large-link {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: center;
+    color: $C-font-point;
+    span {
+        display: inline-block;
+    }
+    &:before {
+        @include use-sprite(nugu_shopping_voice);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+
+    }
+}
+.btn_double {
+    width: 188px;
+    &__link {
+        position: relative;
+        display: block;
+        width: 186px;
+        height: 88px;
+        border: 1px solid $C-border-gray_d9;
+        text-align: center;
+        line-height: 88px;
+        color: $C-black;
+        font-family: $F-family-bold;
+        background: $C-white;
+        &.active {
+            color: $C-font-point;
+            &:before {
+                @include absolute(-1px,-1px,-1px,-1px);
+                border: 6px solid $C-font-point;
+                content:'';
+            }
+        }
+    }
+}
+.btn_double__link + .btn_double__link {
+    margin-top: 8px;
+}
+
+.order_text {
+    min-height: 39px;
+    text-align: center;
+    font-size: $F-size-big;
+    &.price {
+        &:before {
+            @include use-sprite(ico_check);
+            margin: 3px 5px 0 0;
+            vertical-align: top;
+            content:'';
+        }
+    }
+
+}
+.order_ico_text {
+    @include border-radius-multi(18px,18px,18px,18px);
+    margin: 0 5px;
+    display: inline-block;
+    border: 2px solid $C-black;
+    height: 36px;
+    padding:0 15px;
+    vertical-align: top;
+    line-height: 36px;
+    font-family: $F-family-bold;
+    font-size: $F-size-under;
+
+    &:before {
+        @include use-sprite(ico_order_mic);
+        vertical-align: top;
+        margin: 5px 5px 0 0;
+        content:'';
+    }
+}
+.order_text + .homeshopping_wrap {
+    margin-top: 7px;
+}
