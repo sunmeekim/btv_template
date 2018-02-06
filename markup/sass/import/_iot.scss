@@ -3,10 +3,9 @@
 /*  Btv_IOT
 /* ---------------------------------------------------------------------- */
 %voice_order_focus {
+    border-color: $C-font-point;
     color: $C-white;
     background: $C-font-point;
-    border-color: $C-font-point;
-
     &:before {
         @include use-sprite(nugu_advice_icon_mic2_on);
         content:'';

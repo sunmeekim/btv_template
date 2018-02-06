@@ -55,13 +55,22 @@
         @@include('homeshopping_remotecontrol.html')
         <!-- end: Btv template -->
     </div>
-    <!-- CJ오쇼핑 주문결과 -->
-    <div class="content_area" id="homeshopping_order_result">
+    <!-- CJ오쇼핑 CJ오쇼핑 상담원 결제 -->
+    <div class="content_area" id="homeshopping_callcashing">
         <!-- start: Btv template -->
-        @@include('homeshopping_order.html')
+        @@include('homeshopping_callcashing.html')
         <!-- end: Btv template -->
     </div>
-
+    <div class="content_area" id="homeshopping_callcashing_end">
+        <!-- start: Btv template -->
+        @@include('homeshopping_callcashing_end.html')
+        <!-- end: Btv template -->
+    </div>
+    <div class="content_area" id="homeshopping_order_result">
+        <!-- start: Btv template -->
+        @@include('homeshopping_order_result.html')
+        <!-- end: Btv template -->
+    </div>
     <div class="help_area">
         <button class="bottom_text-area"><span class="data">도움말</span></button>
     </div>
@@ -75,9 +84,10 @@
         <li class="case__item"><a href="#homeshopping_policy" class="case__link">CJ오쇼핑 정보제공동의</a></li>
         <li class="case__item"><a href="#homeshopping_track" class="case__link">CJ오쇼핑 상담신청완료</a></li>
         <li class="case__item"><a href="#homeshopping_order" class="case__link">CJ오쇼핑 주문/결제하기</a></li>
-        <li class="case__item"><a href="#homeshopping_order_remote-control" class="case__link" id="defaultOpen">CJ오쇼핑 주문/결제하기(리모콘)</a></li>
-        <li class="case__item"><a href="#homeshopping_counsel" class="case__link">CJ오쇼핑 상담/문의</a></li>
-        <li class="case__item"><a href="#homeshopping_order_result" class="case__link">CJ오쇼핑 주문결과</a></li>
+        <li class="case__item"><a href="#homeshopping_order_remote-control" class="case__link">CJ오쇼핑 주문/결제하기(리모콘)</a></li>
+        <li class="case__item"><a href="#homeshopping_callcashing" class="case__link">CJ오쇼핑 상담원 결제</a></li>
+        <li class="case__item"><a href="#homeshopping_callcashing_end" class="case__link" >CJ오쇼핑 상담원 결제완료</a></li>
+        <li class="case__item"><a href="#homeshopping_order_result" class="case__link" id="defaultOpen">CJ오쇼핑 결제완료</a></li>
     </ul>
 </div>
 <!-- //케이스 확인하기용 -->
