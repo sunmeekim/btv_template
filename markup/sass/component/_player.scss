@@ -34,7 +34,8 @@
     margin-top: 8px;
     position: relative;
 
-    &.melon {
+    &.melon,
+    &.music_other {
         .btn__prev-speed,
         .btn__next-speed,
         .player__controller-speed {

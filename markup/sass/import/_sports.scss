@@ -159,8 +159,9 @@
             .teamrank_wrap__item-logo {
                 position: relative;
                 &:before {
-                    @include absolute(14px,null,null,2px);
+                    @include absolute(-3px,null,null,50%);
                     @extend %img46;
+                    margin-left: -23px;
                     background: url($S-local-img + '/sports/nugu_sports_rank_icon_badge.png') no-repeat 0 0;
                     content: '';
                 }
