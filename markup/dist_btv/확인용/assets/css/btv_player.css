@@ -1,0 +1,693 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* ---------------------------------------------------------------------- */
+/*  player UI
+/* ---------------------------------------------------------------------- */
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 8px;
+  position: relative;
+}
+
+.player.melon .btn__prev-speed,
+.player.melon .btn__next-speed,
+.player.melon .player__controller-speed {
+  display: none;
+}
+
+.player.podcast .player__detail-desc {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.player.podcast .player__detail-desc2,
+.player.podcast .player__detail-desc2:before,
+.player.podcast .btn__replay,
+.player.podcast .btn__random {
+  display: none;
+}
+
+.player.audiobook .btn__prev-speed,
+.player.audiobook .btn__next-speed,
+.player.audiobook .player__controller-speed,
+.player.audiobook .btn__replay,
+.player.audiobook .btn__random {
+  display: none;
+}
+
+.player.audiobook .player__img .player__img-box {
+  background: url("../../assets/images/audiobook/nugu_audiobook_image.png") no-repeat 0 0;
+}
+
+.player.radio .btn__prev-speed,
+.player.radio .btn__next-speed,
+.player.radio .player__controller-speed,
+.player.radio .btn__replay,
+.player.radio .btn__random,
+.player.radio .player__detail-desc2,
+.player.radio .player__detail-desc2:before {
+  display: none;
+}
+
+.player.radio .player__detail-desc {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.player.dailybrifing .btn__prev-speed,
+.player.dailybrifing .btn__next-speed,
+.player.dailybrifing .player__controller-speed,
+.player.dailybrifing .btn__replay,
+.player.dailybrifing .btn__random,
+.player.dailybrifing .player__detail-desc2,
+.player.dailybrifing .player__detail-desc2:before {
+  display: none;
+}
+
+.player.dailybrifing .player__detail-desc {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.player.dailybrifing .player__img .player__img-box {
+  background: url("../../assets/images/dailybriefing/nugu_news_image.png") no-repeat 0 0;
+}
+
+.player.banner {
+  margin-left: 90px;
+}
+
+.player.banner .banner_area {
+  display: inline-block;
+  width: 230px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.player .banner_area {
+  display: none;
+}
+
+.player__img {
+  width: 230px;
+  height: 230px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.player__img .ico_favorite {
+  width: 44px;
+  height: 44px;
+  background-position: -356px -74px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.player__img .ico_favorite.on {
+  width: 44px;
+  height: 44px;
+  background-position: -404px -74px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.player__img .player__img-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.player__img .player__img-box:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 230px;
+  height: 230px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(30, 87, 153, 0)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.player__img .player__img-box .player_p_img {
+  width: 230px;
+  height: 230px;
+}
+
+.player__img .player__minute {
+  display: block;
+  position: absolute;
+  width: 230px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.player__info {
+  margin-left: 40px;
+  max-width: 820px;
+}
+
+.player__info .player__title {
+  display: block;
+  overflow: hidden;
+  max-width: 820px;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  font-family: "SKBRixHeadB", sans-serif-medium !important;
+  font-size: 3.6rem;
+  color: #333;
+}
+
+.player__info .player__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 5px;
+}
+
+.player__info .player__detail-desc {
+  display: block;
+  overflow: hidden;
+  max-width: 50%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  color: #666;
+  font-size: 3rem;
+}
+
+.player__info .player__detail-desc2 {
+  display: block;
+  overflow: hidden;
+  max-width: 50%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  color: #666;
+  font-size: 3rem;
+}
+
+.player__info .player__detail-desc2:before {
+  content: '|';
+  color: #666;
+  padding: 0 10px;
+}
+
+.player__progress {
+  width: 820px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 13px;
+}
+
+.player__progress .player__progress-bg {
+  width: 620px;
+  height: 5px;
+  display: block;
+  background: #cbcbcb;
+  text-align: left;
+  margin-top: 17px;
+}
+
+.player__progress .player__progress-bar {
+  display: inline-block;
+  vertical-align: top;
+  height: 5px;
+  background: #ff4909;
+}
+
+.player__progress .player__start,
+.player__progress .player__end {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.player__controller {
+  position: relative;
+  margin-top: 13px;
+}
+
+.player__controller:before, .player__controller:after {
+  display: table;
+  content: "";
+}
+
+.player__controller:after {
+  clear: both;
+}
+
+.player__controller .player__controller-left {
+  position: absolute;
+  left: -23px;
+  top: 0;
+}
+
+.player__controller .player__controller-right {
+  position: absolute;
+  right: -28px;
+  top: 0;
+}
+
+.player__controller .player__controller-speed {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  margin-top: 22px;
+  background: #fff;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ff4909;
+  font-family: "SKBRixHeadB", sans-serif-medium !important;
+}
+
+.btn__prev:focus, .btn__prev-speed:focus, .btn__play:focus, .btn__next:focus, .btn__next-speed:focus, .btn__pause:focus, .btn__replay:focus, .btn__random:focus {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: none;
+}
+
+.btn__prev:focus:before, .btn__prev-speed:focus:before, .btn__play:focus:before, .btn__next:focus:before, .btn__next-speed:focus:before, .btn__pause:focus:before, .btn__replay:focus:before, .btn__random:focus:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 74px;
+  height: 74px;
+  border: 3px solid #ff611b;
+  border-radius: 50%;
+  overflow: hidden;
+  content: '';
+}
+
+.btn__prev {
+  width: 80px;
+  height: 80px;
+  background-position: -168px -178px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__prev.disabled {
+  width: 80px;
+  height: 80px;
+  background-position: 0 -94px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__prev-speed {
+  width: 80px;
+  height: 80px;
+  background-position: -272px 0;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__play {
+  width: 80px;
+  height: 80px;
+  background-position: 0 -262px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__next {
+  width: 80px;
+  height: 80px;
+  background-position: -84px -178px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__next.disabled {
+  width: 80px;
+  height: 80px;
+  background-position: -272px -168px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__next-speed {
+  width: 80px;
+  height: 80px;
+  background-position: -84px -262px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__pause {
+  width: 80px;
+  height: 80px;
+  background-position: -168px -262px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__replay {
+  width: 80px;
+  height: 80px;
+  background-position: -188px -84px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__replay.select {
+  width: 80px;
+  height: 80px;
+  background-position: -272px -84px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__replay.one {
+  width: 80px;
+  height: 80px;
+  background-position: 0 -178px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__random {
+  width: 80px;
+  height: 80px;
+  background-position: -84px -94px;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.btn__random.select {
+  width: 80px;
+  height: 80px;
+  background-position: -188px 0;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999px;
+  background-image: url("../images/spr_img/spr_img.png");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+/* import */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  .player__img .ico_favorite {
+    width: 44px;
+    height: 44px;
+    background-position: -348px -70px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .player__img .ico_favorite.on {
+    width: 44px;
+    height: 44px;
+    background-position: -394px -70px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__prev {
+    width: 80px;
+    height: 80px;
+    background-position: -164px -174px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__prev.disabled {
+    width: 80px;
+    height: 80px;
+    background-position: 0 -92px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__prev-speed {
+    width: 80px;
+    height: 80px;
+    background-position: -266px 0;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__play {
+    width: 80px;
+    height: 80px;
+    background-position: 0 -256px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__next {
+    width: 80px;
+    height: 80px;
+    background-position: -82px -174px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__next.disabled {
+    width: 80px;
+    height: 80px;
+    background-position: -266px -164px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__next-speed {
+    width: 80px;
+    height: 80px;
+    background-position: -82px -256px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__pause {
+    width: 80px;
+    height: 80px;
+    background-position: -164px -256px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__replay {
+    width: 80px;
+    height: 80px;
+    background-position: -184px -82px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__replay.select {
+    width: 80px;
+    height: 80px;
+    background-position: -266px -82px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__replay.one {
+    width: 80px;
+    height: 80px;
+    background-position: 0 -174px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__random {
+    width: 80px;
+    height: 80px;
+    background-position: -82px -92px;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+  .btn__random.select {
+    width: 80px;
+    height: 80px;
+    background-position: -184px 0;
+    background-size: 509px auto;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url("../images/spr_img/spr_img_2x.png");
+    background-repeat: no-repeat;
+    content: '';
+  }
+}

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Containers
+/* ---------------------------------------------------------------------- */
+.container {
+	height: 430px;
+	width: 100%;
+	min-width: 1920px;
+	background: rgba(242,242,242,.97);
+	z-index:100;
+
+}
+.content_area {
+	position: relative;
+	height: 260px;
+	width: 100%;
+	min-width: 1920px;
+	@include clear();
+	
+	
+}
+.webview_area {
+	width: 1530px;
+	margin:0 auto;
+	position: relative;
+	z-index: 10;
+	@include clear();
+
+	&.wide {
+		width: 1730px;
+	}
+}
+.top_title_area {
+	height: 80px;
+	text-align: center;
+	font-family: $F-family-semi;
+	color: $C-font-light;
+	font-size: $F-size-big;
+	@include overflowHide;
+
+	.data {
+		display: inline-block;
+		padding-top: 25px;
+	}
+	.top_help-tip {
+		@include absolute(0, 65px, null, null);
+		margin: 30px 0 0 116px;
+		vertical-align: top;
+		font-family: $F-family-basic;
+		font-size: $F-size-24;
+		color: $C-font-gray_99;
+		&:before {
+			@include use-sprite(nugu_help_tip);
+			margin: 3px 7px 0 0;
+			vertical-align: top;
+			content: '';
+		}
+	}
+	.service_logo {
+		@include absolute(30px, 65px, null, null);
+		&.melon {
+			@include use-sprite(nugu_melon_control_logo);
+		}
+		&.wikipedia {
+			@include use-sprite(nugu_wikipedia_control_logo);
+		}
+		&.cjo {
+			@include use-sprite(nugu_cjoshopping_logo);
+		}
+	}
+}
+.help_area {
+	height: 80px;
+	text-align: center;
+	color: $C-font-light;
+	
+	.bottom_text-area {
+		@include border-radius-multi(19px,19px,19px,19px);
+		display: inline-block;
+		vertical-align: top;
+		border: 1px solid $C-font-gray_99;
+		height: 38px;
+		padding: 0 20px;
+		line-height: 38px;
+		font-size:$F-size-small;
+		color: $C-font-light;
+		&:before {
+			@include use-sprite(nugu_general_grammer_mic);
+			margin:7px 5px 0 0;
+			vertical-align: top;
+			content:'';
+		}
+	}
+}

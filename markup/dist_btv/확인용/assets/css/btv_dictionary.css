@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_어학사전
+/* ---------------------------------------------------------------------- */
+.dictionary_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4px;
+}
+
+.dictionary_wrap .dictionary_box {
+  max-width: 1528px;
+  height: 233px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.dictionary_wrap .dictionary_box:before {
+  content: '';
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  margin-right: 40px;
+  overflow: hidden;
+  background: url("../../assets/images/dictionary/nugu_dictionary_image.png") no-repeat 0 0;
+}
+
+.dictionary_wrap .dictionary_box__info {
+  word-break: keep-all;
+  font-size: 3.6rem;
+  line-height: 1.5;
+}
+
+.dictionary_wrap .dictionary_box .data {
+  display: block;
+  overflow: hidden;
+  max-width: 1030px;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.dictionary_wrap .dictionary_box .data:only-child {
+  font-size: 4.8rem;
+}

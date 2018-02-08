@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* ---------------------------------------------------------------------- */
+/*  card UI
+/* ---------------------------------------------------------------------- */
+.card_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap__item {
+  width: 196px;
+  height: 232px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px 0 #f2f2f2;
+          box-shadow: 0 0 1px 0 #f2f2f2;
+  margin: 0 5px;
+}
+
+.card_wrap2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap2__item {
+  width: 269px;
+  height: 250px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_도움말
+/* ---------------------------------------------------------------------- */
+.help_card_wrap {
+  margin-top: 7px;
+}
+
+.help_card_wrap .help_card {
+  margin: 0 30px;
+}
+
+.help_card_wrap .help_card__title {
+  padding: 12px 0 9px;
+  border-bottom: 2px solid #ccc;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.help_card_wrap .help_card__list {
+  margin-top: 27px;
+}
+
+.help_card_wrap .help_card__list-item {
+  margin-top: 3px;
+  font-size: 2.4rem;
+  color: #666;
+}
+
+.help_card_wrap .help_card__list-item .data {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 375px;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.help_card_wrap .help_card__list-item:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
+  height: 26px;
+  margin: 2px 4px 0 0;
+  background: url("../../assets/images/help/nugu_advice_icon_mic.png") no-repeat 0 0;
+}
+
+.help_card_wrap .card_wrap__item {
+  width: 472px;
+  height: 234px;
+  background: #fcfcfc;
+  border-radius: 1px;
+  margin: 0 5px;
+}
+
+.help_card_wrap .card_wrap__item.none {
+  display: none;
+}
+
+.help_wrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0;
+  padding-top: 7px;
+}
+
+.help_wrap .card_wrap__item {
+  position: relative;
+  background: #fcfcfc;
+  margin: 0 5px;
+}
+
+.help_wrap .card_wrap__item.active:before {
+  content: '';
+  width: 196px;
+  height: 232px;
+  position: absolute;
+  border: 8px solid #ff4909;
+  border-radius: 3px;
+  left: -8px;
+  top: -8px;
+}
+
+.help_wrap .card_wrap__item.active .help_default_card__order-info {
+  border-color: #ff4909;
+  background: #ff4909;
+  color: #fff;
+}
+
+.help_wrap .card_wrap__item.active .help_default_card__order-info:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 15px;
+  background: url("../../assets/images/help/nugu_advice_icon_mic2_on.png") no-repeat 0 0;
+  background-size: 10px 15px;
+  margin: 6px 5px 0 0;
+}
+
+.help_wrap .help_default_card .help_s_img {
+  width: 126px;
+  height: 126px;
+}
+
+.help_wrap .help_default_card__order {
+  text-align: right;
+  margin: 9px 9px 0;
+  height: 40px;
+}
+
+.help_wrap .help_default_card__order-info {
+  display: inline-block;
+  vertical-align: top;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 14px;
+  font-size: 1.6rem;
+  line-height: 29px;
+  font-weight: bold;
+}
+
+.help_wrap .help_default_card__order-info:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 15px;
+  background: url("../../assets/images/help/nugu_advice_icon_mic2.png") no-repeat 0 0;
+  background-size: 10px 15px;
+  margin: 6px 5px 0 0;
+}
+
+.help_wrap .help_default_card__picto {
+  margin-top: 0;
+  text-align: center;
+}
+
+.help_wrap .help_default_card__domain {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.help_wrap .help_default_card__nodata {
+  display: none;
+}

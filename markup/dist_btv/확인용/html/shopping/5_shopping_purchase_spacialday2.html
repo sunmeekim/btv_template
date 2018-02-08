@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 2-5-5. 구매목록 조회 > 지정일이 과거일 경우_구매목록2개이상 : Btv_shopping</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../assets/js/test_ui.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_shopping.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">11번가 추천상품</span>
+        </div>
+        <div class="content_area">
+                <!-- start: Btv template -->
+                
+<div class="webview_area">
+	<div class="shopping_wrap">
+		<!-- start:상품정보 -->
+		<div class="shopping_mybox">
+			<div class="shopping_myinfo">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="shopping_myinfo__img"><img src="../../assets/images/test/shopping/test_img.png" class="shopping_menu_img" alt="쇼핑제품 이미지"/></span>
+				<div class="shopping_myinfo__info">
+					<div class="shopping_myinfo__order-info">
+						<span class="shopping_myinfo__order-state">배송완료</span>
+						<span class="shopping_myinfo__state-date">YYYY.MM.DD</span>
+					</div>
+					<div class="shopping_myinfo__title">
+						
+						<!-- [D] 해당 제품 타이틀 -->
+						<h3 class="shopping_myinfo__title-main">
+							<span class="shopping_myinfo__text-ellipsis"><span class="data">농심 안성탕면 골드 40봉 2BOX 농심안성탕면골드40봉2BOX</span></span>
+						</h3>
+						<!-- [D] 해당 제품 서브타이틀(도서의 경우 저자 정보) 없을경우 빼주세요. -->
+						<span class="shopping_box2__title-sub">
+							<span class="shopping_box2__text-ellipsis"><span class="data">이나영 저/ 누구 그림</span></span>
+						</span>
+					</div>
+	
+					<div class="shopping_myinfo__data">
+						<div class="shopping_myinfo__data-detail">
+							
+							<!-- [D] 해당 제품 배송정보 -->
+							<p class="shopping_myinfo__data-delivery"><span class="data">무료배송</span></p>
+						</div>
+						<div class="shopping_myinfo__data-price">
+							
+							<!-- [D] 해당 제품 최종결제가 -->
+							<strong class="shopping_myinfo__after-price"><span class="data">8,824,600원</span></strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end:상품정보 -->
+
+
+		<!-- start:상품정보 -->
+		<div class="shopping_mybox">
+				
+			<div class="shopping_myinfo">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="shopping_myinfo__img"><img src="../../assets/images/test/shopping/test_img.png" class="shopping_menu_img" alt="쇼핑제품 이미지"/></span>
+				<div class="shopping_myinfo__info">
+					<div class="shopping_myinfo__order-info">
+						<span class="shopping_myinfo__order-state">배송중</span>
+						<span class="shopping_myinfo__state-date">YYYY.MM.DD</span>
+					</div>
+					<div class="shopping_myinfo__title">
+						
+						<!-- [D] 해당 제품 타이틀 -->
+						<h3 class="shopping_myinfo__title-main">
+							<span class="shopping_myinfo__text-ellipsis"><span class="data">농심 안성탕면 골드 40봉 2BOX 농심안성탕면골드40봉2BOX</span></span>
+						</h3>
+						<!-- [D] 해당 제품 서브타이틀(도서의 경우 저자 정보) 없을경우 빼주세요. -->
+						<!-- <span class="shopping_box2__title-sub">
+							<span class="shopping_box2__text-ellipsis"><span class="data">이나영 저/ 누구 그림</span></span>
+						</span> -->
+					</div>
+	
+					<div class="shopping_myinfo__data">
+						<div class="shopping_myinfo__data-detail">
+							
+							<!-- [D] 해당 제품 배송정보 -->
+							<p class="shopping_myinfo__data-delivery"><span class="data">무료배송</span></p>
+						</div>
+						<div class="shopping_myinfo__data-price">
+							
+							<!-- [D] 해당 제품 최종결제가 -->
+							<strong class="shopping_myinfo__after-price"><span class="data">8,824,600원</span></strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end:상품정보 -->
+		
+	</div>
+</div>
+                <!-- end: Btv template -->
+
+
+                <!-- start: 이전 다음 버튼 -->
+                <div class="pagenate">
+    <div class="pagenate__prev">
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+
+    <div class="pagenate__next">
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+                <!-- end: 이전 다음 버튼 -->
+        </div>
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+
+</body>
+</html>

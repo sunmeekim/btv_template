@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* ---------------------------------------------------------------------- */
+/*  card UI
+/* ---------------------------------------------------------------------- */
+.card_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap__item {
+  width: 196px;
+  height: 232px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px 0 #f2f2f2;
+          box-shadow: 0 0 1px 0 #f2f2f2;
+  margin: 0 5px;
+}
+
+.card_wrap2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap2__item {
+  width: 269px;
+  height: 250px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_melon
+/* ---------------------------------------------------------------------- */
+.playerlst {
+  margin-top: 7px;
+}
+
+.playerlst.active .playerlst__img:before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 165px;
+  height: 165px;
+  border: 3px solid #ff4909;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.playerlst.active .playerlst__count {
+  border-color: #ff4909;
+  background: #ff4909;
+  color: #fff;
+}
+
+.playerlst.active .playerlst__count:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 15px;
+  background: url("../../assets/images/melon/nugu_advice_icon_mic2_on.png") no-repeat 0 0;
+  background-size: 10px 15px;
+  margin: 6px 5px 0 0;
+}
+
+.playerlst__img {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.playerlst__img .playerlst_d_img {
+  width: 165px;
+  height: 165px;
+}
+
+.playerlst__img .playerlst__count {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  font-size: 1.6rem;
+  line-height: 29px;
+  font-family: "SKBRixHeadB", sans-serif-medium !important;
+}
+
+.playerlst__img .playerlst__count:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 15px;
+  background: url("../../assets/images/melon/nugu_advice_icon_mic2.png") no-repeat 0 0;
+  background-size: 10px 15px;
+  margin: 6px 5px 0 0;
+}
+
+.playerlst__title {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+  margin-top: 10px;
+}
+
+.playerlst__total {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #666;
+}

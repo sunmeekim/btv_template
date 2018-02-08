@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 13. 운세</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_fortune.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_fortune_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">오늘 운세 입니다.</span>
+        </div>
+        
+        <!-- 오늘의 운세 -->
+        <div class="content_area" id="fortune">
+                <!-- start: Btv template -->
+                
+<div class="webview_area">
+	<div class="fortune_wrap">
+		<!-- [D] 오늘의 운세 대표이미지 -->
+		<div class="fortune_wrap__img">
+			<img src="../../assets/images/test/fortune/nugu_fortune_animal_rooster.png" class="fortune_d_img" alt="운세 이미지"/>
+		</div>
+		<div class="fortune_wrap__info">
+			<h3 class="fortune_wrap__title">
+				<!-- [D] 오늘의 운세 생년월일 -->
+				<span class="fortune_wrap__title-year"><span class="data">1994년12월30일</span></span>
+				<!-- [D] 오늘의 운세 띠 -->
+				<span class="fortune_wrap__zodiac"><span class="data">원숭이띠</span> </span> /
+				<!-- [D] 오늘의 운세 별자리 -->
+				<span class="fortune_wrap__astromanic"><span class="data">물고기 자리</span> </span>
+			</h3>
+			<div class="fortune_wrap__desc">
+				<!-- [D] 오늘의 운세 내용 3줄 말줄임 처리 중 스크롤 없음 -->
+				<span class="data">
+					당신의 뜻을 마음껏 펼칠 수 있는 한 해가 될 거에요. 운의 흐름도 유리하고, 주변 여건도 좋은 시기입니다. 당신의 노력만 뒷받침된다면, 남들이 부러워할 만한 성과가 있을 거에요. 평소에 바라던 일, 인생의 목표가 있다면, 이번에 도전해 보세요.
+				</span>	
+			</div>
+		</div>
+	</div>
+</div>
+                <!-- end: Btv template -->
+                <!-- start: 이전 다음 버튼 -->
+                <div class="pagenate">
+    <div class="pagenate__prev">
+        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate__next disabled">
+        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+                <!-- end: 이전 다음 버튼 -->
+        </div>
+        <!-- 오늘의 띠 운세 -->
+        <div class="content_area" id="zodiacSign">
+                <!-- start: Btv template -->
+                
+<div class="webview_area">
+	<div class="fortune_wrap">
+		<!-- [D] 오늘의 운세 띠별 대표이미지 -->
+		<div class="fortune_wrap__img">
+			<img src="../../assets/images/test/fortune/nugu_fortune_animal_monkey.png" class="fortune_d_img" alt="운세 이미지"/>
+		</div>
+		<div class="fortune_wrap__info">
+			<h3 class="fortune_wrap__title">
+				<!-- [D] 오늘의 운세 띠별 년월일 -->
+				<!-- 생년월일이 필요할 경우 <span class="fortune_wrap__title-year"><span class="data">1994년12월30일</span></span> -->
+				<!-- [D] 오늘의 운세 띠이름 -->
+				<span class="fortune_wrap__zodiac"><span class="data">원숭이띠</span> </span>
+			</h3>
+			<div class="fortune_wrap__desc">
+				<!-- [D] 오늘의 운세 내용 3줄 말줄임 처리 중 스크롤 없음 -->
+				<span class="data">
+					기회를 잘 잡아야 이익을 볼 수 있습니다. 타이밍을 잘 노려야 합니다. 
+					당신에게 좋은 운이 따르고 있으니 용기를 내 움직이세요.
+					조금은 어려운 일이 생기거나 스트레스가 쌓이는 일이 주위에 있지만 당신의 노력으로 그 모든것을 극복해 낼 수 있습니다. 
+					당신이 하는일마다 그일의 성과가 좋게 나오니 당신 스스로도 오늘 하루는 만족스러운 하루라고 해도 과언이 아닐 것입니다. 
+					기회를 놓치지만 않으면 결과는 당신의 편입니다. 다만 건강상에 무리가 오지 않도록 유의하십시오.
+				</span>	
+			</div>
+		</div>
+	</div>
+</div>
+                <!-- end: Btv template -->
+        </div>
+        <!-- 오늘의 별자리 운세 -->
+        <div class="content_area" id="starSign">
+                <!-- start: Btv template -->
+                <div class="webview_area">
+		<div class="fortune_wrap">
+			<!-- [D] 오늘의 운세 별자리 대표이미지 -->
+			<div class="fortune_wrap__img">
+				<img src="../../assets/images/test/fortune/nugu_fortune_star_pisces.png" class="fortune_d_img" alt="운세 이미지"/>
+			</div>
+			<div class="fortune_wrap__info">
+				<h3 class="fortune_wrap__title">
+					<!-- [D] 오늘의 운세 별자리 월/일 -->
+					<span class="fortune_wrap__title-year"><span class="data">12월30일</span></span>
+					<!-- [D] 오늘의 운세 별자리 이름 -->
+					<span class="fortune_wrap__astromanic"><span class="data">물고기 자리</span> </span>
+				</h3>
+				<div class="fortune_wrap__desc">
+					<!-- [D] 오늘의 운세 내용 3줄 말줄임 처리 중 스크롤 없음 -->
+					<span class="data">
+						기회를 잘 잡아야 이익을 볼 수 있습니다. 타이밍을 잘 노려야 합니다. 
+						당신에게 좋은 운이 따르고 있으니 용기를 내 움직이세요.
+						조금은 어려운 일이 생기거나 스트레스가 쌓이는 일이 주위에 있지만 당신의 노력으로 그 모든것을 극복해 낼 수 있습니다. 
+						당신이 하는일마다 그일의 성과가 좋게 나오니 당신 스스로도 오늘 하루는 만족스러운 하루라고 해도 과언이 아닐 것입니다. 
+						기회를 놓치지만 않으면 결과는 당신의 편입니다. 다만 건강상에 무리가 오지 않도록 유의하십시오.
+					</span>	
+				</div>
+			</div>
+		</div>
+	</div>
+                <!-- end: Btv template -->
+        </div>	
+
+
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+        <ul class="case__list">
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'fortune')" id="defaultOpen">오늘의 운세</a></li>-->
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'zodiacSign')" >오늘의 띠 운세</a></li>-->
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'starSign')" >오늘의 별자리 운세</a></li>-->
+                <li class="case__item"><a href="#fortune" class="case__link" id="defaultOpen">오늘의 운세</a></li>
+                <li class="case__item"><a href="#zodiacSign" class="case__link" >오늘의 띠 운세</a></li>
+                <li class="case__item"><a href="#starSign" class="case__link" >오늘의 별자리 운세</a></li>
+        </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+	<script src="../../assets/js/test_ui.js"></script>
+</body>
+</html>

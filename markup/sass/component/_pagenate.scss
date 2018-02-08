@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Pagenate UI
+/* ---------------------------------------------------------------------- */
+
+%remotebtn {
+    @include border-radius-multi(14px,14px,14px,14px);
+    display: inline-block;
+    vertical-align: top;
+    height: 28px;
+    width: 73px;
+    border: 1px solid $C-border-gray_d9;
+    text-align: center;
+    background: $C-light-gray_fc;
+}
+%remotebtn_s {
+    @include border-radius-multi(13px,13px,13px,13px);
+    @extend %remotebtn;
+    width: 73px;
+    height: 26px;
+}
+.pagenate {
+    @include absolute(0,0,0,0);
+    width: $G-contents-wide;
+    z-index: 1;
+    margin: 0 auto;
+    
+    &__prev {
+        @include absolute(50%,null,null,50px);
+        margin-top: -83px;
+        width: 140px;
+        text-align: center;
+        &.disabled {
+            @include opacity(.3);
+        }
+    }
+    &__btn-prev {
+        @include use-sprite(btn__prev);
+        margin-top: 13px;
+    }
+    &__next {
+        @include absolute(50%,50px,null,null);
+        margin-top: -83px;
+        width: 140px;
+        text-align: center;
+        &.disabled {
+            @include opacity(.3);
+        }
+    }
+    &__btn-next {
+        @include use-sprite(btn__next);
+        margin-top: 13px;
+    }
+    &__paging {
+        font-family: $F-family-bold;
+        font-size: $F-size-19;
+        color: $C-font-light;
+        text-align: center;
+        margin-top: 3px;
+        .current {
+            color: $C-font-dark;
+        }
+    }
+    &__remote_wrap{
+        display:block;
+        margin-top: 3px;
+    }
+    &__remote_prev {
+        @extend %remotebtn;
+
+        &:before {
+            @include use-sprite(btn__prev2);
+            margin-top: 6px;
+            vertical-align: top;
+            content:'';
+        }
+    }
+    &__remote_next {
+        @extend %remotebtn;
+        &:before {
+            @include use-sprite(btn__next2);
+            margin-top: 6px;
+            vertical-align: top;
+            content:'';
+        }
+    }
+    &__voice_wrap {
+        display: block;
+        margin-top: 15px;
+    }
+    &__voice_ordertxt {
+        @include border-radius-multi(16px,16px,16px,16px);
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid $C-border-gray_9d;
+        height: 32px;
+        padding: 0 10px;
+        font-size: $F-size-19;
+        color: $C-font-light;
+        font-family: $F-family-bold;
+        line-height: 32px;
+        background: $C-light-gray_fc;
+
+        &:before {
+            @include use-sprite(nugu_advice_icon_mic);
+            margin: 7px 3px 0 0;
+            vertical-align: top;
+            content:'';
+        }
+
+    }
+    
+}
+.pagenate_s {
+    @include absolute(0,0,0,0);
+    z-index: 1;
+    margin: 0 auto;
+
+    &__prev {
+        @include absolute(50%,null,null,0);
+        margin-top: -77px;
+        width: 123px;
+        text-align: center;
+        &.disabled {
+            @include opacity(.3);
+        }
+    }
+    &__btn-prev {
+        @include use-sprite(btn_s_prev);
+        margin-top: 8px;
+    }
+    &__next {
+        @include absolute(50%,0,null,null);
+        margin-top: -77px;
+        width: 123px;
+        text-align: center;
+
+        &.disabled {
+            @include opacity(.3);
+        }
+    }
+    &__btn-next {
+        @include use-sprite(btn_s_next);
+        margin-top: 8px;
+    }
+    &__paging {
+        margin-top: 3px;
+        text-align: center;
+        font-size: $F-size-20;
+        color: $C-font-light;
+        .current {
+            color: $C-font-dark;
+        }
+    }
+    &__remote_wrap{
+        display:block;
+        margin-top: 3px;
+    }
+    &__remote_prev {
+        @extend %remotebtn_s;
+        &:before {
+            @include use-sprite(btn_s_prev2);
+            margin-top: 7px;
+            vertical-align: top;
+            content:'';
+        }
+    }
+    &__remote_next {
+        @extend %remotebtn_s;
+        &:before {
+            @include use-sprite(btn_s_next2);
+            margin-top: 7px;
+            vertical-align: top;
+            content:'';
+        }
+    }
+    &__voice_wrap {
+        display: block;
+        margin-top: 15px;
+    }
+    &__voice_ordertxt {
+        @include border-radius-multi(14px,14px,14px,14px);
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid $C-border-gray_9d;
+        height: 28px;
+        padding: 0 10px;
+        font-family: $F-family-bold;
+        font-size: $F-size-19;
+        color: $C-font-light;
+        line-height: 28px;
+        background: #fcfcfc;
+
+        &:before {
+            @include use-sprite(nugu_general_grammer_mic);
+            margin: 4px 3px 0 0;
+            vertical-align: top;
+            content:'';
+        }
+
+    }
+}

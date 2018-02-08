@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_melon
+/* ---------------------------------------------------------------------- */
+%voice_order_focus {
+    border-color: $C-font-point;
+    color: $C-white;
+    background: $C-font-point;
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2_on);
+        content:'';
+    }
+}
+%active {
+    @include absolute(-1px, -1px, -1px, -1px);
+    border: 6px solid $C-font-point;
+}
+%img158 {
+    width: 158px;
+    height: 158px;
+}
+%img148 {
+    width: 148px;
+    height: 148px;
+}
+.voice_order {
+    @include absolute(10px, 10px, null, null);
+    @include border-radius-multi(14px,14px,14px,14px);
+    height: 28px;
+    padding:0 10px;
+    border: 1px solid $C-font-dark;
+    font-size: $F-size-16;
+    font-family: $F-family-bold;
+    line-height: 29px;
+    color: $C-font-dark;
+    background-color: rgba(255,255,255,.5);
+
+    &:before {
+        @include use-sprite(nugu_advice_icon_mic2);
+        margin: 6px 5px 0 0;
+        vertical-align: top;
+        content:'';
+    }
+
+}
+.playerlst {
+    margin-top: 7px;
+    width: 269px;
+
+    &.active,
+    &:focus {
+        outline: 0;
+        .playerlst__img {
+            &:before {
+                @include absolute(0 , null, null, 0);
+                @extend %img148;
+                border: 5px solid $C-font-point;
+                z-index: 2;
+                content:'';
+            }
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+        }
+        .playerlst__count {
+            border-color: $C-font-point;
+            background: $C-font-point;
+            color: $C-white;
+            &:before {
+                @include use-sprite(nugu_advice_icon_mic2_on);
+                margin: 6px 5px 0 0;
+                vertical-align: top;
+                content:'';
+            }
+        }
+    }
+    &__img {
+        @extend %img158;
+        position: relative;
+        margin : 0 auto;
+        outline: 0;
+        &:focus {
+            &:before {
+                @extend %active;
+                content:'';
+            }
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+        }
+        .playerlst_d_img {
+            @extend %img158;
+        }
+        
+    }
+    &__title {
+        @include ellipsis (block, 100%);
+        margin-top: 10px;
+        text-align: center;
+        font-size: $F-size;
+        color: $C-black;
+    }
+    &__total {
+        @include ellipsis (block, 100%);
+        text-align: center;
+        font-size: $F-size-under;
+        color: $C-font-light; 
+    }
+}

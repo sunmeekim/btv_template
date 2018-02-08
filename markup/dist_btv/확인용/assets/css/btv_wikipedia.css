@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_위키피디아
+/* ---------------------------------------------------------------------- */
+.wikipedia_wrap {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -3px;
+}
+
+.wikipedia_wrap .wikipedia_block {
+  max-width: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wikipedia_wrap .wikipedia_block:before {
+  content: '';
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url("../../assets/images/wikipedia/nugu_wiki_image.png") no-repeat 0 0;
+}
+
+.wikipedia_wrap .wikipedia_block .data {
+  max-width: 1030px;
+  margin-left: 40px;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 232.5px;
+  font-size: 3rem;
+  text-overflow: ellipsis;
+  line-height: 1.55;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.wikipedia_wrap .wikipedia_block .data strong {
+  color: #ff4909;
+}

@@ -1,0 +1,65 @@
+@mixin spr_member_2x($important:null){
+    @if $important {
+        $important : unquote('!important');
+    }
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url('../images/spr_img/spr_member_2x.png') $important;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+$spr_member_2x: (
+    spritesheet_name: spr_member_2x,
+    total_width: 752px,
+    total_height: 500px,
+    total_width_retina: 376px,
+    total_height_retina: 250px,
+    m_icon1: (
+        offset_x: 0,
+        offset_y: 0,
+        width: 248px,
+        height: 248px,
+        offset_x_retina: 0,
+        offset_y_retina: 0,
+        width_retina: 124px,
+        height_retina: 124px),
+    m_icon2: (
+        offset_x: -252px,
+        offset_y: 0,
+        width: 248px,
+        height: 248px,
+        offset_x_retina: -126px,
+        offset_y_retina: 0,
+        width_retina: 124px,
+        height_retina: 124px),
+    m_icon3: (
+        offset_x: 0,
+        offset_y: -252px,
+        width: 248px,
+        height: 248px,
+        offset_x_retina: 0,
+        offset_y_retina: -126px,
+        width_retina: 124px,
+        height_retina: 124px),
+    m_icon4: (
+        offset_x: -252px,
+        offset_y: -252px,
+        width: 248px,
+        height: 248px,
+        offset_x_retina: -126px,
+        offset_y_retina: -126px,
+        width_retina: 124px,
+        height_retina: 124px),
+    m_icon5: (
+        offset_x: -504px,
+        offset_y: 0,
+        width: 248px,
+        height: 248px,
+        offset_x_retina: -252px,
+        offset_y_retina: 0,
+        width_retina: 124px,
+        height_retina: 124px),
+);

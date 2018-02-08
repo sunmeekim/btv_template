@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 15. 홈쇼핑(CJO쇼핑) : Btv_homeshopping</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_homeshopping.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_homeshopping_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+    <div class="top_title_area">
+        <span class="data">씨제이 오쇼핑입니다.</span>
+        <span class="service_logo cjo"></span>
+    </div>
+
+    <!-- CJ오쇼핑 상품목록 -->
+    <div class="content_area" id="default">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+
+		<a href="#첫번째" class="homeshopping_lst">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_lst__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_lst__info">
+				<div class="homeshopping_lst__title">
+					<span class="voice_order">첫번째</span>
+					<h3 class="homeshopping_lst__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+				</div>
+
+				<div class="homeshopping_lst__value">
+					<span class="homeshopping_lst__value-label">고객 맞춤가</span>
+					<span class="homeshopping_lst__value-price">824,600원</span>
+				</div>
+			</div>
+		</a>
+
+		<!-- 품절상태 일 때  disabled를 넣어주세요 . 상담으로 신청하는 상품은 counsel클래스를 넣어주세요.-->
+		<a href="#두번째" class="homeshopping_lst counsel">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_lst__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_lst__info">
+				<div class="homeshopping_lst__title">
+					<span class="voice_order">두번째</span>
+					<h3 class="homeshopping_lst__title-main">최저가SALE</h3>
+				</div>
+
+				<div class="homeshopping_lst__value">
+					<span class="homeshopping_lst__value-label">전화 상담 신청 상품</span>
+					<span class="homeshopping_lst__value-price">999,999,999원</span>
+				</div>
+			</div>
+		</a>
+
+	</div>
+</div>
+        <!-- end: Btv template -->
+        <!-- start: 이전 다음 버튼 -->
+        <div class="pagenate">
+    <div class="pagenate__prev">
+        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate__next disabled">
+        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+        <!-- end: 이전 다음 버튼 -->
+    </div>
+    <!-- CJ오쇼핑 상품옵션선택 -->
+    <div class="content_area" id="homeshopping_option">
+        <!-- start: Btv template -->
+        
+<div class="webview_area wide">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_select">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_select__info">
+				<div class="homeshopping_select__vlu">
+					<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+					<div class="homeshopping_select__value">
+						<span class="homeshopping_select__value-label">고객 맞춤가</span>
+						<span class="homeshopping_select__value-price">824,600원</span>
+					</div>
+				</div>
+				<div class="homeshopping_select__opt">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#option1" class="homeshopping_select__opt-item active">옵션111</a>
+					<a href="#option2" class="homeshopping_select__opt-item">옵션222</a>
+					<a href="#option3" class="homeshopping_select__opt-item">옵션33333333333</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="homeshopping_option">
+			<ul class="card_wrap">
+				<!-- Start:정상데이터가 있을 경우 리모콘 활성화시 active클래스 추가 -->
+				<li class="card_wrap__item">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#none" class="homeshopping_option__link active">
+						<!-- [D] 차례 -->
+						<span class="voice_order">첫번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10</span></div>
+					</a>
+				</li>
+				<!-- //End:정상데이터가 있을 경우 -->
+
+				<li class="card_wrap__item disabled">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">두번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10 <em>(품절)</em></span></div>
+					</a>
+				</li>
+				<li class="card_wrap__item">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">세번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10+시트러스10</span></div>
+					</a>
+				</li>
+				<li class="card_wrap__item">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">네번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10+시트러스10+밀싹10카카오10+베리믹스10+시트러스10+밀싹10</span></div>
+					</a>
+				</li>
+			</ul>
+
+			<!-- start: 이전 다음 버튼 -->
+			<!-- [D] 4개 이하일 경우 페이징이 나타나지 않습니다 -->
+			<div class="pagenate_s">
+    <div class="pagenate_s__prev">
+        <button class="pagenate_s__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate_s__voice_wrap">
+            <span class="pagenate_s__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate_s__remote_wrap">
+            <span class="pagenate_s__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate_s__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate_s__next disabled">
+        <button class="pagenate_s__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate_s__voice_wrap">
+            <span class="pagenate_s__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate_s__remote_wrap">
+            <span class="pagenate_s__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate_s__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+			<!-- end: 이전 다음 버튼 -->
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 상품갯수선택 -->
+    <div class="content_area" id="homeshopping_quantity">
+        <!-- start: Btv template -->
+        
+<div class="webview_area wide">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_select">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_select__info">
+				<div class="homeshopping_select__vlu">
+					<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+					<div class="homeshopping_select__value">
+						<span class="homeshopping_select__value-label">고객 맞춤가</span>
+						<span class="homeshopping_select__value-price">824,600원</span>
+					</div>
+				</div>
+				<div class="homeshopping_select__opt">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#option1" class="homeshopping_select__opt-item">옵션1</a>
+					<a href="#option2" class="homeshopping_select__opt-item">옵션222</a>
+					<a href="#option3" class="homeshopping_select__opt-item">옵션33333333333</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="homeshopping_option">
+			<ul class="card_wrap">
+				<!-- Start:정상데이터가 있을 경우 리모콘 활성화시 active클래스 추가 -->
+				<li class="card_wrap__item quantity">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#none" class="homeshopping_option__link active">
+						<!-- [D] 차례 -->
+						<span class="voice_order">첫번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">한 개</span></div>
+					</a>
+				</li>
+				<!-- //End:정상데이터가 있을 경우 -->
+
+				<li class="card_wrap__item quantity">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">두번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">두 개</span></div>
+					</a>
+				</li>
+				<li class="card_wrap__item quantity">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">세번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">세 개</span></div>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 약관동의 -->
+    <div class="content_area" id="homeshopping_policy">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_policy">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">전화 상담 신청 상품</span>
+							<!--<span class="homeshopping_select__value-price">824,600원</span>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="homeshopping_agreement">
+				<div>
+					<div class="homeshopping_agreement__contents">본 상담을 위해 고객님의 성명 및 전화번호를 <br>제공하는 것에 동의하십니까? </div>
+					<div class="homeshopping_agreement__attend">미동의 시 상담 예약이 진행되지 않습니다.</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="btnbox">
+			<div class="btn_large active">
+				<a href="#agreement" class="btn_large-link">
+					<span class="data">동의</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 상담신청완료 -->
+    <div class="content_area" id="homeshopping_track">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+
+		<div class="homeshopping_track">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_track__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img_v2" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_track__info">
+				<div class="homeshopping_track__title">
+					<div class="homeshopping_track__title-top">
+						<span class="bedge">상담 신청 완료</span>
+						<span class="homeshopping_track__date">YYYY.MM.DD</span>
+					</div>
+
+					<h3 class="homeshopping_track__title-main">일이삼사오육칠팔구십</h3>
+					<div class="homeshopping_track__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<a href="#option1" class="homeshopping_track__opt-item">레오파드 그레이</a>
+						<a href="#option2" class="homeshopping_track__opt-item">레오파드</a>
+						<a href="#option3" class="homeshopping_track__opt-item">수량 3</a>
+					</div>
+				</div>
+
+				<div class="homeshopping_track__value">
+
+					<span class="homeshopping_track__value-price">824,600원</span>
+					<span class="homeshopping_track__value-label">카드결제</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="homeshopping_track">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_track__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img_v2" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_track__info">
+				<div class="homeshopping_track__title">
+					<div class="homeshopping_track__title-top">
+						<span class="bedge">상담 신청 완료</span>
+						<span class="homeshopping_track__date">YYYY.MM.DD</span>
+					</div>
+					<h3 class="homeshopping_track__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+					<div class="homeshopping_track__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<a href="#option1" class="homeshopping_track__opt-item">레오파드 그레이</a>
+						<a href="#option2" class="homeshopping_track__opt-item">레오파드</a>
+						<a href="#option3" class="homeshopping_track__opt-item">수량 3</a>
+					</div>
+				</div>
+
+				<div class="homeshopping_track__value">
+
+					<span class="homeshopping_track__value-price">824,600원</span>
+					<span class="homeshopping_track__value-label">카드결제</span>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 결제하기 -->
+    <div class="content_area" id="homeshopping_order">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_order">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">고객 맞춤가</span>
+							<span class="homeshopping_select__value-price">824,600원</span>
+						</div>
+					</div>
+					<div class="homeshopping_select__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<span class="homeshopping_select__opt-item">레오파드 그레이</span>
+						<span class="homeshopping_select__opt-item">44</span>
+						<span class="homeshopping_select__opt-item">수량 3</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="homeshopping_payment">
+				<div class="homeshopping_payment__label">
+					<span class="homeshopping_payment__11pay"></span>
+					<span class="homeshopping_payment__name">최종 결제금액</span>
+				</div>
+				<div class="homeshopping_payment__price">30,000,000원</div>
+				<div class="homeshopping_payment__detail">(10,000,000원 X 3개)</div>
+			</div>
+		</div>
+		<div class="btnbox">
+			<div class="btn_large active">
+				<a href="#agreement" class="btn_large-link">
+					<span class="data">결제</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- CJ오쇼핑 결제하기(리모콘) -->
+    <div class="content_area" id="homeshopping_order_remote-control">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_order">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">고객 맞춤가</span>
+							<span class="homeshopping_select__value-price">824,600원</span>
+						</div>
+					</div>
+					<div class="homeshopping_select__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<span class="homeshopping_select__opt-item">레오파드 그레이</span>
+						<span class="homeshopping_select__opt-item">44</span>
+						<span class="homeshopping_select__opt-item">수량 3</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="homeshopping_payment">
+				<div class="homeshopping_payment__label">
+					<span class="homeshopping_payment__11pay"></span>
+					<span class="homeshopping_payment__name">최종 결제금액</span>
+				</div>
+				<div class="homeshopping_payment__price">30,000,000원</div>
+				<div class="homeshopping_payment__detail">(10,000,000원 X 3개)</div>
+			</div>
+		</div>
+		<div class="btnbox">
+			<div class="btn_double">
+				<a href="#agreement" class="btn_double__link active">
+					<span class="data">확인</span>
+				</a>
+				<a href="#agreement" class="btn_double__link">
+					<span class="data">취소</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- CJ오쇼핑 CJ오쇼핑 상담원 결제 -->
+    <div class="content_area" id="homeshopping_callcashing">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_order">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">고객 맞춤가</span>
+							<span class="homeshopping_select__value-price">824,600원</span>
+						</div>
+					</div>
+					<div class="homeshopping_select__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<span class="homeshopping_select__opt-item">레오파드 그레이</span>
+						<span class="homeshopping_select__opt-item">44</span>
+						<span class="homeshopping_select__opt-item">수량 3</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="homeshopping_custom">
+				<div class="homeshopping_custom__label">
+					<!--<span class="homeshopping_payment__11pay"></span>-->
+					<span class="homeshopping_custom__name">고객님의 전화번호</span>
+				</div>
+				<div class="homeshopping_custom__price">000-0000-0000</div>
+				<div class="homeshopping_custom__detail2">
+					<span class="homeshopping_custom__nugu"></span>
+					앱에 결제 정보를 등록하시고 빠르게 주문해보세요.
+				</div>
+			</div>
+		</div>
+		<div class="btnbox">
+			<div class="btn_large active">
+				<a href="#agreement" class="btn_large-link">
+					<span class="data">상담원 결제</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <div class="content_area" id="homeshopping_callcashing_end">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_order">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">고객 맞춤가</span>
+							<span class="homeshopping_select__value-price">824,600원</span>
+						</div>
+					</div>
+					<div class="homeshopping_select__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<span class="homeshopping_select__opt-item">레오파드 그레이</span>
+						<span class="homeshopping_select__opt-item">44</span>
+						<span class="homeshopping_select__opt-item">수량 3</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="homeshopping_custom">
+				<div class="homeshopping_custom__label">
+					<!--<span class="homeshopping_payment__11pay"></span>-->
+					<span class="homeshopping_custom__name">고객님의 전화번호</span>
+				</div>
+				<div class="homeshopping_custom__price">000-0000-0000</div>
+				<div class="homeshopping_custom__detail">
+					전화번호 변경: 고객센터(1644-2525) 문의
+				</div>
+			</div>
+		</div>
+		<!--<div class="btnbox">-->
+			<!--<div class="btn_large active">-->
+				<!--<a href="#agreement" class="btn_large-link">-->
+					<!--<span class="data">상담원 결제</span>-->
+				<!--</a>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <div class="content_area" id="homeshopping_order_result">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_order">
+			<div class="homeshopping_select">
+				<!-- [D] 해당 제품 이미지 -->
+				<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+				<div class="homeshopping_select__info">
+					<div class="homeshopping_select__vlu">
+						<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+						<div class="homeshopping_select__value">
+							<span class="homeshopping_select__value-label">고객 맞춤가</span>
+							<span class="homeshopping_select__value-price">824,600원</span>
+						</div>
+					</div>
+					<div class="homeshopping_select__opt">
+						<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+						<span class="homeshopping_select__opt-item">레오파드 그레이</span>
+						<span class="homeshopping_select__opt-item">44</span>
+						<span class="homeshopping_select__opt-item">수량 3</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="homeshopping_delivery">
+				<div class="homeshopping_delivery__wrap">
+					<h3 class="homeshopping_delivery__title">배송지</h3>
+					<div class="homeshopping_delivery__detail">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</div>
+				</div>
+
+			</div>
+		</div>
+		<!--<div class="btnbox">-->
+			<!--<div class="btn_large active">-->
+				<!--<a href="#agreement" class="btn_large-link">-->
+					<!--<span class="data">상담원 결제</span>-->
+				<!--</a>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <div class="help_area">
+        <button class="bottom_text-area"><span class="data">도움말</span></button>
+    </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+    <ul class="case__list">
+        <li class="case__item"><a href="#default" class="case__link">CJ오쇼핑 상품목록(기본,품절,상담)</a></li>
+        <li class="case__item"><a href="#homeshopping_option" class="case__link">CJ오쇼핑 상품옵션선택</a></li>
+        <li class="case__item"><a href="#homeshopping_quantity" class="case__link">CJ오쇼핑 상품갯수선택</a></li>
+        <li class="case__item"><a href="#homeshopping_policy" class="case__link">CJ오쇼핑 정보제공동의</a></li>
+        <li class="case__item"><a href="#homeshopping_track" class="case__link">CJ오쇼핑 상담신청완료</a></li>
+        <li class="case__item"><a href="#homeshopping_order" class="case__link">CJ오쇼핑 주문/결제하기</a></li>
+        <li class="case__item"><a href="#homeshopping_order_remote-control" class="case__link">CJ오쇼핑 주문/결제하기(리모콘)</a></li>
+        <li class="case__item"><a href="#homeshopping_callcashing" class="case__link">CJ오쇼핑 상담원 결제</a></li>
+        <li class="case__item"><a href="#homeshopping_callcashing_end" class="case__link" >CJ오쇼핑 상담원 결제완료</a></li>
+        <li class="case__item"><a href="#homeshopping_order_result" class="case__link" id="defaultOpen">CJ오쇼핑 결제완료</a></li>
+    </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+
+	<script src="../../assets/js/test_ui.js"></script>
+</body>
+</html>

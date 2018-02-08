@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 1. 주문 (도미노, BBQ) : Btv_order</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_order.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_order_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+    <div class="top_title_area">
+        <span class="data">도미노피자를 주문합니다.</span>
+    </div>
+
+    <!-- 주문접수(리모콘 제어화면) -->
+    <div class="content_area" id="default">
+        <!-- start: Btv template -->
+        <div class="webview_area">
+	<!-- [D] 주문관련 문구 없을경우 <div class="order_text"><span class="data">배달을 원하시면 바로 <span class="order_ico_text">주문접수</span>라고 말해주세요.</span></div> 이부분을 통째로 빼주세요 -->
+	<div class="order_text">주문을 완료하시려면 확인 버튼을 눌러주세요.</div>
+	
+	<div class="order_wrap">
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트에 새우토핑이 사사</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__discount"><span class="data">20%</span> 할인가</span>
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					<!-- [D] 주문접수 발화시 표시
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<div class="order_btnbox">
+			<button class="order_btnbox__button">확인</button>
+			<button class="order_btnbox__button">취소</button>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 주문접수 -->
+    <div class="content_area" id="default2">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 주문접수 발화시 <span class="data">자세한 내역은 NUGU앱에서 확인가능합니다.</span> -->
+	<div class="order_text"><span class="data">배달을 원하시면 바로 <span class="order_ico_text">주문접수</span>라고 말해주세요.</span></div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					
+					<!-- [D] 주문접수 발화시 표시
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<div class="order_btnbox">
+			<button class="order_btnbox__button-large">주문접수</button>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 주문접수완료 -->
+    <div class="content_area" id="order_end">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	
+	<div class="order_text">자세한 주문 내역은 NUGU 앱에서 확인가능합니다.</div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2 end">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">T멤버십 할인가</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<!-- [D] 결제 방법 -->
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 예약주문(일시적으로 주문이 불가능한 경우) -->
+    <div class="content_area" id="order_error">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 매장사정으로 일시적으로 주문이 불가능한 경우 문구 -->
+	<div class="order_text"><span class="data">오후 8시 30분 이후 배달이 가능합니다. 배달을 원하시면 바로 <span class="order_ico_text">주문접수</span>라고 말해주세요.</span></div>
+	
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					<!-- [D] 주문접수가 완료되었을때 표시
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">도착시간</span>
+						<span class="delivery_info__item-data active"><span class="data">오후 hh시 mm분 이후</span></span>
+					</li>
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<div class="order_btnbox">
+			<button class="order_btnbox__button-large">주문접수</button>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 주문확인(주문메뉴 및 가격문의) -->
+    <div class="content_area" id="order_confirm">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D]T멤버십 할인일 경우 '주문하신 피자세트 가격은 T멤버십(20%)할인이 적용된 21,200 원 입니다.' -->
+	<div class="order_text price"> <span class="data">주문하신 피자 세트 가격은 20% 할인 된 21,200원 입니다.</span></div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<!-- [D] 결제 방법 -->
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<!-- <div class="order_btnbox">
+			<button class="order_btnbox__button-large active">주문접수</button>
+		</div> -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 문의대응(결제)(확정된 주문중-쿠폰 없음) -->
+    <div class="content_area" id="order_qna">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_text price"><span class="data">도미노 피자 의 결제는 배달 받으실 때 카드로만 가능합니다.</span></div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="../../assets/images/test/order/test_img.png" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 주문한 메뉴 가격과 할인률 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<!-- [D] 결제 방법 -->
+						<span class="delivery_info__item-data active"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 마이메뉴 (등록) -->
+    <div class="content_area" id="order_my">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_wrap">
+		<!-- 마이메뉴 -->
+		<div class="order_mybox">
+			<!-- [D] 마이메뉴 미등록시 none클래스추가 -->
+			<div class="order_myinfo">
+				<!-- [D] 마이메뉴 이미지 -->
+				<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_myinfo__box">
+						<h3 class="order_mybox__title">마이메뉴</h3>
+					<!-- [D] 마이메뉴 타이틀 -->
+					<p class="order_myinfo__menu"><span class="data">피자</span></p>
+					<!-- [D] 마이메뉴 상세설명 -->
+					<p class="order_myinfo__menu-detaile"><span class="data">콜라</span></p>
+
+					<!-- [D] 마이메뉴 가격과 할인률 -->
+					<div class="order_myinfo__value">
+						<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+						<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+					</div>
+				</div>
+
+				<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+				<div class="order_myinfo__nondata">
+					<span class="order_myinfo__nondata-logo">
+						<span class="g_invisible">nugu</span>
+					</span>
+					<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+				</div>
+				<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+			</div>
+		</div>
+		<!-- //마이메뉴 -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 마이메뉴 (미등록) -->
+    <div class="content_area" id="order_mynone">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_wrap">
+		<!-- 신메뉴 -->
+		<div class="order_mybox">
+			<!-- [D] 메뉴가 없을경우 none클래스를 추가해줍니다. -->	
+			<div class="order_myinfo">
+				<!-- [D] 메뉴 이미지 -->
+				<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_myinfo__box">
+						<h3 class="order_mybox__title">신메뉴</h3>
+					<!-- [D] 메뉴 타이틀 -->
+					<p class="order_myinfo__menu"><span class="data">더블크러스트 치즈 피자세트더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 메뉴 상세설명 -->
+					<p class="order_myinfo__menu-detaile"><span class="data">꽃게 온더 피자L 1판 + 1.25L 콜라</span></p>
+
+					<!-- [D] 메뉴 가격과 할인률 -->
+					<div class="order_myinfo__value">
+						<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+						<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+					</div>
+				</div>
+
+				<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+				<div class="order_myinfo__nondata">
+					<span class="order_myinfo__nondata-logo">
+						<span class="g_invisible">nugu</span>
+					</span>
+					<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+				</div>
+				<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+			</div>
+		</div>
+		<!-- //신메뉴 -->
+
+		<!-- 마이메뉴 -->
+		<div class="order_mybox">
+				<!-- [D] 마이메뉴가 미등록시 none클래스를 추가해줍니다. -->	
+				<div class="order_myinfo  none">
+					<!-- [D] 마이메뉴 이미지 -->
+					<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+					<div class="order_myinfo__box">
+							<h3 class="order_mybox__title">마이메뉴</h3>
+						<!-- [D] 마이메뉴 타이틀 -->
+						<p class="order_myinfo__menu"><span class="data">더블크러스트 치즈 피자세트더블크러스트 치즈 피자세트</span></p>
+						<!-- [D] 마이메뉴 상세설명 -->
+						<p class="order_myinfo__menu-detaile"><span class="data">꽃게 온더 피자L 1판 + 1.25L 콜라</span></p>
+	
+						<!-- [D] 마이메뉴 가격과 할인률 -->
+						<div class="order_myinfo__value">
+							<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+							<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+						</div>
+					</div>
+	
+					<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+					<div class="order_myinfo__nondata">
+						<span class="order_myinfo__nondata-logo">
+							<span class="g_invisible">nugu</span>
+						</span>
+						<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+					</div>
+					<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+				</div>
+			</div>
+			<!-- //마이메뉴 -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    <!-- 신메뉴 -->
+    <div class="content_area" id="order_new">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_wrap">
+		<!-- 신메뉴 -->
+		<div class="order_mybox">
+				
+			<div class="order_myinfo">
+				<!-- [D] 메뉴 이미지 -->
+				<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_myinfo__box">
+						<h3 class="order_mybox__title">신메뉴</h3>
+					<!-- [D] 메뉴 타이틀 -->
+					<p class="order_myinfo__menu"><span class="data">더블크러스트 치즈 피자세트더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 메뉴 상세설명 -->
+					<p class="order_myinfo__menu-detaile"><span class="data">꽃게 온더 피자L 1판 + 1.25L 콜라</span></p>
+
+					<!-- [D] 메뉴 가격과 할인률 -->
+					<div class="order_myinfo__value">
+						<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+						<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+					</div>
+				</div>
+
+				<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+				<div class="order_myinfo__nondata">
+					<span class="order_myinfo__nondata-logo">
+						<span class="g_invisible">nugu</span>
+					</span>
+					<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+				</div>
+				<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+			</div>
+		</div>
+		<!-- //신메뉴 -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- 주문취소(예약된 주문 존재 시) -->
+    <div class="content_area" id="order_cancel">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_text price"><span class="data">주문하신 피자를 변경이나 취소를 원하시면 1577-3082로 문의주세요.</span></div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<!-- [D] 결제 방법 -->
+						<span class="delivery_info__item-data active"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<!-- <div class="order_btnbox">
+			<button class="order_btnbox__button-large active">주문접수</button>
+		</div> -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+    
+    <!-- 주문가능하지 않은 메뉴 주문(에러) -->
+    <div class="content_area" id="order_menu_error">
+        <!-- start: Btv template -->
+        <div class="webview_area">
+	<!--<div class="order_text"><span class="data">주문 가능한 메뉴입니다.</span></div> -->
+		
+	<div class="order_wrap">
+		<!-- 신메뉴 -->
+		<div class="order_mybox">
+			<!-- [D] 메뉴가 없을경우 none클래스를 추가해줍니다. -->	
+			<div class="order_myinfo">
+				<!-- [D] 메뉴 이미지 -->
+				<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_myinfo__box">
+						<h3 class="order_mybox__title">신메뉴</h3>
+					<!-- [D] 메뉴 타이틀 -->
+					<p class="order_myinfo__menu"><span class="data">더블크러스트 치즈 피자세트더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 메뉴 상세설명 -->
+					<p class="order_myinfo__menu-detaile"><span class="data">꽃게 온더 피자L 1판 + 1.25L 콜라</span></p>
+
+					<!-- [D] 메뉴 가격과 할인률 -->
+					<div class="order_myinfo__value">
+						<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+						<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+					</div>
+				</div>
+
+				<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+				<div class="order_myinfo__nondata">
+					<span class="order_myinfo__nondata-logo">
+						<span class="g_invisible">nugu</span>
+					</span>
+					<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+				</div>
+				<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+			</div>
+		</div>
+		<!-- //신메뉴 -->
+
+		<!-- 마이메뉴 -->
+		<div class="order_mybox">
+				<!-- [D] 마이메뉴가 없을경우 none클래스를 추가해줍니다. -->
+				<div class="order_myinfo">
+					<!-- [D] 마이메뉴 이미지 -->
+					<span class="order_myinfo__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+					<div class="order_myinfo__box">
+							<h3 class="order_mybox__title">마이메뉴</h3>
+						<!-- [D] 마이메뉴 타이틀 -->
+						<p class="order_myinfo__menu"><span class="data">더블크러스트 치즈 피자세트더블크러스트 치즈 피자세트</span></p>
+						<!-- [D] 마이메뉴 상세설명 -->
+						<p class="order_myinfo__menu-detaile"><span class="data">꽃게 온더 피자L 1판 + 1.25L 콜라</span></p>
+	
+						<!-- [D] 마이메뉴 가격과 할인률 -->
+						<div class="order_myinfo__value">
+							<span class="order_myinfo__discount"><span class="data">20%</span> 할인</span>
+							<span class="order_myinfo__price-data"><span class="data">324,600</span>원</span>
+						</div>
+					</div>
+	
+					<!-- 마이메뉴설정이 없을경우 나오는 부분 -->
+					<div class="order_myinfo__nondata">
+						<span class="order_myinfo__nondata-logo">
+							<span class="g_invisible">nugu</span>
+						</span>
+						<span class="order_myinfo__nondata-text">앱에서 설정해주세요.</span>
+					</div>
+					<!-- //마이메뉴설정이 없을경우 나오는 부분 -->
+				</div>
+			</div>
+			<!-- //마이메뉴 -->
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- 진행중인 메뉴가 있는 경우(에러) -->
+    <div class="content_area" id="order_menu_error2">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<!-- [D] 주문관련 문구 없을경우 <div class="order_text price"><span class="data">이미 진행중인 피자주문이 있습니다. 배달을 받으신 후에 추가 주문을 해주세요.</span></div> 이부분을 통째로 빼주세요 -->
+	<div class="order_text price"><span class="data">이미 진행중인 피자주문이 있습니다. 배달을 받으신 후에 추가 주문을 해주세요.</span></div>
+	
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="../../assets/images/test/order/test_img.png" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">결제방법</span>
+						<!-- [D] 결제 방법 -->
+						<span class="delivery_info__item-data"><span class="data">신용카드 (배달 받으실 때)</span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <!-- 진행중인 메뉴가 있는 경우(에러) -->
+    <div class="content_area" id="order_menu_error3">
+        <!-- start: Btv template -->
+        
+<div class="webview_area">
+	<div class="order_text"><span class="data">오후 8시 30분 이후 배달이 가능합니다. 배달을 원하시면 바로<span class="order_ico_text">주문접수</span>라고 말해주세요.</span></div>
+
+	<div class="order_wrap">
+		
+		<div class="order_box2">
+			<div class="order_info">
+				<!-- [D] 주문한 메뉴 이미지 -->
+				<span class="order_info__img"><img src="https://cdn.dominos.co.kr/admin/upload/goods/20161124_yw29y5sf.jpg" class="order_menu_img" alt="주문제품 이미지"/></span>
+				<div class="order_info__box">
+					<!-- [D] 주문한 메뉴 타이틀 -->
+					<p class="order_info__menu"><span class="data">더블크러스트 치즈 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 상세설명 -->
+					<p class="order_info__menu-detail"><span class="data">더블프레스터 치즈 멜팅 피자세트</span></p>
+					<!-- [D] 주문한 메뉴 가격과 할인률 -->
+					<div class="order_info__value">
+						<span class="order_info__price-data"><span class="data">324,600</span>원</span>
+						<span class="order_info__discount"><span class="data">20%</span> 할인</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery_info">
+				<ul class="delivery_info__list">
+					<li class="delivery_info__item">
+						<span class="delivery_info__item-title">배달주소</span>
+						<!-- [D] 배달할 주소 -->
+						<span class="delivery_info__item-data"><span class="data">서울시 마포구 신촌로 4길 5-19  3층서울시 마포구 신촌로 4길 5-19  3층</span></span>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<!-- [D] 버튼 활성화는 active 클래스를 추가해서 표시해 줍니다. -->
+		<div class="order_btnbox">
+			<button class="order_btnbox__button-large">주문접수</button>
+		</div>
+	</div>
+</div>
+        <!-- end: Btv template -->
+    </div>
+
+    <div class="help_area">
+        <button class="bottom_text-area"><span class="data">도움말</span></button>
+    </div>
+</div>
+
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+    <ul class="case__list">
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">주문접수(리모콘 제어화면)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'default2')" >주문접수</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_end')" >주문접수완료</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_error')" >예약주문(일시적으로 주문이 불가능한 경우)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_confirm')" >주문확인(주문메뉴 및 가격문의)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_qna')" >문의대응(결제)(확정된 주문중-쿠폰 없음)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_my')" >마이메뉴 (등록)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_mynone')" >마이메뉴 (미등록)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_new')" >신메뉴</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_cancel')" >주문취소(예약된 주문 존재 시)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error')" >주문가능하지 않은 메뉴 주문(에러)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error2')" >진행중인 메뉴가 있는 경우(에러)</a></li>-->
+        <!--<li class="case__item"><a href="#order" class="case__link" onclick="includePage(event, 'order_menu_error3')" >매장사정으로 배달지연(에러)</a></li>-->
+
+        <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">주문접수(리모콘 제어화면)</a></li>
+        <li class="case__item"><a href="#default2" class="case__link">주문접수</a></li>
+        <li class="case__item"><a href="#order_end" class="case__link">주문접수완료</a></li>
+        <li class="case__item"><a href="#order_error" class="case__link">예약주문(일시적으로 주문이 불가능한 경우)</a></li>
+        <li class="case__item"><a href="#order_confirm" class="case__link">주문확인(주문메뉴 및 가격문의)</a></li>
+        <li class="case__item"><a href="#order_qna" class="case__link">문의대응(결제)(확정된 주문중-쿠폰 없음)</a></li>
+        <li class="case__item"><a href="#order_my" class="case__link">마이메뉴 (등록)</a></li>
+        <li class="case__item"><a href="#order_mynone" class="case__link">마이메뉴 (미등록)</a></li>
+        <li class="case__item"><a href="#order_new" class="case__link">신메뉴</a></li>
+        <li class="case__item"><a href="#order_cancel" class="case__link">주문취소(예약된 주문 존재 시)</a></li>
+        <li class="case__item"><a href="#order_menu_error" class="case__link">주문가능하지 않은 메뉴 주문(에러)</a></li>
+        <li class="case__item"><a href="#order_menu_error2" class="case__link">진행중인 메뉴가 있는 경우(에러)</a></li>
+        <li class="case__item"><a href="#order_menu_error3" class="case__link">매장사정으로 배달지연(에러)</a></li>
+    </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+
+	<script src="../../assets/js/test_ui.js"></script>
+</body>
+</html>

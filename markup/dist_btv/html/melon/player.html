@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 9.멜론 플레이어</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_player.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_player_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">인기 음악을 재생합니다.</span>
+                <span class="service_logo melon"></span>
+        </div>
+        <!-- 플레이어 -->
+        <div class="content_area" id = "music">
+                <!-- start: Btv template -->
+                <div class="webview_area">
+	<!-- [D]플레이어를 사용하는 멜론:melon, 팟캐스트:podcast, 오디오북:audiobook, 라디오:radio, 데일리 브리핑:dailybrifing 클래스를 넣어주세요. 배너가 있을경우 banner클래스를 넣어주세요._전체정렬이 변경됩니다.  -->
+	<div class="player melon banner">
+
+		<!-- 이미지영역 -->
+		<div class="player__img">
+			<!-- [D]비로그인인 상태에서는 mask 클래스가 추가됩니다. -->
+			<span class="player__img-box mask">
+				<!-- [D] 오디오북에서 이미지가 안내려오면 이미지를 태그를 아예없애주세요. default이미지 스타일 적용해놨습니다. -->
+				<img src="http://cdnimg.melon.co.kr/cm/album/images/101/05/030/10105030_500.jpg/melon/resize/216/quality/80/optimize" class="player_p_img"/>
+				<span class="player__minute">1분 미리듣기</span>
+			</span>
+			<!-- [D]즐겨찾기 되어있을경우 on클래스를 추가해줍니다. -->
+			<span class="ico_favorite"></span>
+		</div>
+		<!-- //이미지영역 -->
+
+		<!-- 배너영역 -->
+		<div class="banner_area">
+			<img src="../../assets/images/test/melon/nugu_melon_bannner_test.png" class="player_banner"/>
+		</div>
+		<!-- //배너영역 -->
+		
+		<div class="player__info">
+			<!-- [D]제목 -->
+			<h3 class="player__title">노땡큐 (Feat. MINO, 사이먼 도미닉, 더콰이엇)글자수가 길경우 말줄임될 예정입니다.</h3>
+			<!-- [D]추가정보 -->
+			<div class="player__detail">
+				<span class="player__detail-desc">WE`VE DONE SOMETHING WON | 에픽 하이 (EPIK HIGH)가수명이 길 경우 적당한곳에서 말줄임</span>
+			</div>
+			<!-- [D]플레이어 진행률 -->
+			<div class="player__progress disabled">
+				<span class="player__start">00:00</span>
+				<div class="player__progress-bg">
+					<!-- [D]진행률은 여기에서 표시하시면 됩니다. -->
+					<span class="player__progress-bar" style="width:30%"></span>
+				</div>
+				<span class="player__end">03:30</span>
+			</div>
+
+			<!-- 플레이어 컨트롤러 -->
+			<div class="player__controller">
+				<!-- [D]배속설정버튼은 팟캐스트에서만 나옵니다. -->
+				<div class="player__controller-left">
+					
+					<button type="button" class="btn__prev disabled">이전</button>
+					<button type="button" class="btn__prev-speed">뒤로감기배속설정</button>
+					<!-- [D] 재생과 일시정지는 class="btn__play",class="btn__pause" 이렇게 입니다. -->
+					<button type="button" class="btn__pause">재생/일시정지</button>
+					<button type="button" class="btn__next-speed">앞으로감기배속설정</button>
+					<button type="button" class="btn__next">다음</button>
+				</div>
+
+				<!-- [D]배속설정보기는 팟캐스트에서만 나옵니다. 나머지버튼은 멜론에서만 나옵니다.  -->
+				<div class="player__controller-right">
+					<!-- [D] 리모콘 포커스는 active, 반복이 선택되면 select, 한번더 클릭해서 한곡반복듣기가 선택되면 one클래스를 넣어줍니다. -->
+					<button type="button" class="btn__replay  select one ">전곡반복/한곡반복</button>
+					<button type="button" class="btn__random">랜덤재생</button>
+					<span class="player__controller-speed">X1</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+                <!-- end: Btv template -->
+        </div>	
+        <!-- 플레이어 목록보기 -->
+        <div class="content_area" id = "playlist">
+                <!-- start: Btv template -->
+                <div class="webview_area">
+	<ul class="card_wrap2">
+		<!-- Start:정상데이터가 3개이상일 경우 -->
+		<li class="card_wrap2__item">
+			<!-- [D] 리모콘 활성화시 active클래스 추가  -->
+			<div class="playerlst">
+				<button class="playerlst__img">
+					<!-- [D] 발화명령어 -->
+					<span class="voice_order">첫번째</span>
+					<img src="http://cdnimg.melon.co.kr/cm/artistcrop/images/002/61/143/261143.jpg?8278b340c081cd2bd020bff2d632329f" class="playerlst_d_img">
+				</button>
+				<div class="playerlst__title">아늑한 Jazz Mood 글자수가 늘어나면 한줄말줄임</div>
+				<div class="playerlst__total">100곡</div>
+			</div>
+		</li>
+		<!-- //End:정상데이터가 3개이상일 경 -->
+
+		<li class="card_wrap2__item">
+			<div class="playerlst">
+				<button class="playerlst__img">
+					<!-- [D] 발화명령어 -->
+					<span class="voice_order">두번째</span>
+					<img src="http://cdnimg.melon.co.kr/cm/artistcrop/images/002/61/143/261143.jpg?8278b340c081cd2bd020bff2d632329f" class="playerlst_d_img">
+				</button>
+				<div class="playerlst__title">아늑한 Jazz Mood 글자수가 늘어나면 한줄말줄임</div>
+				<div class="playerlst__total">100곡</div>
+			</div>
+		</li>
+		<li class="card_wrap2__item">
+			<div class="playerlst">
+				<button class="playerlst__img">
+					<!-- [D] 발화명령어 -->
+					<span class="voice_order">세번째</span>
+					<img src="http://cdnimg.melon.co.kr/cm/artistcrop/images/002/61/143/261143.jpg?8278b340c081cd2bd020bff2d632329f" class="playerlst_d_img">
+				</button>
+				<div class="playerlst__title">아늑한 Jazz Mood 글자수가 늘어나면 한줄말줄임</div>
+				<div class="playerlst__total">100곡</div>
+			</div>
+		</li>
+	</ul>
+</div>
+                <!-- end: Btv template -->
+                <!-- start: 이전 다음 버튼 -->
+                <div class="pagenate">
+    <div class="pagenate__prev">
+        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate__next disabled">
+        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+                <!-- end: 이전 다음 버튼 -->
+        </div>		
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+        <ul class="case__list">
+                <!--<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'music')" id="defaultOpen">기본 플레이어</a></li>-->
+                <!--<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'playlist')" >플레이어 목록</a></li>-->
+                <li class="case__item"><a href="#music" class="case__link" id="defaultOpen">기본 플레이어</a></li>
+                <li class="case__item"><a href="#playlist" class="case__link">플레이어 목록</a></li>
+        </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+	<script src="../../assets/js/test_ui.js"></script>
+</body>
+
+</html>

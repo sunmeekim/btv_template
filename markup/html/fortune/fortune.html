@@ -1,0 +1,50 @@
+@@include('head.html', {"css": "btv_fortune", "title": "[Btv] 13. 운세","filePath": "../"})
+<body>
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">오늘 운세 입니다.</span>
+        </div>
+        
+        <!-- 오늘의 운세 -->
+        <div class="content_area" id="fortune">
+                <!-- start: Btv template -->
+                @@include('fortune_all.html')
+                <!-- end: Btv template -->
+                <!-- start: 이전 다음 버튼 -->
+                @@include('pagenate.html')
+                <!-- end: 이전 다음 버튼 -->
+        </div>
+        <!-- 오늘의 띠 운세 -->
+        <div class="content_area" id="zodiacSign">
+                <!-- start: Btv template -->
+                @@include('fortune_chinese_zodiac.html')
+                <!-- end: Btv template -->
+        </div>
+        <!-- 오늘의 별자리 운세 -->
+        <div class="content_area" id="starSign">
+                <!-- start: Btv template -->
+                @@include('fortune_astromantic.html')
+                <!-- end: Btv template -->
+        </div>	
+
+
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+        <ul class="case__list">
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'fortune')" id="defaultOpen">오늘의 운세</a></li>-->
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'zodiacSign')" >오늘의 띠 운세</a></li>-->
+                <!--<li class="case__item"><a href="#fortune" class="case__link" onclick="includePage(event, 'starSign')" >오늘의 별자리 운세</a></li>-->
+                <li class="case__item"><a href="#fortune" class="case__link" id="defaultOpen">오늘의 운세</a></li>
+                <li class="case__item"><a href="#zodiacSign" class="case__link" >오늘의 띠 운세</a></li>
+                <li class="case__item"><a href="#starSign" class="case__link" >오늘의 별자리 운세</a></li>
+        </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+@@include('bottom.html')
+</body>
+</html>

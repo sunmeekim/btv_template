@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_운세
+/* ---------------------------------------------------------------------- */
+.fortune_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fortune_wrap .fortune_d_img {
+  width: 230px;
+  height: 230px;
+}
+
+.fortune_wrap__img {
+  float: left;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.fortune_wrap__info {
+  float: left;
+  margin: 17px 0 0 40px;
+}
+
+.fortune_wrap__title {
+  width: 995px;
+  font-size: 4.6rem;
+  font-family: "SKBRixHeadB", sans-serif !important;
+  color: #000;
+}
+
+.fortune_wrap__title-year {
+  color: #000;
+}
+
+.fortune_wrap__zodiac {
+  color: #000;
+}
+
+.fortune_wrap__astromanic {
+  color: #000;
+}
+
+.fortune_wrap__desc {
+  margin-top: 13px;
+  width: 995px;
+  color: #333;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 139.5px;
+  font-size: 3rem;
+  text-overflow: ellipsis;
+  line-height: 1.55;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.fortune_wrap .fortune_wrap__title-year + .fortune_wrap__zodiac {
+  color: #000;
+}

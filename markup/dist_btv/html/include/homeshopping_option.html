@@ -1,0 +1,103 @@
+
+<div class="webview_area wide">
+	<!-- [D] 결제하기 버튼 선택 시 '주문을 완료하시려면 확인 버튼을 눌러주세요.' -->
+	<!--<div class="order_text"><span class="data">주문을 원하시면 <span class="order_ico_text">결제해줘</span>라고 말해주세요.</span></div>-->
+
+	<div class="homeshopping_wrap">
+		<div class="homeshopping_select">
+			<!-- [D] 해당 제품 이미지 -->
+			<span class="homeshopping_select__img"><img src="../../assets/images/test/shopping/test_img.png" class="homeshopping_img" alt="홈쇼핑제품이미지"/></span>
+			<div class="homeshopping_select__info">
+				<div class="homeshopping_select__vlu">
+					<h3 class="homeshopping_select__title-main">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔</h3>
+					<div class="homeshopping_select__value">
+						<span class="homeshopping_select__value-label">고객 맞춤가</span>
+						<span class="homeshopping_select__value-price">824,600원</span>
+					</div>
+				</div>
+				<div class="homeshopping_select__opt">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#option1" class="homeshopping_select__opt-item active">옵션111</a>
+					<a href="#option2" class="homeshopping_select__opt-item">옵션222</a>
+					<a href="#option3" class="homeshopping_select__opt-item">옵션33333333333</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="homeshopping_option">
+			<ul class="card_wrap">
+				<!-- Start:정상데이터가 있을 경우 리모콘 활성화시 active클래스 추가 -->
+				<li class="card_wrap__item">
+					<!-- [D] focus상태 스타일 되어있습니다 선택후 다음 옵션을 선택해야 함으로 active 클래스로 잡아줍니다 -->
+					<a href="#none" class="homeshopping_option__link active">
+						<!-- [D] 차례 -->
+						<span class="voice_order">첫번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10</span></div>
+					</a>
+				</li>
+				<!-- //End:정상데이터가 있을 경우 -->
+
+				<li class="card_wrap__item disabled">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">두번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10 <em>(품절)</em></span></div>
+					</a>
+				</li>
+				<li class="card_wrap__item">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">세번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10+시트러스10</span></div>
+					</a>
+				</li>
+				<li class="card_wrap__item">
+					<a href="#none" class="homeshopping_option__link">
+						<!-- [D] 차례 -->
+						<span class="voice_order">네번째</span>
+
+						<!-- [D] option 값 -->
+						<div  class="homeshopping_option__value"><span class="data">카카오10+베리믹스10+시트러스10+밀싹10카카오10+베리믹스10+시트러스10+밀싹10</span></div>
+					</a>
+				</li>
+			</ul>
+
+			<!-- start: 이전 다음 버튼 -->
+			<!-- [D] 4개 이하일 경우 페이징이 나타나지 않습니다 -->
+			<div class="pagenate_s">
+    <div class="pagenate_s__prev">
+        <button class="pagenate_s__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate_s__voice_wrap">
+            <span class="pagenate_s__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate_s__remote_wrap">
+            <span class="pagenate_s__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate_s__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate_s__next disabled">
+        <button class="pagenate_s__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate_s__voice_wrap">
+            <span class="pagenate_s__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate_s__remote_wrap">
+            <span class="pagenate_s__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate_s__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+			<!-- end: 이전 다음 버튼 -->
+		</div>
+	</div>
+</div>

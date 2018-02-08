@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Btv] 6.스마트 홈</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_iot.css"/>
+	<link rel="stylesheet" href="../../assets/css/btv_iot_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">등록된 조명이 10개 있습니다.</span>
+        </div>
+        <div class="content_area">
+                <!-- start: Btv template -->
+                
+<div class="webview_area">
+	<ul class="card_wrap iot_wrap">
+		<!-- Start:정상데이터가 있을 경우 리모콘 활성화시 active클래스 추가 -->
+		<li class="card_wrap__item active">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">첫번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action off"><span class="data">OFF</span></p>
+				<!-- [D] IOT 컨텐츠 정보없을경우 -->
+				<p class="iot_default_card__item"><span class="data">NONE</span></p>
+			</button>
+		</li>
+		<!-- //End:정상데이터가 있을 경우 -->
+
+		<li class="card_wrap__item">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">두번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action on"><span class="data">ON</span></p>
+				<!-- [D] IOT 컨텐츠 정보 -->
+				<p class="iot_default_card__item"><span class="data">안방</span></p>
+			</button>
+		</li>
+
+		<li class="card_wrap__item">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">세번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action off"><span class="data">OFF</span></p>
+				<!-- [D] IOT 컨텐츠 정보 -->
+				<p class="iot_default_card__item"><span class="data">욕실1</span></p>
+			</button>
+		</li>
+
+		<li class="card_wrap__item">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">네번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action off"><span class="data">OFF</span></p>
+				<!-- [D] IOT 도메인 네임 -->
+				<p class="iot_default_card__item"><span class="data">드레스룸</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">다섯번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action off"><span class="data">OFF</span></p>
+				<!-- [D] IOT 도메인 네임 -->
+				<p class="iot_default_card__item"><span class="data">서재</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="iot_default_card" disabled>
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">여섯번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action"><span class="data">ON</span></p>
+				<!-- [D] IOT 도메인 네임 -->
+				<p class="iot_default_card__item"><span class="data">주방</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="iot_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">일곱번째</span>
+				<!-- [D] IOT_액션(on/off) 안쪽 텍스트와 class 제어 해주세요.-->
+				<p class="iot_default_card__action on"><span class="data">ON</span></p>
+				<!-- [D] IOT 도메인 네임 -->
+				<p class="iot_default_card__item"><span class="data">작은방</span></p>
+			</button>
+		</li>
+		
+	</ul>
+</div>
+                <!-- end: Btv template -->
+
+                <!-- start: 이전 다음 버튼 -->
+                <div class="pagenate">
+    <div class="pagenate__prev">
+        <button class="pagenate__btn-prev"><span class="g_invisible">이전</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">이전페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_prev"><span class="g_invisible">리모콘 이전 버튼모양</span></span>
+        </p>
+        
+        <!-- <p class="pagenate__paging"><span class="current">1</span>/2</p> -->
+    </div>
+
+    <div class="pagenate__next disabled">
+        <button class="pagenate__btn-next"><span class="g_invisible">다음</span></button>
+        <p class="pagenate__voice_wrap">
+            <span class="pagenate__voice_ordertxt">다음페이지</span>
+        </p>
+        <p class="pagenate__remote_wrap">
+            <span class="pagenate__remote_next"><span class="g_invisible">리모콘 다음 버튼모양</span></span>
+        </p>
+        
+        <p class="pagenate__paging"><span class="current">1</span>/2</p>
+    </div>
+</div>
+                <!-- end: 이전 다음 버튼 -->
+        </div>	
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+
+	<script src="../../assets/js/test_ui.js"></script>
+</body>
+
+</html>

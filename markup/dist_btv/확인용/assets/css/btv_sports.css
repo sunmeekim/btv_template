@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_스포츠
+/* ---------------------------------------------------------------------- */
+.sports_wrap {
+  margin-top: 12px;
+}
+
+.sports_wrap .teamrank_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 10px;
+}
+
+.sports_wrap .teamrank_wrap .sports_img {
+  width: 50px;
+  height: 50px;
+}
+
+.sports_wrap .teamrank_wrap__list {
+  width: 712px;
+}
+
+.sports_wrap .teamrank_wrap__list + .teamrank_wrap__list {
+  margin-left: 2px;
+}
+
+.sports_wrap .teamrank_wrap__list-item {
+  height: 78px;
+  background: #fff;
+  font-size: 2.8rem;
+  line-height: 78px;
+}
+
+.sports_wrap .teamrank_wrap__list-item:nth-child(2n) {
+  background: #f8f8f8;
+}
+
+.sports_wrap .teamrank_wrap__list-item.winner .teamrank_wrap__item-logo {
+  position: relative;
+}
+
+.sports_wrap .teamrank_wrap__list-item.winner .teamrank_wrap__item-logo:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 14px;
+  width: 46px;
+  height: 46px;
+  background: url("../../assets/images/sports/nugu_sports_rank_icon_badge.png") no-repeat 0 0;
+}
+
+.sports_wrap .teamrank_wrap__list-item.active {
+  color: #f53f0e;
+}
+
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-ranking,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-logo,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-name,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-game,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-diff,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-scoring,
+.sports_wrap .teamrank_wrap__list-item.none .teamrank_wrap__item-winrate {
+  display: none;
+}
+
+.sports_wrap .teamrank_wrap__list-item:before, .sports_wrap .teamrank_wrap__list-item:after {
+  display: table;
+  content: "";
+}
+
+.sports_wrap .teamrank_wrap__list-item:after {
+  clear: both;
+}
+
+.sports_wrap .teamrank_wrap__item-ranking {
+  float: left;
+  width: 57px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "SKBRixHeadB", sans-serif-medium !important;
+}
+
+.sports_wrap .teamrank_wrap__item-logo {
+  float: left;
+  width: 63px;
+}
+
+.sports_wrap .teamrank_wrap__item-logo .sports_img {
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+.sports_wrap .teamrank_wrap__item-name {
+  float: left;
+  width: 63px;
+  font-family: "SKBRixHeadB", sans-serif-medium !important;
+}
+
+.sports_wrap .teamrank_wrap__item-game {
+  float: left;
+  font-size: 2.2rem;
+}
+
+.sports_wrap .teamrank_wrap__item-diff {
+  float: left;
+  font-size: 2.2rem;
+}
+
+.sports_wrap .teamrank_wrap__item-diff:before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #b2b2b2;
+  margin: 0 10px;
+}
+
+.sports_wrap .teamrank_wrap__item-scoring {
+  float: left;
+  font-size: 2.2rem;
+}
+
+.sports_wrap .teamrank_wrap__item-scoring:before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #b2b2b2;
+  margin: 0 10px;
+}
+
+.sports_wrap .teamrank_wrap__item-winrate {
+  float: left;
+  font-size: 2.2rem;
+}
+
+.sports_wrap .teamrank_wrap__item-winrate:before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #b2b2b2;
+  margin: 0 10px;
+}

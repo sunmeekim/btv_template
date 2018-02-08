@@ -1,0 +1,24 @@
+@@include('head.html', {"css": "btv_iot", "title": "[Btv] 6.스마트 홈","filePath": "../"})
+<body>
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">등록된 조명이 10개 있습니다.</span>
+        </div>
+        <div class="content_area">
+                <!-- start: Btv template -->
+                @@include('iot_default.html')
+                <!-- end: Btv template -->
+
+                <!-- start: 이전 다음 버튼 -->
+                @@include('pagenate.html')
+                <!-- end: 이전 다음 버튼 -->
+        </div>	
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+@@include('bottom.html')
+</body>
+
+</html>

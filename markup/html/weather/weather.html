@@ -1,0 +1,63 @@
+@@include('head.html', {"css": "btv_weather", "title": "[Btv] 10.날씨","filePath": "../"})
+<body id="test">
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">08월 04일 명동 날씨 입니다.</span>
+        </div>
+        <!-- 오늘 날씨 -->
+        <div class="content_area" id="default">
+                <!-- start: Btv template -->
+                @@include('weather_daily.html')
+                <!-- end: Btv template -->
+        </div>
+        <!-- 주말 날씨 -->
+        <div class="content_area" id="weekend">
+                <!-- start: Btv template -->
+                @@include('weather_weekend.html')
+                <!-- end: Btv template -->
+        </div>	
+        <!-- 주중 날씨 -->
+        <div class="content_area" id="weekly">
+                <!-- start: Btv template -->
+                @@include('weather_weekly.html')
+                <!-- end: Btv template -->
+        </div>	
+        <!-- 특정일 날씨 -->
+        <div class="content_area" id="special">
+                <!-- start: Btv template -->
+                @@include('weather_special.html')
+                <!-- end: Btv template -->
+        </div>	
+        <!-- 대기지수 -->
+        <div class="content_area" id="finedust">
+                <!-- start: Btv template -->
+                @@include('weather_finedust.html')
+                <!-- end: Btv template -->
+        </div>
+
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+        <ul class="case__list">
+                <!--<li class="case__item"><a href="#default" class="case__link" onclick="includePage(event, 'default')" id="defaultOpen">오늘 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#weekend" class="case__link" onclick="includePage(event, 'weekend')" >주말 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#weekly" class="case__link" onclick="includePage(event, 'weekly')" >주중 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#special" class="case__link" onclick="includePage(event, 'special')" >특정일 날씨</a></li>-->
+                <!--<li class="case__item"><a href="#finedust" class="case__link" onclick="includePage(event, 'finedust')" >대기지수</a></li>-->
+
+                <li class="case__item"><a href="#default" class="case__link" id="defaultOpen">오늘 날씨</a></li>
+                <li class="case__item"><a href="#weekend" class="case__link">주말 날씨</a></li>
+                <li class="case__item"><a href="#weekly" class="case__link">주중 날씨</a></li>
+                <li class="case__item"><a href="#special" class="case__link">특정일 날씨</a></li>
+                <li class="case__item"><a href="#finedust" class="case__link">대기지수</a></li>
+        </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+
+@@include('bottom.html')
+</body>
+</html>

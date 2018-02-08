@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* ---------------------------------------------------------------------- */
+/*  card UI
+/* ---------------------------------------------------------------------- */
+.card_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap__item {
+  width: 196px;
+  height: 232px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px 0 #f2f2f2;
+          box-shadow: 0 0 1px 0 #f2f2f2;
+  margin: 0 5px;
+}
+
+.card_wrap2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap2__item {
+  width: 269px;
+  height: 250px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_ALARM
+/* ---------------------------------------------------------------------- */
+.alarm_wrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 6px;
+}
+
+.alarm_wrap .card_wrap__item {
+  position: relative;
+  background: #fcfcfc;
+  margin: 0 5px;
+}
+
+.alarm_wrap .card_wrap__item.active .alarm_default_card__action,
+.alarm_wrap .card_wrap__item.active .alarm_default_card__item {
+  color: #ff4909;
+}
+
+.alarm_wrap .card_wrap__item.active .alarm_default_card__ampm {
+  background: #ff4909;
+  color: #fff;
+}
+
+.alarm_wrap .card_wrap__item.none {
+  display: none;
+}
+
+.alarm_wrap .alarm_default_card {
+  text-align: center;
+}
+
+.alarm_wrap .alarm_default_card__ampm {
+  display: inline-block;
+  vertical-align: top;
+  height: 34px;
+  margin-top: 29px;
+  padding: 0 15px;
+  border-radius: 17px;
+  background: #e6e6e6;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 34px;
+  color: #666;
+}
+
+.alarm_wrap .alarm_default_card__action {
+  margin: 20px 0 11px;
+  text-align: center;
+  font-size: 5.6rem;
+  color: #000;
+}
+
+.alarm_wrap .alarm_default_card__item {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "SKBRixHeadB", sans-serif !important;
+  color: #000;
+}
+
+.alarm_wrap .alarm_default_card__nodata {
+  display: none;
+}

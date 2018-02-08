@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- start: HEAD -->
+<head>
+	<title>[Home] layout : Btv_webview</title>
+	<!-- start: META -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end: META -->
+	<link rel="stylesheet" href="../assets/css/btv_common.css"/>
+	<link rel="stylesheet" href="../assets/css/Btv_weather.css"/>
+	<link rel="stylesheet" href="../assets/css/Btv_weather_list.css"/>
+</head>
+<!-- end: HEAD -->
+
+<body>
+<div id="wrap">
+	<div class="video_bg">
+			<iframe src="https://www.youtube.com/embed/fpWoxlJZC_g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+	<div class="container">
+		<div class="top_title_area">8월 4일  명동 날씨 입니다.</div>
+		<div class="content_area">
+			<!-- include에 여기부터  -->
+			
+<div class="webview_area">
+	<ul class="card_wrap help_wrap">
+		<!-- Start:정상데이터가 있을 경우 -->
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">첫번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">멜론</span></p>
+			</button>
+		</li>
+		<!-- //End:정상데이터가 있을 경우 -->
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">두번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">Btv</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">세번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">금융</span></p>
+			</button>
+		</li>
+
+		<li class="card_wrap__item">
+			<button class="help_default_card" disabled>
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">네번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">오디오북</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">다섯번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">한영사전</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">여섯번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">11번가 쇼핑</span></p>
+			</button>
+		</li>
+		<li class="card_wrap__item">
+			<button class="help_default_card">
+				<!-- [D] 발화명령어 -->
+				<span class="voice_order">일곱번째</span>
+				<!-- [D] 도움말 도메인 대표이미지 -->
+				<p class="help_default_card__picto"><img src="http://img.sktnugu.com/aladdin/pmt/20180126/20180126104753_3de5ae38-9cfe-47fe-b9ec-c4428771402a.png" class="help_s_img" alt="도움말 도메인별 대표이미지"/></p>
+				<!-- [D] 도움말 도메인 네임 -->
+				<p class="help_default_card__domain"><span class="data">일정</span></p>
+			</button>
+		</li>
+		
+	</ul>
+</div>
+			<!-- 여기까지 가져가세요  -->
+		</div>	
+		<div class="help_area">도움말</div>
+	</div>
+</div>
+
+</body>
+</html>

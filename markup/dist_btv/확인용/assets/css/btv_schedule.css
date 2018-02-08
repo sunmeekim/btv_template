@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* common */
+/* variables.scss */
+/*
+  $base- reset용 기본 변수입니다.
+  $F- 폰트 관련 변수입니다.
+  $C- 컬러 관련 변수입니다.
+  $G- 글로벌 변수입니다.
+  $M- Mixin 변수입니다.
+*/
+/* mixins.scss */
+/* layout */
+/* component */
+/* ---------------------------------------------------------------------- */
+/*  card UI
+/* ---------------------------------------------------------------------- */
+.card_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap__item {
+  width: 196px;
+  height: 232px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px 0 #f2f2f2;
+          box-shadow: 0 0 1px 0 #f2f2f2;
+  margin: 0 5px;
+}
+
+.card_wrap2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_wrap2__item {
+  width: 269px;
+  height: 250px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* import */
+/* ---------------------------------------------------------------------- */
+/*  Btv_Schedule
+/* ---------------------------------------------------------------------- */
+.schedule_wrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+  padding-top: 7px;
+}
+
+.schedule_wrap .card_wrap__item {
+  position: relative;
+  background: #fcfcfc;
+  margin: 0 5px;
+}
+
+.schedule_wrap .card_wrap__item.date {
+  background: #f3f3f3;
+}
+
+.schedule_wrap .schedule_default_card__time {
+  height: 66px;
+  margin: 0 20px;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: center;
+}
+
+.schedule_wrap .schedule_default_card__time .ampm {
+  display: inline-block;
+  vertical-align: top;
+  height: 32px;
+  margin-top: 19px;
+  padding: 0 15px;
+  border-radius: 16px;
+  line-height: 32px;
+  font-size: 2.3rem;
+  color: #626262;
+  background: #e6e6e6;
+}
+
+.schedule_wrap .schedule_default_card__time .time {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+  color: #626262;
+  font-size: 2.6rem;
+}
+
+.schedule_wrap .schedule_default_card__action {
+  margin: 10px 28px 15px;
+  text-align: left;
+  font-size: 3rem;
+  color: #000;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 150px;
+  font-size: 3rem;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.schedule_wrap .schedule_default_card__month {
+  margin-top: 27px;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #808080;
+}
+
+.schedule_wrap .schedule_default_card__day {
+  margin: 10px 0 9px;
+  text-align: center;
+  font-size: 6.8rem;
+  color: #333;
+}
+
+.schedule_wrap .schedule_default_card__week {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "SKBRixHeadB", sans-serif !important;
+  color: #4c4c4c;
+}
