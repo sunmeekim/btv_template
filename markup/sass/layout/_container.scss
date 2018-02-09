@@ -3,24 +3,24 @@
 /*  Containers
 /* ---------------------------------------------------------------------- */
 .container {
-	height: 430px;
+	//height: 430px;
 	width: 100%;
-	min-width: 1920px;
-	background: rgba(242,242,242,.97);
+	//min-width: 1920px;
+	//background: rgba(242,242,242,.97);
 	z-index:100;
 
 }
 .content_area {
 	position: relative;
-	height: 260px;
+	//height: 260px;
 	width: 100%;
-	min-width: 1920px;
+	//min-width: 1920px;
 	@include clear();
 	
 	
 }
 .webview_area {
-	width: 1530px;
+	width: 100%;
 	margin:0 auto;
 	position: relative;
 	z-index: 10;
@@ -31,16 +31,19 @@
 	}
 }
 .top_title_area {
-	height: 80px;
-	text-align: center;
-	font-family: $F-family-semi;
-	color: $C-font-light;
-	font-size: $F-size-big;
+	//height: 80px;
 	@include overflowHide;
+	text-align: center;
+	//font-family: $F-family-bold;
+	color: $C-black;
+	font-size: $F-size-big;
+	font-weight: bold;
+	padding: 20px 0;
+
 
 	.data {
 		display: inline-block;
-		padding-top: 25px;
+		//padding-top: 25px;
 	}
 	.top_help-tip {
 		@include absolute(0, 65px, null, null);

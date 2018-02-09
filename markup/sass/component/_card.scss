@@ -11,27 +11,27 @@
     height: 250px;
 }
 .card_wrap {
-    @include flex();
-    @include flex-justify(center);
+    //@include flex();
+    //@include flex-justify(center);
     position: relative;
     z-index: 10;
 }
 .card_wrap__item {
-    @include border-radius-multi(2px, 2px, 2px, 2px);
-    @extend %card_basic-size;
+    //@include border-radius-multi(2px, 2px, 2px, 2px);
+    //@extend %card_basic-size;
     margin: 0 5px;
-    border: 1px solid $C-border-gray_d9;
-    box-shadow: 0 0 1px 0 $C-light-gray_fc;
-    background: $C-white;
+    //border: 1px solid $C-border-gray_d9;
+    //box-shadow: 0 0 1px 0 $C-light-gray_fc;
+    //background: $C-white;
 }
 .card_wrap2 {
-    @include flex();
-    @include flex-justify(center);
+    //@include flex();
+    //@include flex-justify(center);
     position: relative;
     z-index: 10;
 }
 .card_wrap2__item {
-    @extend %card_wide-size;
+    //@extend %card_wide-size;
     margin: 0 15px;
     text-align: center;
 

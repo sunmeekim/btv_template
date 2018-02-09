@@ -10,7 +10,7 @@
   width: 74px;
   height: 74px;
 }
-%active {
+%active_btn {
   &:focus {
     @include border-radius-multi(50%,50%,50%,50%);
     @include overflowHide;
@@ -212,25 +212,25 @@
 .btn {
     &__prev {
         @include use-sprite(nugu_melon_control_back_nor);
-        @extend %active;
+        @extend %active_btn;
         &:disabled {
             @include use-sprite(nugu_melon_control_back_dis);
         }
     }
     &__prev-speed {
         @include use-sprite(nugu_melon_control_back_severalfold_nor);
-        @extend %active;
+        @extend %active_btn;
         &:disabled {
             @include opacity(.3);
         }
     }
     &__play {
         @include use-sprite(nugu_melon_control_play_nor);
-        @extend %active;
+        @extend %active_btn;
     }
     &__next {
         @include use-sprite(nugu_melon_control_next_nor);
-        @extend %active;
+        @extend %active_btn;
         &:disabled {
             @include use-sprite(nugu_melon_control_next_dis);
 
@@ -238,31 +238,31 @@
     }
     &__next-speed {
         @include use-sprite(nugu_melon_control_next_severalfold_nor);
-        @extend %active;
+        @extend %active_btn;
         &:disabled {
             @include opacity(.3);
         }
     }
     &__pause {
         @include use-sprite(nugu_melon_control_pause_nor);
-        @extend %active;
+        @extend %active_btn;
     }
     &__replay {
         @include use-sprite(nugu_melon_control_repeat_off_nor);
-        @extend %active;
+        @extend %active_btn;
         &.select {
             @include use-sprite(nugu_melon_control_repeat_nor); 
-            @extend %active;
+            @extend %active_btn;
         }
         &.one {
             @include use-sprite(nugu_melon_control_1_repeat_nor); 
-            @extend %active;
+            @extend %active_btn;
         }
         
     }
     &__random {
         @include use-sprite(nugu_melon_control_shuffle_off_nor);
-        @extend %active;
+        @extend %active_btn;
 
         &.select {
             @include use-sprite(nugu_melon_control_shuffle_nor); 

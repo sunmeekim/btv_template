@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Utillity
+/* ---------------------------------------------------------------------- */
+.g_invisible {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* skip navigation */
+.g_skip {
+  @include g_invisible;
+}
+.g_btn-skip {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 128px;
+  background-color: #191919;
+  border: 1px solid $C-brand;
+  text-align: center;
+  outline: none;
+}
+.g_btn-skip:active,
+.g_btn-skip:focus {
+  top: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  zoom: 1;
+}
+.g_btn-skip__inner {
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 12px;
+  letter-spacing: -1px;
+  color: #fff;
+  line-height: 26px;
+}
+.loading {
+  text-align: center;
+  position: relative;
+  &:before {
+    font: normal normal normal 30px/1 FontAwesome;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-15px -15px);
+    -webkit-transform: translate(-15px -15px);
+    animation : loading 1s infinite linear;
+    -webkit-animation: loading 1s infinite linear;
+    content:"\f110"
+  }
+
+}
+.float_l {
+  float:left;
+}
+.float_r {
+  float:right;
+}
+
+/* 페이지 그리드 */
+.col-md-1{width:8.33333333%}
+.col-md-2{width:16.66666667%}
+.col-md-3{width:25%}
+.col-md-4{width:33.33333333%}
+.col-md-5{width:41.66666667%}
+.col-md-6{width:50%}
+.col-md-7{width:58.333333%}
+.col-md-8{width:66.66666667%}
+.col-md-9{width:75%}
+.col-md-10{width:83.33333333%}
+.col-md-11{width:91.66666667%}
+.col-md-12{width:100%}
+
+/* 마진 */
+.m40 {
+  margin: 40px;
+}
+.mt40 {
+  margin-top: 40px;
+}

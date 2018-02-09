@@ -21,7 +21,7 @@
 }
 .pagenate {
     @include absolute(0,0,0,0);
-    width: $G-contents-wide;
+    width: $G-contents-fit;
     z-index: 1;
     margin: 0 auto;
     

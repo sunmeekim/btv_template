@@ -3,13 +3,13 @@
 /*  Btv_ALARM
 /* ---------------------------------------------------------------------- */
 .alarm_wrap {
-    @include flex-justify(center);
+    //@include flex-justify(center);
     padding-top: 6px;
     //기본 카드 UI 수정 부분
     .card_wrap__item {
         margin: 0 5px;
         position: relative;
-        background: $C-light-gray_fc;
+        //background: $C-light-gray_fc;
         &.active {
             .alarm_default_card__action,
             .alarm_default_card__item {
@@ -28,30 +28,41 @@
 }
 //알람카드 UI 추가 부분
 .alarm_default_card {
+    @include flex();
+    @include flex-justify(space-between);
+    @include flex-align(center);
     text-align: center;
+    border-bottom: 2px solid #eee;
+    margin: 0 30px;
+
     &__ampm {
-        margin-top: 29px;
+        //float:left;
+        flex:1;
+        //margin-top: 29px;
         display: inline-block;
         vertical-align: top;
-        height: 34px;
-        border-radius: 17px;
+
         padding:0 15px;
         text-align: center;
         font-size: $F-size-24;
         line-height: 34px;
         color: $C-font-light;
-        background: $C-light-gray_e6;
+
     }
     &__action {
-        margin: 20px 0 11px;
-        text-align: center;
+        flex:3;
+        //float:left;
+        margin: 10px 0 11px;
+        text-align: left;
         font-size: $F-size-56;
         color: $C-black;
     }
     &__item {
+        flex:1;
+        //float:left;
         text-align: center;
         font-size: $F-size;
-        font-family: $F-family-semi;
+        //font-family: $F-family-semi;
         color: $C-black;
     }
     &__nodata {

@@ -19,7 +19,7 @@
   @include flex-justify(center);
   @include flex-align(center);
   @include overflowHide;
-  max-width: $G-contents;
+  max-width: $G-contents-fit;
   height: 233px;
 
   &:before {
