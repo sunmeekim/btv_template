@@ -42,6 +42,19 @@
         margin: 0 5px;
         outline: 0;
         background: $C-light-gray_fc;
+        //&:focus 작업 후 삭제
+        &.active {
+            &:before {
+                @extend %active;
+                content:'';
+            }
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+            .iot_default_card__item {
+                color: $C-font-point;
+            }
+        }
     }
 }
 .iot_default_card {
@@ -52,20 +65,19 @@
     box-sizing: border-box;
     outline: 0;
     text-align: center;
-
-    &.active,
-    &:focus {
-        &:before {
-            @extend %active;
-            content:'';
-        }
-        .voice_order {
-            @extend %voice_order_focus;
-        }
-        .iot_default_card__item {
-            color: $C-font-point;
-        }
-    }
+    //&:focus 작업 후 열림
+    //&:focus {
+    //    &:before {
+    //        @extend %active;
+    //        content:'';
+    //    }
+    //    .voice_order {
+    //        @extend %voice_order_focus;
+    //    }
+    //    .iot_default_card__item {
+    //        color: $C-font-point;
+    //    }
+    //}
     &:disabled {
         @include opacity(.3);
     }

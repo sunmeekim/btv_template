@@ -46,9 +46,8 @@
 .playerlst {
     margin-top: 7px;
     width: 269px;
-
-    &.active,
-    &:focus {
+    //&:focus 작업 후 삭제될 부분
+    &.active {
         outline: 0;
         .playerlst__img {
             &:before {
@@ -79,15 +78,16 @@
         position: relative;
         margin : 0 auto;
         outline: 0;
-        &:focus {
-            &:before {
-                @extend %active;
-                content:'';
-            }
-            .voice_order {
-                @extend %voice_order_focus;
-            }
-        }
+        //&:focus 작업 후 변경할 부분
+        //&:focus {
+        //    &:before {
+        //        @extend %active;
+        //        content:'';
+        //    }
+        //    .voice_order {
+        //        @extend %voice_order_focus;
+        //    }
+        //}
         .playerlst_d_img {
             @extend %img158;
         }

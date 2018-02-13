@@ -52,6 +52,19 @@
         margin: 0 5px;
         position: relative;
         background: $C-light-gray_fc;
+        //&:focus 작업 후 액티브삭제
+        &.active {
+            &:before {
+                @extend %active;
+                content:'';
+            }
+            .voice_order {
+                @extend %voice_order_focus;
+            }
+            .help_default_card__domain {
+                color: $C-font-point;
+            }
+        }
     }
 }
 .help_default_card {
@@ -62,19 +75,19 @@
     box-sizing: border-box;
     outline: 0;
     text-align: center;
-
-    &:focus {
-        &:before {
-            @extend %active;
-            content:'';
-        }
-        .voice_order {
-            @extend %voice_order_focus;
-        }
-        .help_default_card__domain {
-            color: $C-font-point;
-        }
-    }
+    //&:focus 작업 후 변경할 부분
+    //&:focus {
+    //    &:before {
+    //        @extend %active;
+    //        content:'';
+    //    }
+    //    .voice_order {
+    //        @extend %voice_order_focus;
+    //    }
+    //    .help_default_card__domain {
+    //        color: $C-font-point;
+    //    }
+    //}
     &:disabled {
         @include opacity(.3);
     }
