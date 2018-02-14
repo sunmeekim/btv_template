@@ -3,74 +3,41 @@
 /*  Containers
 /* ---------------------------------------------------------------------- */
 .container {
-	//height: 430px;
+	position: relative;
 	width: 100%;
-	//min-width: 1920px;
-	//background: rgba(242,242,242,.97);
+	min-height: 100%;
 	z-index:100;
 
 }
 .content_area {
-	position: relative;
-	//height: 260px;
+	//position: relative;
 	width: 100%;
-	//min-width: 1920px;
+	min-height: 100%;
 	@include clear();
-	
-	
 }
 .webview_area {
-	width: 100%;
 	margin:0 auto;
 	position: relative;
+	width: 100%;
+	min-height: 100%;
 	z-index: 10;
+	padding-bottom: 150px;
 	@include clear();
-
-	&.wide {
-		width: 1730px;
-	}
 }
 .top_title_area {
 	//height: 80px;
 	@include overflowHide;
 	text-align: center;
-	//font-family: $F-family-bold;
+	font-family: $F-family-semi;
 	color: $C-black;
 	font-size: $F-size-big;
 	font-weight: bold;
-	padding: 20px 0;
-
-
+	padding: 20px;
 	.data {
+		@include multiline-ellipsis(2,$F-size-big,$base-line-height);
 		display: inline-block;
-		//padding-top: 25px;
 	}
-	.top_help-tip {
-		@include absolute(0, 65px, null, null);
-		margin: 30px 0 0 116px;
-		vertical-align: top;
-		font-family: $F-family-basic;
-		font-size: $F-size-24;
-		color: $C-font-gray_99;
-		&:before {
-			@include use-sprite(nugu_help_tip);
-			margin: 3px 7px 0 0;
-			vertical-align: top;
-			content: '';
-		}
-	}
-	.service_logo {
-		@include absolute(30px, 65px, null, null);
-		&.melon {
-			@include use-sprite(nugu_melon_control_logo);
-		}
-		&.wikipedia {
-			@include use-sprite(nugu_wikipedia_control_logo);
-		}
-		&.cjo {
-			@include use-sprite(nugu_cjoshopping_logo);
-		}
-	}
+
 }
 .help_area {
 	height: 80px;

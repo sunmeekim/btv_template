@@ -3,26 +3,12 @@
 /*  Btv_ALARM
 /* ---------------------------------------------------------------------- */
 .alarm_wrap {
-    //@include flex-justify(center);
     padding-top: 6px;
     //기본 카드 UI 수정 부분
     .card_wrap__item {
         margin: 0 5px;
         position: relative;
-        //background: $C-light-gray_fc;
-        &.active {
-            .alarm_default_card__action,
-            .alarm_default_card__item {
-                color: $C-font-point;
-            }
-            .alarm_default_card__ampm {
-                background: $C-font-point;
-                color: $C-white;
-            }
-        }
-        &.none {
-            display: none;
-        }
+
     }
 
 }
@@ -34,36 +20,38 @@
     text-align: center;
     border-bottom: 2px solid #eee;
     margin: 0 30px;
-
+    &.disabled {
+        .alarm_default_card__action,
+        .alarm_default_card__item,
+        .alarm_default_card__ampm {
+            color: $C-border-gray_cc;
+        }
+    }
+    &.active {
+        background: $C-bgColor;
+    }
     &__ampm {
-        //float:left;
         flex:1;
-        //margin-top: 29px;
         display: inline-block;
         vertical-align: top;
-
         padding:0 15px;
         text-align: center;
         font-size: $F-size-24;
         line-height: 34px;
         color: $C-font-light;
-
     }
     &__action {
         flex:3;
-        //float:left;
         margin: 10px 0 11px;
         text-align: left;
         font-size: $F-size-56;
-        color: $C-black;
+        color: $C-font-dark;
     }
     &__item {
         flex:1;
-        //float:left;
         text-align: center;
         font-size: $F-size;
-        //font-family: $F-family-semi;
-        color: $C-black;
+        color: $C-font-light;
     }
     &__nodata {
         display: none;

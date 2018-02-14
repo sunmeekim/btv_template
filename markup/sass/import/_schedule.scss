@@ -3,69 +3,82 @@
 /*  Btv_Schedule
 /* ---------------------------------------------------------------------- */
 .schedule_wrap {
-    @include flex-justify(center);
+    //@include flex-justify(center);
     margin-top: 12px;
     .card_wrap__item {
         position: relative;
-        margin: 0 5px;
-        background: $C-light-gray_fc;
+        margin: 0 30px;
         &.past{
             .schedule_default_card__time,
             .schedule_default_card__action {
                 @include opacity(.4);
             }
         }
+        &.date {
+            .schedule_default_card {
+                @include border-radius-multi(25px,25px,25px,25px);
+                margin: 40px 0 10px;
+                padding: 0 0 0 20px;
+                background: $C-light-gray_f5;
+                height: 50px;
+                border-bottom: 0;
+
+            }
+        }
     }
 }
 .schedule_default_card {
+    @include flex();
+    @include flex-justify(flex-start);
+    @include flex-align(center);
+    border-bottom: 1px solid $C-light-gray_e2;
+    padding: 15px 0;
+    text-align: left;
+
     &__time {
-        margin: 0 20px;
-        height: 66px;
-        border-bottom: 1px solid $C-light-gray_e2;
-        text-align: center;
+        flex:1;
+        //margin: 0 20px;
+        //height: 66px;
+        //border-bottom: 1px solid $C-light-gray_e2;
+        //text-align: center;
     }
     &__action {
-        @include multiline-ellipsis(4,$F-size,1.25,block);
-        margin: 10px 28px 15px;
+        @include multiline-ellipsis(2,$F-size,1.25,block);
+        flex:2;
         text-align: left;
         font-size: $F-size;
-        color: $C-black;
+        color: $C-font-dark;
     }
     &__month {
-        margin-top: 27px;
-        text-align: center;
-        font-size: $F-size-under;
-        color: $C-font-light;
+        font-size: $F-size;
+        color: $C-font-dark;
     }
     &__day {
-        margin: 10px 0 9px;
-        text-align: center;
-        font-size: $F-size-68;
-        color: $C-black;
+        font-size: $F-size;
+        color: $C-font-dark;
     }
     &__week {
         text-align: center;
         font-size: $F-size;
-        font-family: $F-family-semi;
-        color: $C-black;
+        color: $C-font-dark;
     }
     .ampm {
-        @include border-radius-multi(16px,16px,16px,16px);
-        display: inline-block;
-        vertical-align: top;
-        height: 32px;
-        margin-top: 19px;
-        padding:0 15px;
-        line-height: 32px;
-        font-size: $F-size-24;
+        //@include border-radius-multi(16px,16px,16px,16px);
+        //display: inline-block;
+        //vertical-align: top;
+        //height: 32px;
+        //margin-top: 19px;
+        //padding:0 15px;
+        //line-height: 32px;
+        font-size: $F-size;
         color: $C-font-light;
-        background: $C-light-gray_e6;
+        //background: $C-light-gray_e6;
     }
     .time {
-        display: inline-block;
-        vertical-align: top;
-        margin: 18px 0 0 5px;
+        //display: inline-block;
+        //vertical-align: top;
+        //margin: 18px 0 0 5px;
         color: $C-font-light;
-        font-size: $F-size-small;
+        font-size: $F-size;
     }
 }

@@ -4,26 +4,30 @@
 /* ---------------------------------------------------------------------- */
 
 %fortune_d_img {
-      width: 230px;
-      height: 230px;
+      width: 160px;
+      height: 160px;
 }
 .fortune_wrap {
       @include flex();
-      @include flex-justify(center);
+      @include flex-justify(flex-start);
       @include flex-align(center);
-
+      margin:0 40px;
       &__img {
             @include overflowHide;
             @include border-radius-multi(50%,50%,50%,50%);
             @extend %fortune_d_img;
-            margin-top: 6px;
+
+            img {
+                  @extend %fortune_d_img;
+            }
       }
       &__info {
-            margin: 0 0 0 40px;
             text-align: left;
+            flex:1;
+            margin-left: 20px;
       }
       &__title {
-            font-size: $F-size-46;
+            font-size: $F-size;
             font-family: $F-family-semi;
             color: $C-black;
       }
@@ -33,14 +37,14 @@
             color: $C-black;
       }
       &__desc {
-            @include multiline-ellipsis(3,$F-size,1.55,block);
-            margin-top: 13px;
-            max-width: 955px;
-            width: 100%;
+            margin: 26px 40px 0;
             color: $C-font-dark;
 
       }
       .fortune_wrap__title-year + .fortune_wrap__zodiac {
             color: $C-black;
+      }
+      .btn__default {
+            padding: 7px 30px;
       }
 }

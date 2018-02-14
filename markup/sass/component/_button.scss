@@ -10,9 +10,12 @@
     white-space: nowrap;
     font-size: $F-size-under;
     text-align: center;
+    background: $C-white;
 
     &__default {
-
+        border: 2px solid $C-border-gray_cc;
+        color: $C-font-gray_99;
+        font-size: $F-size;
     }
     &__primary {
         border: 2px solid $C-primary;
@@ -25,4 +28,7 @@
 }
 .btn_wrap {
     @include clear();
+}
+.btn_b-fix {
+    @include absolute(null, 0, 0, 0);
 }

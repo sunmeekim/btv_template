@@ -9,7 +9,7 @@
     vertical-align: top;
     height: 28px;
     width: 73px;
-    border: 1px solid $C-border-gray_d9;
+    border: 1px solid $C-border-gray_ee;
     text-align: center;
     background: $C-light-gray_fc;
 }
@@ -92,7 +92,7 @@
         @include border-radius-multi(16px,16px,16px,16px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid $C-border-gray_9d;
+        border: 1px solid $C-border-gray_ee;
         height: 32px;
         padding: 0 10px;
         font-size: $F-size-19;
@@ -182,7 +182,7 @@
         @include border-radius-multi(14px,14px,14px,14px);
         display: inline-block;
         vertical-align: top;
-        border: 1px solid $C-border-gray_9d;
+        border: 1px solid $C-border-gray_ee;
         height: 28px;
         padding: 0 10px;
         font-family: $F-family-bold;

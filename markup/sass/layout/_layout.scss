@@ -8,24 +8,24 @@ body, html {
 
 }
 #wrap {
-	min-height: 100%;
 	position: relative;
+	min-height: 100%;
 	padding-bottom: 0;
 }
-.video_bg {
-	@include absolute(50%, null, null, 50%);
-	transform: translateX(-50%) translateY(-50%);
-	width: 100%;
-	height: 100%;
-	background: url($S-local-img+'/test_img.jpg') no-repeat 0 0;
-	background-size: cover;
-	z-index: -100;
-	iframe {
-		width: 100%;
-		height: 100%;
-		border: none;
-	}
-}
+//.video_bg {
+//	@include absolute(50%, null, null, 50%);
+//	transform: translateX(-50%) translateY(-50%);
+//	width: 100%;
+//	height: 100%;
+//	background: url($S-local-img+'/test_img.jpg') no-repeat 0 0;
+//	background-size: cover;
+//	z-index: -100;
+//	iframe {
+//		width: 100%;
+//		height: 100%;
+//		border: none;
+//	}
+//}
 
 
 
