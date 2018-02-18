@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------------------- */
+/*  Btv_금융
+/* ---------------------------------------------------------------------- */
+%box348 {
+  width: 348px;
+  height: 232px;
+}
+%box718 {
+  width: 718px;
+  height: 232px;
+}
+%box468 {
+  width: 468px;
+  height: 232px;
+}
+%box558 {
+  width: 558px;
+  height: 232px;
+}
+%img38 {
+  width: 38px;
+  height: 25px;
+}
+%exchange_updown {
+  font-family: $F-family-bold;
+  font-size: $F-size-36;
+  color: $C-font-light;
+
+  &.up {
+    color: $C-font-up;
+    .finance__exchange-won {
+      &:after {
+        @include use-sprite(nugu_finance_arr_up);
+      }
+    }
+    .finance__exchange-rate {
+      color: $C-font-up;
+    }
+
+  }
+  &.down {
+    color: $C-font-down;
+    .finance__exchange-won {
+      &:after {
+        @include use-sprite(nugu_finance_arr_down);
+      }
+    }
+    .finance__exchange-rate {
+      color: $C-font-down;
+    }
+
+  }
+  &.mine {
+    color: $C-font-point;
+  }
+  .data {
+    font-size: $F-size-48;
+  }
+  .rate {
+    font-size: $F-size-under;
+  }
+}
+.finance_wrap {
+  @include flex();
+  @include flex-justify(center);
+  @include flex-align(center);
+}
+.finance {
+  &__card {
+    @extend %box348;
+    background: $C-light-gray_fc;
+  }
+  &__box {
+    @extend %box348;
+  }
+  &__detail-box {
+    @extend %box718;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
+  }
+  &__result-box {
+    @extend %box468;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
+  }
+  &__result-box2 {
+    @extend %box558;
+    box-sizing: border-box;
+    margin-left: 10px;
+    padding-top: 20px;
+    border: 1px solid $C-border-gray_d9;
+    background: $C-light-gray_fc;
+
+  }
+  &__exchange-country {
+    margin: 55px 0 0 0;
+
+  }
+  &__exchange-flag {
+
+    img {
+      @extend %img38;
+      vertical-align: middle;
+    }
+  }
+  &__exchange-nation {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    font-size: $F-size-26;
+    color: $C-font-light;
+  }
+  &__exchange-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    font-size: $F-size;
+    color: $C-black;
+  }
+  &__exchange-won {
+    padding-top: 30px;
+  }
+  &__exchange-rate {
+    padding: 0 0 10px 10px;
+    font-size: $F-size-under;
+    color: $C-font-light;
+    font-family: $F-family-basic;
+  }
+  &__exchange-value {
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(flex-end);
+    @extend %exchange_updown;
+  }
+  &__equal {
+    @include use-sprite(nugu_finance_equal);
+    margin: 0 60px;
+  }
+  &__deal {
+    @include clear();
+    margin: 5px 50px;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    text-align: left;
+    width: 460px;
+    font-family: $F-family-bold;
+  }
+  &__deal-title {
+    float:left;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  &__buy {
+    float: right;
+    font-size: $F-size-36;
+    color: $C-font-point;
+    .data {
+      font-size: $F-size-44;
+    }
+  }
+  &__sell {
+    float: right;
+    font-size: $F-size-36;
+    color: $C-font-light;
+    .data {
+      font-size: $F-size-44;
+    }
+  }
+  &__time-box {
+    @include flex();
+    @include flex-justify(center);
+    @include flex-align(center);
+  }
+  &__bank-biz {
+    text-align: left;
+    margin-left: 40px;
+  }
+  &__bank-time {
+    font-size: $F-size;
+    color: $C-font-dark;
+  }
+  &__bank-hours {
+    padding: 10px 0 20px;
+    font-size: $F-size-46;
+    font-family: $F-family-bold;
+    color: $C-black;
+  }
+  &__bank-detail {
+    font-size: $F-size-under;
+    color: $C-font-light;
+  }
+  &__bank-product {
+    margin-left: 40px;
+  }
+  &__prd-detail {
+    @include multiline-ellipsis(3, $F-size, $base-line-height, block);
+    max-width: 1030px;
+    color: $C-font-dark;
+    text-align: left;
+
+  }
+}
+.finance__deal + .finance__deal {
+  border-top: 2px solid $C-border-gray_d9;
+}

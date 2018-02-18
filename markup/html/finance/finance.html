@@ -1,0 +1,57 @@
+@@include('head.html', {"css": "btv_finance", "title": "[Btv] 16. 금융_기본환율정보 : Btv_finance","filePath": "../"})
+<body>
+@@include('top.html')
+<div class="container">
+        <div class="top_title_area">
+                <span class="data">현재 환율 정보입니다.</span>
+                <span class="service_logo"></span>
+        </div>
+        <div class="content_area" id="exchange_rate">
+                <!-- start: Btv template -->
+                @@include('finance_exchange_rate.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="exchange_detail">
+                <!-- start: Btv template -->
+                @@include('finance_exchange_detail.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="exchange_result">
+                <!-- start: Btv template -->
+                @@include('finance_exchange_result.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="exchange_result2">
+                <!-- start: Btv template -->
+                @@include('finance_exchange_result2.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="biz_hours">
+                <!-- start: Btv template -->
+                @@include('finance_exchange_bizhour.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="content_area" id="recommend_product">
+                <!-- start: Btv template -->
+                @@include('finance_recommend_product.html')
+                <!-- end: Btv template -->
+        </div>
+        <div class="help_area">
+                <button class="bottom_text-area"><span class="data">도움말</span></button>
+        </div>
+</div>
+<!-- 케이스 확인하기용 -->
+<div class="case_wrap">
+    <ul class="case__list">
+        <li class="case__item"><a href="#exchange_rate" class="case__link">현재환율정보</a></li>
+        <li class="case__item"><a href="#exchange_detail" class="case__link">발화한곳의환율정보</a></li>
+        <li class="case__item"><a href="#exchange_result" class="case__link">환전정보</a></li>
+        <li class="case__item"><a href="#exchange_result2" class="case__link">환전정보_상세</a></li>
+        <li class="case__item"><a href="#biz_hours" class="case__link">은행영업시간</a></li>
+        <li class="case__item"><a href="#recommend_product" class="case__link" id="defaultOpen">은행추천상품</a></li>
+    </ul>
+</div>
+<!-- //케이스 확인하기용 -->
+@@include('bottom.html')
+</body>
+</html>
