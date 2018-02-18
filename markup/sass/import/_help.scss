@@ -44,14 +44,34 @@
 
 }
 /* 서비스 도움말 카드(기본) */
+.webview_area {
+    overflow: hidden;
+}
 .help_wrap {
-    @include flex-justify(center);
-    margin-top: 0;
+    @include flex();
+    @include flex-justify(flex-start);
+    @include overflowHide();
     padding-top: 7px;
+    margin-left: 20px;
+    width: 100%;
     .card_wrap__item {
-        margin: 0 5px;
-        position: relative;
-        background: $C-light-gray_fc;
+        @include border-radius-multi(10px,10px,10px,10px);
+        margin: 0 20px;
+        width: 340px;
+        height: 412px;
+        border: 1px solid $C-font-gray_dd;
+        background: $C-white;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+        &:before {
+            @include border-radius-multi(3px,3px,3px,3px);
+            margin: 40px 0 0 40px;
+            display: inline-block;
+            vertical-align: top;
+            width: 50px;
+            height: 6px;
+            background: $C-brand-point3;
+            content:'';
+        }
     }
 }
 .help_default_card {
@@ -119,41 +139,64 @@
 }
 
 /* 서비스 도움말 카드(넓은거 ex:melon_help.html) */
+//.help_card_wrap {
+//    margin-top: 7px;
+//    .card_wrap__item {
+//        //@extend %card_help-wide;
+//        margin: 0 5px;
+//        //background: $C-light-gray_fc;
+//        &.none {
+//            display: none;
+//        }
+//    }
+//}
 .help_card_wrap {
-    margin-top: 7px;
+    @include flex();
+    @include flex-justify(flex-start);
+    @include overflowHide();
+    padding-top: 7px;
+    margin:40px 0 0 20px;
+    width: 100%;
     .card_wrap__item {
-        @extend %card_help-wide;
-        margin: 0 5px;
-        background: $C-light-gray_fc;
-        &.none {
-            display: none;
+        @include border-radius-multi(10px,10px,10px,10px);
+        margin: 0 20px;
+        width: 340px;
+        height: 412px;
+        border: 1px solid $C-font-gray_dd;
+        background: $C-white;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+        &:before {
+            @include border-radius-multi(3px,3px,3px,3px);
+            margin: 40px 0 0 40px;
+            display: inline-block;
+            vertical-align: top;
+            width: 50px;
+            height: 6px;
+            background: $C-brand-point3;
+            content:'';
         }
     }
 }
 .help_card {
-    margin:0 30px;
+    margin:40px 40px 0;
 
     &__title {
-        padding:12px 0 9px;
-        border-bottom:2px solid $C-border-gray_cc;
-        font-size: $F-size-under;
-        text-align:center;
+        //padding:12px 0 9px;
+        //border-bottom:2px solid $C-border-gray_cc;
+        font-size: $F-size-40;
+        font-weight: $F-weight-bold;
+        text-align:left;
     }
     &__list {
-        margin-top: 27px;
+        margin: 27px 40px 0 0;
     }
     &__list-item {
         padding-top: 3px;
-        font-size: $F-size-24;
-        color: $C-font-light;
-        &:before {
-            @include use-sprite(nugu_advice_icon_mic);
-            margin:4px 4px 0 0;
-            vertical-align: top;
-            content: '';
-        }
+        font-size: $F-size;
+        color: $C-font-dark;
+
         .data {
-            @include ellipsis(inline-block,375px);
+            @include ellipsis(inline-block,265px);
         }
     }
 }

@@ -190,7 +190,7 @@
         }
     }
     &__detail_more {
-        margin: 15px 0 0 0;
+        margin: 10px 0 0 0;
     }
     &__better {
         font-size: $F-size;
@@ -294,7 +294,7 @@
     }
 }
 .weather_daily_represent__special + .weather_daily_represent__info {
-    margin-left: 0;
+    margin-left: 15px;
     margin-top: 19px;
 }
 .weather_daily_represent__dust + .weather_daily_represent__dust,
