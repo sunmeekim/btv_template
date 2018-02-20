@@ -48,10 +48,11 @@ $F-size-27: 2.7rem;
 $F-size-25: 2.5rem;
 $F-size-24: 2.4rem;
 $F-size-23: 2.3rem;
-$F-size-22: 2.2rem;
+$F-size-22: 2.2rem;//T
 $F-size-20: 2.0rem;
 $F-size-19: 1.9rem;
-$F-size-16: 1.6rem;
+$F-size-16: 1.6rem;//T
+$F-size-14: 1.4rem;//T
 $F-size-13: 1.3rem;
 
 // Font weight
@@ -64,7 +65,7 @@ $F-weight-heavy: 800;
 // Color
 $C-brand: #1e6fd1; //로고 파랑
 $C-brand-point: #ffc501; //포인트 yellow
-$C-brand-point2: #46BFBD;//포인트 아쿠아그린
+$C-brand-point2: #00c3ca;//포인트 아쿠아그린
 $C-primary: #5674d7; //primary
 $C-red-point: #f1504a;//빨간색 포인트
 
@@ -88,7 +89,7 @@ $C-font-point : #ff4909;//강조의 오렌지 컬러
 $C-font-disable: #bcbcbc;
 
 //basic color & bgcolor
-$C-white: #fff; //흰색
+$C-white: #fff; //흰색 T
 $C-black: #000; //검정색
 $C-bgColor: #f1f1f1; //밝은 회색
 $C-light-gray_fc: #fcfcfc;

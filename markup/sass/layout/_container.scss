@@ -3,24 +3,26 @@
 /*  Containers
 /* ---------------------------------------------------------------------- */
 .container {
-	height: 430px;
+	$list : (rgba(7,12,21,1) 50%,rgba(7,22,54,1) 100%);
+	@include gradient(to bottom, $list);
+	height: 480px;
 	width: 100%;
-	min-width: 1920px;
-	background: rgba(242,242,242,.97);
+	min-width: 100%;
+	//background: rgba(242,242,242,.97);
 	z-index:100;
 
 }
 .content_area {
 	position: relative;
-	height: 260px;
+	//height: 260px;
 	width: 100%;
-	min-width: 1920px;
+	//min-width: 1920px;
 	@include clear();
 	
 	
 }
 .webview_area {
-	width: 1530px;
+	width: 100%;
 	margin:0 auto;
 	position: relative;
 	z-index: 10;
@@ -31,6 +33,7 @@
 	}
 }
 .top_title_area {
+	display: none;
 	height: 80px;
 	text-align: center;
 	font-family: $F-family-semi;
@@ -70,6 +73,7 @@
 	}
 }
 .help_area {
+	display: none;
 	height: 80px;
 	text-align: center;
 	color: $C-font-light;

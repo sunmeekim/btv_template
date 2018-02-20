@@ -2,38 +2,39 @@
 /* ---------------------------------------------------------------------- */
 /*  player UI
 /* ---------------------------------------------------------------------- */
-%img230 {
-    width: 230px;
-    height: 230px;
+%img160 {
+    width: 160px;
+    height: 160px;
 }
-%img74 {
-  width: 74px;
-  height: 74px;
+%img66 {
+  width: 66px;
+  height: 66px;
 }
-%active {
+%active_player {
   &:focus {
     @include border-radius-multi(50%,50%,50%,50%);
     @include overflowHide;
     position:relative;
-    background-color:$C-white;
+    //background-color:$C-white;
     outline: none;
-    &:before {
-      @include border-radius-multi(50%,50%,50%,50%);
-      @include overflowHide;
-      @include absolute(0, null, null, 0);
-      @extend %img74;
-      border: 3px solid $C-font-point;
-      content:'';
-    }
+
+      border: 3px solid $C-brand-point2;
+    //&:before {
+    //  @include border-radius-multi(50%,50%,50%,50%);
+    //  @include overflowHide;
+    //  //@include absolute(0, null, null, 0);
+    //  @extend %img60;
+    //  content:'';
+    //}
   }
 }
 
 .player {
-    @include flex();
-    @include flex-justify(center);
+    //@include flex();
+    //@include flex-justify(center);
     margin-top: 8px;
     position: relative;
-
+    text-align: center;
     &.melon {
         .btn__prev-speed,
         .btn__next-speed,
@@ -64,6 +65,7 @@
         }
     }
     &.banner {
+        display: none;
         margin-left: 90px;
 
         .banner_area {
@@ -76,7 +78,7 @@
         display: none;
     }
     &__img {
-        @extend %img230;
+        @extend %img160;
         position: relative;
         display: inline-block;
         vertical-align: top;
@@ -90,7 +92,7 @@
         }
     }
     &__img-box {
-        @extend %img230;
+        @extend %img160;
         @include border-radius-multi(50%,50%,50%,50%);
         @include overflowHide;
         position: relative;
@@ -106,51 +108,54 @@
                 @include border-radius-multi(50%,50%,50%,50%);
                 @include overflowHide;
                 @include absolute(null, 0, 0, 0);
-                @extend %img230;
+                @extend %img160;
                 content:'';
             }
         }
         .player_p_img {
-            @extend %img230;
+            @extend %img160;
         }
         
     }
     &__minute {
-        @include absolute(null, 0, 30px, 0);
+        @include absolute(null, 0, 20px, 0);
         display: block;
-        width: 230px;
+        width: 160px;
         text-align: center;
-        font-size: $F-size-22;
+        font-size: $F-size-14;
         color: $C-white;
     }
     &__info {
-        margin-left: 40px;
-        max-width: 820px;
+        //margin-left: 40px;
+        //max-width: 820px;
+        margin: 30px 50px 0;
     }
     &__title {
-        @include ellipsis (block,820px);
+        @include ellipsis (block,100%);
         font-family: $F-family-bold;
-        font-size: $F-size-36;
-        color: $C-font-dark;
+        font-size: $F-size-22;
+        color: $C-white;
     }
     &__detail {
         @include flex();
-        @include flex-justify(flex-start);
-        @include flex-align(flex-start);
+        @include flex-justify(center);
+        @include flex-align(center);
         margin-top: 5px;
     }
     &__detail-desc {
         @include ellipsis (block,100%);
-        color: $C-font-light;
-        font-size: $F-size;
+        color: rgba(255,255,255,.4);
+        font-size: $F-size-16;
     }
     &__progress {
-        @include flex();
-        @include flex-justify(space-between);
-        @include flex-align(flex-start);
-        margin-top: 13px;
-        width: 820px;
-
+        //@include flex();
+        //@include flex-justify(space-between);
+        //@include flex-align(flex-start);
+        //margin-top: 13px;
+        //width: 820px;
+        position: relative;
+        padding-top: 30px;
+        margin-top: 30px;
         &.disabled {
             .player__start,
             .player__end {
@@ -163,36 +168,45 @@
     }
     &__progress-bg {
         display: block;
-        margin-top: 17px;
-        width: 620px;
-        height: 5px;
+        width: 100%;
+        height: 3px;
         text-align:left;
         background: $C-light-gray_cb;
     }
     &__progress-bar {
         display: inline-block;
         vertical-align: top;
-        height: 5px;
-        background: $C-font-point;
+        height: 3px;
+        background: $C-brand-point2;
     }
     &__start,
     &__end {
-        font-size: $F-size-under;
-        color: $C-font-dark;
+
+        font-size: $F-size-16;
+        color: rgba(255,255,255,.3);
+    }
+    &__start {
+        @include absolute(0, null, null, 0);
+    }
+
+    &__end {
+        @include absolute(0, 0, null, null);
     }
     &__controller {
-        position: relative;
+        //position: relative;
         margin-top: 13px;
+        text-align: center;
         @include clear;
     }
     &__controller-left {
-        @include absolute(0, null, null, -35px);
+        //@include absolute(0, null, null, -35px);
         button {
             margin: 0 13px 0 12px;
         }
     }
     &__controller-right {
-        @include absolute(0, -28px, null, null);
+        //@include absolute(0, -28px, null, null);
+        display: none;
     }
     &__controller-speed {
         @include border-radius-multi(15px,15px,15px,15px);
@@ -211,25 +225,38 @@
 .btn {
     &__prev {
         @include use-sprite(nugu_melon_control_back_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
+
         &:disabled {
             @include use-sprite(nugu_melon_control_back_dis);
         }
     }
     &__prev-speed {
         @include use-sprite(nugu_melon_control_back_severalfold_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
         &:disabled {
             @include opacity(.3);
         }
     }
     &__play {
         @include use-sprite(nugu_melon_control_play_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
     }
     &__next {
         @include use-sprite(nugu_melon_control_next_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
         &:disabled {
             @include use-sprite(nugu_melon_control_next_dis);
 
@@ -237,31 +264,50 @@
     }
     &__next-speed {
         @include use-sprite(nugu_melon_control_next_severalfold_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
         &:disabled {
             @include opacity(.3);
         }
     }
     &__pause {
         @include use-sprite(nugu_melon_control_pause_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
     }
     &__replay {
         @include use-sprite(nugu_melon_control_repeat_off_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
+
         &.select {
-            @include use-sprite(nugu_melon_control_repeat_nor); 
-            @extend %active;
+            @include use-sprite(nugu_melon_control_repeat_nor);
+            @include border-radius-multi(50%,50%,50%,50%);
+            @extend %active_player;
+            @extend %img66;
+            border: 3px solid $C-white;
         }
         &.one {
-            @include use-sprite(nugu_melon_control_1_repeat_nor); 
-            @extend %active;
+            @include use-sprite(nugu_melon_control_1_repeat_nor);
+            @include border-radius-multi(50%,50%,50%,50%);
+            @extend %active_player;
+            @extend %img66;
+            border: 3px solid $C-white;
         }
         
     }
     &__random {
         @include use-sprite(nugu_melon_control_shuffle_off_nor);
-        @extend %active;
+        @include border-radius-multi(50%,50%,50%,50%);
+        @extend %active_player;
+        @extend %img66;
+        border: 3px solid $C-white;
 
         &.select {
             @include use-sprite(nugu_melon_control_shuffle_nor); 

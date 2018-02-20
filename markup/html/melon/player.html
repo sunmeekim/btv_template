@@ -12,29 +12,21 @@
                 @@include('player.html')
                 <!-- end: Btv template -->
         </div>	
-        <!-- 플레이어 목록보기 -->
-        <div class="content_area" id = "playlist">
-                <!-- start: Btv template -->
-                @@include('player_list.html')
-                <!-- end: Btv template -->
-                <!-- start: 이전 다음 버튼 -->
-                @@include('pagenate.html')
-                <!-- end: 이전 다음 버튼 -->
-        </div>		
+        
         <div class="help_area">
                 <button class="bottom_text-area"><span class="data">도움말</span></button>
         </div>
 </div>
 
 <!-- 케이스 확인하기용 -->
-<div class="case_wrap">
-        <ul class="case__list">
-                <!--<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'music')" id="defaultOpen">기본 플레이어</a></li>-->
-                <!--<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'playlist')" >플레이어 목록</a></li>-->
-                <li class="case__item"><a href="#music" class="case__link" id="defaultOpen">기본 플레이어</a></li>
-                <li class="case__item"><a href="#playlist" class="case__link">플레이어 목록</a></li>
-        </ul>
-</div>
+<!--<div class="case_wrap">-->
+        <!--<ul class="case__list">-->
+                <!--&lt;!&ndash;<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'music')" id="defaultOpen">기본 플레이어</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="case__item"><a href="#music" class="case__link" onclick="includePage(event, 'playlist')" >플레이어 목록</a></li>&ndash;&gt;-->
+                <!--<li class="case__item"><a href="#music" class="case__link" id="defaultOpen">기본 플레이어</a></li>-->
+                <!--<li class="case__item"><a href="#playlist" class="case__link">플레이어 목록</a></li>-->
+        <!--</ul>-->
+<!--</div>-->
 <!-- //케이스 확인하기용 -->
 @@include('bottom.html')
 </body>
