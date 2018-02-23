@@ -3,33 +3,52 @@
 /*  Btv_Schedule
 /* ---------------------------------------------------------------------- */
 .schedule_wrap {
-    @include flex-justify(center);
+    //@include flex-justify(center);
     margin-top: 12px;
     .card_wrap__item {
         position: relative;
-        margin: 0 5px;
-        background: $C-light-gray_fc;
+        margin: 0 40px;
+        padding: 20px 0;
+        border-bottom: 1px solid ;
+        border-bottom-color: rgba(255,255,255,.2);
+        //background: $C-light-gray_fc;
         &.past{
-            .schedule_default_card__time,
+
             .schedule_default_card__action {
                 @include opacity(.4);
             }
         }
     }
 }
+//.top_title_area {
+//    @include opacity(.6);
+//    font-family: $F-family-basic;
+//    font-size: $F-size-small;
+//    color: $C-white;
+//    display: block;
+//}
 .schedule_default_card {
+    @include flex();
+    @include flex-justify(flex-start);
     &__time {
-        margin: 0 20px;
-        height: 66px;
-        border-bottom: 1px solid $C-light-gray_e2;
-        text-align: center;
+        //margin: 0 20px;
+        //height: 66px;
+        //border-bottom: 1px solid $C-light-gray_e2;
+        //text-align: center;
+        width: 140px;
+        .data {
+            @include flex();
+            @include flex-justify(flex-start);
+            padding-left: 8px;
+        }
     }
     &__action {
-        @include multiline-ellipsis(4,$F-size,1.25,block);
-        margin: 10px 28px 15px;
+        @include multiline-ellipsis(1,$F-size-23,1.5,block);
+        flex: 2;
+        margin: 0 28px 0;
         text-align: left;
-        font-size: $F-size;
-        color: $C-black;
+        font-size: $F-size-23;
+        color: $C-white;
     }
     &__month {
         margin-top: 27px;
@@ -50,22 +69,25 @@
         color: $C-black;
     }
     .ampm {
-        @include border-radius-multi(16px,16px,16px,16px);
+        @include border-radius-multi(14px,14px,14px,14px);
+        @include opacity(.5);
         display: inline-block;
         vertical-align: top;
-        height: 32px;
-        margin-top: 19px;
-        padding:0 15px;
-        line-height: 32px;
-        font-size: $F-size-24;
-        color: $C-font-light;
-        background: $C-light-gray_e6;
+        height: 28px;
+        //margin-top: 19px;
+        padding:0 12px;
+        line-height: 28px;
+        font-size: $F-size-18;
+        color: $C-black;
+        background: $C-white;
+        white-space: nowrap;
     }
     .time {
         display: inline-block;
         vertical-align: top;
-        margin: 18px 0 0 5px;
-        color: $C-font-light;
-        font-size: $F-size-small;
+        margin: 0 0 0 5px;
+        color: $C-white;
+        font-size: $F-size-23;
+        @include opacity(.4);
     }
 }

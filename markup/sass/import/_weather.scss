@@ -18,9 +18,9 @@
     height: 155px;
 }
 //오늘의 날씨이미지
-%img250 {
-    width: 250px;
-    height: 250px;
+%img160 {
+    width: 160px;
+    height: 160px;
 }
 //대기지수 큰이미지
 %img180 {
@@ -77,7 +77,7 @@
     @extend %img100;
 }
 .weather_d_img {
-    @extend %img250
+    @extend %img160
 }
 .weather_w_img {
     @extend %img132;
@@ -123,31 +123,46 @@
     width:100%;
 }
 .weather_daily_represent {
-    @include flex();
-    @include flex-justify(center);
-    width: 820px;
+    //@include flex();
+    //@include flex-justify(center);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
 
     &__img {
-        @extend %img250;
+        @extend %img160;
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 185px;
+        .weather_d_simg {
+            @extend %img160;
+        }
     }
     &__info {
-        margin: 23px 0 0 35px;
+        margin: 20px 0 0 0;
     }
     &__title {
         font-family: $F-family-bold;
-        font-size: $F-size-42;
-        color: $C-font-point;
+        font-size: $F-size;
+        color: $C-brand-point2;
     }
     &__detail {
-        @include flex();
-        @include flex-justify(flex-start);
+        //@include flex();
+        //@include flex-justify(flex-start);
         margin-top: 0;
     }
+    &__info_more {
+        padding-top: 15px;
+    }
     &__degree {
+        position: absolute;
+        left: 50%;
+        top: 80px;
         margin-top: 5px;
         font-family: $F-family-bold;
-        font-size: $F-size-86;
-        color: $C-black;
+        font-size: $F-size-80;
+        color: $C-white;
 
         .data {
             margin-top: -2px;
@@ -161,13 +176,14 @@
     }
     &__better {
         font-family: $F-family-bold;
-        font-size: $F-size-36;
-        color: $C-font-dark-gray;
+        font-size: $F-size-24;
+        color: $C-white;
     }
     &__degree_more {
         margin-top: 0;
-        font-size: $F-size-big;
-        color: $C-font-dark;
+        font-size: $F-size-24;
+        color: $C-white;
+        @include opacity(.4);
 
         .degree_low {
             margin-left: 10px;
@@ -181,8 +197,9 @@
     &__dust {
         display: inline-block;
         vertical-align:top;
-        font-size: $F-size;
-        color: $C-font-light;
+        font-size: $F-size-20;
+        color: $C-white;
+        @include opacity(.4);
     }
     &__special {
         margin: -4px 15px 0 0;
@@ -218,6 +235,7 @@
     }
 }
 .weather_daily_timeline {
+    display: none;
     margin: 25px 0 0 70px;
     .weather_d_simg {
         @extend %img100;

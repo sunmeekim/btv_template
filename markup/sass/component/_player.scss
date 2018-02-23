@@ -2,9 +2,9 @@
 /* ---------------------------------------------------------------------- */
 /*  player UI
 /* ---------------------------------------------------------------------- */
-%img160 {
-    width: 160px;
-    height: 160px;
+%img150 {
+    width: 150px;
+    height: 150px;
 }
 %img66 {
   width: 66px;
@@ -15,24 +15,14 @@
     @include border-radius-multi(50%,50%,50%,50%);
     @include overflowHide;
     position:relative;
-    //background-color:$C-white;
     outline: none;
-
-      border: 3px solid $C-brand-point2;
-    //&:before {
-    //  @include border-radius-multi(50%,50%,50%,50%);
-    //  @include overflowHide;
-    //  //@include absolute(0, null, null, 0);
-    //  @extend %img60;
-    //  content:'';
-    //}
+    border: 3px solid $C-brand-point2;
   }
 }
 
 .player {
-    //@include flex();
-    //@include flex-justify(center);
-    margin-top: 8px;
+
+    margin-top: 50px;
     position: relative;
     text-align: center;
     &.melon {
@@ -78,7 +68,7 @@
         display: none;
     }
     &__img {
-        @extend %img160;
+        @extend %img150;
         position: relative;
         display: inline-block;
         vertical-align: top;
@@ -92,7 +82,7 @@
         }
     }
     &__img-box {
-        @extend %img160;
+        @extend %img150;
         @include border-radius-multi(50%,50%,50%,50%);
         @include overflowHide;
         position: relative;
@@ -108,12 +98,12 @@
                 @include border-radius-multi(50%,50%,50%,50%);
                 @include overflowHide;
                 @include absolute(null, 0, 0, 0);
-                @extend %img160;
+                @extend %img150;
                 content:'';
             }
         }
         .player_p_img {
-            @extend %img160;
+            @extend %img150;
         }
         
     }
@@ -126,8 +116,7 @@
         color: $C-white;
     }
     &__info {
-        //margin-left: 40px;
-        //max-width: 820px;
+
         margin: 30px 50px 0;
     }
     &__title {
@@ -148,14 +137,10 @@
         font-size: $F-size-16;
     }
     &__progress {
-        //@include flex();
-        //@include flex-justify(space-between);
-        //@include flex-align(flex-start);
-        //margin-top: 13px;
-        //width: 820px;
+
         position: relative;
         padding-top: 30px;
-        margin-top: 30px;
+        //margin-top: 30px;
         &.disabled {
             .player__start,
             .player__end {
@@ -194,7 +179,7 @@
     }
     &__controller {
         //position: relative;
-        margin-top: 13px;
+        margin-top: 20px;
         text-align: center;
         @include clear;
     }
@@ -224,11 +209,12 @@
 }
 .btn {
     &__prev {
-        @include use-sprite(nugu_melon_control_back_nor);
-        @include border-radius-multi(50%,50%,50%,50%);
-        @extend %active_player;
-        @extend %img66;
-        border: 3px solid $C-white;
+        @include use-sprite(nugu_melon_control_back_sel);
+        outline: 0;
+        //@include border-radius-multi(50%,50%,50%,50%);
+        //@extend %active_player;
+        //@extend %img66;
+        //border: 3px solid $C-white;
 
         &:disabled {
             @include use-sprite(nugu_melon_control_back_dis);
@@ -245,18 +231,20 @@
         }
     }
     &__play {
-        @include use-sprite(nugu_melon_control_play_nor);
-        @include border-radius-multi(50%,50%,50%,50%);
-        @extend %active_player;
-        @extend %img66;
-        border: 3px solid $C-white;
+        @include use-sprite(nugu_melon_control_play_sel);
+        outline: 0;
+        //@include border-radius-multi(50%,50%,50%,50%);
+        //@extend %active_player;
+        //@extend %img66;
+        //border: 3px solid $C-white;
     }
     &__next {
-        @include use-sprite(nugu_melon_control_next_nor);
-        @include border-radius-multi(50%,50%,50%,50%);
-        @extend %active_player;
-        @extend %img66;
-        border: 3px solid $C-white;
+        @include use-sprite(nugu_melon_control_next_sel);
+        outline: 0;
+        //@include border-radius-multi(50%,50%,50%,50%);
+        //@extend %active_player;
+        //@extend %img66;
+        //border: 3px solid $C-white;
         &:disabled {
             @include use-sprite(nugu_melon_control_next_dis);
 
@@ -273,11 +261,12 @@
         }
     }
     &__pause {
-        @include use-sprite(nugu_melon_control_pause_nor);
-        @include border-radius-multi(50%,50%,50%,50%);
-        @extend %active_player;
-        @extend %img66;
-        border: 3px solid $C-white;
+        @include use-sprite(nugu_melon_control_pause_sel);
+        outline: 0;
+        //@include border-radius-multi(50%,50%,50%,50%);
+        //@extend %active_player;
+        //@extend %img66;
+        //border: 3px solid $C-white;
     }
     &__replay {
         @include use-sprite(nugu_melon_control_repeat_off_nor);
