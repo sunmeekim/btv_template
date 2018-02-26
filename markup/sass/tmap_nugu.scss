@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /* common */
-//@import "common/font";
+
 @import "common/variables";
 @import "common/mixins";
 @import "common/normalize";
+@import "common/font";
 @import "sprites/spr_img";
 @import "sprites/spr_img_2x";
 

@@ -1,19 +1,11 @@
 @charset "utf-8";
 @font-face {
-    font-family: 'SKBRIXHEADSB_0';
-    src: url('../images/font/SKBRIXHEADSB_0.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../images/font/SKBRIXHEADSB_0.ttf')  format('truetype'), /* Safari, Android, iOS */
+    font-family: 'MobisRegular';
+    src: url($S-local-img + '/font/Mobis-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url($S-local-img + '/font/Mobis-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 @font-face {
-    font-family: 'SKBRixHeadM';
-    src: url('../images/font/SKBRixHeadM.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../font/SKBRixHeadM.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-@font-face {
-    font-family: 'SKBRixHeadB';
-    src: url('../images/font/SKBRixHeadB.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-@font-face {
-    font-family: 'SKBRixHeadEB';
-    src: url('../images/font/SKBRixHeadEB.ttf')  format('truetype'), /* Safari, Android, iOS */
+    font-family: 'MobisBold';
+    src: url($S-local-img + '/font/Mobis-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url($S-local-img + '/font/Mobis-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }

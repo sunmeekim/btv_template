@@ -14,15 +14,15 @@ $G-contents-fit:100%;
 $G-contents-wide:1920px;
 $G-height:250px;
 // Base Font Style
-$base-font-family:'SKBRixHeadM',sans-serif !important;
+$base-font-family:'MobisRegular',sans-serif !important;
 $base-font-size: 10px;
 $base-line-height: 1.3;
 
 // Font Style
-$F-family-xbold: 'SKBRixHeadEB', sans-serif-black !important;
-$F-family-bold: 'SKBRixHeadB', sans-serif-medium !important;
-$F-family-semi: 'SKBRixHeadB', sans-serif !important;
-$F-family-basic: 'SKBRixHeadM', sans-serif-light !important;
+$F-family-xbold: 'MobisBold', sans-serif-black !important;
+$F-family-bold: 'MobisBold', sans-serif-medium !important;
+$F-family-semi: 'MobisBold', sans-serif !important;
+$F-family-basic: 'MobisRegular', sans-serif-light !important;
 
 // Font size
 $F-size-big: 3.2rem;
@@ -100,5 +100,5 @@ $C-light-gray_f8: #f8f8f8; // 조금 더더 밝은 회색
 $C-light-gray_cb: #cbcbcb;
 $C-light-gray_e2: #e2e2e2;
 $C-light-gray_ee: #eee;
-$S-local-img : "../images";
+$S-local-img : "/images";
 

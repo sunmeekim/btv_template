@@ -2,6 +2,14 @@
 /* ---------------------------------------------------------------------- */
 /*  Btv_Schedule
 /* ---------------------------------------------------------------------- */
+.schedule {
+    .top_title_area {
+        font-family: $F-family-bold;
+        font-size: $F-size-small;
+        color: $C-brand-point2;
+        display: block;
+    }
+}
 .schedule_wrap {
     //@include flex-justify(center);
     margin-top: 12px;
@@ -20,13 +28,8 @@
         }
     }
 }
-//.top_title_area {
-//    @include opacity(.6);
-//    font-family: $F-family-basic;
-//    font-size: $F-size-small;
-//    color: $C-white;
-//    display: block;
-//}
+
+
 .schedule_default_card {
     @include flex();
     @include flex-justify(flex-start);
